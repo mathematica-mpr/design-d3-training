@@ -118,7 +118,7 @@ This is an overview and introduction to web technologies including HTML, CSS and
 [Interactive Data Visualization for the Web: Chapter 5](http://chimera.labs.oreilly.com/books/1230000000345/ch05.html)
 
 ##### Assignments
-1. Find a dataset out in the wild that you would like to use for your final project
+1. Find dataset(s) out in the wild that you would like to use for your final project
 2. CODING ASSIGNMENT
 3. *Visualization Critique*: 
 - (LINK)[]
@@ -159,8 +159,9 @@ This is an overview and introduction to web technologies including HTML, CSS and
 [Interactive Data Visualization for the Web: Chapter 7](http://chimera.labs.oreilly.com/books/1230000000345/ch07.html) and [Chapter 8](http://chimera.labs.oreilly.com/books/1230000000345/ch08.html)
 
 ##### Assignments
-1. CODING ASSIGNMENT
-2. *Visualization Critique*: 
+1. Sketch of final project
+2. CODING ASSIGNMENT
+3. *Visualization Critique*: 
 - (LINK)[]
 
 ---
@@ -275,3 +276,64 @@ Along with your tool, you will submit a brief written document including:
 3. How each feature (chart, interaction, etc.) contributes to meeting the visualization goals
 
 Your tool can use any data that you choose.
+
+
+
+
+
+# NOTES
+
+Add names (me, Charlie)
+Pre-course surveys
+Weekly surveys
+Chrome (for class), FireFox
+
+NO VIDEO IN 769
+
+### General notes
+- intentionality in design
+    + justification for all decisions
+- not just looking pretty
+
+### Week 1/2
+- design process/challenges at MPR
+- Need to be assertive but flexible
+- colorbrewer and colorgorical
+- color-blindness plugin for Chrome
+
+### Week 3
+- Asynchronous JS
+- Debugging tools (dev tools, console.log)
+- Clarify stacking (no z-index)
+- JS weirdness (coercion, string data (d => +d))
+- no ES6 (but mention)
+
+### Week 4
+- how to set up margins, dimensions
+
+### Week 5
+- how D3 deals with time
+- .defined()
+
+### Week 6
+- don't do much data manipulation
+    + slow
+    + harder
+    + not type-safe
+- mention floating point arithmetic, exact equality
+
+### Week 7
+
+
+### Week 8
+- don't do much with easing functions
+- this is short, but will leave for cushion
+
+### Week 9
+- switch to before transitions
+
+
+
+ 
+
+
