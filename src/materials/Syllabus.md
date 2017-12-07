@@ -238,11 +238,13 @@ This is an overview and introduction to web technologies including HTML, CSS and
 
 ### Final Project
 For your final project you will create a data visualization tool meeting the following minimum requirements:
+
 1. At least three different types of charts/visualizations
 2. At least two types of interaction (tooltips, filters, etc.)
 3. At least one transition
 
 Along with your tool, you will submit a brief written document including:
+
 1. The goals of the tool (what are you trying to show? Who is your intended audience?)
 2. Why you chose the type of tool you did (dashboard/exploration tool/narrative/infographic)
 3. How each feature (chart, interaction, etc.) contributes to meeting the visualization goals
