@@ -1,7 +1,12 @@
 # Course Syllabus
 
+**Instructor:** Linus Marco
+
+**TA:** Charlie Hanley
+
 ### Overview and Goals 
 This 10-week course is designed to teach you (the student) the fundamentals of data visualization and how to apply these concepts in a practical manner using D3. Most lessons and course activities will revolve around the following concepts:
+
 - Fundamentals of web development
 - Principles of data visualization design
 - Constructing data visualizations in D3
@@ -30,6 +35,7 @@ I will also hold a weekly open office hours session.
 - Git
 - Node.js
 - Text editor or IDE (Sublime Text, Atom, Visual Studio, VS Code, etc.)
+- Google Chrome
 - Create an account on [GitHub](https://github.com/)
 
 You will need ITS to install 1-3 if you do not have them already
@@ -46,6 +52,7 @@ You will need ITS to install 1-3 if you do not have them already
     + Simplicity
     + Focus, drawing attention to important points
     + Avoiding bias and distortion
+    + Intentionality
 
 ##### Materials
 - Class slides
@@ -56,10 +63,7 @@ You will need ITS to install 1-3 if you do not have them already
 This is an overview and introduction to web technologies including HTML, CSS and JavaScript
 
 ##### Assignments
-1. *Visualization Critiques*: 
-- (LINK)[]
-- (LINK)[]
-- (LINK)[]
+[Assignment 1](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%201/Assignment/Assignment%201.md)
 
 ##### Additional Resources
 - For learning HTML/CCS/JS: [codecademy.com](https://www.codecademy.com)
@@ -84,10 +88,7 @@ This is an overview and introduction to web technologies including HTML, CSS and
 This is an overview and introduction to web technologies including HTML, CSS and JavaScript
 
 ##### Assignments
-1. *Visualization Critiques*: 
-- (LINK)[]
-- (LINK)[]
-- (LINK)[]
+[Assignment 2](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%202/Assignment/Assignment%202.md)
 
 ##### Additional Resources
 - For learning HTML/CCS/JS: [codecademy.com](https://www.codecademy.com)
@@ -98,35 +99,30 @@ This is an overview and introduction to web technologies including HTML, CSS and
 #### Week 3: D3 Fundamentals
 ##### Key Concepts
 - Review of web concepts (HTML/CSS/JS)
+    + Asynchronous JavaScript
 - Setting up a simple development environment
 - D3 overview
     + What is it? What isn't it?
     + Data binding and selections
     + General update pattern (enter/exit/update)
     + Creating SVG elements and manipulating properties
+- SVG Concepts
 - SVG building block elements
-    + rect
-    + circle
-    + line
-    + path
 
 ##### Materials
 - Class slides
 - Code on GitHub
 
-##### Reading
-[Interactive Data Visualization for the Web: Chapter 5](http://chimera.labs.oreilly.com/books/1230000000345/ch05.html)
-
 ##### Assignments
 1. Find dataset(s) out in the wild that you would like to use for your final project
-2. CODING ASSIGNMENT
-3. *Visualization Critique*: 
-- (LINK)[]
+2. [Assignment 3](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%203/Assignment/Assignment%203.md)
 
 ---
 
 #### Week 4: Static Charts, Part 1
 ##### Key Concepts
+- Setting up a D3 visualization
+    + Size, margins, code structure
 - Scales and axes in D3
 - Making a bar chart
 - Making a scatterplot
@@ -135,34 +131,25 @@ This is an overview and introduction to web technologies including HTML, CSS and
 - Class slides
 - Code on GitHub
 
-##### Reading
-[Interactive Data Visualization for the Web: Chapter 6](http://chimera.labs.oreilly.com/books/1230000000345/ch06.html)
-
 ##### Assignments
-1. CODING ASSIGNMENT
-2. *Visualization Critique*: 
-- (LINK)[]
+[Assignment 4](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%204/Assignment/Assignment%204.md)
 
 ---
 
 #### Week 5: Static Charts, Part 2
 ##### Key Concepts
 - Making a line chart
-- More detail on axes
+- More detail on scales and axes
+    + Time
 - Legends
 
 ##### Materials
 - Class slides
 - Code on GitHub
 
-##### Reading
-[Interactive Data Visualization for the Web: Chapter 7](http://chimera.labs.oreilly.com/books/1230000000345/ch07.html) and [Chapter 8](http://chimera.labs.oreilly.com/books/1230000000345/ch08.html)
-
 ##### Assignments
 1. Sketch of final project
-2. CODING ASSIGNMENT
-3. *Visualization Critique*: 
-- (LINK)[]
+2. [Assignment 5](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%205/Assignment/Assignment%205.md)
 
 ---
 
@@ -179,59 +166,18 @@ This is an overview and introduction to web technologies including HTML, CSS and
     + reduce
 - Math library and D3 functions
 - Missing data: NaN, null, undefined
+- Floating point arithmetic and strict equality
 
 ##### Materials
 - Class slides
 - Code on GitHub
 
 ##### Assignments
-1. CODING ASSIGNMENT
-2. *Visualization Critique*: 
-- (LINK)[]
+[Assignment 6](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%206/Assignment/Assignment%206.md)
 
 ---
 
-#### Week 7: Interactions and Transitions, Part 1
-##### Key Concepts
-- Event handling in D3
-- Tooltips
-- Basic transitions
-
-##### Materials
-- Class slides
-- Code on GitHub
-
-##### Reading
-[Interactive Data Visualization for the Web: Chapter 10](http://chimera.labs.oreilly.com/books/1230000000345/ch10.html)
-
-##### Assignments
-1. CODING ASSIGNMENT
-2. *Visualization Critique*: 
-- (LINK)[]
-
----
-
-#### Week 8: Interactions and Transitions, Part 2
-##### Key Concepts
-- Transitions and data binding
-- Easing functions
-- Delays
-
-##### Materials
-- Class slides
-- Code on GitHub
-
-##### Reading
-[Interactive Data Visualization for the Web: Chapter 9](http://chimera.labs.oreilly.com/books/1230000000345/ch09.html)
-
-##### Assignments
-1. CODING ASSIGNMENT
-2. *Visualization Critique*: 
-- (LINK)[]
-
----
-
-#### Week 9: Maps!
+#### Week 7: Maps
 ##### Key Concepts
 - Working with geographic data (GeoJSON, TopoJSON)
 - Binding quantitative data to a map
@@ -242,14 +188,40 @@ This is an overview and introduction to web technologies including HTML, CSS and
 - Class slides
 - Code on GitHub
 
-##### Reading
-[Interactive Data Visualization for the Web: Chapter 12](http://chimera.labs.oreilly.com/books/1230000000345/ch12.html)
+##### Assignments
+[Assignment 7](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%207/Assignment/Assignment%207.md)
+
+
+---
+
+#### Week 8: Interactions and Transitions, Part 1
+##### Key Concepts
+- Event handling in D3
+- Tooltips
+- Basic transitions
+
+##### Materials
+- Class slides
+- Code on GitHub
 
 ##### Assignments
-1. CODING ASSIGNMENT
+[Assignment 8](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%208/Assignment/Assignment%208.md)
+
+---
+
+#### Week 9: Interactions and Transitions, Part 2
+##### Key Concepts
+- Transitions and data binding
+- Easing functions
+- Delays
+
+##### Materials
+- Class slides
+- Code on GitHub
+
+##### Assignments
+1. [Assignment 9](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%209/Assignment/Assignment%209.md)
 2. Finish final project 
-3. *Visualization Critique*: 
-- (LINK)[]
 
 ---
 
@@ -276,64 +248,3 @@ Along with your tool, you will submit a brief written document including:
 3. How each feature (chart, interaction, etc.) contributes to meeting the visualization goals
 
 Your tool can use any data that you choose.
-
-
-
-
-
-# NOTES
-
-Add names (me, Charlie)
-Pre-course surveys
-Weekly surveys
-Chrome (for class), FireFox
-
-NO VIDEO IN 769
-
-### General notes
-- intentionality in design
-    + justification for all decisions
-- not just looking pretty
-
-### Week 1/2
-- design process/challenges at MPR
-- Need to be assertive but flexible
-- colorbrewer and colorgorical
-- color-blindness plugin for Chrome
-
-### Week 3
-- Asynchronous JS
-- Debugging tools (dev tools, console.log)
-- Clarify stacking (no z-index)
-- JS weirdness (coercion, string data (d => +d))
-- no ES6 (but mention)
-
-### Week 4
-- how to set up margins, dimensions
-
-### Week 5
-- how D3 deals with time
-- .defined()
-
-### Week 6
-- don't do much data manipulation
-    + slow
-    + harder
-    + not type-safe
-- mention floating point arithmetic, exact equality
-
-### Week 7
-
-
-### Week 8
-- don't do much with easing functions
-- this is short, but will leave for cushion
-
-### Week 9
-- switch to before transitions
-
-
-
- 
-
-
