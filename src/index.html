@@ -2,6 +2,27 @@
     <head>
         <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
         <link rel="stylesheet" href="node_modules/reveal.js/css/theme/white.css">
+
+        <style>
+            .reveal .slides section .source {
+                font-size: 0.3em;
+            }
+
+            .reveal .slides section .code-file-name {
+                width: 85%;
+                margin: 0 auto -0.5em auto;
+                text-align:left;
+                font-size: 0.7em;
+            }
+        </style>
+
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
     </head>
     <body>
         <div class="reveal">
