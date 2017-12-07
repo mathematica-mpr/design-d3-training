@@ -126,7 +126,3 @@ Notes:
 ### Assignment 2
 [Details](materials/Week 2/Assignment/Assignment 2.html)
 
----
-
-### Submitting Assignments
-[Instructions](materials/Assignment Submission Instructions.html)

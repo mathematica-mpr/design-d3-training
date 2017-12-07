@@ -50,8 +50,8 @@ Notes:
 </style>
 
 ### Pattern Discovery
-<img class="img" src="materials/Week 1/Slides/Census-time-machine.png">
-<img class="img" src="materials/Week 1/Slides/morris-feature-messi-2.png">
+<img class="img" src="materials/Week 1/Slides/resources/Census-time-machine.png">
+<img class="img" src="materials/Week 1/Slides/resources/morris-feature-messi-2.png">
 
 Notes:
 - Patterns
@@ -69,7 +69,7 @@ Notes:
 </style>
 
 ### Large Datasets
-<img class="img" src="materials/Week 1/Slides/Track-National-Unemployment-Job-Gains-and-Job-Losses-–-Wall-Street-Journal-.png">
+<img class="img" src="materials/Week 1/Slides/resources/Track-National-Unemployment-Job-Gains-and-Job-Losses-–-Wall-Street-Journal-.png">
 
 Notes:
 - Patterns
@@ -78,7 +78,7 @@ Notes:
 
 ---
 
-#### People love it!
+### People love it!
 
 ------
 
@@ -95,6 +95,10 @@ Notes:
 ### The Data-to-Ink Ratio
 - Avoid unnecessary frills
 - Each element has a purpose
+<img class="img" src="materials/Week 1/Slides/resources/data2ink.jpg" style="border:none">
+
+Notes:
+- It's possible to go overboard here
 
 ---
 
@@ -168,12 +172,12 @@ Notes:
 ---
 
 ### Example 1: Length vs. Angle 
-<img class="img" src="materials/Week 1/Slides/class2_4.jpg">
+<img class="img" src="materials/Week 1/Slides/resources/class2_4.jpg">
 
 ---
 
 ### Example 2: The problem with area
-<img class="img" src="materials/Week 1/Slides/class2_31.jpg">
+<img class="img" src="materials/Week 1/Slides/resources/class2_31.jpg">
 
 Notes:
 - Area is proportional to the square of the radius
@@ -182,7 +186,7 @@ Notes:
 ---
 
 ### Example 3: Bars aren't always king
-<img class="img" src="materials/Week 1/Slides/3D_Bar_on_Flatten_Surface.png">
+<img class="img" src="materials/Week 1/Slides/resources/3D_Bar_on_Flatten_Surface.png">
 
 Notes:
 - A simple choropleth map would have been more effective
