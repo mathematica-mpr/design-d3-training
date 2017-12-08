@@ -1,12 +1,14 @@
 # Data Visualization with D3
 
+### Class Materials
+
 [**Syllabus**](https://github.com/linusmarco/d3-training/blob/master/src/materials/Syllabus.md)
 
 [**Assignment submission instructions**](https://github.com/linusmarco/d3-training/blob/master/src/materials/Assignment%20Submission%20Instructions.md)
 
-### Slides
+All slides (as markdown) and assignments are in the `src/materials` folder under the appropriate week.
 
-All slides are available as markdown (.md) files in the `src/materials/Week [#]/Slides` folders. 
+#### Slides
 
 To view the slides as slide shows, do the following:
 1. Navigate to the `src` folder
