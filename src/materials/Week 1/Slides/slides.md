@@ -1,6 +1,13 @@
 ## Basics of Visualization Design (Part 1)
 ##### Representing data effectively
 
+Notes:
+- Before lecture:
+    + Go over syllabus
+    + Questions
+    + Final project
+    + Show them GitHub repo
+
 ------
 
 ### Why Data Visualization?
@@ -312,7 +319,11 @@ Notes:
 ### Assignment 1
 [Details](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%201/Assignment/Assignment%201.md)
 
+Notes:
+- Also mention reading
+
 ---
 
 ### Submitting Assignments
 [Instructions](https://github.com/linusmarco/d3-training/blob/master/src/materials/Assignment%20Submission%20Instructions.md)
+
