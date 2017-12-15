@@ -26,4 +26,8 @@ You will be required to submit your assignments for this course through GitHub.
     ```bash
     git commit --allow-empty -m "completed assignment 1"
     ```
-4. Notify me that you have completed the assignment. Make sure to include the commit hash of the submission commit.
+4. Push your changes up to your fork
+    ```
+    git push origin master
+    ```
+5. Notify me that you have completed the assignment. Make sure to include the commit hash of the submission commit.
