@@ -7,7 +7,10 @@
 [Assignment 1](materials/Week 1/Assignment)
 
 Notes:
+- Check in to make sure people had no issues with Git, etc.
 - Going over critiques of visualizations from homework
+- Ask for questions on reading, remind it's due next week
+- Go over how to update your local repo
 
 ------
 
@@ -252,7 +255,19 @@ Notes:
 ---
 
 ### Step 5: Deployment and Updates
-- Gather feedback and bu reports as appropriate
+- Gather feedback and update reports as appropriate
+
+------
+
+## Data Visualization at MPR
+
+---
+
+### Challenges
+- Lack of knowledge about options
+- Inexperience with design
+- Entrenched tools
+- Budget priorities
 
 ------
 
@@ -265,4 +280,9 @@ Notes:
 
 ### Assignment 2
 [Details](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%202/Assignment/Assignment%202.md)
+
+------
+
+### Final Project
+[Details](materials/Syllabus.html)
 
