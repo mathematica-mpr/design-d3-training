@@ -1,7 +1,9 @@
 <html>
+
     <head>
         <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
         <link rel="stylesheet" href="node_modules/reveal.js/css/theme/white.css">
+        <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
 
         <style>
             .reveal .slides section .source {
@@ -11,29 +13,30 @@
             .reveal .slides section .code-file-name {
                 width: 85%;
                 margin: 0 auto -0.5em auto;
-                text-align:left;
+                text-align: left;
                 font-size: 0.7em;
             }
         </style>
 
         <script>
-            var link = document.createElement( 'link' );
+            var link = document.createElement('link');
             link.rel = 'stylesheet';
             link.type = 'text/css';
-            link.href = window.location.search.match( /print-pdf/gi ) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
-            document.getElementsByTagName( 'head' )[0].appendChild( link );
+            link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
         </script>
     </head>
+
     <body>
         <div class="reveal">
             <div class="slides">
-                <section data-markdown="materials/Week 1/Slides/slides.md"
+                <!-- <section data-markdown="materials/Week 1/Slides/slides.md"
                          data-separator="^\r?\n------\r?\n$"  
                          data-separator-vertical="^\r?\n---\r?\n$">
-                </section>
-                <section data-markdown="materials/Week 2/Slides/slides.md"
-                         data-separator="^\r?\n------\r?\n$"  
-                         data-separator-vertical="^\r?\n---\r?\n$">
+                </section> -->
+                <!-- <section data-markdown="materials/Week 2/Slides/slides.md" data-separator="^\r?\n------\r?\n$" data-separator-vertical="^\r?\n---\r?\n$">
+                </section> -->
+                <section data-markdown="materials/Week 3/Slides/slides.md" data-separator="^\r?\n===\r?\n$" data-separator-vertical="^\r?\n---\r?\n$">
                 </section>
             </div>
         </div>
@@ -41,11 +44,19 @@
         <script src="node_modules/reveal.js/js/reveal.js"></script>
         <script src="node_modules/reveal.js/plugin/markdown/marked.js"></script>
         <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+        <script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
         <script>
             Reveal.initialize({
                 controlsTutorial: false
             });
+
+            Reveal.addEventListener('slidechanged', function (event) {
+                document.querySelectorAll('pre code').forEach(function (block, i) {
+                    hljs.highlightBlock(block);
+                });
+            });
         </script>
         <script src="materials/Week 1/Slides/resources/line-chart.js"></script>
     </body>
+
 </html>
