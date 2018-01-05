@@ -54,6 +54,18 @@
                 document.querySelectorAll('pre code').forEach(function (block, i) {
                     hljs.highlightBlock(block);
                 });
+
+                document.getElementById('dynamic').onclick = function () {
+                    var i = 21;
+                    var mult = 1;
+                    setInterval(function () {
+                        if (i === 60) mult = -1;
+                        if (i === 20) mult = 1;
+                        mult === 1 ? i++ : i--;
+                        document.getElementById('dynamic')
+                            .setAttribute('style', 'position:fixed; top: 40%; left:' + i + '%');
+                    }, 20)
+                };
             });
         </script>
         <script src="materials/Week 1/Slides/resources/line-chart.js"></script>
