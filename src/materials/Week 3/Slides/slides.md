@@ -19,9 +19,9 @@ Notes:
 
 ### 3 Components
 
-* HTML: Content and structure
-* CSS: Appearance
-* JavaScript: Dynamism and interaction
+* **HTML**: Content and structure
+* **CSS**: Appearance
+* **JavaScript**: Dynamism and interaction
 
 Notes:
 
@@ -115,13 +115,13 @@ Notes:
 * Code doesn't always execute 'in order'
 
 ```js
-console.log('I');
+console.log('Mathematica');
 
 setTimeout(function() {
-    console.log('am');
+    console.log('Policy');
 });
 
-console.log('legend');
+console.log('Research');
 ```
 
 Note:
@@ -218,6 +218,27 @@ Notes:
 
 ---
 
+### Working with attributes
+
+```js
+d3
+    .select('p')
+    .attr('class', 'red')
+    .style('color', 'red');
+```
+
+Result:
+
+```html
+<p class="red" style="color: red;"></p>
+```
+
+Notes:
+
+* `.style` is a convenience method
+
+---
+
 ### Data Binding
 
 * Using `selectAll.data`
@@ -233,6 +254,10 @@ d3
         return d;
     });
 ```
+
+Notes:
+
+* `.html` changes the text within the selected element tag
 
 ---
 
@@ -373,6 +398,9 @@ d3.selectAll('.a').data([1, 2, 3, 4]);
 <svg width="500" height="500"></svg>
 ```
 
+* `width`: total width of area
+* `height`: total height of area
+
 Notes:
 
 * Think of it as a "canvas" you'll draw on, but don't use "canvas" terminology
@@ -386,8 +414,6 @@ Notes:
     <rect x="10" y="10" width="100" height="50"/>
 </svg>
 ```
-
-Main properties
 
 * `x`: X-coordinate of upper-left corner of rectangle
 * `y`: Y-coordinate of upper-left corner of rectangle
@@ -408,8 +434,6 @@ Notes:
 </svg>
 ```
 
-Main properties
-
 * `cx`: X-coordinate of center of circle
 * `cy`: Y-coordinate of center of circle
 * `r`: Radius
@@ -423,8 +447,6 @@ Main properties
     <circle x1="0" x2="100" y1="0" y2="50"/>
 </svg>
 ```
-
-Main properties
 
 * `x1`: X-coordinate of line start
 * `x2`: X-coordinate of line start
@@ -441,10 +463,13 @@ Main properties
 </svg>
 ```
 
-Main properties
-
 * `x`: X-coordinate of text
 * `y`: Y-coordinate of text
+
+---
+
+### `<text>` cont'd
+
 * `text-anchor`: Defines how to orient the text around the `X` coordinate
   * `start`: `X` is the start of the text
   * `middle`: `X` is the middle of the text
@@ -464,8 +489,6 @@ Main properties
 </svg>
 ```
 
-Main properties
-
 * `points`: Space-seperated X,Y pairs defining the shape's points
 
 ---
@@ -478,27 +501,68 @@ Main properties
 </svg>
 ```
 
-Main properties
+---
+
+### `<path>` cont'd
 
 * `d`: Description of path (like a pencil drawing)
   * `M [X] [Y]`: Pick up pencil and move to the (X, Y) coordinate of SVG
   * `m [X] [Y]`: Pick up pencil and move to a point `X` pixels to the right of and `Y` pixels below the previous point
   * `L [X] [Y]`: Draw a line from the previous point to the (X, Y) coordinate of SVG
   * `l [X] [Y]`: Draw a line from the previous point to a point `X` pixels to the right of and `Y` pixels below the previous point
+
+---
+
+### `<path>` cont'd
+
+* `d` (cont'd)
   * `z`: Draw a line from the previous point to the first point
   * Others...
 
 ---
 
-### SVG Transforms
+### The `<g>` Element
 
-Attributes of _most_ SVG elements
+```html
+<svg>
+    <g>
+        <rect x="10" y="10" width="100" height="50"/>
+        <text x="55" y="30" text-anchor="middle">Hello world</text>
+    </g>
+</svg>
+```
+
+Used to group other SVG elements together
+
+Notes:
+
+* Useful for semantic purposes but also for transformations
+
+---
+
+### SVG Transforms
 
 * `transform`: Changes various aspects of the element
   * `translate(X, Y)`: Moves the element relative to its own defined position
   * `scale(X [, Y])`: Scales the element's size (1 = no change) in the X and Y directions
   * `rotate(A [, X, Y])`: Rotates element `A` degrees around the origin (or the point (`X`, `Y`))
   * Other...
+
+---
+
+### SVG Transforms (cont'd)
+
+* Transforms are applied in order for RIGHT to LEFT
+
+```html
+<svg width="100" height="100">
+    <circle cx="50" cy="50" r="25" transform="translate(-50, -50) scale(2)" />
+</svg>
+```
+
+Notes:
+
+* End up with 50-radius circle centered at (50,50)
 
 ---
 
@@ -509,6 +573,21 @@ Attributes of _most_ SVG elements
 * `stroke-width`: Border width
 * `stroke-dasharray`: Border dash definition (e.g. `3 3`)
 * `style`: To add other generic CSS attributes
+
+===
+
+## Putting it all together
+
+---
+
+### Specs
+
+Using D3:
+
+1. Start with a 500x500 SVG
+2. Draw a red circle with a black border at the center with a diameter of 150px
+3. Draw a square circumscribing the circle (black border, no fill)
+4. Draw a line from the center of the circle to the top-right of the square
 
 ===
 
