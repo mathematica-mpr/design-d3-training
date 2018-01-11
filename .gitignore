@@ -1,3 +1,7 @@
+# Recordings
+*.arf
+*.wmv
+
 # Logs
 logs
 *.log
