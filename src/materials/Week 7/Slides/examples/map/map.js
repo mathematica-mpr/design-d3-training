@@ -149,7 +149,7 @@ function buildMap(containerId) {
             .append('circle')
             .attr('cx', innerWidth / 2)
             .attr('cy', innerHeight / 2)
-            .attr('r', 200.2)
+            .attr('r', 199.2)
             .attr('fill', '#0077be')
             .attr('stroke', 'none');
 
