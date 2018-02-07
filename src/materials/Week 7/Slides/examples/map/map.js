@@ -150,7 +150,7 @@ function buildMap(containerId) {
             .attr('cx', innerWidth / 2)
             .attr('cy', innerHeight / 2)
             .attr('r', 200.2)
-            .attr('fill', 'blue')
+            .attr('fill', '#0077be')
             .attr('stroke', 'none');
 
         var countries = g
@@ -164,11 +164,11 @@ function buildMap(containerId) {
                 if (arctics.indexOf(d.properties.name) > -1) {
                     return 'white';
                 } else {
-                    return 'green';
+                    return '#669966';
                 }
             })
             .style('stroke', 'white')
-            .style('stroke-width', 0.5);
+            .style('stroke-width', 0.2);
 
         var deg = 0;
         setInterval(function() {
