@@ -145,13 +145,28 @@ function buildMap(containerId) {
 
         var geoPath = d3.geoPath().projection(orthoProj);
 
+        g
+            .append('circle')
+            .attr('cx', innerWidth / 2)
+            .attr('cy', innerHeight / 2)
+            .attr('r', 200.2)
+            .attr('fill', 'blue')
+            .attr('stroke', 'none');
+
         var countries = g
             .selectAll('path')
             .data(geojson.features)
             .enter()
             .append('path')
             .attr('d', geoPath)
-            .style('fill', 'black')
+            .style('fill', function(d) {
+                var arctics = ['Antarctica', 'Greenland', 'Iceland'];
+                if (arctics.indexOf(d.properties.name) > -1) {
+                    return 'white';
+                } else {
+                    return 'green';
+                }
+            })
             .style('stroke', 'white')
             .style('stroke-width', 0.5);
 
