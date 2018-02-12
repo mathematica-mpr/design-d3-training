@@ -4,20 +4,21 @@ This assignment focuses on inserting various SVG elements in the DOM using D3. U
 
 ### Part 1:
 
-1. Use the `us-named.json` file and `NRDB_StationMeta.csv` to create a us map with solar stations.
-    * use albersUSA projection to create your map
+1. Use the `us-states.json` file and `NRDB_StationMeta.csv` to create a us map with solar stations.
+    * use the d3.geoAlbersUsa projection to create your map
     * superimpose the stations onto the map using the latitude and longitude properties. Each station should be represents by a dot.
     * Color the stations (dots) by the Class variable (and create a legend for it)
-    * have the station (dots) radius be associated with elevation of the station. Us a logistic scale for this with the minimal elevation being 2 px in radius and the max being 15.
+    * have the station (dots) radius be associated with elevation of the station. Use a logistic scale for this with the minimal elevation being 2 px in radius and the max being 15.
     * The chart should have a title
+    * HINT: If a `[long, lat]` cordinate pair is outside of the bounds of the projection, `projection([long, lat])` will be `null`. You will have to deal with this fact in the assignment. Feel free to not display any stations that don't fall within the projection.
 
 ### Part 2
 
-1. Use the `us-county` file and laucnty12.csv-laucnty16.csv (county level unemployment data 2012-2016)
+1. Use the `us-counties.json` file and `laucnty12.csv`-`laucnty16.csv` (county level unemployment data 2012-2016)
 
-* First convert the csv files to json and combine them into a single array.
-* You will then need to merge this data on us-county data using the FIPS code. Note you will have to combine the FIPS code on the csvs (StateCode + CountyCode)
-* Create 5 chloropleth maps (one for each year) using the unemployment percentage. Color each county based on it's unemployment rate in that year. You can choose the color scheme. Put each map next to each other on an imaginary horizontal axis.
+* First read in the csv files and combine them into a single array.
+* You will then need to merge this data on `us-counties` data using the FIPS code. Note you will have to combine the FIPS code on the csvs (StateCode + CountyCode). FIPS code is the value of the `id` attribute on each feature in the `features` array of `us-counties`
+* Create 5 choropleth maps (one for each year) using the unemployment percentage. Color each county based on it's unemployment rate in that year. You can choose the color scheme. Put each map next to each other on an imaginary horizontal axis.
 * Create one legend that will serve all 5 maps
 * Each chart should have its own title
 
