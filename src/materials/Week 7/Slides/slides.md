@@ -133,7 +133,7 @@ g
 
 ===
 
-[Sandbox](/materials/Week%207/Slides/examples/map/)
+[Example](/materials/Week%207/Slides/examples/map/)
 
 ===
 
