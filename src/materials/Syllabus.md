@@ -194,7 +194,7 @@ This is an overview and introduction to web technologies including HTML, CSS and
 
 ---
 
-#### Week 8: Interactions and Transitions, Part 1
+#### Week 8: Interactions and Transitions
 ##### Key Concepts
 - Event handling in D3
 - Tooltips
@@ -205,23 +205,19 @@ This is an overview and introduction to web technologies including HTML, CSS and
 - Code on GitHub
 
 ##### Assignments
-[Assignment 8](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%208/Assignment/Assignment%208.md)
+1. [Assignment 8](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%208/Assignment/Assignment%208.md)
+2. Re-read [Interactive Data Visualization for the Web: Chapter 3](http://chimera.labs.oreilly.com/books/1230000000345/ch03.html) (continued from week 1)
 
 ---
 
-#### Week 9: Interactions and Transitions, Part 2
-##### Key Concepts
-- Transitions and data binding
-- Easing functions
-- Delays
+#### Week 9: TBD
 
 ##### Materials
 - Class slides
 - Code on GitHub
 
 ##### Assignments
-1. [Assignment 9](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%209/Assignment/Assignment%209.md)
-2. Finish final project 
+Finish final project 
 
 ---
 
