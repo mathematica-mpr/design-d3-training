@@ -198,7 +198,10 @@ This is an overview and introduction to web technologies including HTML, CSS and
 ##### Key Concepts
 - Event handling in D3
 - Tooltips
-- Basic transitions
+- Transitions and data binding
+- Easing functions
+- Delays
+- Chaining
 
 ##### Materials
 - Class slides
