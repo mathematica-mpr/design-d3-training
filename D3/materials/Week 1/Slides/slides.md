@@ -4,19 +4,19 @@
 
 Notes:
 
-* Before lecture:
-  * Go over syllabus
-  * Questions
-  * Final project
-  * Show them GitHub repo
+- Before lecture:
+  - Go over syllabus
+  - Questions
+  - Final project
+  - Show them GitHub repo
 
 ===
 
 ### Why Data Visualization?
 
-* Mental processing speed
-* Discovery of patterns
-* Distillation of large datasets
+- Mental processing speed
+- Discovery of patterns
+- Distillation of large datasets
 
 ---
 
@@ -37,18 +37,18 @@ What year had the highest sales?
 
 | Year | Sales |
 | ---- | ----- |
-| 2000 | $45   |
-| 2001 | $56   |
-| 2002 | $36   |
-| 2003 | $58   |
-| 2004 | $75   |
-| 2005 | $62   |
+| 2000 | \$45  |
+| 2001 | \$56  |
+| 2002 | \$36  |
+| 2003 | \$58  |
+| 2004 | \$75  |
+| 2005 | \$62  |
 
 <div class="viz"></div>
 
 Notes:
 
-* Immediately obvious from the graph which was highest
+- Immediately obvious from the graph which was highest
 
 ---
 
@@ -75,9 +75,9 @@ Notes:
 
 Notes:
 
-* Patterns
-  * Regional trends in a map
-  * Outlier detection in a scatterplot
+- Patterns
+  - Regional trends in a map
+  - Outlier detection in a scatterplot
 
 ---
 
@@ -103,35 +103,35 @@ Notes:
 
 ### General Design Principles
 
-* High data-ink ratio
-* Simplicity
-* Focus
-* Objectivity
-* Completeness
-* Accessibility
-* Intentionality
+- High data-ink ratio
+- Simplicity
+- Focus
+- Objectivity
+- Completeness
+- Accessibility
+- Intentionality
 
 ---
 
 ### The Data-Ink Ratio
 
-* Avoid unnecessary frills
-* Each element has a purpose
+- Avoid unnecessary frills
+- Each element has a purpose
 
 <img class="img" src="materials/Week 1/Slides/resources/data2ink.jpg" style="border:none">
 <div class="source">Source: https://datahero.com/blog/2017/06/06/4-data-design-principles/</div>
 
 Notes:
 
-* It's possible to go overboard here
+- It's possible to go overboard here
 
 ---
 
 ### Simplicity
 
-* User shouldn't need an instruction manual
-* Prettier isn't always better
-* Boring can be good
+- User shouldn't need an instruction manual
+- Prettier isn't always better
+- Boring can be good
 
 <a target="_blank" href="https://www.theguardian.com/environment/ng-interactive/2014/dec/01/carbon-emissions-past-present-and-future-interactive">Carbon Emissions</a>
 
@@ -141,78 +141,78 @@ VS
 
 Notes:
 
-* Visualization should never add complexity to your data
-* Complex concepts can sometimes require complex visualization
-* Emissions: simple data visualized complexly
-* NYT: complex concept visualized simply
+- Visualization should never add complexity to your data
+- Complex concepts can sometimes require complex visualization
+- Emissions: simple data visualized complexly
+- NYT: complex concept visualized simply
 
 ---
 
 ### Focus
 
-* Know your visualization's purpose
-* Know your audience
-* Draw attention to key values
+- Know your visualization's purpose
+- Know your audience
+- Draw attention to key values
 
 <img class="img" src="materials/Week 1/Slides/resources/incarceration.png" style="border:none; height: 350px">
 <div class="source">Source: https://priceonomics.com/is-mass-incarceration-in-america-actually-on-the/</div>
 
 Notes:
 
-* This is VERY important on projects
-* Gather requirements before putting pen to paper
-  * You can create a beautiful, effective vis, but if it answers the wrong question then it's useless
-* Brainstorm with class other ways that this data could have been presented
+- This is VERY important on projects
+- Gather requirements before putting pen to paper
+  - You can create a beautiful, effective vis, but if it answers the wrong question then it's useless
+- Brainstorm with class other ways that this data could have been presented
 
 ---
 
 ### Objectivity
 
-* Let the user make judgments, don't force yours
-* Never purposely deceive
-* Explain assumptions, filters, and transformations
-* Give appropriate context
+- Let the user make judgments, don't force yours
+- Never purposely deceive
+- Explain assumptions, filters, and transformations
+- Give appropriate context
 
 <img class="img" src="materials/Week 1/Slides/resources/fox-apprehensions.jpg" style="border:none; height: 350px">
 <div class="source">Source: https://www.mediamatters.org/blog/2013/04/05/fox-news-newest-dishonest-chart-immigration-enf/193507</div>
 
 Notes:
 
-* Axis doesn't start at zero
-  * Bar charts ALWAYS have 0-start axes
-  * Line charts can be different
-* Follow link to show context
+- Axis doesn't start at zero
+  - Bar charts ALWAYS have 0-start axes
+  - Line charts can be different
+- Follow link to show context
 
 ---
 
 ### Completeness
 
-* Don't make the user guess
-* Labels, labels, labels
-* Ask an outsider
+- Don't make the user guess
+- Labels, labels, labels
+- Ask an outsider
 
 <img class="img" src="materials/Week 1/Slides/resources/power-bi-color.png" style="border:none">
 <div class="source">Source: https://docs.microsoft.com/en-us/power-bi/power-bi-visualization-best-practices</div>
 
 Notes:
 
-* Context is important here too
-* We run into this a lot a MPR
-  * Make sure that you design for your audience. Not everyone is a health policy expert
+- Context is important here too
+- We run into this a lot a MPR
+  - Make sure that you design for your audience. Not everyone is a health policy expert
 
 ---
 
 ### Accessibility
 
-* Color blindness
-* Not just 508 compliance
+- Color blindness
+- Not just 508 compliance
 
 <img class="img" src="materials/Week 1/Slides/resources/Gradientsbad1.png" style="border:none">
 <div class="source">Source: http://www.dundas.com/support/blog/visualizing-for-the-color-blind</div>
 
 Notes:
 
-* DON'T USE RED AND GREEN TO REPRESENT +/-
+- DON'T USE RED AND GREEN TO REPRESENT +/-
 
 ---
 
@@ -221,20 +221,20 @@ Notes:
 
 Notes:
 
-* This isn't readable by anyone, colorblind or not
+- This isn't readable by anyone, colorblind or not
 
 ---
 
 ### Intentionality
 
-* Every element should have a purpose
+- Every element should have a purpose
 
 <img class="img" src="materials/Week 1/Slides/resources/plot-lines-visualization.png" style="border:none">
 <div class="source">Source: https://saberni.com/use-data-visualization-data-mining-and-predictive-analytics-to-create-effective-b2b-marketing-campaigns/</div>
 
 Notes:
 
-* Don't do something just because it looks pretty
+- Don't do something just because it looks pretty
 
 ===
 
@@ -244,30 +244,30 @@ Notes:
 
 #### What are dimensions?
 
-* Length
-* Color (hue)
-* Color (intensity)
-* Angle
-* Position
-* Area
-* Orientation
-* Slope
-* Added marks
-* Many more
+- Length
+- Color (hue)
+- Color (intensity)
+- Angle
+- Position
+- Area
+- Orientation
+- Slope
+- Added marks
+- Many more
 
 ---
 
 ### Not all dimensions are created equal
 
-* Preattentive attributes: those that are distinguishable and comparable at first glance, without any thinking or specific attention
-  * Length
-  * Color
+- Preattentive attributes: those that are distinguishable and comparable at first glance, without any thinking or specific attention
+  - Length
+  - Color
 
 Notes:
 
-* This is a bit of a nebulous area. Attributes can be preattentive in some contexts but not in others
-* Your choice can depend a lot on context and other constraints
-  * color on maps rather than length
+- This is a bit of a nebulous area. Attributes can be preattentive in some contexts but not in others
+- Your choice can depend a lot on context and other constraints
+  - color on maps rather than length
 
 ---
 
@@ -285,8 +285,8 @@ Notes:
 
 Notes:
 
-* Area is proportional to the square of the radius
-* Making the obvious change here avoids bias, but makes it less clear that the largest circle is actually almost as large as the rest combined.
+- Area is proportional to the square of the radius
+- Making the obvious change here avoids bias, but makes it less clear that the largest circle is actually almost as large as the rest combined.
 
 ---
 
@@ -297,7 +297,7 @@ Notes:
 
 Notes:
 
-* A simple choropleth map would have been more effective
+- A simple choropleth map would have been more effective
 
 ---
 
@@ -307,9 +307,9 @@ Notes:
 
 Notes:
 
-* Look out for data visualization in the wild and critique it
-* Think about whether there would be a clearer way
-* Learn to trust your gut--not all visualizations will be obviously good or bad
+- Look out for data visualization in the wild and critique it
+- Think about whether there would be a clearer way
+- Learn to trust your gut--not all visualizations will be obviously good or bad
 
 ===
 
@@ -321,15 +321,15 @@ Notes:
 
 Notes:
 
-* Pros
-  * Really good focus and annotations
-  * Easy to see distribution (sort of like a stream graph)
-* Cons
-  * Faces might be a bit much
-  * Missed opportunities
-    * Size circles based on sales
-    * Color based on subgenre
-    * Reorganize circles when coloring by region
+- Pros
+  - Really good focus and annotations
+  - Easy to see distribution (sort of like a stream graph)
+- Cons
+  - Faces might be a bit much
+  - Missed opportunities
+    - Size circles based on sales
+    - Color based on subgenre
+    - Reorganize circles when coloring by region
 
 ---
 
@@ -338,34 +338,30 @@ Notes:
 
 Notes:
 
-* Pros
-  * Data-ink ratio
-  * Good labeling
-* Cons
-  * No reason for person shape
-  * Don't stack percentages that don't add to 100
-  * Sizes don't relate to percentages
-  * What are the quotes for??
-  * Numbers should be aligned
+- Pros
+  - Data-ink ratio
+  - Good labeling
+- Cons
+  - No reason for person shape
+  - Don't stack percentages that don't add to 100
+  - Sizes don't relate to percentages
+  - What are the quotes for??
+  - Numbers should be aligned
 
 ===
 
 ### Cool Tools
 
-* [Figma](https://www.figma.com/)
+[Figma](https://www.figma.com/)
 
 ===
 
-### Assignment 1
-
-[Details](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%201/Assignment/Assignment%201.md)
+### [Assignment 1](../Assignment/Assignment%201.md)
 
 Notes:
 
-* Also mention reading
+- Also mention reading
 
 ---
 
-### Submitting Assignments
-
-[Instructions](https://github.com/linusmarco/d3-training/blob/master/src/materials/Assignment%20Submission%20Instructions.md)
+### [Submitting Assignments Instructions](../../../../resources/Assignment%20Submission%20Instructions.md)

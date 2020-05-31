@@ -28,7 +28,7 @@ This is an overview and introduction to web technologies including HTML, CSS and
 
 #### Assignments
 
-[Assignment 1](src/materials/Week%201/Assignment/Assignment%201.md)
+[Assignment 1](D3/materials/Week%201/Assignment/Assignment%201.md)
 
 #### Additional Resources
 
@@ -80,7 +80,7 @@ This is an overview and introduction to web technologies including HTML, CSS and
 
 ### Assignments
 
-[Assignment 2](../src/materials/Week%202/Assignment/Assignment%202.md)
+[Assignment 2](../D3/materials/Week%202/Assignment/Assignment%202.md)
 
 ### Additional Resources
 
@@ -112,7 +112,7 @@ This is an overview and introduction to web technologies including HTML, CSS and
 
 #### Assignments
 
-[Assignment 2](../src/materials/Week%206/Assignment/Assignment%206.md)
+[Assignment 2](../D3/materials/Week%206/Assignment/Assignment%206.md)
 
 ---
 
@@ -167,7 +167,7 @@ An important step of the requirements gathering process is interacting with stak
 #### Assignments
 
 1. Find dataset(s) out in the wild that you would like to use for your final project
-2. [Assignment 3](../src/materials/Week%203/Assignment/Assignment%203.md)
+2. [Assignment 3](../D3/materials/Week%203/Assignment/Assignment%203.md)
 
 ---
 
@@ -221,7 +221,7 @@ Please see the wireframe section of the class materials for more information. Pl
 
 #### Assignments
 
-[Assignment 4](../src/materials/Week%204/Assignment/Assignment%204.md)
+[Assignment 4](../D3/materials/Week%204/Assignment/Assignment%204.md)
 
 ---
 
@@ -242,7 +242,7 @@ Please see the wireframe section of the class materials for more information. Pl
 #### Assignments
 
 1. Sketch of final project
-2. [Assignment 5](../src/materials/Week%205/Assignment/Assignment%205.md)
+2. [Assignment 5](../D3/materials/Week%205/Assignment/Assignment%205.md)
 
 ---
 
@@ -262,7 +262,7 @@ Please see the wireframe section of the class materials for more information. Pl
 
 ### Assignments
 
-[Assignment 6](../src/materials/Week%207/Assignment/Assignment%207.md)
+[Assignment 6](../D3/materials/Week%207/Assignment/Assignment%207.md)
 
 ---
 
@@ -284,7 +284,7 @@ Please see the wireframe section of the class materials for more information. Pl
 
 #### Assignments
 
-1. [Assignment 7](../src/materials/Week%208/Assignment/Assignment%208.md)
+1. [Assignment 7](../D3/materials/Week%208/Assignment/Assignment%208.md)
 2. Re-read [Interactive Data Visualization for the Web: Chapter 3](d3js.pdf) (Continued from Week 1)
 
 ---
