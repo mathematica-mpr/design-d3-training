@@ -14,9 +14,7 @@ Notes:
 
 ## What is data visualization?
 
----
-
-*In its most basic form, visualization is simply mapping data to geometry and color.* (Yau, 2013, p. 93)
+*In its most basic form, visualization is simply mapping data to geometry and color* (Yau, 2013, p. 93).
 
 Notes:
 
@@ -31,6 +29,8 @@ Notes:
 * Distillation of large datasets
 
 ---
+
+<!-- .slide: class="processing-speed" data-state="processing-speed" -->
 
 <style>
     .processing-speed table { margin-left: 0; }
@@ -61,6 +61,8 @@ Notes:
 * Immediately obvious from the graph which was highest
 
 ---
+
+<!-- .slide: class="pattern-discovery" data-state="pattern-discovery" -->
 
 <style>
     .pattern-discovery .img {
@@ -93,7 +95,7 @@ Notes:
 
 <style>
     .big-data .img {
-        margin:auto;
+        /* margin:auto; */
         border:none;
     }
 </style>
@@ -114,21 +116,69 @@ Notes:
 
 ---
 
-[Insert talking points for tidy data reading]
+In *Tidy Data (2014)*, Hadley Wickham lays out the benefits of tidy data and how to use it.
+
+#### Wide data: Untidy data set
+|         | ScenarioA | ScenarioB |
+| ----    | -----     | -----     |
+| Kim     | 18        | 2         |
+| John    | 38        | 5         |
+| Ellen   | 10        | 29        |
+| Marcus  | 17        | 15        |
+
+Notes:
+
+- Article is written from the perspective of a data scientists using R
+- Goal of paper is to propose a set of standards of how to tidy data for data processing, analyzing, and visualizing
+- Typical data set you might get
+- Each different 
+
+---
+
+#### Long data: tidy data set
+|  Name   | Scenario | Result |
+| ----    | -----    | -----  |
+| Kim     | A        | 18     |
+| John    | A        | 38     |
+| Ellen   | A        | 10     |
+| Marcus  | A        | 17     |
+| Kim     | B        | 2      |
+| John    | B        | 5      |
+| Ellen   | B        | 29     |
+| Marcus  | B        | 15     |
+
+Notes:
+- Tidy data sets enable us to draw a connection between the physical structure of data and with the metrics we'd be interested in visualizing
+- Here every value belongs to a variable (column) and observation (row)
+- The table structure helps us to assign variables to axes and identify which visual graphics we want to map to the data
+
+---
+
+### Ways to tidy up messy data
+
+- Column headers are variables and not values
+- Each column contains on variable
+- Observations constitue a row, variables a column
+- Multiple types of observations are stored in one table, and vice versa
 
 ===
 
 ## Using dimensions
+
+Notes:
+
+* Once you identify which metrics you'd like to visual, it's time to consider how you'll visually do that
 
 ---
 
 #### What are dimensions?
 
 In *Semiology of Graphics (1967)*, Jacques Bertin presented the following dimensions as "visual variables":
+
 * Position
 * Size
 * Shape
-* Value
+* Value (lightness)
 * Color hue
 * Orientation
 * Texture
