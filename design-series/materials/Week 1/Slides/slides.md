@@ -119,12 +119,12 @@ Notes:
 In *Tidy Data (2014)*, Hadley Wickham lays out the benefits of tidy data and how to use it.
 
 #### Wide data: Untidy data set
-|            | < 20K | 20K - 40K | 40K - 60K |
-| ----       | ----- | -----     | -----     |
-| Main St    | 18    | 2         | 54        |
-| Maple Ave  | 38    | 5         | 12        |
-| Baker Lane | 10    | 29        | 34        |
-| Fourth St  | 17    | 15        | 22        |
+|            | < $20K | $20K - $40K | $40K - $60K |
+| ----       | -----  | -----       | -----       |
+| Main St    | 18     | 2           | 54          |
+| Maple Ave  | 38     | 5           | 12          |
+| Baker Lane | 10     | 29          | 34          |
+| Fourth St  | 17     | 15          | 22          |
 
 Notes:
 
@@ -163,7 +163,8 @@ Notes:
 - Column headers are variables and not values
 - Each column contains one variable
 - Observations constitue a row, variables a column
-- Multiple types of observations are stored in one table, and vice versa
+- Multiple types of observations aren't stored in one table
+- One type of observation isn't stored across multiple tables
 
 ===
 
