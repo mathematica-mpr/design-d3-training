@@ -119,12 +119,12 @@ Notes:
 In *Tidy Data (2014)*, Hadley Wickham lays out the benefits of tidy data and how to use it.
 
 #### Wide data: Untidy data set
-|         | ScenarioA | ScenarioB |
-| ----    | -----     | -----     |
-| Kim     | 18        | 2         |
-| John    | 38        | 5         |
-| Ellen   | 10        | 29        |
-| Marcus  | 17        | 15        |
+|            | < 20K | 20K - 40K | 40K - 60K |
+| ----       | ----- | -----     | -----     |
+| Main St    | 18    | 2         | 54        |
+| Maple Ave  | 38    | 5         | 12        |
+| Baker Lane | 10    | 29        | 34        |
+| Fourth St  | 17    | 15        | 22        |
 
 Notes:
 
@@ -136,16 +136,20 @@ Notes:
 ---
 
 #### Long data: tidy data set
-|  Name   | Scenario | Result |
-| ----    | -----    | -----  |
-| Kim     | A        | 18     |
-| John    | A        | 38     |
-| Ellen   | A        | 10     |
-| Marcus  | A        | 17     |
-| Kim     | B        | 2      |
-| John    | B        | 5      |
-| Ellen   | B        | 29     |
-| Marcus  | B        | 15     |
+|            | Income    | Value |
+| ----       | -----     | ----- |
+| Main St    | < 20K     | 18    |
+| Maple Ave  | < 20K     | 38    |
+| Baker Lane | < 20K     | 10    |
+| Fourth St  | < 20K     | 17    |
+| Main St    | 20K - 40K | 2     |
+| Maple Ave  | 20K - 40K | 5     |
+| Baker Lane | 20K - 40K | 29    |
+| Fourth St  | 20K - 40K | 15    |
+| Main St    | 40K - 60K | 54    |
+| Maple Ave  | 40K - 60K | 12    |
+| Baker Lane | 40K - 60K | 34    |
+| Fourth St  | 40K - 60K | 22    |
 
 Notes:
 - Tidy data sets enable us to draw a connection between the physical structure of data and with the metrics we'd be interested in visualizing
@@ -157,7 +161,7 @@ Notes:
 ### Ways to tidy up messy data
 
 - Column headers are variables and not values
-- Each column contains on variable
+- Each column contains one variable
 - Observations constitue a row, variables a column
 - Multiple types of observations are stored in one table, and vice versa
 
@@ -186,6 +190,10 @@ In *Semiology of Graphics (1967)*, Jacques Bertin presented the following dimens
 Notes:
 
 * Visual representation of quantitative values in a graphic
+* Visual variables make up "the world of images" - Jacques Bertin
+* This could be encoding length, area, volume to be represent a data point's magnitude
+* Within certain cultural context, color (red and blue) could denote hot and cold
+* Light to dark can represent a continuous scale of increasing values
 
 ---
 
@@ -200,21 +208,6 @@ In *Data Points: Visualization That Means Something (2013)*, Nathan Yau presente
 * Volume
 * Color saturation
 * Color hue
-
----
-
-### Not all dimensions are created equal
-
-* Preattentive attributes: those that are distinguishable and comparable at first glance, without any thinking or specific attention
-  * Length
-  * Color
-
-Notes:
-
-* Visual variables make up "the world of images" - Jacques Bertin
-* This is a bit of a nebulous area. Attributes can be preattentive in some contexts but not in others
-* Your choice can depend a lot on context and other constraints
-  * color on maps rather than length
 
 ---
 
@@ -245,6 +238,8 @@ Notes:
 Notes:
 
 * A simple choropleth map would have been more effective
+* Also ask what do we want to get out of the data viz?
+* If it's not compare areas relative to one another, this data viz accomplishes that
 
 ---
 
@@ -255,7 +250,7 @@ Notes:
 Notes:
 
 * Look out for data visualization in the wild and critique it
-* Think about whether there would be a clearer way
+* Think about whether there would be a clearer and more intentional way to show something
 * Learn to trust your gut--not all visualizations will be obviously good or bad
 
 ===
@@ -268,7 +263,7 @@ Notes:
 
 ### Assignment 1
 
-[Details](https://github.com/mathematica-mpr/design-d3-training/blob/development/D3/materials/Week%201/Assignment/Assignment%201.md)
+[Details](https://github.com/mathematica-mpr/design-d3-training/blob/development/design-series/materials/Week%201/Assignment/Assignment%201.md)
 
 Notes:
 
