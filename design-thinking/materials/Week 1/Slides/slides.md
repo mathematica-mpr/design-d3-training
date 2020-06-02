@@ -1,4 +1,4 @@
-## Basics of Visualization Design (Part 1)
+## How to conceptualize data and why data visualizations?
 
 ##### Representing data effectively
 
@@ -12,6 +12,18 @@ Notes:
 
 ===
 
+## What is data visualization?
+
+---
+
+*In its most basic form, visualization is simply mapping data to geometry and color.* (Yau, 2013, p. 93)
+
+Notes:
+
+- Way to translate data or real life to graphics or visual representations
+
+---
+
 ### Why Data Visualization?
 
 * Mental processing speed
@@ -19,8 +31,6 @@ Notes:
 * Distillation of large datasets
 
 ---
-
-<!-- .slide: class="processing-speed" data-state="processing-speed" -->
 
 <style>
     .processing-speed table { margin-left: 0; }
@@ -51,8 +61,6 @@ Notes:
 * Immediately obvious from the graph which was highest
 
 ---
-
-<!-- .slide: class="pattern-discovery" data-state="pattern-discovery" -->
 
 <style>
     .pattern-discovery .img {
@@ -99,142 +107,14 @@ Notes:
 
 ### People love it!
 
-===
+---
 
-### General Design Principles
-
-* High data-ink ratio
-* Simplicity
-* Focus
-* Objectivity
-* Completeness
-* Accessibility
-* Intentionality
+### How can we conceptualize data?
+#### Long vs. wide data
 
 ---
 
-### The Data-Ink Ratio
-
-* Avoid unnecessary frills
-* Each element has a purpose
-
-<img class="img" src="materials/Week 1/Slides/resources/data2ink.jpg" style="border:none">
-<div class="source">Source: https://datahero.com/blog/2017/06/06/4-data-design-principles/</div>
-
-Notes:
-
-* It's possible to go overboard here
-
----
-
-### Simplicity
-
-* User shouldn't need an instruction manual
-* Prettier isn't always better
-* Boring can be good
-
-<a target="_blank" href="https://www.theguardian.com/environment/ng-interactive/2014/dec/01/carbon-emissions-past-present-and-future-interactive">Carbon Emissions</a>
-
-VS
-
-<a target="_blank" href="https://www.nytimes.com/interactive/2014/upshot/buy-rent-calculator.html">Rent or Buy</a>
-
-Notes:
-
-* Visualization should never add complexity to your data
-* Complex concepts can sometimes require complex visualization
-* Emissions: simple data visualized complexly
-* NYT: complex concept visualized simply
-
----
-
-### Focus
-
-* Know your visualization's purpose
-* Know your audience
-* Draw attention to key values
-
-<img class="img" src="materials/Week 1/Slides/resources/incarceration.png" style="border:none; height: 350px">
-<div class="source">Source: https://priceonomics.com/is-mass-incarceration-in-america-actually-on-the/</div>
-
-Notes:
-
-* This is VERY important on projects
-* Gather requirements before putting pen to paper
-  * You can create a beautiful, effective vis, but if it answers the wrong question then it's useless
-* Brainstorm with class other ways that this data could have been presented
-
----
-
-### Objectivity
-
-* Let the user make judgments, don't force yours
-* Never purposely deceive
-* Explain assumptions, filters, and transformations
-* Give appropriate context
-
-<img class="img" src="materials/Week 1/Slides/resources/fox-apprehensions.jpg" style="border:none; height: 350px">
-<div class="source">Source: https://www.mediamatters.org/blog/2013/04/05/fox-news-newest-dishonest-chart-immigration-enf/193507</div>
-
-Notes:
-
-* Axis doesn't start at zero
-  * Bar charts ALWAYS have 0-start axes
-  * Line charts can be different
-* Follow link to show context
-
----
-
-### Completeness
-
-* Don't make the user guess
-* Labels, labels, labels
-* Ask an outsider
-
-<img class="img" src="materials/Week 1/Slides/resources/power-bi-color.png" style="border:none">
-<div class="source">Source: https://docs.microsoft.com/en-us/power-bi/power-bi-visualization-best-practices</div>
-
-Notes:
-
-* Context is important here too
-* We run into this a lot a MPR
-  * Make sure that you design for your audience. Not everyone is a health policy expert
-
----
-
-### Accessibility
-
-* Color blindness
-* Not just 508 compliance
-
-<img class="img" src="materials/Week 1/Slides/resources/Gradientsbad1.png" style="border:none">
-<div class="source">Source: http://www.dundas.com/support/blog/visualizing-for-the-color-blind</div>
-
-Notes:
-
-* DON'T USE RED AND GREEN TO REPRESENT +/-
-
----
-
-<img class="img" src="materials/Week 1/Slides/resources/evapotranspiration-map.jpg" style="border:none; width:70%">
-<div class="source">Source: https://eagereyes.org/basics/rainbow-color-map</div>
-
-Notes:
-
-* This isn't readable by anyone, colorblind or not
-
----
-
-### Intentionality
-
-* Every element should have a purpose
-
-<img class="img" src="materials/Week 1/Slides/resources/plot-lines-visualization.png" style="border:none">
-<div class="source">Source: https://saberni.com/use-data-visualization-data-mining-and-predictive-analytics-to-create-effective-b2b-marketing-campaigns/</div>
-
-Notes:
-
-* Don't do something just because it looks pretty
+[Insert talking points for tidy data reading]
 
 ===
 
@@ -244,16 +124,32 @@ Notes:
 
 #### What are dimensions?
 
-* Length
-* Color (hue)
-* Color (intensity)
-* Angle
+In *Semiology of Graphics (1967)*, Jacques Bertin presented the following dimensions as "visual variables":
 * Position
-* Area
+* Size
+* Shape
+* Value
+* Color hue
 * Orientation
-* Slope
-* Added marks
-* Many more
+* Texture
+
+Notes:
+
+* Visual representation of quantitative values in a graphic
+
+---
+
+In *Data Points: Visualization That Means Something (2013)*, Nathan Yau presented the following dimensions as "visual cues":
+
+* Position
+* Length
+* Angle
+* Direction
+* Shapes
+* Area
+* Volume
+* Color saturation
+* Color hue
 
 ---
 
@@ -265,6 +161,7 @@ Notes:
 
 Notes:
 
+* Visual variables make up "the world of images" - Jacques Bertin
 * This is a bit of a nebulous area. Attributes can be preattentive in some contexts but not in others
 * Your choice can depend a lot on context and other constraints
   * color on maps rather than length
@@ -313,44 +210,7 @@ Notes:
 
 ===
 
-## Critiques
-
----
-
-<a href="https://pudding.cool/2017/02/vocabulary/">https://pudding.cool/2017/02/vocabulary/</a>
-
-Notes:
-
-* Pros
-  * Really good focus and annotations
-  * Easy to see distribution (sort of like a stream graph)
-* Cons
-  * Faces might be a bit much
-  * Missed opportunities
-    * Size circles based on sales
-    * Color based on subgenre
-    * Reorganize circles when coloring by region
-
----
-
-<img class="img" src="materials/Week 1/Slides/resources/tumblr_ms9pq9mvtR1sgh0voo1_1280.png" style="border:none; width:70%">
-<div class="source">Source: http://viz.wtf/post/59697293967/hes-243-baby-boomer</div>
-
-Notes:
-
-* Pros
-  * Data-ink ratio
-  * Good labeling
-* Cons
-  * No reason for person shape
-  * Don't stack percentages that don't add to 100
-  * Sizes don't relate to percentages
-  * What are the quotes for??
-  * Numbers should be aligned
-
-===
-
-### Cool Tools
+### A Cool Prototyping Tool
 
 * [Figma](https://www.figma.com/)
 
@@ -358,7 +218,7 @@ Notes:
 
 ### Assignment 1
 
-[Details](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%201/Assignment/Assignment%201.md)
+[Details](https://github.com/mathematica-mpr/design-d3-training/blob/development/D3/materials/Week%201/Assignment/Assignment%201.md)
 
 Notes:
 
@@ -368,4 +228,4 @@ Notes:
 
 ### Submitting Assignments
 
-[Instructions](https://github.com/linusmarco/d3-training/blob/master/src/materials/Assignment%20Submission%20Instructions.md)
+[Instructions](https://github.com/mathematica-mpr/design-d3-training/blob/development/resources/Assignment%20Submission%20Instructions.md)

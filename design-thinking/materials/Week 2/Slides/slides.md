@@ -17,6 +17,145 @@ Notes:
 
 ===
 
+### General Design Principles
+
+In *The Visual Display of Quantitative Information (1982)*, Edward Tufte presents six fundamental principles of design:
+
+* High data-ink ratio
+* Simplicity
+* Focus
+* Objectivity
+* Completeness
+* Accessibility
+* Intentionality
+
+---
+
+### The Data-Ink Ratio
+
+* Avoid unnecessary frills
+* Each element has a purpose
+
+<img class="img" src="materials/Week 1/Slides/resources/data2ink.jpg" style="border:none">
+<div class="source">Source: https://datahero.com/blog/2017/06/06/4-data-design-principles/</div>
+
+Notes:
+
+* It's possible to go overboard here
+
+---
+
+### Simplicity
+
+* User shouldn't need an instruction manual
+* Prettier isn't always better
+* Boring can be good
+
+<a target="_blank" href="https://www.theguardian.com/environment/ng-interactive/2014/dec/01/carbon-emissions-past-present-and-future-interactive">Carbon Emissions</a>
+
+VS
+
+<a target="_blank" href="https://www.nytimes.com/interactive/2014/upshot/buy-rent-calculator.html">Rent or Buy</a>
+
+Notes:
+
+* Visualization should never add complexity to your data
+* Complex concepts can sometimes require complex visualization
+* Emissions: simple data visualized complexly
+* NYT: complex concept visualized simply
+
+---
+
+### Focus
+
+* Know your visualization's purpose
+* Know your audience
+* Draw attention to key values
+
+<img class="img" src="materials/Week 1/Slides/resources/incarceration.png" style="border:none; height: 350px">
+<div class="source">Source: https://priceonomics.com/is-mass-incarceration-in-america-actually-on-the/</div>
+
+Notes:
+
+* This is VERY important on projects
+* Gather requirements before putting pen to paper
+  * You can create a beautiful, effective vis, but if it answers the wrong question then it's useless
+* Brainstorm with class other ways that this data could have been presented
+
+---
+
+### Objectivity
+
+* Let the user make judgments, don't force yours
+* Never purposely deceive
+* Explain assumptions, filters, and transformations
+* Give appropriate context
+
+<img class="img" src="materials/Week 1/Slides/resources/fox-apprehensions.jpg" style="border:none; height: 350px">
+<div class="source">Source: https://www.mediamatters.org/blog/2013/04/05/fox-news-newest-dishonest-chart-immigration-enf/193507</div>
+
+Notes:
+
+* Axis doesn't start at zero
+  * Bar charts ALWAYS have 0-start axes
+  * Line charts can be different
+* Follow link to show context
+
+---
+
+### Completeness
+
+* Don't make the user guess
+* Labels, labels, labels
+* Ask an outsider
+
+<img class="img" src="materials/Week 1/Slides/resources/power-bi-color.png" style="border:none">
+<div class="source">Source: https://docs.microsoft.com/en-us/power-bi/power-bi-visualization-best-practices</div>
+
+Notes:
+
+* Context is important here too
+* We run into this a lot a MPR
+  * Make sure that you design for your audience. Not everyone is a health policy expert
+
+---
+
+### Accessibility
+
+* Color blindness
+* Not just 508 compliance
+
+<img class="img" src="materials/Week 1/Slides/resources/Gradientsbad1.png" style="border:none">
+<div class="source">Source: http://www.dundas.com/support/blog/visualizing-for-the-color-blind</div>
+
+Notes:
+
+* DON'T USE RED AND GREEN TO REPRESENT +/-
+
+---
+
+<img class="img" src="materials/Week 1/Slides/resources/evapotranspiration-map.jpg" style="border:none; width:70%">
+<div class="source">Source: https://eagereyes.org/basics/rainbow-color-map</div>
+
+Notes:
+
+* This isn't readable by anyone, colorblind or not
+
+---
+
+### Intentionality
+
+* Every element should have a purpose
+
+<img class="img" src="materials/Week 1/Slides/resources/plot-lines-visualization.png" style="border:none">
+<div class="source">Source: https://saberni.com/use-data-visualization-data-mining-and-predictive-analytics-to-create-effective-b2b-marketing-campaigns/</div>
+
+Notes:
+
+* Don't do something just because it looks pretty
+
+===
+
 ### 3 Types:
 
 * Explanatory (narrative)
