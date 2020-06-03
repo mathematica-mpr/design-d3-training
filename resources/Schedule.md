@@ -173,7 +173,7 @@ An important step of the requirements gathering process is interacting with stak
 
 #### Assignments
 
-2. [Assignment 3](https://github.com/mathematica-mpr/design-d3-training/blob/development/d3-series/materials/Week%203/Assignment/Assignment%203.md)
+[Assignment 3](https://github.com/mathematica-mpr/design-d3-training/blob/development/d3-series/materials/Week%203/Assignment/Assignment%203.md)
 
 ---
 
