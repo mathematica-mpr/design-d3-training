@@ -19,6 +19,7 @@ Notes:
 Notes:
 
 - Way to translate data or real life to graphics or visual representations
+- Data visualization can also encompass aesthetics, but the core of this class will be focusing on binding data to graphics and dimensions (for example color)
 
 ---
 
@@ -114,45 +115,50 @@ Notes:
 ### How can we conceptualize data?
 #### Long vs. wide data
 
+Notes:
+
+- Before we dive into how to create data viz, it's important to understand the data set you're working with and how to identify the metrics you want to visualize
+
 ---
 
 In *Tidy Data (2014)*, Hadley Wickham lays out the benefits of tidy data and how to use it.
 
 #### Wide data: Untidy data set
-|            | < $20K | $20K - $40K | $40K - $60K |
-| ----       | -----  | -----       | -----       |
-| Main St    | 18     | 2           | 54          |
-| Maple Ave  | 38     | 5           | 12          |
-| Baker Lane | 10     | 29          | 34          |
-| Fourth St  | 17     | 15          | 22          |
+|            | Blue   | Red   | Yellow |
+| ----       | -----  | ----- | -----  |
+| Main St    | 18     | 2     | 54     |
+| Maple Ave  | 38     | 5     | 12     |
+| Baker Lane | 10     | 29    | 34     |
+| Fourth St  | 17     | 15    | 22     |
 
 Notes:
 
 - Article is written from the perspective of a data scientists using R
 - Goal of paper is to propose a set of standards of how to tidy data for data processing, analyzing, and visualizing
 - Typical data set you might get
-- Each different 
+- The way this is laid out, the single dimension of house color is split across different columns
+- Wide data can be easier to analyze if you're curious on how many yellow houses Fourth St has
 
 ---
 
 #### Long data: tidy data set
-|            | Income    | Value |
-| ----       | -----     | ----- |
-| Main St    | < 20K     | 18    |
-| Maple Ave  | < 20K     | 38    |
-| Baker Lane | < 20K     | 10    |
-| Fourth St  | < 20K     | 17    |
-| Main St    | 20K - 40K | 2     |
-| Maple Ave  | 20K - 40K | 5     |
-| Baker Lane | 20K - 40K | 29    |
-| Fourth St  | 20K - 40K | 15    |
-| Main St    | 40K - 60K | 54    |
-| Maple Ave  | 40K - 60K | 12    |
-| Baker Lane | 40K - 60K | 34    |
-| Fourth St  | 40K - 60K | 22    |
+|            | Color  | Value |
+| ----       | -----  | ----- |
+| Main St    | Blue   | 18    |
+| Maple Ave  | Blue   | 38    |
+| Baker Lane | Blue   | 10    |
+| Fourth St  | Blue   | 17    |
+| Main St    | Red    | 2     |
+| Maple Ave  | Red    | 5     |
+| Baker Lane | Red    | 29    |
+| Fourth St  | Red    | 15    |
+| Main St    | Yellow | 54    |
+| Maple Ave  | Yellow | 12    |
+| Baker Lane | Yellow | 34    |
+| Fourth St  | Yellow | 22    |
 
 Notes:
-- Tidy data sets enable us to draw a connection between the physical structure of data and with the metrics we'd be interested in visualizing
+- But I'd argue that long data, which happens to follow the tidy data structure enables us to draw a connection between the physical structure of data and with the metrics we'd be interested in visualizing
 - Here every value belongs to a variable (column) and observation (row)
 - The table structure helps us to assign variables to axes and identify which visual graphics we want to map to the data
 
