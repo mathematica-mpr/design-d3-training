@@ -187,3 +187,22 @@ Note:
 
 - Talk about reasoning behind this
 - Always be aware
+
+---
+
+### Resources
+
+#### Interactive
+
+- CodeWars -- https://www.codewars.com/
+- Codecademy -- https://www.codecademy.com/
+- nodeschool -- https://nodeschool.io/
+
+#### Books
+
+- JavaScript: The Good Parts By Douglas Crockford
+- You Don't know JS (Series) -- https://github.com/getify/You-Dont-Know-JS
+
+#### Videos
+
+- js-must-watch -- https://github.com/bolshchikov/js-must-watch?utm_content=buffer7f8d6&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
