@@ -1,13 +1,13 @@
 # Schedule
 
-### **Week 1 (Design Thinking):** How to conceptualize the data and why data visualizations?
+### **Week 1 (Design series):** How to conceptualize the data and why data visualizations?
 
 #### Key Concepts
 
-- Why do we use data visualizations?
+- What is data visualization and why we should use it.
 - Conceptualizing data and translating it to a visualization
   - Looking at long vs. wide data structures
-- Visual variables for displaying data from Semiology of Graphics (1967)
+- Visual variables and using dimensions
   - Position
   - Size
   - Shape
@@ -28,7 +28,7 @@ This is an overview and introduction to web technologies including HTML, CSS and
 
 #### Assignments
 
-[Assignment 1](d3-series/materials/Week%201/Assignment/Assignment%201.md)
+[Assignment 1](https://github.com/mathematica-mpr/design-d3-training/blob/development/design-series/materials/Week%201/Assignment/Assignment%201.md)
 
 #### Additional Resources
 
@@ -36,7 +36,7 @@ For learning HTML/CCS/JS: [codecademy.com](https://www.codecademy.com)
 
 ---
 
-### **Week 1 (D3):**
+### **Week 1 (d3 series):**
 
 #### Key Concepts
 
@@ -46,13 +46,19 @@ Class slides
 
 #### Reading
 
+[Interactive Data Visualization for the Web: Chapter 3](d3js.pdf) (due Week 3)
+
+This is an overview and introduction to web technologies including HTML, CSS and JavaScript
+
 #### Assignments
+
+No assignments for this class!
 
 #### Additional Resources
 
 ---
 
-### **Week 2 (Design Thinking):** What makes a good visualization?
+### **Week 2 (Design series):** What makes a good visualization?
 
 #### Key Concepts
 
@@ -80,15 +86,16 @@ This is an overview and introduction to web technologies including HTML, CSS and
 
 ### Assignments
 
-[Assignment 2](../d3-series/materials/Week%202/Assignment/Assignment%202.md)
+1. Find dataset(s) out in the wild that you would like to use for your final project
+2. [Assignment 2](https://github.com/mathematica-mpr/design-d3-training/blob/development/design-series/materials/Week%202/Assignment/Assignment%202.md)
 
 ### Additional Resources
 
-- For learning HTML/CCS/JS: [codecademy.com](https://www.codecademy.com)
+For learning HTML/CCS/JS: [codecademy.com](https://www.codecademy.com)
 
 ---
 
-### **Week 2 (D3):** Data Manipulation in JavaScript
+### **Week 2 (d3 series):** Data Manipulation in JavaScript
 
 #### Key Concepts
 
@@ -112,11 +119,11 @@ This is an overview and introduction to web technologies including HTML, CSS and
 
 #### Assignments
 
-[Assignment 2](../d3-series/materials/Week%206/Assignment/Assignment%206.md)
+[Assignment 2](https://github.com/mathematica-mpr/design-d3-training/blob/development/d3-series/materials/Week%206/Assignment/Assignment%206.md)
 
 ---
 
-### **Week 3 (Design Thinking):** How can we engage stakeholders during the design phase?
+### **Week 3 (Design series):** How can we engage stakeholders during the design phase?
 
 #### Key Concepts
 
@@ -146,7 +153,7 @@ An important step of the requirements gathering process is interacting with stak
 
 ---
 
-### **Week 3 (D3):** D3 Fundamentals
+### **Week 3 (d3 series):** D3 Fundamentals
 
 #### Key Concepts
 
@@ -166,12 +173,11 @@ An important step of the requirements gathering process is interacting with stak
 
 #### Assignments
 
-1. Find dataset(s) out in the wild that you would like to use for your final project
-2. [Assignment 3](../d3-series/materials/Week%203/Assignment/Assignment%203.md)
+[Assignment 3](https://github.com/mathematica-mpr/design-d3-training/blob/development/d3-series/materials/Week%203/Assignment/Assignment%203.md)
 
 ---
 
-### **Week 4 (Design Thinking):** How do we construct a prototype?
+### **Week 4 (Design series):** How do we construct a prototype?
 
 ### Key Concepts
 
@@ -204,7 +210,7 @@ Please see the wireframe section of the class materials for more information. Pl
 
 ---
 
-### **Week 4 (D3):** Static Charts, Part 1
+### **Week 4 (d3 series):** Static Charts, Part 1
 
 #### Key Concepts
 
@@ -221,11 +227,11 @@ Please see the wireframe section of the class materials for more information. Pl
 
 #### Assignments
 
-[Assignment 4](../d3-series/materials/Week%204/Assignment/Assignment%204.md)
+[Assignment 4](https://github.com/mathematica-mpr/design-d3-training/blob/development/d3-series/materials/Week%204/Assignment/Assignment%204.md)
 
 ---
 
-### **Week 5 (D3):** Static Charts, Part 2
+### **Week 5 (d3 series):** Static Charts, Part 2
 
 #### Key Concepts
 
@@ -242,11 +248,11 @@ Please see the wireframe section of the class materials for more information. Pl
 #### Assignments
 
 1. Sketch of final project
-2. [Assignment 5](../d3-series/materials/Week%205/Assignment/Assignment%205.md)
+2. [Assignment 5](https://github.com/mathematica-mpr/design-d3-training/blob/development/d3-series/materials/Week%205/Assignment/Assignment%205.md)
 
 ---
 
-## **Week 6 (D3):** Maps
+## **Week 6 (d3 series):** Maps
 
 ### Key Concepts
 
@@ -262,11 +268,11 @@ Please see the wireframe section of the class materials for more information. Pl
 
 ### Assignments
 
-[Assignment 6](../d3-series/materials/Week%207/Assignment/Assignment%207.md)
+[Assignment 6](https://github.com/mathematica-mpr/design-d3-training/blob/development/d3-series/materials/Week%207/Assignments/Assignment%207.md)
 
 ---
 
-### **Week 7 (D3):** Interactions and Transitions
+### **Week 7 (d3 series):** Interactions and Transitions
 
 #### Key Concepts
 
@@ -284,7 +290,7 @@ Please see the wireframe section of the class materials for more information. Pl
 
 #### Assignments
 
-1. [Assignment 7](../d3-series/materials/Week%208/Assignment/Assignment%208.md)
+1. [Assignment 7](https://github.com/mathematica-mpr/design-d3-training/blob/development/d3-series/materials/Week%208/Assignments/Assignment%208.md)
 2. Re-read [Interactive Data Visualization for the Web: Chapter 3](d3js.pdf) (Continued from Week 1)
 
 ---
