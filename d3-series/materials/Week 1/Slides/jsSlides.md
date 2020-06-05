@@ -28,7 +28,7 @@ Example (index.html)
 
 Document Object Model: should be thought of as an API into your document.
 
-<img class="img" src="materials/Week 3/Slides/resources/ExampleDOM.png" style="width:80%">
+<img class="img" src="materials/Week 1/Slides/resources/ExampleDOM.png" style="width:80%">
 
 ---
 
@@ -52,6 +52,8 @@ Casading Style Sheets: Add style and much more
 </style>
 <div class="my-class">Hello world</div>
 ```
+
+---
 
 <div style="font-size: 0.5em">External Style Sheet</div>
 
@@ -198,10 +200,14 @@ Note:
 - Codecademy -- https://www.codecademy.com/
 - nodeschool -- https://nodeschool.io/
 
+---
+
 #### Books
 
 - JavaScript: The Good Parts By Douglas Crockford
 - You Don't know JS (Series) -- https://github.com/getify/You-Dont-Know-JS
+
+---
 
 #### Videos
 
