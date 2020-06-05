@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css" />
+    <link rel="stylesheet" href="node_modules/reveal.js/css/theme/white.css" />
+    <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css" />
+
+    <style>
+      .reveal .slides section .source {
+        font-size: 0.3em;
+      }
+
+      .reveal .slides section .code-file-name {
+        width: 85%;
+        margin: 0 auto -0.5em auto;
+        text-align: left;
+        font-size: 0.7em;
+      }
+    </style>
+
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? 'node_modules/reveal.js/css/print/pdf.css'
+        : 'node_modules/reveal.js/css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section
+          data-markdown="materials/Week 1/Slides/slides.md"
+          data-separator="^\r?\n===\r?\n$"
+          data-separator-vertical="^\r?\n---\r?\n$"
+        ></section>
+        <section
+          data-markdown="materials/Week 2/Slides/slides.md"
+          data-separator="^\r?\n===\r?\n$"
+          data-separator-vertical="^\r?\n---\r?\n$"
+        ></section>
+      </div>
+    </div>
+    <script src="node_modules/d3/build/d3.min.js"></script>
+    <script src="node_modules/reveal.js/js/reveal.js"></script>
+    <script src="node_modules/reveal.js/plugin/markdown/marked.js"></script>
+    <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        controlsTutorial: false,
+      });
+
+      Reveal.addEventListener('slidechanged', function (event) {
+        document.querySelectorAll('pre code').forEach(function (block, i) {
+          hljs.highlightBlock(block);
+        });
+
+        var dynamicEl = document.getElementById('dynamic');
+        if (dynamicEl) {
+          dynamicEl.onclick = function () {
+            var i = 21;
+            var mult = 1;
+            setInterval(function () {
+              if (i === 60) mult = -1;
+              if (i === 20) mult = 1;
+              mult === 1 ? i++ : i--;
+              document
+                .getElementById('dynamic')
+                .setAttribute(
+                  'style',
+                  'position:fixed; top: 40%; left:' + i + '%'
+                );
+            }, 20);
+          };
+        }
+      });
+    </script>
+    <script src="materials/Week 1/Slides/resources/line-chart.js"></script>
+  </body>
+</html>
