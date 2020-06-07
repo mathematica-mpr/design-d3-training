@@ -1,12 +1,12 @@
-## Basics of Visualization Design (Part 2)
+## What is good data visualization?
 
 ##### Types of visualization tools
 
-===
+---
 
 ## Review
 
-[Assignment 1](materials/Week 1/Assignment)
+[Assignment 1](https://github.com/mathematica-mpr/design-d3-training/blob/development/design-series/materials/Week%201/Assignment/Assignment%201.md)
 
 Notes:
 
@@ -19,8 +19,6 @@ Notes:
 
 ### General Design Principles
 
-In *The Visual Display of Quantitative Information (1982)*, Edward Tufte presents six fundamental principles of design:
-
 * High data-ink ratio
 * Simplicity
 * Focus
@@ -29,65 +27,80 @@ In *The Visual Display of Quantitative Information (1982)*, Edward Tufte present
 * Accessibility
 * Intentionality
 
+Notes:
+
+* This class isn't about determining the best type of chart to use for a given data set
+* Concepts will help to enbolden you (the designer) to make good decisions when creating a data viz 
 ---
 
-### The Data-Ink Ratio
+### Maximize the Data-Ink Ratio
 
-* Avoid unnecessary frills
-* Each element has a purpose
+* *Above all else, show the data.* - Edward Tufte, 1983
+* Reduce the amount of unecessary frills
 
 <img class="img" src="materials/Week 1/Slides/resources/data2ink.jpg" style="border:none">
 <div class="source">Source: https://datahero.com/blog/2017/06/06/4-data-design-principles/</div>
 
 Notes:
 
+* *The Visual Display of Quantitative Information* (1983)
+* Each element has a purpose
 * It's possible to go overboard here
 
 ---
 
-### Simplicity
+### Simplicity vs. Complexity
 
 * User shouldn't need an instruction manual
 * Prettier isn't always better
 * Boring can be good
 
-<a target="_blank" href="https://www.theguardian.com/environment/ng-interactive/2014/dec/01/carbon-emissions-past-present-and-future-interactive">Carbon Emissions</a>
-
-VS
-
-<a target="_blank" href="https://www.nytimes.com/interactive/2014/upshot/buy-rent-calculator.html">Rent or Buy</a>
+<a target="_blank" href="https://www.theguardian.com/environment/ng-interactive/2014/dec/01/carbon-emissions-past-present-and-future-interactive">Carbon Emissions</a> vs. <a target="_blank" href="https://www.nytimes.com/interactive/2014/upshot/buy-rent-calculator.html">Rent or Buy</a>
 
 Notes:
 
 * Visualization should never add complexity to your data
 * Complex concepts can sometimes require complex visualization
 * Emissions: simple data visualized complexly
+* Difficult to see change over time within an individual country
 * NYT: complex concept visualized simply
 
 ---
 
 ### Focus
 
-* Know your visualization's purpose
-* Know your audience
+* *What do I want the audience to get out of the viz?* 
+* Understand the needs/knowledge of your audience
 * Draw attention to key values
-
-<img class="img" src="materials/Week 1/Slides/resources/incarceration.png" style="border:none; height: 350px">
-<div class="source">Source: https://priceonomics.com/is-mass-incarceration-in-america-actually-on-the/</div>
 
 Notes:
 
 * This is VERY important on projects
 * Gather requirements before putting pen to paper
   * You can create a beautiful, effective vis, but if it answers the wrong question then it's useless
+
+---
+
+<img class="img" src="materials/Week 2/Slides/resources/COVID_dataisugly.png" style="border:none; height: 600px">
+<div class="source">Source: https://www.reddit.com/r/dataisugly/comments/fp3d4t/post_made_midpandemic_with_no_date_for_reference/</div>
+
+Notes:
+
 * Brainstorm with class other ways that this data could have been presented
+---
+
+<div style="float:left; width:50%"><img class="img" src="materials/Week 2/Slides/resources/COVID_dataisugly.png" style="border:none">
+<div class="source" style="font-size:0.2em">Source: https://www.reddit.com/r/dataisugly/comments/fp3d4t/post_made_midpandemic_with_no_date_for_reference/</div></div>
+
+
+<div style="float:right; width:50%"><img class="img" src="materials/Week 2/Slides/resources/COVID_dataisbeautiful.png" style="border:none">
+<div class="source" style="font-size:0.2em">Source: https://www.reddit.com/r/dataisbeautiful/comments/fp76db/death_count_of_various_pandemics_as_a_ratio_of/?utm_medium=android_app&utm_source=share</div></div>
 
 ---
 
 ### Objectivity
 
-* Let the user make judgments, don't force yours
-* Never purposely deceive
+* Be wary of introducing bias
 * Explain assumptions, filters, and transformations
 * Give appropriate context
 
@@ -97,8 +110,8 @@ Notes:
 Notes:
 
 * Axis doesn't start at zero
-  * Bar charts ALWAYS have 0-start axes
-  * Line charts can be different
+  * Bar charts ALWAYS have 0-start axes since bar charts are compared by their area and height
+  * Line charts can be different, often have time as the x-axis and therefore can show change over time
 * Follow link to show context
 
 ---
@@ -116,7 +129,8 @@ Notes:
 
 * Context is important here too
 * We run into this a lot a MPR
-  * Make sure that you design for your audience. Not everyone is a health policy expert
+  * Make sure that you design for your audience
+  * Not everyone is a health policy expert
 
 ---
 
@@ -147,22 +161,29 @@ Notes:
 
 * Every element should have a purpose
 
-<img class="img" src="materials/Week 1/Slides/resources/plot-lines-visualization.png" style="border:none">
-<div class="source">Source: https://saberni.com/use-data-visualization-data-mining-and-predictive-analytics-to-create-effective-b2b-marketing-campaigns/</div>
+<img class="img" src="materials/Week 2/Slides/resources/plot-lines-visualization.png" style="border:none; height:450px">
+<div class="source">Source: https://ebookfriendly.com/best-book-visualizations/the-recipe-for-writing-a-bestseller-infographic-2/</div>
 
 Notes:
 
 * Don't do something just because it looks pretty
 
+---
+
+### Good and Bad Data Viz Examples
+
+[r/dataisbeautiful](https://www.reddit.com/r/dataisbeautiful/)
+[r/dataisugly](https://www.reddit.com/r/dataisugly/)
+
 ===
 
-### 3 Types:
+### Types of data viz:
 
-* Explanatory (narrative)
+* Explanatory/Narrative
 * Exploratory
 * Dashboards
 
-===
+---
 
 ## Explanatory/Narrative Tools
 
@@ -179,7 +200,7 @@ Notes:
 
 ### When should they be used?
 
-* When you have a piece of information or a message that you want to communicate to the user/reader/client
+* When you have a piece of information or a message that you want to communicate to the audience
 * To explain the results of an analysis or study
 * In support of an argument
 * When the user may not have deep prior knowledge of the data
@@ -188,38 +209,25 @@ Notes:
 
 ### Strengths
 
-* Focused and direct
-* More easily customizable
-* Easier to design/build
+* Great story telling tool
+* Lower LOE to design and build
 
 Notes:
 
-* Only needs to handle a single instance of data, and thus can be designed to fit the data rather than needing to adapt to any data that may be plugged into it
-
----
-
-### Weaknesses
-
-* Inflexible
-* Context-dependent
+* only needs to handle a single instance of data
+* can be designed to fit the data rather than needing to adapt to any data that may be plugged into it
 
 ---
 
 ## Examples
 
----
-
 https://www.mathematica-mpr.com/dataviz/county-unemployment-map
-
----
 
 https://www.mathematica-mpr.com/dataviz/snap
 
----
-
 http://guns.periscopic.com/?year=2013
 
-===
+---
 
 ## Exploratory Tools
 
@@ -249,10 +257,10 @@ http://guns.periscopic.com/?year=2013
 
 ---
 
-### Weaknesses
+### Drawbacks
 
 * Unfocused, harder to control
-* Harder to design/build
+* Higher LOE to design and build
 * Can allow user to come to less-than-sound conclusions if they have bias or ignorance coming in
 
 Notes:
@@ -263,21 +271,20 @@ Notes:
 
 ## Examples
 
----
-
 https://trends.google.com/trends/explore?date=all&q=%2Fm%2F018w8,%2Fm%2F018jz
-
----
 
 https://demos.qlik.com/qliksense/OpioidCrisisAnalysis
 
----
-
 https://projects.fivethirtyeight.com/mortality-rates-united-states/
 
-===
+---
 
 ## Dashboards
+
+Notes:
+
+* The term "dashboard" is overused
+* Dashboards are meant to meet the specific need to informing real-time actions of its users
 
 ---
 
@@ -290,7 +297,7 @@ https://projects.fivethirtyeight.com/mortality-rates-united-states/
 
 Notes:
 
-* Simplest dashboard could just be simple OK/Not OK box
+* Simplest dashboard could just be simple Good/Bad box
 
 ---
 
@@ -302,8 +309,6 @@ Notes:
 
 Notes:
 
-* The term "dashboard" is overused
-* Dashboards are meant to meet the specific need to informing real-time actions of its users
 * If it is looked at less frequently or contains more information and detail, then it is really a report, or series of explanatory tools
 
 ---
@@ -316,7 +321,7 @@ Notes:
 
 ---
 
-### Weaknesses
+### Drawbacks
 
 * Limited amount of data
 * Lack of deep insights
@@ -325,8 +330,6 @@ Notes:
 ---
 
 ## Examples
-
----
 
 https://www.geckoboard.com/learn/dashboard-examples/call-center-dashboard-example/
 
@@ -361,10 +364,6 @@ Notes:
 
 ---
 
-[Google: "dashboard"](https://www.google.com/search?client=firefox-b-ab&biw=1600&bih=777&tbm=isch&sa=1&ei=H_IpWp3TF6fG_Qbu35TIBw&q=dashboard&oq=dashboard&gs_l=psy-ab.3...0.0.0.493638.0.0.0.0.0.0.0.0..0.0....0...1c..64.psy-ab..0.0.0....0.voboXBkcBME)
-
----
-
 <img class="img" src="materials/Week 2/Slides/resources/trafficlights1.gif" style="width:80%">
 <div class="source">Source: http://blog.robbowley.net/2009/10/28/visualising-the-internal-quality-of-software-part-1/</div>
 
@@ -380,78 +379,27 @@ https://www.mathematica-mpr.com/dataviz/urbanization
 
 ## The Design Process
 
----
-
-### Step 1: Requirements Gathering
-
-* Figure out what the client/user needs
-* What key questions are they trying to answer?
-* What points are they trying to make?
-* Don't talk about what it will look like until after you have requirements
-
----
-
-### Step 2: Initial Design and Feedback
-
-* Rough sketch or mockup
-* Verbal or written description to client
-* Negotiate design elements
-* Try to stick to your guns on good design principles
-
 Notes:
 
-* Lots of thought, less drawing
-
----
-
-### Step 3: Full Mock-up and Feedback
-
-* Using mock-up software
-* As close to the real thing as possible
-* Minimal feedback and changes
-* Deliver revised final mock-up
-
----
-
-### Step 4: Development and Feedback
-
-* Build it!
-* Show pieces along the way, get feedback as necessary
-
----
-
-### Step 5: Deployment and Updates
-
-* Gather feedback and update reports as appropriate
+- Over the next two courses we'll take a look the different phases and activities that go into designing a data visualization at Mathematica
+- Next week we'll look at some UX activities to do when gathering requirements on a project
+- The week after that we'll take a look at the different stages of creating a prototype
 
 ===
 
-## Data Visualization at MPR
-
----
-
-### Challenges
-
-* Lack of knowledge about options
-* Inexperience with design
-* Entrenched tools
-* Budget priorities
-
-===
-
-### Cool Tools
+### Cool tools for choosing colors
 
 * [Colorbrewer](http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
 * [Colorgorical](http://vrl.cs.brown.edu/color)
 * [Spectrum](https://chrome.google.com/webstore/detail/spectrum/ofclemegkcmilinpcimpjkfhjfgmhieb)
 
-===
+---
 
 ### Assignment 2
 
 [Details](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%202/Assignment/Assignment%202.md)
 
-===
+---
 
 ### Final Project
 

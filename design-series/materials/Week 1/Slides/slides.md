@@ -14,6 +14,8 @@ Notes:
 
 ## What is data visualization?
 
+---
+
 *In its most basic form, visualization is simply mapping data to geometry and color* (Yau, 2013, p. 93).
 
 Notes:
@@ -24,10 +26,6 @@ Notes:
 ---
 
 ### Why Data Visualization?
-
-* Mental processing speed
-* Discovery of patterns
-* Distillation of large datasets
 
 ---
 
@@ -74,7 +72,7 @@ Notes:
     }
 </style>
 
-### Pattern Discovery
+### Discovery of patterns
 
 <img class="img" src="materials/Week 1/Slides/resources/Census-time-machine.png">
 <img class="img" src="materials/Week 1/Slides/resources/morris-feature-messi-2.png">
@@ -101,7 +99,7 @@ Notes:
     }
 </style>
 
-### Large Datasets
+### Distillation of large datasets
 
 <img class="img" src="materials/Week 1/Slides/resources/Track-National-Unemployment-Job-Gains-and-Job-Losses-–-Wall-Street-Journal-.png">
 <div class="source">Source: http://graphics.wsj.com/job-market-tracker/</div>
@@ -123,24 +121,6 @@ Notes:
 
 In *Tidy Data (2014)*, Hadley Wickham lays out the benefits of tidy data and how to use it.
 
-#### Wide data: Untidy data set
-|            | Blue   | Red   | Yellow |
-| ----       | -----  | ----- | -----  |
-| Main St    | 18     | 2     | 54     |
-| Maple Ave  | 38     | 5     | 12     |
-| Baker Lane | 10     | 29    | 34     |
-| Fourth St  | 17     | 15    | 22     |
-
-Notes:
-
-- Article is written from the perspective of a data scientists using R
-- Goal of paper is to propose a set of standards of how to tidy data for data processing, analyzing, and visualizing
-- Typical data set you might get
-- The way this is laid out, the single dimension of house color is split across different columns
-- Wide data can be easier to analyze if you're curious on how many yellow houses Fourth St has
-
----
-
 #### Long data: tidy data set
 |            | Color  | Value |
 | ----       | -----  | ----- |
@@ -158,9 +138,28 @@ Notes:
 | Fourth St  | Yellow | 22    |
 
 Notes:
-- But I'd argue that long data, which happens to follow the tidy data structure enables us to draw a connection between the physical structure of data and with the metrics we'd be interested in visualizing
+- Article is written from the perspective of a data scientists using R
+- Goal of paper is to propose a set of standards of how to tidy data for data processing, analyzing, and visualizing
+- In the paper, Wickham proposes using long data in a tidy format for data processing
+- But I'd argue that long data, enables us to draw a connection between the physical structure of data and with the metrics we'd be interested in visualizing
 - Here every value belongs to a variable (column) and observation (row)
 - The table structure helps us to assign variables to axes and identify which visual graphics we want to map to the data
+
+---
+
+#### Wide data: Untidy data set
+|            | Blue   | Red   | Yellow |
+| ----       | -----  | ----- | -----  |
+| Main St    | 18     | 2     | 54     |
+| Maple Ave  | 38     | 5     | 12     |
+| Baker Lane | 10     | 29    | 34     |
+| Fourth St  | 17     | 15    | 22     |
+
+Notes:
+
+- Typical data set you might get
+- The way this is laid out, the single dimension of house color is split across different columns
+- Wide data can be easier to analyze if you're curious on how many yellow houses Fourth St has
 
 ---
 
@@ -198,7 +197,7 @@ Notes:
 
 * Visual representation of quantitative values in a graphic
 * Visual variables make up "the world of images" - Jacques Bertin
-* This could be encoding length, area, volume to be represent a data point's magnitude
+* Size be encoding length, area, volume to be represent a data point's magnitude
 * Within certain cultural context, color (red and blue) could denote hot and cold
 * Light to dark can represent a continuous scale of increasing values
 
@@ -266,7 +265,7 @@ Notes:
 
 * [Figma](https://www.figma.com/)
 
-===
+---
 
 ### Assignment 1
 
