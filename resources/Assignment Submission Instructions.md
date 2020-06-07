@@ -18,12 +18,16 @@ You will be required to submit your assignments for this course through GitHub.
 
 ### For each assignment
 
-1. Get the most recent version of `upstream`
+1. Get the most recent version of `upstream`. 
+
+
    ```bash
    git fetch upstream
    git checkout master
    git merge upstream/master
    ```
+   **Note:** The `development branch` will always have the latest changes to the course materials.
+
 2. In the week's `Assignment` folder, create the various materials required for the assignment, committing along the way.
 3. Once you have finished the assignment and committed all of your changes, make one final empty commit with a message indicating completion of the assignment:
    ```bash
