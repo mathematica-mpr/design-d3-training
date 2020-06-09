@@ -1,0 +1,125 @@
+<html>
+
+    <head>
+        <title>TEST</title>
+    </head>
+
+    <body>
+        <div id="viz"></div>
+
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script>
+
+            // Start with a 500x500 SVG
+            // Draw a red circle with a black border at the center with a diameter of 150px
+            // Draw a square circumscribing the circle (black border, no fill)
+            // Draw a line from the center of the circle to the top-right of the square
+
+            var height = 500;
+            var width = 500;
+
+            var svg = d3.select("#viz")
+                .append('svg')
+                .attr('height', height)
+                .attr('width', width);
+
+            // svg.append('circle')
+            //     .attr('cx', height / 2)
+            //     .attr('cy', width / 2)
+            //     .attr('r', 150)
+            //     .attr('fill', 'red')
+            //     .attr('stroke', 'black');
+
+            // svg.append('rect')
+            //     .attr('x', +svg.select('circle').attr('cx') - +svg.select('circle').attr('r'))
+            //     .attr('y', +svg.select('circle').attr('cy') - +svg.select('circle').attr('r'))
+            //     .attr('height', 300)
+            //     .attr('width', 300)
+            //     .attr('fill', 'none')
+            //     .attr('stroke', 'black');
+
+            // svg.append('line')
+            //     .attr('x1', +svg.select('circle').attr('cx'))
+            //     .attr('y1', +svg.select('circle').attr('cy'))
+            //     .attr('x2', +svg.select('circle').attr('cx') + +svg.select('circle').attr('r'))
+            //     .attr('y2', +svg.select('circle').attr('cy') - +svg.select('circle').attr('r'))
+            //     .attr('stroke', 'black');
+
+
+            d3.json('data.json', function (error, data) {
+
+                updateViz(data, svg);
+
+                var int = setInterval(function () {
+                    data.pop();
+                    updateViz(data, svg);
+
+                    if (data.length === 0) {
+                        clearInterval(int);
+                    }
+                }, 1000);
+
+            });
+
+
+            //  [d1] [n1] => update 
+            //  [d2] [n2] => update 
+            //  [d3] [n3] => update 
+            //  [d4] [n4] => update 
+            //  [d5] [n5] => update             
+            //  []   [n6] => exit 
+            //  []   [n7] => exit 
+
+            // =============
+
+            //  [d1] [n1] => update 
+            //  [d2] [n2] => update 
+            //  [d3] [n3] => update 
+            //  [d4] [n4] => update 
+            //  [d5] [n5] => update             
+            //  [d6] []   => enter 
+            //  [d7] []   => enter 
+
+            function updateViz(data, svg) {
+
+                var selection = svg.selectAll('rect')
+                    .data(data);
+
+                selection
+                    .enter()
+                    .append('rect')
+                    .attr('x', 100)
+                    .attr('y', 100)
+                    .attr('height', function (d) {
+                        return d.size;
+                    })
+                    .attr('width', function (d) {
+                        return 2 * d.size;
+                    })
+                    .attr('fill', 'none')
+                    .attr('stroke', function (d) {
+                        return d.color;
+                    });
+
+                selection
+                    .exit()
+                    .remove();
+
+                selection
+                    .attr('height', function (d) {
+                        return d.size;
+                    })
+                    .attr('width', function (d) {
+                        return 2 * d.size;
+                    })
+                    .attr('stroke', function (d) {
+                        return d.color;
+                    });
+
+            }
+
+
+        </script>
+    </body>
+
+</html>
