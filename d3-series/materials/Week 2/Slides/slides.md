@@ -325,4 +325,4 @@ d3.max(arr, function(d) {
 
 ### Assignment 2
 
-* [Details](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%206/Assignment/Assignment%206.md)
+* [Details](https://github.com/mathematica-mpr/design-d3-training/blob/development/d3-series/materials/Week%202/Assignment/Assignment%202.md)

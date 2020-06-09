@@ -1,4 +1,4 @@
-# Assignment 6
+# Assignment 2
 
 This assignment focuses on data manipulation and you may use d3 or any techniques you learned in class to finish this homework. Do not use other third party libraries unless they were mentioned in class for use with this homework.
 
@@ -20,7 +20,7 @@ This assignment focuses on data manipulation and you may use d3 or any technique
 
 
 ### Materials
-1. `Assignment 6.md`: This document
+1. `Assignment 2.md`: This document
 2. `pokemon.json` and `cars.json`: The data that you will use throughout this assignment
 
 ### What to submit
