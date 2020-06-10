@@ -1,0 +1,7 @@
+Design Series: Week 1
+
+Viz1 -  I feel a little confused by how many different values there are. I can tell that we are looking at 7 products over 8 strategies, and there is a line graph showing the "Total of amount". However, the TOA never dips below 600, so I don't see a point in there even being a line graph for that value. That total could have been text over the strategies perhaps. I tried moving the line graph to the y axis, and the products (and amounts) into a stacked bar graph with the strategies along the x axis. 
+
+Viz2 - This chart has an overwhelming amount of data; some information is in percentages, some not, too many colors. The totals of the y axis values are posted above each of the bars, making the y axis obsolete. I honestly feel like the data is too saturated and some data should be omitted, like whatever the values are at the bottom.
+
+Viz3 - I think the main problem with this graphic is that the values represented should all be separated, and should NOT be parts of the whole "person" silhouette if their total doesn't equal 100%. I think the play on the "person" is interesting, but since it represents a man, I can see that alienating women Baby Boomers. With that said, there would need to be a better way to represent the data, like separate bars along the y axis of 0 - 100%. That is what I created.
