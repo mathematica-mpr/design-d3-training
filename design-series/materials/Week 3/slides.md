@@ -112,3 +112,5 @@ Notes:
 ### Assignment 3
 
 [Details](https://github.com/mathematica-mpr/design-d3-training/blob/development/design-series/materials/Week%203/Assignment/Assignment%203.md)
+
+* Find a dataset for final project
