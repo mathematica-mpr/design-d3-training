@@ -16,14 +16,23 @@ Notes:
 
 ### What is User Experience?
 
-* How will a person interact with the designed tool?
-* Sits within the framework of User Centered Design or Human Centered Design
+* Sits within the framework of User Centered Design (UCD)
+* How will a user interact with the designed tool?
+* Who are the key stakeholders?
 
 Notes:
 
 - understanding the user's wants/needs
 - how the user understands the content area and will engage with the information
 - when designing for social impact, HCD tends to get used rather than UCD
+
+---
+
+<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/embed/adc2482a47bb1563752fe1e0e59c20f6/384f5c04b162' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+
+---
+
+<div style='position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/embed/adc2482a47bb1563752fe1e0e59c20f6/40e4bdab30c0' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
 
 ---
 
@@ -42,7 +51,21 @@ Notes:
 - Develop/Ideation: brainstorming (diverging)
 - Deliver/Implementation: creating solutions that work (converging)
 
-===
+---
+
+### IDEO Design Thinking Process
+
+<img class="img" src="materials/Week 3/Slides/resources/design_thinking_ideo.png" style="border:none; width:70%">
+<div class="source">https://medium.com/digital-experience-design/how-to-apply-a-design-thinking-hcd-ux-or-any-creative-process-from-scratch-b8786efbf812</div>
+
+---
+
+### Stanford d.school Design Thinking Process
+
+<img class="img" src="materials/Week 3/Slides/resources/d_school_process.png" style="border:none; width:70%">
+<div class="source">https://medium.com/digital-experience-design/how-to-apply-a-design-thinking-hcd-ux-or-any-creative-process-from-scratch-b8786efbf812</div>
+
+---
 
 ### What are some of the UX activities we can do on a project?
 
@@ -50,8 +73,9 @@ Notes:
 - User stories
 - **Experience mapping**
 - Heuristic evaluation
-- AB testing
+- A/B testing
 - **Usability testing**
+- Accessibility testing
 
 ---
 
