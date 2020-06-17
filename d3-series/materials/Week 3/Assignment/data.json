@@ -1,0 +1,38 @@
+[
+	{
+		"size": 15,
+		"color": "purple"
+	},
+	{
+		"size": 50,
+		"color": "magenta"
+	},
+	{
+		"size": 20,
+		"color": "green"
+	},
+		{
+		"size": 35,
+		"color": "white"
+	},
+		{
+		"size": 65,
+		"color": "black"
+	},
+		{
+		"size": 75,
+		"color": "steelblue"
+	},
+		{
+		"size": 115,
+		"color": "blue"
+	},
+		{
+		"size": 95,
+		"color": "orange"
+	},
+		{
+		"size": 85,
+		"color": "red"
+	}
+]
