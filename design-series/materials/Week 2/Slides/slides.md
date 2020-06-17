@@ -1,4 +1,4 @@
-## What is good data visualization?
+## What is a good data visualization?
 
 ##### Types of visualization tools
 
@@ -49,7 +49,7 @@ Notes:
 
 ---
 
-### Simplicity vs. Complexity
+### Simplicity
 
 * User shouldn't need an instruction manual
 * Prettier isn't always better

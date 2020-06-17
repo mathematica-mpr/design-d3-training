@@ -144,13 +144,15 @@ For learning HTML/CCS/JS: [codecademy.com](https://www.codecademy.com)
 
 #### Assignment
 
-An important step of the requirements gathering process is interacting with stakeholders to understand their role, perspective, wants, and needs of the tool. For next week, please create a user interview script to gain insight to the wants and needs of the stakeholders who’ll be using your final data visualization tool. Please come prepared next week to discuss the user interview script with the class. For guidance on creating a user interview script, please see the additional resources section.
+1. Find a data set for the final project!
+
+2. An important step of the requirements gathering process is interacting with stakeholders to understand their role, perspective, wants, and needs of the tool. For next week, please create a user interview script to gain insight to the wants and needs of the stakeholders who’ll be using your final data visualization tool. Please come prepared next week to discuss the user interview script with the class. For guidance on creating a user interview script, please see the additional resources section.
 
 #### Additional Resources
 
 [How to create a user interview guidance](https://www.nngroup.com/articles/user-interviews/)
 
-[What is design thinking](https://medium.com/digital-experience-design/how-to-apply-a-design-thinking-hcd-ux-or-any-creative-process-from-scratch-b8786efbf812)
+[How to apply the UCD approach](https://medium.com/digital-experience-design/how-to-apply-a-design-thinking-hcd-ux-or-any-creative-process-from-scratch-b8786efbf812)
 
 ---
 
