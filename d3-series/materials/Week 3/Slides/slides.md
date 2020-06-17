@@ -4,130 +4,12 @@
 
 ## Review
 
-[Assignment 2](materials/Week 2/Assignment)
+[Assignment 2](https://github.com/mathematica-mpr/design-d3-training/blob/development/d3-series/materials/Week%202/Assignment/Assignment%202.md)
 
 Notes:
 
 * Going over critiques of visualizations from homework
 * Ask for questions on reading
-
-===
-
-## Web Concepts
-
----
-
-### 3 Components
-
-* **HTML**: Content and structure
-* **CSS**: Appearance
-* **JavaScript**: Dynamism and interaction
-
-Notes:
-
-* JavaScript is actually taking over a lot of the domain once covered by HTML and CSS
-  * JS can generate HTML & CSS too
-  * Front-end frameworks
-
----
-
-### HTML
-
-The core of the DOM
-
-* Tags
-* Attributes
-* Text
-
-```html
-<div class="my-class">Hello world</div>
-```
-
----
-
-### CSS
-
-<div style="font-size: 0.5em">Inline Styles</div>
-
-```html
-<div style="color:red">Hello world</div>
-```
-
-<div style="font-size: 0.5em">Internal Style Sheet</div>
-
-```html
-<style>
-.my-class {
-    color: red;
-}
-</style>
-<div class="my-class">Hello world</div>
-```
-
-<div style="font-size: 0.5em">External Style Sheet</div>
-
-```html
-<link rel="styles.css">
-<div class="my-class">Hello world</div>
-```
-
-```css
-.my-class {
-    color: red;
-}
-```
-
----
-
-### JavaScript
-
-* Dynamically typed language used to manipulate the DOM
-
-```js
-document.querySelector('body').append('<p>Hello world</p>');
-```
-
-* Or add interaction and <span id="dynamic">dynamic content</span>
-
-```js
-document.getElementById('dynamic').onclick = function() {
-    var i = 21;
-    var mult = 1;
-    setInterval(function() {
-        if (i === 60) mult = -1;
-        if (i === 20) mult = 1;
-        mult === 1 ? i++ : i--;
-        document
-            .getElementById('dynamic')
-            .setAttribute('style', 'position:fixed; top: 40%; left:' + i + '%');
-    }, 20);
-};
-```
-
-Notes:
-
-* Can do much more than DOM manipulation, but that's the original purpose and the main thing we'll use it for in this class
-
----
-
-### Asynchrony in JS
-
-* Code doesn't always execute 'in order'
-
-```js
-console.log('Mathematica');
-
-setTimeout(function() {
-    console.log('Policy');
-});
-
-console.log('Research');
-```
-
-Note:
-
-* Talk about reasoning behind this
-* Always be aware
 
 ===
 
@@ -603,10 +485,4 @@ Using D3:
 ### Assignment 3
 
 * [Details](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%203/Assignment/Assignment%203.md)
-* Find a dataset for final project
 
----
-
-### Final Project
-
-[Details](materials/Syllabus.html)
