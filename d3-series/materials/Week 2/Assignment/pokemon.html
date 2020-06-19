@@ -1,0 +1,118 @@
+<html>
+  <body>
+    <!-- NOTE: Using v5 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+      d3.json("./pokemon.json").then((pokemon) => {
+        // Part 2a
+        const getWeightKg = (pokemon) => Number(pokemon.weight.slice(0, -3));
+        const getHeightM = (pokemon) => Number(pokemon.height.slice(0, -2));
+
+        const getWeightLb = (pokemon) => {
+          const kg = getWeightKg(pokemon);
+          const lb = kg * 2.205;
+          return lb;
+        };
+
+        const getHeightIn = (pokemon) => {
+          const m = getHeightM(pokemon);
+          const inch = m * 39.37;
+          return inch;
+        };
+
+        let sumWeight = 0;
+        let sumHeight = 0;
+
+        pokemon.forEach((poke) => {
+          sumWeight += getWeightLb(poke);
+          sumHeight += getHeightIn(poke);
+        });
+
+        const averageWeight = Number((sumWeight / pokemon.length).toFixed(1));
+        const averageHeight = Number((sumHeight / pokemon.length).toFixed(1));
+        console.log(
+          `The average weight and height of pokemon is ${averageWeight} lbs and ${averageHeight} in.`
+        );
+
+        // Part 2b
+        const sumEggDistance = pokemon.reduce((accumulated, current) => {
+          if (!current.weaknesses.includes("Psychic")) {
+            return accumulated;
+          }
+          const eggDistance =
+            current.egg === "Not in Eggs"
+              ? -1
+              : Number(current.egg.slice(0, -3));
+          return accumulated + eggDistance;
+        }, 0);
+
+        console.log(
+          `The total egg distance for all pokemon with a weakness of "Psychic" is ${sumEggDistance}.`
+        );
+
+        // Part 2c
+        const weaknesses = {};
+
+        for (let poke of pokemon) {
+          for (let type of poke.type) {
+            if (!weaknesses[type]) {
+              weaknesses[type] = { sumPokemon: 0, sumWeaknesses: 0 };
+            }
+            weaknesses[type].sumPokemon++;
+            weaknesses[type].sumWeaknesses += poke.weaknesses.length;
+          }
+        }
+
+        const entries = Object.entries(weaknesses);
+
+        entries.forEach(([type, data]) => {
+          const averageWeaknesses = data.sumWeaknesses / data.sumPokemon;
+          data.averageWeaknesses = Number(averageWeaknesses.toFixed(1));
+        });
+
+        entries.sort((a, b) => b[1].averageWeaknesses - a[1].averageWeaknesses);
+
+        console.log("Pokemon Type | Average Number of Weaknesses");
+        entries.forEach(([type, data]) => {
+          console.log(`${type}: ${data.averageWeaknesses}`);
+        });
+
+        // Part 2d
+        const buckets = [];
+        const deepCopy = JSON.parse(JSON.stringify(pokemon));
+
+        deepCopy.sort((a, b) => Number(getWeightKg(a) - getWeightKg(b)));
+
+        for (let i = 0; i < deepCopy.length; i += deepCopy.length / 5) {
+          buckets.push(deepCopy.slice(i, i + deepCopy.length / 5));
+        }
+
+        buckets.forEach((bucket, i) => {
+          const sumSpawnTimeMinAndSec = bucket.reduce(
+            (accumulated, current) => {
+              const split = current.spawn_time.split(":");
+              if (split[0] === "N/A") {
+                return accumulated;
+              }
+              accumulated[0] += Number(split[0]);
+              accumulated[1] += Number(split[1]);
+              return accumulated;
+            },
+            [0, 0]
+          );
+
+          const sumSpawnTimeMin =
+            sumSpawnTimeMinAndSec[0] + sumSpawnTimeMinAndSec[1] / 60;
+          const averageSpawnTimeMin = (sumSpawnTimeMin / bucket.length).toFixed(
+            1
+          );
+          console.log(
+            `The average spawn time of weight class ${
+              i + 1
+            } is ${averageSpawnTimeMin} minutes.`
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+  <body>
+    <!-- NOTE: Using v5 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+      d3.json("./cars.json")
+        .then((cars) => {
+          // Part 1a
+          const sumMakeIsCommon = cars.reduce(
+            (accumulated, current) =>
+              accumulated + (current.make_is_common === "1" ? 1 : 0),
+            0
+          );
+
+          console.log(`${sumMakeIsCommon} makes are considered common.`);
+
+          // Part 1b, 1c
+          const makesPerCountry = {};
+
+          cars.forEach((car) => {
+            if (!makesPerCountry[car.make_country]) {
+              makesPerCountry[car.make_country] = { 0: 0, 1: 0 };
+            }
+            makesPerCountry[car.make_country][car.make_is_common]++;
+          });
+
+          const getMakeOrMakes = (number) => (number === 1 ? "make" : "makes");
+
+          Object.entries(makesPerCountry).forEach(([country, makes]) => {
+            console.log(`${country} has ${makes[1]} common ${getMakeOrMakes(
+              makes[1]
+            )} and ${makes[0]} uncommon ${getMakeOrMakes(
+              makes[0]
+            )} for a total of ${makes[0] + makes[1]} ${getMakeOrMakes(
+              makes[0] + makes[1]
+            )}.
+            `);
+          });
+        })
+        .catch((error) => console.log("Whoops!"));
+    </script>
+  </body>
+</html>
