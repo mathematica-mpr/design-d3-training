@@ -1,0 +1,45 @@
+<html>
+  <body style="margin: 0;">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+      d3.json("./data.json")
+        .then((data) => {
+          const padding = 180;
+          const getRandom = (min, max) => Math.random() * (max - min) + min;
+          const getX = () => getRandom(0, window.innerWidth - padding);
+          const getY = () => getRandom(0, window.innerHeight - padding);
+
+          const updateViz = (data) => {
+            const circles = d3.select("main svg").selectAll("path").data(data);
+
+            circles
+              .enter()
+              .append("path")
+              .attr("transform", () => `translate(${getX()}, ${getY()})`)
+              .attr(
+                "d",
+                "m96 0a96 96 0 1 0 96 96 96.108 96.108 0 0 0 -96-96zm-40 56a24.027 24.027 0 0 1 24 24h-16a8 8 0 0 0 -16 0h-16a24.027 24.027 0 0 1 24-24zm40 104a48.054 48.054 0 0 1 -48-48 8 8 0 0 1 8-8h80a8 8 0 0 1 8 8 48.054 48.054 0 0 1 -48 48zm48-80a8 8 0 0 0 -16 0h-16a24 24 0 0 1 48 0z"
+              )
+              .attr("fill", (data) => data.color)
+              .attr("style", "transition: 1s all linear;");
+
+            circles.exit().remove();
+
+            circles.attr("transform", () => `translate(${getX()}, ${getY()})`);
+          };
+
+          const animate = (data) => {
+            const loop = setInterval(() => {
+              updateViz(data);
+            }, 1000);
+          };
+
+          animate(data);
+        })
+        .catch((error) => console.log("Whoops!"));
+    </script>
+    <main>
+      <svg height="100%" width="100%" style="background-color: darkgrey;"></svg>
+    </main>
+  </body>
+</html>

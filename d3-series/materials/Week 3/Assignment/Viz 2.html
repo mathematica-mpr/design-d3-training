@@ -1,0 +1,38 @@
+<html>
+  <body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+      d3.json("./data.json")
+        .then((data) => {
+          let position = 0;
+
+          d3.select("main svg:first-child")
+            .selectAll("rect")
+            .data(data)
+            .join("rect")
+            .attr("width", (data) => data.size)
+            .attr("height", "100")
+            .attr("x", (data) => {
+              let value = position;
+              position += data.size;
+              return value;
+            })
+            .attr("fill", (data) => data.color);
+
+          d3.select("main svg:last-child")
+            .selectAll("circle")
+            .data(data)
+            .join("circle")
+            .attr("cx", (data) => data.size)
+            .attr("cy", (data) => 2 * data.size)
+            .attr("r", 5)
+            .attr("fill", (data) => data.color);
+        })
+        .catch((error) => console.log("Whoops!"));
+    </script>
+    <main>
+      <svg height="100" width="100%"></svg>
+      <svg height="200" style="border: solid 0.25rem;" width="200"></svg>
+    </main>
+  </body>
+</html>

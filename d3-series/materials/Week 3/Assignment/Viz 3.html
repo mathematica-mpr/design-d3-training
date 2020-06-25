@@ -1,0 +1,54 @@
+<html>
+  <body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+      d3.json("./data.json")
+        .then((data) => {
+          const radius = 10;
+          const strokeWidth = 2;
+          const padding = (radius + strokeWidth) * 2 + 20;
+          const getRandom = (min, max) => Math.random() * (max - min) + min;
+          const getCx = () => getRandom(padding, window.innerWidth - padding);
+          const getCy = () => getRandom(padding, window.innerHeight - padding);
+
+          const updateViz = (data) => {
+            const circles = d3
+              .select("main svg")
+              .selectAll("circle")
+              .data(data);
+
+            circles
+              .enter()
+              .append("circle")
+              .attr("cx", () => getCx())
+              .attr("cy", () => getCy())
+              .attr("r", radius)
+              .attr("fill", (data) => data.color)
+              .attr("stroke-width", strokeWidth)
+              .attr("stroke", "black");
+
+            circles.exit().remove();
+
+            circles.attr("cx", () => getCx()).attr("cy", () => getCy());
+          };
+
+          const animate = (data) => {
+            updateViz(data);
+            const loop = setInterval(() => {
+              data.pop();
+              if (data.length === 0) {
+                clearInterval(loop);
+              }
+              updateViz(data);
+            }, 2000);
+          };
+
+          animate(data);
+        })
+        .catch((error) => console.log("Whoops!"));
+    </script>
+    <main>
+      <svg height="100%" width="100%"></svg>
+    </main>
+  </body>
+</html>
