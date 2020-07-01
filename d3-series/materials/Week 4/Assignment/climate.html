@@ -1,0 +1,176 @@
+<html>
+  <body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+      const buildChart = (containerSelector, data) => {
+        const width = 960;
+        const barSpacing = 2;
+        const barHeight = 5;
+        const height = data.length * (barSpacing + barHeight);
+
+        const margin = {
+          top: 50,
+          right: 50,
+          bottom: 50,
+          left: 50,
+        };
+
+        const innerWidth = width - margin.left - margin.right;
+        const innerHeight = height - margin.top - margin.bottom;
+
+        const containerOuter = d3
+          .select(containerSelector)
+          .append("svg")
+          .attr("height", height)
+          .attr("width", width);
+
+        const containerInner = containerOuter
+          .append("g")
+          .attr("transform", `translate(${margin.left}, ${margin.right})`);
+
+        // NOTE: An experiment. Saving this and associated code for future reference.
+        // const getGradientPalette = (rgb1, rgb2, steps) => {
+        //   const gradientPalette = [];
+        //   let r = rgb1.r;
+        //   let g = rgb1.g;
+        //   let b = rgb1.b;
+        //   let rIncrement = (rgb2.r - r) / steps;
+        //   let gIncrement = (rgb2.g - g) / steps;
+        //   let bIncrement = (rgb2.b - b) / steps;
+
+        //   for (let i = 0; i < steps; i++) {
+        //     r += rIncrement;
+        //     g += gIncrement;
+        //     b += bIncrement;
+        //     const colorStep = `rgb(${r}, ${g}, ${b})`;
+        //     gradientPalette.push(colorStep);
+        //   }
+        //
+        //   return gradientPalette;
+        // };
+
+        // const minYear = d3.min(data, (d) => d.year);
+        // const maxYear = d3.max(data, (d) => d.year);
+        // const color = d3
+        //   .scaleQuantize()
+        //   .domain([minYear, maxYear])
+        //   .range(
+        //     getGradientPalette(
+        //       { r: 0, g: 126, b: 255 },
+        //       { r: 255, g: 126, b: 0 },
+        //       data.length / 10
+        //     )
+        //   );
+
+        const maxAbs = d3.max(data, (d) => Math.abs(d.temp));
+
+        const x = d3
+          .scaleLinear()
+          .domain([-maxAbs, maxAbs])
+          .range([0, innerWidth]);
+
+        const y = d3
+          .scaleBand()
+          .domain(
+            data
+              .slice()
+              .reverse()
+              .map((d) => d.year)
+          )
+          .range([innerHeight, 0]);
+
+        const xAxis = d3.axisBottom(x);
+
+        containerInner
+          .append("g")
+          .attr("class", "x-axis")
+          .attr("transform", `translate(0, ${innerHeight})`)
+          .call(xAxis);
+
+        containerInner
+          .append("text")
+          .style("text-anchor", "middle")
+          .text("Temperature (C)")
+          .attr("x", innerWidth / 2)
+          .attr("y", innerHeight + 35);
+
+        const yAxis = d3
+          .axisLeft(y)
+          .tickSize(0)
+          .tickValues(data.filter((d) => d.year % 5 === 0).map((d) => d.year));
+
+        const reversedData = data.slice().reverse();
+        const mostRecentYear = reversedData[0].year;
+
+        containerInner
+          .append("g")
+          .attr("class", "y-axis")
+          .attr("transform", `translate(${x(0)}, 0)`)
+          .call(yAxis)
+          .call((g) =>
+            g
+              .selectAll(".tick text")
+              .filter((i) => reversedData[mostRecentYear - i].temp < 0)
+              .attr("text-anchor", "start")
+              .attr("x", 6)
+          );
+
+        containerInner
+          .append("text")
+          .attr("x", innerWidth / 2)
+          .attr("y", -20)
+          .attr("text-anchor", "middle")
+          .attr("dominant-baseline", "baseline")
+          .style("font-size", 24)
+          .text("History of Global Surface Temperatures Since 1880");
+
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+        const getRandomInt = (min, max) => {
+          min = Math.ceil(min);
+          max = Math.floor(max);
+          return Math.floor(Math.random() * (max - min)) + min;
+        };
+
+        const getRandomColor = () => `rgb(
+          ${getRandomInt(0, 255)},
+          ${getRandomInt(0, 255)},
+          ${getRandomInt(0, 255)}
+        )`;
+
+        let currentDecade = null;
+        let currentDecadeFill = null;
+
+        const getFill = (year) => {
+          const decade = year.slice(-2, -1);
+          if (currentDecade !== decade) {
+            currentDecade = decade;
+            currentDecadeFill = getRandomColor();
+          }
+          return currentDecadeFill;
+        };
+
+        containerInner
+          .selectAll(".bar")
+          .data(data)
+          .enter()
+          .append("rect")
+          .attr("class", "bar")
+          .attr("x", (d) => (d.temp < 0 ? x(d.temp) : x(0)))
+          .attr("y", (d) => y(d.year))
+          .attr("width", (d) => Math.abs(x(d.temp) - x(0)))
+          .attr("height", barHeight)
+          // .attr("fill", (d) => color(d.year))
+          .attr("fill", (d) => getFill(d.year));
+        // NOTE: Personally, I'd go with something like this fill pattern.
+        // .attr("fill", (d) =>
+        //   d.temp < 0 ? "rgb(0, 125, 255)" : "rgb(255, 125, 0"
+        // );
+      };
+
+      d3.json("./climate.json")
+        .then((data) => buildChart("main", data))
+        .catch((error) => console.error(error));
+    </script>
+    <main></main>
+  </body>
+</html>
