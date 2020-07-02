@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+      }
+      main {
+        background-color: #1c2431;
+        display: flex;
+        height: 100%;
+        width: 100%;
+      }
+      .chart-container-outer {
+        background-color: #283142;
+        border-radius: 1rem;
+        margin: auto;
+      }
+      .chart-container-outer text {
+        fill: white;
+        font-family: arial;
+        font-weight: bold;
+      }
+      .chart-container-outer .domain,
+      .chart-container-outer .tick line {
+        stroke: white;
+      }
+      .x-axis-label,
+      .y-axis-label,
+      .chart-title {
+        text-anchor: middle;
+      }
+      .chart-title {
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+      const buildChart = (containerSelector, data) => {
+        data.forEach(
+          (d) => (d.Emissions = Number(d.Emissions.replace(/,/g, "")))
+        );
+
+        const sortData = (data) => {
+          let sortedData = [];
+          const regions = {};
+          const dataDeepCopy = JSON.parse(JSON.stringify(data));
+
+          dataDeepCopy.forEach((d) => {
+            if (!regions[d.Region]) {
+              regions[d.Region] = [d];
+            } else {
+              regions[d.Region].push(d);
+            }
+          });
+
+          Object.values(regions).forEach((region) => {
+            sortedData = sortedData.concat(
+              region.sort((a, b) => a.Emissions - b.Emissions)
+            );
+          });
+
+          return sortedData;
+        };
+
+        data = sortData(data);
+
+        const height = 800;
+        const barSpacing = 5;
+        const barWidth = 20;
+        const width = data.length * (barSpacing + barWidth);
+
+        const margin = {
+          top: 50,
+          right: 50,
+          bottom: 50,
+          left: 100,
+        };
+
+        const innerWidth = width - margin.left - margin.right;
+        const innerHeight = height - margin.top - margin.bottom;
+
+        const containerOuter = d3
+          .select(containerSelector)
+          .append("svg")
+          .attr("class", "chart-container-outer")
+          .attr("height", height)
+          .attr("width", width);
+
+        const containerInner = containerOuter
+          .append("g")
+          .attr("transform", `translate(${margin.left}, ${margin.right})`);
+
+        const x = d3
+          .scaleBand()
+          .domain(data.map((d) => d.State))
+          .range([0, innerWidth]);
+
+        const y = d3
+          .scaleLinear()
+          .domain([0, d3.max(data, (d) => d.Emissions)])
+          .range([innerHeight, 0]);
+
+        const xAxis = d3.axisBottom(x).tickSize(0);
+
+        containerInner
+          .append("g")
+          .attr("class", "x-axis")
+          .attr("transform", `translate(0, ${innerHeight})`)
+          .call(xAxis);
+
+        containerInner
+          .append("text")
+          .attr("class", "x-axis-label")
+          .attr("x", innerWidth / 2)
+          .attr("y", innerHeight + 35)
+          .text("State");
+
+        const yAxis = d3.axisLeft(y).ticks(20);
+
+        containerInner.append("g").attr("class", "y-axis").call(yAxis);
+
+        containerInner
+          .append("text")
+          .attr("class", "y-axis-label")
+          .attr("x", 0)
+          .attr("y", innerHeight / 2 - 30)
+          .attr("transform", "rotate(-90,-30," + innerHeight / 2 + ")")
+          .text("Death Poofs per Zillion");
+
+        containerInner
+          .append("text")
+          .attr("class", "chart-title")
+          .attr("x", innerWidth / 2)
+          .attr("y", -20)
+          .text("US Emissions by State and Region");
+
+        const fills = {
+          South: "purple",
+          Northeast: "blue",
+          Midwest: "green",
+          West: "orange",
+        };
+
+        containerInner
+          .selectAll(".bar")
+          .data(data)
+          .enter()
+          .append("rect")
+          .attr("class", "bar")
+          .attr("x", (d) => x(d.State))
+          .attr("y", (d) => y(d.Emissions))
+          .attr("width", barWidth)
+          .attr("height", (d) => innerHeight - y(d.Emissions))
+          .attr("fill", (d) => fills[d.Region]);
+      };
+
+      d3.csv("./air_quality.csv")
+        .then((data) => buildChart("main", data))
+        .catch((error) => console.error(error));
+    </script>
+    <main></main>
+  </body>
+</html>
