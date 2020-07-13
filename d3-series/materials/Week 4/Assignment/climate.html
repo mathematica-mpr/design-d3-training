@@ -45,7 +45,7 @@
         //     const colorStep = `rgb(${r}, ${g}, ${b})`;
         //     gradientPalette.push(colorStep);
         //   }
-        //
+
         //   return gradientPalette;
         // };
 
@@ -65,12 +65,12 @@
         const maxAbs = d3.max(data, (d) => Math.abs(d.temp));
 
         const x = d3
-          .scaleLinear()
+          .scaleLinear() // use for continous range
           .domain([-maxAbs, maxAbs])
           .range([0, innerWidth]);
 
         const y = d3
-          .scaleBand()
+          .scaleBand() // use for discrete categories
           .domain(
             data
               .slice()
@@ -160,11 +160,11 @@
           .attr("width", (d) => Math.abs(x(d.temp) - x(0)))
           .attr("height", barHeight)
           // .attr("fill", (d) => color(d.year))
-          .attr("fill", (d) => getFill(d.year));
-        // NOTE: Personally, I'd go with something like this fill pattern.
-        // .attr("fill", (d) =>
-        //   d.temp < 0 ? "rgb(0, 125, 255)" : "rgb(255, 125, 0"
-        // );
+          // .attr("fill", (d) => getFill(d.year));
+          // NOTE: Personally, I'd go with something like this fill pattern.
+          .attr("fill", (d) =>
+            d.temp < 0 ? "rgb(0, 125, 255)" : "rgb(255, 125, 0"
+          );
       };
 
       d3.json("./climate.json")

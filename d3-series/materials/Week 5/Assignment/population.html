@@ -1,0 +1,249 @@
+<html>
+  <head>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+      }
+      main {
+        background-color: #1c2431;
+        display: flex;
+        height: 100%;
+        width: 100%;
+      }
+      .chart-container-outer {
+        background-color: #283142;
+        border-radius: 1rem;
+        margin: auto;
+      }
+      .chart-container-outer text {
+        fill: white;
+        font-family: arial;
+        font-weight: bold;
+      }
+      .chart-container-outer .domain,
+      .chart-container-outer .tick line {
+        stroke: white;
+      }
+      .x-axis-label,
+      .y-axis-label,
+      .chart-title {
+        text-anchor: middle;
+      }
+      .x-axis,
+      .y-axis {
+        font-size: 16px;
+        stroke-width: 2px;
+      }
+      .y-axis-label {
+        transform: rotate(-90deg);
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+      .chart-title {
+        font-size: 24px;
+      }
+      .line {
+        fill: none;
+        stroke-width: 3px;
+      }
+      .legend-color-indicator {
+        stroke-width: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <main></main>
+    <script>
+      // Initialize dimensions.
+      const height = 800;
+      const width = 1200;
+
+      const margin = {
+        top: 100,
+        right: 50,
+        bottom: 100,
+        left: 100,
+      };
+
+      const innerWidth = width - margin.left - margin.right;
+      const innerHeight = height - margin.top - margin.bottom;
+
+      // Add containers.
+      const containerOuter = d3
+        .select("main")
+        .append("svg")
+        .attr("class", "chart-container-outer")
+        .attr("height", height)
+        .attr("width", width);
+
+      const containerInner = containerOuter
+        .append("g")
+        .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+      const buildChart = (containerSelector, data) => {
+        // Remove entries with a population of `null`.
+        data = data.filter((d) => d.pop);
+
+        // Format data.
+        data.forEach((d) => {
+          // Format year to be compatible with scaleTime().
+          d.pop = Number(d.pop);
+          d.year = new Date(d.year.slice(-4), 00, 01).getTime();
+        });
+
+        console.log("data = ", data);
+
+        // Add x-axis.
+        const x = d3
+          .scaleTime()
+          .domain(d3.extent(data, (d) => d.year))
+          .range([0, innerWidth])
+          .nice();
+
+        const xAxis = d3.axisBottom(x);
+
+        containerInner
+          .append("g")
+          .attr("class", "x-axis")
+          .attr("transform", `translate(0, ${innerHeight})`)
+          .call(xAxis);
+
+        containerInner
+          .append("text")
+          .attr("class", "x-axis-label")
+          .attr("x", innerWidth / 2)
+          .attr("y", innerHeight + 60)
+          .text("Year");
+
+        // Add y-axis.
+        const y = d3
+          .scaleLinear()
+          .domain(d3.extent(data, (d) => d.pop))
+          .range([innerHeight, 0])
+          .nice();
+
+        const yAxis = d3
+          .axisLeft(y)
+          .tickFormat((num) => num / 1000000000 + "B");
+
+        containerInner.append("g").attr("class", "y-axis").call(yAxis);
+
+        containerInner
+          .append("text")
+          .attr("class", "y-axis-label")
+          .attr("x", -65)
+          .attr("y", innerHeight / 2)
+          .text("Population");
+
+        // Add title.
+        containerInner
+          .append("text")
+          .attr("class", "chart-title")
+          .attr("x", innerWidth / 2)
+          .attr("y", -40)
+          .text("India vs China by Population");
+
+        // Get countries and assign each a random color.
+        const getRandomInt = (min, max) => {
+          min = Math.ceil(min);
+          max = Math.floor(max);
+          return Math.floor(Math.random() * (max - min)) + min;
+        };
+
+        const getRandomColor = () => {
+          const red = getRandomInt(0, 255);
+          const green = getRandomInt(0, 255);
+          const blue = getRandomInt(0, 255);
+          return `rgb(${red}, ${green}, ${blue})`;
+        };
+
+        const getCountries = (data) => {
+          const countries = {};
+
+          // Iterate through the data and record each new country encountered using the `countries` object.
+          data.forEach((d) => {
+            // If the `countries` object doesn't already have a key corresponding to the current data entry's
+            // country, add this country to `countries' with the country name as the key and an object
+            // containing the country name and a random color as the value.
+            if (!countries[d.country]) {
+              countries[d.country] = {
+                color: getRandomColor(),
+                country: d.country,
+              };
+            }
+          });
+
+          return countries;
+        };
+
+        const countries = getCountries(data);
+        console.log("countries = ", countries);
+
+        // Line generator.
+        const line = d3
+          .line()
+          .x((d) => x(d.year))
+          .y((d) => y(d.pop));
+
+        // Add lines.
+        const countryLine = containerInner
+          .selectAll(".country")
+          .data(Object.values(countries))
+          .enter()
+          .append("g")
+          .attr("class", "country");
+
+        countryLine
+          .append("path")
+          .attr("class", "line")
+          .attr("stroke", (d) => d.color)
+          .datum((country) => data.filter((r) => r.country === country.country))
+          .attr("d", line);
+
+        // Add legend.
+        const legend = containerInner.append("g").attr("class", "legend");
+
+        // Add legend color indicators.
+        const verticalSpacing = 30;
+        const originX = 30;
+        const originY = 0;
+        const colorIndicatorLength = 25;
+
+        legend
+          .selectAll(".legend-entry")
+          .data(Object.values(countries))
+          .enter()
+          .append("line")
+          .attr("class", "legend-color-indicator")
+          .style("stroke", (d) => d.color)
+          .attr("x1", originX)
+          .attr("y1", (d, i) => originY + i * verticalSpacing)
+          .attr("x2", originX + colorIndicatorLength)
+          .attr("y2", (d, i) => originY + i * verticalSpacing);
+
+        const horizontalOffset = colorIndicatorLength + 15;
+        const verticalOffset = 5;
+
+        // Add legend labels.
+        legend
+          .selectAll(".legend-label")
+          .data(Object.values(countries))
+          .enter()
+          .append("text")
+          .attr("class", "legend-label")
+          .attr("x", originX + horizontalOffset)
+          .attr("y", (d, i) => originY + verticalOffset + i * verticalSpacing)
+          .text((d) => d.country);
+      };
+
+      // Asynchronously fetch the data.
+      d3.json("./population.json")
+        // If successful, use the data to build the chart.
+        .then((data) => buildChart("main", data))
+        // If unsuccessful, log the error in the console.
+        .catch((error) => console.error(error));
+    </script>
+    <main></main>
+  </body>
+</html>

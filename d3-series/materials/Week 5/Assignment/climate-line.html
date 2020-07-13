@@ -1,0 +1,207 @@
+<html>
+  <head>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+      }
+      main {
+        background-color: #1c2431;
+        display: flex;
+        height: 100%;
+        width: 100%;
+      }
+      .chart-container-outer {
+        background-color: #283142;
+        border-radius: 1rem;
+        margin: auto;
+      }
+      .chart-container-outer text {
+        fill: white;
+        font-family: arial;
+        font-weight: bold;
+      }
+      .chart-container-outer .domain,
+      .chart-container-outer .tick line {
+        stroke: white;
+      }
+      .x-axis-label,
+      .y-axis-label,
+      .chart-title {
+        text-anchor: middle;
+      }
+      .x-axis,
+      .y-axis {
+        font-size: 16px;
+        stroke-width: 2px;
+      }
+      .y-axis-label {
+        transform: rotate(-90deg);
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+      .chart-title {
+        font-size: 24px;
+      }
+      .line-reference,
+      .line {
+        fill: none;
+      }
+      .line-reference {
+        stroke: white;
+        stroke-dasharray: 4px 8px;
+        stroke-width: 2px;
+        transform: translate(-4px, 1px);
+      }
+      .line {
+        stroke: #ff5900;
+        stroke-width: 1.5px;
+      }
+      .point {
+        fill: #ff5900;
+        stroke: white;
+        stroke-width: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <main></main>
+    <script>
+      // Initialize constants.
+      const height = 800;
+      const width = 1200;
+
+      const margin = {
+        top: 100,
+        right: 50,
+        bottom: 100,
+        left: 100,
+      };
+
+      const innerWidth = width - margin.left - margin.right;
+      const innerHeight = height - margin.top - margin.bottom;
+
+      const containerOuter = d3
+        .select("main")
+        .append("svg")
+        .attr("class", "chart-container-outer")
+        .attr("height", height)
+        .attr("width", width);
+
+      const containerInner = containerOuter
+        .append("g")
+        .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+      const buildChart = (containerSelector, data) => {
+        // Format data.
+        data.forEach((d) => {
+          // Format year to be compatible with scaleTime().
+          d.year = new Date(d.year, 00, 01).getTime();
+          d.temp = Number(d.temp);
+        });
+
+        console.log("data = ", data);
+
+        // Add x-axis.
+        const x = d3
+          .scaleTime()
+          .domain(d3.extent(data, (d) => d.year))
+          .range([0, innerWidth])
+          .nice();
+
+        const xAxis = d3.axisBottom(x);
+
+        containerInner
+          .append("g")
+          .attr("class", "x-axis")
+          .attr("transform", `translate(0, ${innerHeight})`)
+          .call(xAxis);
+
+        containerInner
+          .append("text")
+          .attr("class", "x-axis-label")
+          .attr("x", innerWidth / 2)
+          .attr("y", innerHeight + 60)
+          .text("Year");
+
+        // Add y-axis.
+        const [tempMin, tempMax] = d3.extent(data, (d) => d.temp);
+
+        const y = d3
+          .scaleLinear()
+          .domain(d3.extent(data, (d) => d.temp))
+          .range([innerHeight, 0])
+          .nice();
+
+        const yAxis = d3.axisLeft(y).ticks(10);
+
+        containerInner.append("g").attr("class", "y-axis").call(yAxis);
+
+        containerInner
+          .append("text")
+          .attr("class", "y-axis-label")
+          .attr("x", -65)
+          .attr("y", innerHeight / 2)
+          .text("Annual Change in Temperature (°C)");
+
+        // Add title.
+        containerInner
+          .append("text")
+          .attr("class", "chart-title")
+          .attr("x", innerWidth / 2)
+          .attr("y", -40)
+          .text("History of Global Surface Temperatures Since 1880");
+
+        // Add reference line.
+        const lineReference = d3
+          .line()
+          .x((d) => x(d.year))
+          .y((d) => y(d.temp));
+
+        const [yearMin, yearMax] = d3.extent(data, (d) => d.year);
+
+        const lineReferenceData = [
+          { temp: 0, year: yearMin },
+          { temp: 0, year: yearMax },
+        ];
+
+        containerInner
+          .append("path")
+          .attr("class", "line-reference")
+          .datum(lineReferenceData)
+          .attr("d", lineReference);
+
+        // Add graph line.
+        const lineGraph = d3
+          .line()
+          .x((d) => x(d.year))
+          .y((d) => y(d.temp));
+
+        containerInner
+          .append("path")
+          .attr("class", "line")
+          .datum(data)
+          .attr("d", lineGraph);
+
+        // Add points.
+        containerInner
+          .selectAll(".point")
+          .data(data)
+          .enter()
+          .append("circle")
+          .attr("class", "point")
+          .attr("cx", (d) => x(d.year))
+          .attr("cy", (d) => y(d.temp))
+          .attr("r", 3);
+      };
+
+      // Asynchronously fetch the data.
+      d3.json("./climate.json")
+        // If successful, use the data to build the chart.
+        .then((data) => buildChart("main", data))
+        // If unsuccessful, log the error in the console.
+        .catch((error) => console.error(error));
+    </script>
+    <main></main>
+  </body>
+</html>
