@@ -21,9 +21,9 @@ Notes:
 
 ### Components
 
-1. GeoJSON data
-2. D3 Projections
-3. D3 GeoPaths
+1. Position data: __GeoJSON data__
+2. Coordinate converter: __D3 Projections__
+3. Line generator: __D3 GeoPaths__
 4. Other data
 
 ===
@@ -65,6 +65,15 @@ Notes:
 
 ---
 
+### There is also TopoJson
+
+* Extension of GeoJson 
+* More complicated object structure, but reduces redundancies
+* Smaller file size, but need to convert to GeoJson with compatible libraries
+* [docs](https://github.com/topojson/topojson/blob/master/README.md)
+
+---
+
 ### Where can I find geoJSON?
 
 * [census.gov](https://www.census.gov/geo/maps-data/data/tiger-line.html)
@@ -103,6 +112,9 @@ var mercatorProj = d3
 // get x, y coordinates for Cambridge, MA
 mercatorProj([42.373611, -71.110556]);
 ```
+---
+
+[Projection example](/materials/Week%206/Slides/examples/projections/)
 
 ===
 
@@ -122,7 +134,6 @@ mercatorProj([42.373611, -71.110556]);
 ```javascript
 var geoPath = d3.geoPath().projection(mercatorProj);
 
-// get x, y coordinates for Cambridge, MA
 g
     .selectAll('path')
     .data(geoJsonData.features) // array of geoJSON features
@@ -133,24 +144,12 @@ g
     .attr('stroke-width', 0.5)
     .attr('d', geoPath);
 ```
+===
+
+[Putting it all together](/materials/Week%206/Slides/examples/map/)
 
 ===
 
-[Sandbox](/materials/Week%207/Slides/examples/projections/)
+### Assignment 6
 
-===
-
-[Example](/materials/Week%207/Slides/examples/map/)
-
-===
-
-### Cool Tools
-
-* [census.gov](https://www.census.gov/geo/maps-data/data/tiger-line.html)
-* [mapshaper](http://mapshaper.org)
-
-===
-
-### Assignment 7
-
-* [Details](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%207/Assignment/Assignment%207.md)
+* [Details](https://github.com/mathematica-mpr/design-d3-training/blob/development/d3-series/materials/Week%206/Assignments/Assignment%206.md)
