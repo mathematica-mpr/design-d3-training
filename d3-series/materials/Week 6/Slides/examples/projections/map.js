@@ -1,7 +1,7 @@
 function buildMap(containerId) {
   // size globals
-  var width = 960;
-  var height = 500;
+  var width = 1200;
+  var height = 800;
 
   var margin = {
     top: 50,
@@ -32,10 +32,18 @@ function buildMap(containerId) {
 
     var mercatorProj = d3
       .geoMercator()
+      // .geoOrthographic()
       .rotate([71.110556, 0]) // rotate projection [yaw (east-west), pitch (north-south), roll (3rd axis)]
       .center([0, 42.373611]) // set center of projection
-      .scale(130)
-      .translate([innerWidth / 2, innerHeight / 2]); // can also use fitExtent here
+      // .fitExtent(
+      //   [
+      //     [margin.left, margin.top],
+      //     [width - margin.right, height - margin.bottom],
+      //   ],
+      //   geojson
+      // );
+      .scale(200)
+      .translate([innerWidth / 2, innerHeight / 2]);
 
     var geoPath = d3.geoPath().projection(mercatorProj);
 

@@ -70,7 +70,7 @@ Notes:
 * Extension of GeoJson 
 * More complicated object structure, but reduces redundancies
 * Smaller file size, but need to convert to GeoJson with compatible libraries
-[docs] (https://github.com/topojson/topojson/blob/master/README.md)
+* [docs](https://github.com/topojson/topojson/blob/master/README.md)
 
 ---
 
@@ -112,6 +112,9 @@ var mercatorProj = d3
 // get x, y coordinates for Cambridge, MA
 mercatorProj([42.373611, -71.110556]);
 ```
+---
+
+[Projection example](/materials/Week%206/Slides/examples/projections/)
 
 ===
 
@@ -141,14 +144,9 @@ g
     .attr('stroke-width', 0.5)
     .attr('d', geoPath);
 ```
-
 ===
 
-[Sandbox](/materials/Week%206/Slides/examples/projections/)
-
-===
-
-[Example](/materials/Week%206/Slides/examples/map/)
+[Putting it all together](/materials/Week%206/Slides/examples/map/)
 
 ===
 
