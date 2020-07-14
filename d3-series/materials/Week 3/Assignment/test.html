@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Viz 2</title>
+  </head>
+
+  <body>
+    <div>
+      In a new HTML file, read in data.json file using D3. This file contains an
+      array of 10 objects that have the following properties: size and color.
+    </div>
+    <br />
+    <div id="svg1"></div>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+      var myData;
+      d3.json('data.json').then((data) => {
+        myData = data;
+      });
+
+      var svg1 = d3
+        .select('#svg1')
+        .append('svg')
+        .attr('height', 200)
+        .attr('width', 2000);
+
+      var x = 0;
+      var rectangles = svg1
+        .selectAll('rect')
+        .data(myData)
+        .enter()
+        .append('rect')
+        .attr('width', '20')
+        .attr('x', function (d) {
+          return (x += 50);
+        })
+        .style('fill', function (d) {
+          return d.color;
+        })
+        .attr('height', function (d) {
+          return d.size;
+        });
+    </script>
+  </body>
+</html>

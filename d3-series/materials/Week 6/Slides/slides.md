@@ -21,9 +21,9 @@ Notes:
 
 ### Components
 
-1. GeoJSON data
-2. D3 Projections
-3. D3 GeoPaths
+1. Position data: __GeoJSON data__
+2. Coordinate converter: __D3 Projections__
+3. Line generator: __D3 GeoPaths__
 4. Other data
 
 ===
@@ -62,6 +62,15 @@ Notes:
 
 * Each element in the "features" array represents one thing that will turn into an SVG path
 * The geometry.coordinates attribute is an array of lat/long coordinates that define the thing
+
+---
+
+### There is also TopoJson
+
+* Extension of GeoJson 
+* More complicated object structure, but reduces redundancies
+* Smaller file size, but need to convert to GeoJson with compatible libraries
+[docs] (https://github.com/topojson/topojson/blob/master/README.md)
 
 ---
 
@@ -122,7 +131,6 @@ mercatorProj([42.373611, -71.110556]);
 ```javascript
 var geoPath = d3.geoPath().projection(mercatorProj);
 
-// get x, y coordinates for Cambridge, MA
 g
     .selectAll('path')
     .data(geoJsonData.features) // array of geoJSON features
@@ -136,21 +144,14 @@ g
 
 ===
 
-[Sandbox](/materials/Week%207/Slides/examples/projections/)
+[Sandbox](/materials/Week%206/Slides/examples/projections/)
 
 ===
 
-[Example](/materials/Week%207/Slides/examples/map/)
+[Example](/materials/Week%206/Slides/examples/map/)
 
 ===
 
-### Cool Tools
+### Assignment 6
 
-* [census.gov](https://www.census.gov/geo/maps-data/data/tiger-line.html)
-* [mapshaper](http://mapshaper.org)
-
-===
-
-### Assignment 7
-
-* [Details](https://github.com/linusmarco/d3-training/blob/master/src/materials/Week%207/Assignment/Assignment%207.md)
+* [Details](https://github.com/mathematica-mpr/design-d3-training/blob/development/d3-series/materials/Week%206/Assignments/Assignment%206.md)
