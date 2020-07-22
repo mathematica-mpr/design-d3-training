@@ -1,0 +1,284 @@
+<html>
+  <head>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+      }
+      main {
+        background-color: #1c2431;
+        display: flex;
+        height: 100%;
+        width: 100%;
+      }
+      #map {
+        display: flex;
+        width: 100%;
+      }
+      .map-container-outer {
+        background-color: #283142;
+        border-radius: 1rem;
+        margin: auto;
+      }
+      .map-title {
+        font-size: 24px;
+        fill: white;
+        font-family: arial;
+        text-anchor: middle;
+      }
+      .legend-label-station-class,
+      .legend-label-station-elevation,
+      .legend-label-section {
+        fill: white;
+        font-family: arial;
+      }
+      .legend-elevation-scale-circle {
+        fill: rgba(255, 255, 255, 0.5);
+        stroke: rgba(255, 255, 255, 0.5);
+      }
+      .legend-elevation-scale-line {
+        stroke: white;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const buildMap = (containerSelector, data) => {
+        console.log("data = ", data);
+
+        // Initialize dimensions.
+        const height = 800;
+        const width = 1200;
+
+        const margin = {
+          top: 50,
+          right: 50,
+          bottom: 50,
+          left: 125,
+        };
+
+        const innerWidth = width - margin.left - margin.right;
+        const innerHeight = height - margin.top - margin.bottom;
+
+        // Add containers.
+        const containerOuter = d3
+          .select(containerSelector)
+          .append("svg")
+          .attr("class", "map-container-outer")
+          .attr("height", height)
+          .attr("width", width);
+
+        const containerInner = containerOuter
+          .append("g")
+          .attr("transform", `translate(${margin.left} ${margin.top})`);
+
+        containerInner
+          .append("text")
+          .attr("class", "map-title")
+          .attr("x", innerWidth / 2)
+          .attr("y", 0)
+          .text("National Solar Radiation Database Stations");
+
+        // Add map projection.
+        const projection = d3
+          .geoAlbersUsa()
+          .translate([innerWidth / 2, innerHeight / 2])
+          // Q: Number is arbitrary - is there a better way of selecting?
+          .scale(1400);
+
+        // Create the paths corresponding to US states.
+        const geoPath = d3.geoPath().projection(projection);
+
+        // Add logarithmic scale.
+        const scaleLog = d3
+          .scaleSymlog()
+          .range([2, 15])
+          .domain(
+            d3.extent(data.stations.map((d) => Number(d["ISH_ELEV (m)"])))
+          );
+
+        // Reformat stations data.
+        const stationPoints = [];
+
+        data.stations.forEach((station) => {
+          const lngLat = projection([
+            Number(station.longitude),
+            Number(station.latitude),
+          ]);
+
+          // Check to ensure the coordinates fall within of projection bounds.
+          if (lngLat) {
+            stationPoints.push({
+              // Add class to reference corresponding color.
+              class: station.CLASS,
+              latitude: lngLat[1],
+              longitude: lngLat[0],
+              radius: scaleLog(Number(station["ISH_ELEV (m)"])),
+            });
+          }
+        });
+
+        // Add color generation helper functions.
+        const getRandomInt = (min, max) => {
+          min = Math.ceil(min);
+          max = Math.floor(max);
+          return Math.floor(Math.random() * (max - min)) + min;
+        };
+
+        const getRandomColor = () => {
+          const r = getRandomInt(0, 255);
+          const g = getRandomInt(0, 255);
+          const b = getRandomInt(0, 255);
+          return { r, g, b };
+        };
+
+        // Get station classes and assign each a random color.
+        const getStationsClasses = (data) => {
+          const stationsClasses = {};
+
+          // Iterate through the data and record each new country encountered using the `stationClasses` object.
+          data.forEach((d) => {
+            if (!stationsClasses[d.CLASS]) {
+              const color = getRandomColor();
+              stationsClasses[d.CLASS] = {
+                class: d.CLASS,
+                fill: `rgba(${color.r}, ${color.g}, ${color.b},0.4)`,
+                stroke: `rgba(${color.r}, ${color.g}, ${color.b}, 0.75)`,
+              };
+            }
+          });
+
+          return stationsClasses;
+        };
+
+        const stationsClasses = getStationsClasses(data.stations);
+
+        // Add map.
+        containerInner
+          .selectAll("path")
+          .data(data.states.features)
+          .enter()
+          .append("path")
+          .attr("d", geoPath)
+          .style("fill", "black")
+          .style("stroke", "white")
+          .style("stroke-width", 0.5);
+
+        // Add station circles.
+        containerInner
+          .selectAll("circle")
+          .data(stationPoints)
+          .enter()
+          .append("circle")
+          .attr("cx", (d) => d.longitude)
+          .attr("cy", (d) => d.latitude)
+          .attr("r", (d) => d.radius)
+          .attr("fill", (d) => stationsClasses[d.class].fill)
+          .attr("stroke", "rgba(255, 0, 0, 0.5")
+          .attr("stroke", (d) => stationsClasses[d.class].stroke);
+
+        // Add legend.
+        const legend = containerInner.append("g").attr("class", "legend");
+
+        // Add legend constants.
+        const yHeightLabel = 25;
+        const xOrigin = innerWidth - 90;
+        const yOrigin = 500;
+        const xOffsetLabel = 25;
+        const yOffsetLabel = 5;
+        const stationClassesCount = Object.values(stationsClasses).length;
+        const yOffsetElevationSection =
+          yOrigin + yHeightLabel * (stationClassesCount + 1);
+        const yOffsetEntry1 = yOffsetElevationSection + yHeightLabel * 1;
+        const yOffsetEntry2 = yOffsetElevationSection + yHeightLabel * 3;
+        const radiusElevationMin = 2;
+        const radiusElevationMax = 15;
+
+        // Add legend class section labels.
+        legend
+          .append("text")
+          .attr("class", "legend-label-section")
+          .attr("x", xOrigin - radiusElevationMax)
+          .attr("y", yOrigin - yHeightLabel)
+          .text("Station Classes");
+
+        legend
+          .selectAll(".legend-label-station-class")
+          .data(Object.values(stationsClasses))
+          .enter()
+          .append("text")
+          .attr("class", "legend-label-station-class")
+          .attr("x", xOrigin + xOffsetLabel)
+          .attr("y", (d, i) => yOrigin + yOffsetLabel + i * yHeightLabel)
+          .text((d) => d.class);
+
+        // Add legend class section color indicators.
+        legend
+          .selectAll(".legend-color-indicator")
+          .data(Object.values(stationsClasses))
+          .enter()
+          .append("circle")
+          .attr("class", "legend-color-indicator")
+          .attr("cx", xOrigin)
+          .attr("cy", (d, i) => yOrigin + i * yHeightLabel)
+          .attr("r", 10)
+          .style("fill", (d) => d.fill)
+          .style("stroke", (d) => d.stroke);
+
+        // Add legend elevation section labels.
+        legend
+          .append("text")
+          .attr("class", "legend-label-section")
+          .attr("x", xOrigin - radiusElevationMax)
+          .attr("y", yOffsetElevationSection)
+          .text("Station Elevation");
+
+        legend
+          .append("text")
+          .attr("class", "legend-label-station-elevation")
+          .attr("x", xOrigin + xOffsetLabel)
+          .attr("y", yOffsetEntry1 + yOffsetLabel)
+          .text("-40m");
+
+        legend
+          .append("text")
+          .attr("class", "legend-label-station-elevation")
+          .attr("x", xOrigin + xOffsetLabel)
+          .attr("y", yOffsetEntry2 + yOffsetLabel)
+          .text("3000m");
+
+        // Add legend elevation section scale indicator.
+        legend
+          .append("line")
+          .attr("class", "legend-elevation-scale-line")
+          .attr("x1", xOrigin)
+          .attr("y1", yOffsetEntry1 + radiusElevationMin)
+          .attr("x2", xOrigin)
+          .attr("y2", yOffsetEntry2 - radiusElevationMax);
+
+        legend
+          .append("circle")
+          .attr("class", "legend-elevation-scale-circle")
+          .attr("cx", xOrigin)
+          .attr("cy", yOffsetEntry1)
+          .attr("r", radiusElevationMin);
+
+        legend
+          .append("circle")
+          .attr("class", "legend-elevation-scale-circle")
+          .attr("cx", xOrigin)
+          .attr("cy", yOffsetEntry2)
+          .attr("r", radiusElevationMax);
+      };
+
+      // Asynchronously fetch the data.
+      Promise.all([
+        d3.json("us-states.json"),
+        d3.csv("NSRDB_StationsMeta.csv"),
+      ]).then(([states, stations]) => buildMap("#map", { states, stations }));
+    </script>
+    <main>
+      <div id="map"></div>
+    </main>
+  </body>
+</html>

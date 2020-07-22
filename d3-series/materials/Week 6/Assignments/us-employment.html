@@ -1,0 +1,231 @@
+<html>
+  <head>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+      }
+      main {
+        background-color: #1c2431;
+        display: flex;
+        height: 100%;
+        width: 100%;
+      }
+      #map {
+        display: flex;
+        width: 100%;
+      }
+      .container {
+        background-color: #283142;
+        border-radius: 1rem;
+        margin: auto;
+      }
+      .title,
+      .map-label,
+      .legend-label,
+      .legend-label-no-data {
+        fill: white;
+        font-family: arial;
+        text-anchor: middle;
+      }
+      .title {
+        font-size: 1.5rem;
+      }
+      .map-label {
+        font-size: 1rem;
+      }
+      .legend-label,
+      .legend-label-no-data {
+        font-size: 0.7rem;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const buildMap = (parentSelector, data) => {
+        console.log("data = ", data);
+
+        // Initialize dimensions.
+        const widthContainer = 1300;
+        const heightContainer = 275;
+
+        // Add container.
+        const container = d3
+          .select(parentSelector)
+          .append("svg")
+          .attr("class", "container")
+          .attr("height", heightContainer)
+          .attr("width", widthContainer);
+
+        container
+          .append("text")
+          .attr("class", "title")
+          .attr("x", widthContainer / 2)
+          .attr("y", 45)
+          .text("US Unemployment by County");
+
+        // Add map projection.
+        const widthMap = widthContainer / data.years.length;
+
+        const projection = d3
+          .geoAlbersUsa()
+          .translate([widthMap / 2, widthMap / 2])
+          .scale(300);
+
+        // Create the paths corresponding to US counties.
+        const geoPath = d3.geoPath().projection(projection);
+
+        // Add map constant.
+        const colors = [
+          "#fef0d9",
+          "#fdd49e",
+          "#fdbb84",
+          "#fc8d59",
+          "#ef6548",
+          "#d7301f",
+          "#990000",
+        ];
+
+        // The ugly way (ideally, a d3 scale would be used).
+        const getFill = (d) => {
+          if (!d) {
+            return "#808080";
+          } else if (d < 2.5) {
+            return colors[0];
+          } else if (d < 5) {
+            return colors[1];
+          } else if (d < 7.5) {
+            return colors[2];
+          } else if (d < 10) {
+            return colors[3];
+          } else if (d < 12.5) {
+            return colors[4];
+          } else if (d < 15) {
+            return colors[5];
+          } else {
+            return colors[6];
+          }
+        };
+
+        // Add maps.
+        data.years.forEach((year, i) => {
+          const map = container
+            .append("g")
+            .attr("transform", `translate(${i * widthMap}, 25)`)
+            .attr("class", "map");
+
+          // Add map county boundaries.
+          map
+            .selectAll("path")
+            .data(data.countyFeatures)
+            .enter()
+            .append("path")
+            .attr("d", geoPath)
+            .style("fill", (d) =>
+              getFill(d.properties.percentUnemployed[year])
+            );
+
+          // Add map label.
+          map
+            .append("text")
+            .attr("class", "map-label")
+            .attr("x", widthMap / 2)
+            .attr("y", widthMap - 30)
+            .text(year);
+        });
+
+        // Add legend constants.
+        const widthRect = 40;
+        const heightRect = 10;
+        const yOrigin = 30;
+        const marginRight = 20;
+        const xOrigin =
+          widthContainer - marginRight - widthRect * (colors.length + 2);
+        const yOffsetLabel = 27;
+        const percentages = [];
+
+        for (let i = 0; i <= colors.length; i++) {
+          percentages.push(i * 2.5);
+        }
+
+        // Add legend container.
+        const legend = container.append("g");
+
+        // Add legend color indicators.
+        legend
+          .selectAll(".legend-color-indicator")
+          .data(colors)
+          .enter()
+          .append("rect")
+          .attr("class", "legend-color-indicator")
+          .attr("x", (d, i) => xOrigin + i * widthRect)
+          .attr("y", yOrigin)
+          .attr("width", widthRect)
+          .attr("height", heightRect)
+          .style("fill", (d) => d);
+
+        // Add legend color indicator for counties with no corresponding data.
+        legend
+          .append("rect")
+          .attr("class", "legend-color-indicator-no-data")
+          .attr("x", xOrigin + widthRect * (colors.length + 1))
+          .attr("y", yOrigin)
+          .attr("width", widthRect)
+          .attr("height", heightRect)
+          .attr("fill", "grey");
+
+        // Add legend labels.
+        legend
+          .selectAll(".legend-label")
+          .data(percentages)
+          .enter()
+          .append("text")
+          .attr("class", "legend-label")
+          .attr("x", (d, i) => xOrigin + i * widthRect)
+          .attr("y", yOrigin + yOffsetLabel)
+          .text((d) => (d !== 0 ? d : "%"));
+
+        // Add legend label for counties with no corresponding data.
+        legend
+          .append("text")
+          .attr("class", "legend-label-no-data")
+          .attr("x", xOrigin + widthRect * (colors.length + 1.5))
+          .attr("y", yOrigin + yOffsetLabel)
+          .text("?");
+      };
+
+      // Asynchronously fetch the data.
+      Promise.all([
+        d3.json("us-counties.json"),
+        d3.csv("laucnty12.csv"),
+        d3.csv("laucnty13.csv"),
+        d3.csv("laucnty14.csv"),
+        d3.csv("laucnty15.csv"),
+        d3.csv("laucnty16.csv"),
+      ]).then((countyData) => {
+        const countyFeatures = countyData.shift().features;
+        const years = [2012, 2013, 2014, 2015, 2016];
+
+        countyFeatures.forEach((countyFeature) => {
+          const percentUnemployed = {};
+
+          years.forEach((year, i) => {
+            const info = countyData[i].find(
+              (countyDatum) =>
+                countyFeature.id ===
+                Number(countyDatum.StateCode + countyDatum.CountyCode)
+            );
+            percentUnemployed[year] = (info && Number(info.Percent)) || null;
+          });
+
+          countyFeature.properties.percentUnemployed = percentUnemployed;
+        });
+
+        buildMap("#map", { countyFeatures, years });
+      });
+    </script>
+    <main>
+      <div id="map"></div>
+    </main>
+  </body>
+</html>
