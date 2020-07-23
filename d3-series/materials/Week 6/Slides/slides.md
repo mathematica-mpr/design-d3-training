@@ -21,9 +21,9 @@ Notes:
 
 ### Components
 
-1. Position data: __GeoJSON data__
-2. Coordinate converter: __D3 Projections__
-3. Line generator: __D3 GeoPaths__
+1. GeoJSON data
+2. D3 Projections
+3. D3 GeoPaths
 4. Other data
 
 ===
