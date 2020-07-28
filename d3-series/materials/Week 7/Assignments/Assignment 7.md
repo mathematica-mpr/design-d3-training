@@ -1,4 +1,4 @@
-# Assignment 8
+# Assignment 7
 
 This assignment focuses on using interactions and transitions in d3 visualizations. The homework will revisit past visualizations to add interaction and transitions to them. Unless otherwise stated, all tasks should be done using D3.
 
@@ -23,7 +23,7 @@ This assignment focuses on using interactions and transitions in d3 visualizatio
 * Create two textboxes that take numbers. The textboxes will represent the min and max elevation of the stations you want to keep on the map. Create a button that says filter stations. On click, the javascript should ensure that both inputs have a number in them (if not alert the user similiar to part 1). If there is no value in min or max assume that the user wants to keep down to the lowest value (if min is empty) or up to the highest value (if max is empty).
 * When a circle falls outside the range it should be removed from the visualization. Its transition should appear as if the circle "falls off the bottom of page". When a circle that has been removed should re-appear it should "fall from the top of the page" and land in its appropriate spot given its lat/long. 
 
-### Part 3
+### Part 3 - Do not need to do but can look at for practice
 
 Review the interactive visualization here https://blog.csaladen.es/refugees/ (feel free to skip the intro after a couple of minutes if you get bored). Use what you have learned about data visualization design principles to come up with 5-10 notes about aspects of the visualization that you think are either good or bad (as many in each category as you feel is appropriate). In addition, come up with your own design for a visualization that displays the same data. Submit your design as a rough sketch or mock-up exported from a piece of drawing or design software. Also write a couple of sentences on why you think that your design effectively presents the data.
 
@@ -38,5 +38,3 @@ Review the interactive visualization here https://blog.csaladen.es/refugees/ (fe
 1. Your visualizations:
     * `us-station_interaction.html`: Part 1
     * `us-employment.html`: Part 2
-2. `Critique.md`: Your critique from Part 3
-3. `Alt.[ext]`: Your alternate design from Part 3
