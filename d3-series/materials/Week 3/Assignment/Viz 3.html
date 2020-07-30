@@ -27,7 +27,7 @@
               .attr("stroke-width", strokeWidth)
               .attr("stroke", "black");
 
-            circles.exit().remove();
+            circles.exit().transition().attr("r", 0);
 
             circles.attr("cx", () => getCx()).attr("cy", () => getCy());
           };

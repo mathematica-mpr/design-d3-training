@@ -12,18 +12,17 @@
         width: 100%;
       }
       #map {
-        display: flex;
-        width: 100%;
+        margin: auto;
+        position: relative;
       }
       .map-container-outer {
         background-color: #283142;
         border-radius: 1rem;
-        margin: auto;
       }
       .map-title {
-        font-size: 24px;
         fill: white;
         font-family: arial;
+        font-size: 24px;
         text-anchor: middle;
       }
       .legend-label-station-class,
@@ -39,12 +38,46 @@
       .legend-elevation-scale-line {
         stroke: white;
       }
+      .legend-inputs-class {
+        bottom: 17.55rem;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 3rem;
+      }
+      .station-class-checkbox {
+        margin: 0;
+        margin-bottom: 0.75rem;
+      }
+      .legend-inputs-elevation {
+        bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        height: 4rem;
+        position: absolute;
+        right: 1rem;
+        width: 7.5rem;
+      }
+      .station-elevation-text-box-label {
+        color: white;
+        display: flex;
+        font-family: arial;
+        justify-content: space-between;
+        margin-top: 0.5rem;
+      }
+      .station-elevation-text-box {
+        margin-left: 0.5rem;
+        width: 3rem;
+      }
+      .station-elevation-button {
+        margin-top: 0.5rem;
+      }
     </style>
   </head>
   <body>
     <script>
       const buildMap = (containerSelector, data) => {
-        console.log("data = ", data);
+        console.log("Initial data = ", data);
 
         // Initialize dimensions.
         const height = 800;
@@ -83,12 +116,12 @@
         const projection = d3
           .geoAlbersUsa()
           .translate([innerWidth / 2, innerHeight / 2])
-          // Q: Number is arbitrary - is there a better way of selecting?
           .scale(1400);
 
         // Create the paths corresponding to US states.
         const geoPath = d3.geoPath().projection(projection);
 
+        // TODO: Tweak scale to eliminate "bloat".
         // Add logarithmic scale.
         const scaleLog = d3
           .scaleSymlog()
@@ -100,7 +133,7 @@
         // Reformat stations data.
         const stationPoints = [];
 
-        data.stations.forEach((station) => {
+        data.stations.forEach((station, i) => {
           const lngLat = projection([
             Number(station.longitude),
             Number(station.latitude),
@@ -111,13 +144,18 @@
             stationPoints.push({
               // Add class to reference corresponding color.
               class: station.CLASS,
+              id: i,
               latitude: lngLat[1],
               longitude: lngLat[0],
-              radius: scaleLog(Number(station["ISH_ELEV (m)"])),
+              elevation: +station["ISH_ELEV (m)"],
+              radius: scaleLog(+station["ISH_ELEV (m)"]),
             });
           }
         });
 
+        console.log("Formatted station data = ", stationPoints);
+
+        // TODO: Replace with something like ColorBrewer.
         // Add color generation helper functions.
         const getRandomInt = (min, max) => {
           min = Math.ceil(min);
@@ -151,7 +189,139 @@
           return stationsClasses;
         };
 
+        // Add station logic constants.
         const stationsClasses = getStationsClasses(data.stations);
+        const currentClasses = { "1": true, "2": true, "3": true };
+        const elevationRange = { min: -40, max: 3000, from: -40, to: 3000 };
+
+        const updateStations = () => {
+          const travelDistance = 800;
+          const durationFall = 500;
+          // TODO: Get this working during fall transition.
+          const durationSpread = 250;
+
+          const transitionFallIn = d3
+            .transition()
+            .duration(durationFall)
+            .ease(d3.easeLinear);
+
+          const transitionSpread = d3
+            .transition()
+            .delay(durationFall)
+            .duration(durationSpread);
+
+          const transitionContract = d3.transition().duration(durationSpread);
+
+          const transitionFallOut = d3
+            .transition()
+            .delay(durationSpread)
+            .duration(durationFall);
+
+          const transitionRemove = d3
+            .transition()
+            .delay(durationSpread + durationFall);
+
+          const newData = JSON.parse(JSON.stringify(stationPoints)).filter(
+            (d) =>
+              currentClasses[d.class] &&
+              d.elevation >= elevationRange.from &&
+              d.elevation <= elevationRange.to
+          );
+
+          containerInner
+            .selectAll(".station-point")
+            // Assign datum to corresponding element to ensure transitions work correctly.
+            .data(newData, (d) => d.id)
+            .join(
+              (enter) =>
+                enter
+                  .append("circle")
+                  .attr("id", (d) => d.id)
+                  .attr("class", "station-point")
+                  .attr("cx", (d) => d.longitude)
+                  .attr("cy", (d) => d.latitude - travelDistance)
+                  .attr("r", 2)
+                  .attr("fill", (d) => stationsClasses[d.class].fill)
+                  .attr("stroke", (d) => stationsClasses[d.class].stroke)
+                  .call((enter) =>
+                    enter
+                      .transition(transitionFallIn)
+                      .attr("cy", (d) => d.latitude)
+                      .transition(transitionSpread)
+                      .attr("r", (d) => d.radius)
+                  ),
+              (update) => update.attr("r", (d) => d.radius),
+              (exit) =>
+                exit
+                  .transition(transitionContract)
+                  .attr("r", 2)
+                  .transition(transitionFallOut)
+                  // TODO: This SHOULD be done by transitionFallOut's duration, but that isn't working for some reason.
+                  .duration(durationFall)
+                  .attr("cy", (d) => d.latitude + travelDistance)
+                  .transition(transitionRemove)
+                  .remove()
+            );
+        };
+
+        // TODO: Prevent event listeners from calling updateStations until all active transitions are resolved.
+
+        // Add on change event listeners to class checkboxes.
+        for (let i = 1; i <= Object.keys(stationsClasses).length; i++) {
+          d3.select(`#class-${i}`).on("change", (_, __, element) => {
+            currentClasses[i] = element[0].checked;
+            updateStations();
+          });
+        }
+
+        // Add on change event listeners to elevation text boxes and buttons.
+        d3.select(`#elevation-from`).on("change", (_, __, element) => {
+          let value = +element[0].value;
+
+          if (isNaN(value)) {
+            value = elevationRange.from;
+            alert("Enter a number");
+          } else if (value < elevationRange.min) {
+            value = elevationRange.from;
+            alert(`"From" value must be at least ${elevationRange.min}`);
+          } else if (value >= elevationRange.to) {
+            value = elevationRange.from;
+            alert('"From" value must be less than current "To" value');
+          } else {
+            elevationRange.from = element[0].value;
+          }
+
+          element[0].value = value;
+        });
+
+        d3.select(`#elevation-to`).on("change", (_, __, element) => {
+          let value = +element[0].value;
+
+          if (isNaN(value)) {
+            value = elevationRange.to;
+            alert("Enter a number");
+          } else if (value > elevationRange.max) {
+            value = elevationRange.to;
+            alert(`"From" value must be at most ${elevationRange.max}`);
+          } else if (value <= elevationRange.from) {
+            value = elevationRange.to;
+            alert('"To" value must be greater than current "From" value');
+          } else {
+            elevationRange.to = element[0].value;
+          }
+
+          element[0].value = value;
+        });
+
+        d3.select("#reset-button").on("click", () => {
+          document.getElementById("elevation-from").value = elevationRange.min;
+          document.getElementById("elevation-to").value = elevationRange.max;
+          elevationRange.from = elevationRange.min;
+          elevationRange.to = elevationRange.max;
+          updateStations();
+        });
+
+        d3.select("#filter-button").on("click", () => updateStations());
 
         // Add map.
         containerInner
@@ -165,24 +335,15 @@
           .style("stroke-width", 0.5);
 
         // Add station circles.
-        containerInner
-          .selectAll("circle")
-          .data(stationPoints)
-          .enter()
-          .append("circle")
-          .attr("cx", (d) => d.longitude)
-          .attr("cy", (d) => d.latitude)
-          .attr("r", (d) => d.radius)
-          .attr("fill", (d) => stationsClasses[d.class].fill)
-          .attr("stroke", (d) => stationsClasses[d.class].stroke);
+        updateStations();
 
         // Add legend.
         const legend = containerInner.append("g").attr("class", "legend");
 
         // Add legend constants.
         const yHeightLabel = 25;
-        const xOrigin = innerWidth - 90;
-        const yOrigin = 500;
+        const xOrigin = innerWidth - 70;
+        const yOrigin = 400;
         const xOffsetLabel = 25;
         const yOffsetLabel = 5;
         const stationClassesCount = Object.values(stationsClasses).length;
@@ -277,7 +438,57 @@
       ]).then(([states, stations]) => buildMap("#map", { states, stations }));
     </script>
     <main>
-      <div id="map"></div>
+      <div id="map">
+        <div class="legend-inputs-class">
+          <input
+            checked
+            class="station-class-checkbox"
+            id="class-1"
+            type="checkbox"
+          />
+          <input
+            checked
+            class="station-class-checkbox"
+            id="class-2"
+            type="checkbox"
+          />
+          <input
+            checked
+            class="station-class-checkbox"
+            id="class-3"
+            type="checkbox"
+          />
+        </div>
+
+        <div class="legend-inputs-elevation">
+          <label class="station-elevation-text-box-label">
+            From:
+            <input
+              class="station-elevation-text-box"
+              id="elevation-from"
+              type="text"
+              value="-40"
+            />
+          </label>
+          <label class="station-elevation-text-box-label">
+            To:
+            <input
+              class="station-elevation-text-box"
+              id="elevation-to"
+              type="text"
+              value="3000"
+            />
+          </label>
+
+          <button class="station-elevation-button" id="reset-button">
+            Reset
+          </button>
+
+          <button class="station-elevation-button" id="filter-button">
+            Filter Stations
+          </button>
+        </div>
+      </div>
     </main>
   </body>
 </html>
