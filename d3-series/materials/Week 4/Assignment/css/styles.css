@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=montserrat');
+@import url('https://fonts.googleapis.com/css?family=zillaslab');
+
+body {
+    font-size: 14px;
+    font-family: Montserrat, sans-serif;
+}
+
+.tick { 
+    font: 12px Montserrat, sans-serif; 
+}
