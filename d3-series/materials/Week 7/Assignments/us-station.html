@@ -1,0 +1,171 @@
+<html>
+
+    <head>
+        <title>Map</title>
+    </head>
+
+    <body>
+        <div id="map-holder"></div>
+
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script>
+            function buildMap(containerId) {
+                // size globals
+                var width = 960;
+                var height = 600;
+
+                var margin = {
+                    top: 80,
+                    right: 50,
+                    bottom: 50,
+                    left: 50
+                };
+
+                var innerWidth = width - margin.left - margin.right;
+                var innerHeight = height - margin.top - margin.bottom;
+
+                var svg = d3
+                    .select(containerId)
+                    .append('svg')
+                    .attr('height', height)
+                    .attr('width', width);
+
+                var g = svg
+                    .append('g')
+                    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+                d3.json('us-states.json', function(error, geojson) {
+                    handleError(error, 'failed to read geoJSON data');
+
+                    d3.csv('NSRDB_StationsMeta.csv', function(error, stations) {
+                        handleError(error, 'failed to read station data');
+                        stations=prepDataStations(stations);
+                        console.log(stations);
+                        draw(geojson, stations);
+                        
+                        
+                    });
+                });
+
+                function handleError(error, msg) {
+                    if (error) {
+                        console.error(msg);
+                    }
+                }
+
+                function prepDataStations(data) {
+                    return data
+                    .map(function(d) {
+                        return {
+                            name: d.USAF,
+                            class: +d.CLASS,
+                            loc: [+d.longitude, +d.latitude],
+                            ele: +d.NSRDB_ELEV
+                        };
+                    });
+                }
+                function draw(geojson, stations) {
+
+                    var colors = ['red','yellow','blue'];
+
+                    var scale = d3
+                                .scaleLinear()
+                                .domain([
+                                    d3.min(stations, function(d) {
+                                        return d.ele;
+                                    }),
+                                    d3.max(stations, function(d) {
+                                        return d.ele;
+                                    })
+                                ])
+                                .range([2,15]);
+
+                    var usaProj = d3
+                        .geoAlbersUsa()
+                        //.scale(1000)
+                        .translate([innerWidth / 2, innerHeight / 2]);
+
+                    var geoPath = d3.geoPath().projection(usaProj);
+
+                    g
+                        .selectAll('path')
+                        .data(geojson.features)
+                        .enter()
+                        .append('path')
+                        .attr('d', geoPath)
+                        .style('fill', 'white')
+                        .style('stroke', 'black')
+                        .style('stroke-width', 0.5);
+
+                    g
+                        .selectAll('circle')
+                        .data(stations)
+                        .enter()
+                        .append('circle')
+                        .attr('cx', function(d) {
+                            if(usaProj(d.loc)!=null){
+                                return usaProj(d.loc)[0];
+                            }
+                            
+                        })
+                        .attr('cy', function(d) {
+                            if(usaProj(d.loc)!=null){
+                                return usaProj(d.loc)[1];
+                            }
+                        })
+                        .attr('r', function(d){
+                            return scale(d.ele);
+                        })
+                        .attr('fill', function(d){
+                            return colors[d.class-1];
+                        })
+                        .attr('stroke', 'none');
+                    //title
+                    g
+                    .append('text')
+                    .attr('class', 'title')
+                    .attr('x', innerWidth / 2)
+                    .attr('y', -40)
+                    .attr('text-anchor', 'middle')
+                    .attr('dominant-baseline', 'baseline')
+                    .style('font-size', 20)
+                    .text('NSEDB Stations in the States');
+                    //legend
+                    g
+                    .selectAll('rect')
+                    .data(colors)
+                    .enter()
+                    .append('rect')
+                    .attr('x',860)
+                    .attr('y',function(d,i){
+                        return 400+i*20;
+                    })
+                    .attr('width',30)
+                    .attr('height',15)
+                    .attr('fill',function(d){
+                        return d;
+                    });
+
+                    g.selectAll('textLegend')
+                     .data(colors)
+                     .enter()
+                     .append('text')
+                     .attr('x',840)
+                     .attr('y',function(d,i){
+                        return 410+i*20;
+                    })
+                    .style('font-size', 10)
+                    .text(function(d,i){
+                        return i+1;
+                    });
+                    
+                }
+
+            }
+
+            buildMap('#map-holder');
+
+        </script>
+    </body>
+
+</html>
