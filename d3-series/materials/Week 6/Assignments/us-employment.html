@@ -1,0 +1,150 @@
+<html>
+
+    <head>
+        <title>Map</title>
+    </head>
+
+    <body>
+        <div id="map-holder"></div>
+
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script>
+        function buildMap(containerId) {
+
+            // read in our data
+            d3.json('us-counties.json', function(error, geojson) {
+                handleError(error, 'failed to read geoJSON data');
+
+                d3.csv('laucnty12.csv', function(error, lct12) {
+                    handleError(error, 'failed to read population data');
+
+                    d3.csv('laucnty13.csv', function(error, lct13) {
+                        handleError(error, 'failed to read population data');
+
+                        d3.csv('laucnty14.csv', function(error, lct14) {
+                        handleError(error, 'failed to read population data');
+                            
+                            d3.csv('laucnty15.csv', function(error, lct15) {
+                            handleError(error, 'failed to read population data');
+
+                                d3.csv('laucnty16.csv', function(error, lct16) {
+                                    handleError(error, 'failed to read population data');
+                                    lct12 = prepDataUnEmploy(lct12);
+                                    lct13 = prepDataUnEmploy(lct13);
+                                    lct14 = prepDataUnEmploy(lct14);
+                                    lct15 = prepDataUnEmploy(lct15);
+                                    lct16 = prepDataUnEmploy(lct16);
+                                    draw(geojson, lct12, 100, 80);
+                                    draw(geojson, lct13, 100, 80);
+                                    draw(geojson, lct14, 100, 80);
+                                    draw(geojson, lct15, 100, 80);
+                                    draw(geojson, lct16, 100, 80);
+                                });
+                            });
+                        });
+                        
+                    });
+                });
+            });
+
+            function handleError(error, msg) {
+                if (error) {
+                    console.error(msg);
+                }
+            }
+
+            function prepData(data) {
+                return data
+                    .map(function(d) {
+                        return {
+                            id: d.StateCode + d.CountyCode,
+                            unemployee: +d.Percent
+                        };
+                    });
+            }
+
+            function prepDataUnEmploy(data) {
+                var unemploy = {};
+
+                data.forEach(function(d) {
+                    unemploy[+(d.StateCode + d.CountyCode)] = +d.Percent;
+                   
+                });
+                console.log('unemploy',unemploy[1001]);
+                return unemploy;
+            }
+
+            function draw(geojson, lct, ww, hh) {
+                var width = 250;
+                var height = 200;
+
+                var margin = {
+                    top: 30,
+                    right: 30,
+                    bottom: 30,
+                    left: 30
+                };
+
+                var innerWidth = width - margin.left - margin.right;
+                var innerHeight = height - margin.top - margin.bottom;
+
+             
+                var svg = d3
+                    .select(containerId)
+                    .append('svg')
+                    .attr('height', height)
+                    .attr('width', width);
+
+                var g = svg
+                    .append('g')
+                    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+                geojson.features.forEach(function(f) {
+                    var unemploy = lct[f.id];
+                    if (unemploy) {
+                        f.unemployee = unemploy;
+                    }
+                });
+
+                var opacityScale = d3
+                    .scaleLinear()
+                    .domain([0,30])
+                    .range([0, 1]);
+
+                var usaProj = d3
+                    .geoAlbersUsa()
+                    .scale(300)
+                    .translate([ww, hh]);
+
+                var geoPath = d3.geoPath().projection(usaProj);
+
+                g
+                    .selectAll('path')
+                    .data(geojson.features)
+                    .enter()
+                    .append('path')
+                    .attr('d', geoPath)
+                    .style('fill', function(d) {
+                        if (d.unemployee) {
+                            return 'red';
+                        } else {
+                            return 'grey';
+                        }
+                    })
+                    .style('stroke', 'grey')
+                    .style('stroke-width', 0.1)
+                    .attr('fill-opacity', function(d) {
+                        if (d.unemployee) {
+                            return opacityScale(d.unemployee);
+                        } else {
+                            return 1;
+                        }
+                    });
+
+            }
+        }
+
+        buildMap('#map-holder');
+        </script>
+    </body>
+
+</html>
