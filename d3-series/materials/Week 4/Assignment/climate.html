@@ -1,0 +1,180 @@
+<html>
+
+    <head>
+        <title>Bar Chart</title>
+    </head>
+
+    <body>
+        <div id="chart-holder"></div>
+
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script>
+            var width = 960;
+            var height = 500;
+
+            var margin = {
+                top: 50,
+                right: 50,
+                bottom: 50,
+                left: 50
+            };
+
+            // calculate dimensions without margins
+            var innerWidth = width - margin.left - margin.right;
+            var innerHeight = height - margin.top - margin.bottom;
+
+            // create svg element
+            var svg = d3
+                .select('#chart-holder')
+                .append('svg')
+                .attr('height', height)
+                .attr('width', width);
+
+            // create inner group element
+            var g = svg
+                .append('g')
+                .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+            // read in our data
+            d3.json('climate.json', function(error, data) {
+                // handle read errors
+                var parseYear =  d3.timeFormat("%Y");
+                if (error) {
+                    console.error('failed to read data');
+                    return;
+                }
+
+                console.log('raw', data);
+
+                // coerce data to numeric
+                data.forEach(function(d) {
+                    d.year = parseInt(d.year);
+                    d.temp = +d.temp
+                });
+                
+                var years = [];
+                var min = d3.min(data, function(d) {
+                            return d.year;
+                        });
+                var max = d3.max(data,function(d){
+                    return d.year;
+                })
+                for(let i=0 ; i<=(max-min)/10; i++){
+                    years.push(min+i*10);
+                }
+                years.push(max);
+                var colors = [];
+                for(let j=0;j<years.length;j++){
+                    colors.push("rgb("+ Math.floor(Math.random() * 301)
+                                    +","+Math.floor(Math.random() * 301)
+                                    +","+Math.floor(Math.random() * 301)
+                                    +")");
+                }
+                console.log('color',colors);
+                console.log('clean', data);
+
+                // scales
+                var x = d3
+                    .scaleBand()
+                    .domain(
+                        data.map(function(d) {
+                            return d.year;
+                        })
+                    )
+                    .range([0, innerWidth])
+                    .padding(0.2);
+
+                console.log(x.domain(), x.range());
+
+                var y = d3
+                    .scaleLinear()
+                    .domain([
+                        d3.min(data, function(d) {
+                            return d.temp;
+                        }),
+                        d3.max(data, function(d) {
+                            return d.temp;
+                        })
+                    ])
+                    .range([innerHeight, 0]);
+
+                console.log(y.domain(), y.range());
+
+                // axes
+                var xAxis = d3.axisBottom(x);
+
+                g
+                    .append('g')
+                    .attr('class', 'x-axis')
+                    .attr('transform', 'translate(0,' + innerHeight + ')')
+                    .call(xAxis);
+
+                var yAxis = d3.axisLeft(y).ticks(10);
+
+                g
+                    .append('g')
+                    .attr('class', 'y-axis')
+                    .call(yAxis);
+
+                // bars
+                g
+                    .selectAll('.bar')
+                    .data(data)
+                    .enter()
+                    .append('rect')
+                    .attr('class', 'bar')
+                    .attr('x', function(d) {
+                        return x(d.year);
+                    })
+                    .attr('y', function(d) {
+                        return y(d.temp);
+                    })
+                    .attr('width', x.bandwidth())
+                    .attr('height', function(d) {
+                        return innerHeight - y(d.temp);
+                    })
+                    // .attr('fill','rgb(12,240,233)')
+                    .attr('fill', function(d){
+                        for(let i=0;i<(years.length-1);i++){
+                            if((d.year>=years[i])&&(d.year<=years[i+1])){
+                                return colors[i];
+                            }
+                        }
+                    })
+                    .attr('stroke', 'none');
+
+                // axis labels
+                g
+                    .append('text')
+                    .attr('class', 'x-axis-label')
+                    .attr('x', innerWidth / 2)
+                    .attr('y', innerHeight + 30)
+                    .attr('text-anchor', 'middle')
+                    .attr('dominant-baseline', 'hanging')
+                    .text('Years');
+
+                g
+                    .append('text')
+                    .attr('class', 'y-axis-label')
+                    .attr('x', -30)
+                    .attr('y', innerHeight / 2)
+                    .attr('transform', 'rotate(-90,-30,' + innerHeight / 2 + ')')
+                    .attr('text-anchor', 'middle')
+                    .attr('dominant-baseline', 'baseline')
+                    .text('Temprature');
+
+                // title
+                g
+                    .append('text')
+                    .attr('class', 'title')
+                    .attr('x', innerWidth / 2)
+                    .attr('y', -20)
+                    .attr('text-anchor', 'middle')
+                    .attr('dominant-baseline', 'baseline')
+                    .style('font-size', 24)
+                    .text('Climate for years from 1880 to 2016');
+            });
+        </script>
+    </body>
+
+</html>
