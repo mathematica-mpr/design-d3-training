@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+<title>Week2 D3 Assignment</title>
+<script type="text/javascript" src="lib/d3/d3.min.js"></script>
+<script type="text/javascript" src="lib/d3-dsv/d3-dsv.min.js"></script>
+<script type="text/javascript" src="lib/d3-fetch/d3-fetch.min.js"></script>
+
+</head>
+<body>
+    <script>
+        d3.json("pokemon.json").then(function(data){
+           //calculate the mean weight and height
+           let mean_weight = function(len){
+               let sum = data.reduce(function(a,d){
+                    let weight = parseFloat(d.weight);
+                    weight = weight * 2.2;
+                    return a + weight;
+               },0);
+               return sum/len;
+            }
+
+            let mean_height = function(len){
+               let sum = data.reduce(function(a,d){
+                    let height = parseFloat(d.height);
+                    height = height * 39.37;
+                    return a + height;
+               },0);
+               return sum/len;
+            }
+            console.log(mean_weight(data.length)+"lbs,"+mean_height(data.length)+"iches");
+            
+            //calculate egg distance
+            let eggs = [];
+            data.forEach(function(d){
+                let weak_arr = d.weaknesses;
+                let egg;
+                weak_arr.forEach(function(dd){
+                    if(dd=="Psychic"){
+                        egg = d.egg;
+                        if(d.egg=="Not in Eggs") egg = -1;
+                        else egg = parseInt(egg,10);
+                    }
+                })
+                if((typeof egg)=="number") eggs.push(egg);
+            });
+            let egg_distance = eggs.reduce(function(a,d){
+                return a+d;
+            },0);
+            console.log("egg_distance:"+egg_distance);
+
+            //Determine which type of pokemon has the most weaknesses on average
+            let types = [];
+            data.forEach(function(d){
+                d.type.forEach(function(dd){
+                    let type ={
+                        key: dd,
+                        weakness:d.weaknesses.length
+                    }
+                    types.push(type);
+                });
+            })
+            let type_mean = d3.nest()
+              .key(function(d) { return d.key; })
+              .rollup(function(v) { return d3.mean(v, function(d) { return d.weakness; }); })
+              .entries(types)
+              .sort(function(x, y){
+                return d3.descending(x.value, y.value);
+           });
+           
+            console.log(type_mean);
+
+        //Averge spawn time of weight categories
+           let sum = data.reduce(function(a,d){
+                    let weight = parseFloat(d.weight);
+                    return a + weight;
+               },0);
+            let weight5 = sum/5;
+              
+            let grouped_weight=[];
+            let wt=0;
+            let curr_weight=[];
+            for(let i=0;i<data.length;i++){
+                if(wt>=weight5){
+                    wt=0;
+                    grouped_weight.push(curr_weight);
+                    curr_weight=[];
+                }
+                wt = wt+ parseFloat(data[i].weight);
+                curr_weight.push(data[i]);
+            }
+            grouped_weight.push(curr_weight);
+
+            spawns = [];
+            for(let i=0;i<grouped_weight.length;i++){
+                let spawn = grouped_weight[i].reduce(function(a,d){
+                    return a+d.avg_spawns;
+                },0);
+                spawns.push(spawn);
+            }
+            
+            console.log("ave spwans sum :"+spawns);
+            
+
+
+
+
+
+
+
+        })
+    </script>
+</body>
