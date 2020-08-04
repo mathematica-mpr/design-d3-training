@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <title>Climate Line Graph</title>
+    </head>
+    <body>
+        <div id="viz" style="border: solid black 2px;"></div>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script>
+            function buildChart(id) {
+                var width = 960;
+                var height = 500;
+
+                var margin = {
+                    top: 50,
+                    right: 50,
+                    bottom: 50,
+                    left: 100
+                };
+
+                var innerWidth = width - margin.left - margin.right;
+                var innerHeight = height - margin.top - margin.bottom;
+
+                var svg = d3
+                    .select(id)
+                    .append('svg')
+                    .attr('height', height)
+                    .attr('width', width);
+                
+                var g = svg
+                    .append('g')
+                    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
+                    .style('border', 'solid red 2px')
+                
+                d3.json('population.json', (error, data) => {
+                    if (error) {
+                        console.error(error)
+                    }
+                    var parseTime = d3.timeParse('%Y')
+                    data.forEach(d => {
+                        d.year = parseTime((+(d.year.slice(8, 12))).toString())
+                        d.pop = +d.pop
+                    })
+
+                    var x = d3
+                        .scaleTime()
+                        .domain(d3.extent(data, d => d.year))
+                        .range([0, innerWidth])
+
+                    var y = d3
+                        .scaleLinear()
+                        .domain([d3.min(data, d => d.pop), d3.max(data, d => d.pop)])
+                        .range([innerHeight, 0])
+
+                    var xAxis = d3
+                        .axisBottom(x)
+                        .ticks(d3.timeYear.every(5))
+                    
+                    g
+                        .append('g')
+                        .attr('class', 'x-axis')
+                        .attr('transform', 'translate(0,' + innerHeight + ')')
+                        .call(xAxis);
+                    
+                    var yAxis = d3
+                        .axisLeft(y)
+                        .ticks(10)
+                    
+                    g
+                        .append('g')
+                        .attr('class', 'y-axis')
+                        .call(yAxis);
+
+                    var line = d3
+                        .line()
+                        .x(d => x(d.year))
+                        .y(d => y(d.pop))
+                    
+                    var countries = data.reduce((acc, curr) => {
+                        if (!acc.includes(curr.country)) {
+                            acc.push(curr.country)
+                        }
+                        return acc
+                    }, [])
+                    console.log(countries)
+
+                    var colors = ['red', 'blue']
+
+                    var colorScale = d3
+                        .scaleOrdinal()
+                        .domain(countries)
+                        .range(colors);
+
+                    var groups = g
+                        .selectAll('.country')
+                        .data(countries)
+                        .enter()
+                        .append('g')
+                        .attr('class', 'country');
+                    
+                    groups
+                        .append('path')
+                        .datum(d => data.filter(r => r.country === d))
+                        .attr('class', 'pop-line')
+                        .attr('fill', 'none')
+                        .attr('stroke', d => colorScale(d[0].country))
+                        .attr('stroke-width', 1.5)
+                        .attr('d', line);
+
+                    groups
+                        .selectAll('.pop-point')
+                        .data(d => data.filter(r => r.country === d))
+                        .enter()
+                        .append('circle')
+                        .attr('class', 'pop-point')
+                        .attr('fill', d => colorScale(d.country))
+                        .attr('stroke', 'none')
+                        .attr('cx', d => x(d.year))
+                        .attr('cy', d => y(d.pop))
+                        .attr('r', 2);
+
+                    g
+                        .append('text')
+                        .attr('class', 'x-axis-label')
+                        .attr('x', innerWidth / 2)
+                        .attr('y', innerHeight + 30)
+                        .attr('text-anchor', 'middle')
+                        .attr('dominant-baseline', 'hanging')
+                        .text('Year');
+
+                    g
+                        .append('text')
+                        .attr('class', 'y-axis-label')
+                        .attr('x', -30)
+                        .attr('y', innerHeight / 2)
+                        .attr('transform', 'rotate(-90,-30,' + innerHeight / 2 + ')')
+                        .attr('text-anchor', 'middle')
+                        .attr('dominant-baseline', 'baseline')
+                        .text('Population')
+
+                    g
+                        .append('text')
+                        .attr('class', 'title')
+                        .attr('x', innerWidth / 2)
+                        .attr('y', -20)
+                        .attr('text-anchor', 'middle')
+                        .attr('dominant-baseline', 'baseline')
+                        .style('font-size', 24)
+                        .text('Population by Country over Time')
+                })
+            };
+
+            buildChart('#viz');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title>Climate Line Graph</title>
+    </head>
+    <body>
+        <div id="viz" style="border: solid black 2px;"></div>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script>
+            function buildChart(id) {
+                var width = 960;
+                var height = 500;
+
+                var margin = {
+                    top: 50,
+                    right: 50,
+                    bottom: 50,
+                    left: 50
+                };
+
+                var innerWidth = width - margin.left - margin.right;
+                var innerHeight = height - margin.top - margin.bottom;
+
+                var svg = d3
+                    .select(id)
+                    .append('svg')
+                    .attr('height', height)
+                    .attr('width', width);
+                
+                var g = svg
+                    .append('g')
+                    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
+                    .style('border', 'solid red 2px')
+                
+                d3.json('climate.json', (error, data) => {
+                    if (error) {
+                        console.error(error)
+                    }
+                    var parseTime = d3.timeParse('%Y')
+                    data.forEach(d => {
+                        d.year = parseTime((+d.year).toString())
+                        d.temp = +d.temp
+                    })
+                    console.log('clean', data)
+
+                    var x = d3
+                        .scaleTime()
+                        .domain(d3.extent(data, d => d.year))
+                        .range([0, innerWidth])
+                    console.log(x.domain(), x.range())
+
+                    var y = d3
+                        .scaleLinear()
+                        .domain([d3.min(data, d => d.temp), d3.max(data, d => d.temp)])
+                        .range([innerHeight, 0])
+                    console.log(y.domain(), y.range())
+
+                    var xAxis = d3
+                        .axisBottom(x)
+                        .ticks(d3.timeYear.every(5))
+                    
+                    g
+                        .append('g')
+                        .attr('class', 'x-axis')
+                        .attr('transform', 'translate(0,' + innerHeight + ')')
+                        .call(xAxis);
+                    
+                    var yAxis = d3
+                        .axisLeft(y)
+                        .ticks(10)
+                    
+                    g
+                        .append('g')
+                        .attr('class', 'y-axis')
+                        .call(yAxis);
+
+                    var line = d3
+                        .line()
+                        .x(d => x(d.year))
+                        .y(d => y(d.temp))
+                    
+                    g
+                        .append('path')
+                        .datum(data)
+                        .attr('fill', 'none')
+                        .attr('stroke', 'blue')
+                        .attr('stroke-width', 1.5)
+                        .attr('d', line)
+
+                    g
+                        .selectAll('.temp-point')
+                        .data(data)
+                        .enter()
+                        .append('circle')
+                        .attr('class', '.temp-point')
+                        .attr('fill', 'blue')
+                        .attr('stroke', 'none')
+                        .attr('cx', d => x(d.year))
+                        .attr('cy', d => y(d.temp))
+                        .attr('r', 3)
+
+                    g
+                        .append('text')
+                        .attr('class', 'x-axis-label')
+                        .attr('x', innerWidth / 2)
+                        .attr('y', innerHeight + 30)
+                        .attr('text-anchor', 'middle')
+                        .attr('dominant-baseline', 'hanging')
+                        .text('Year');
+
+                    g
+                        .append('text')
+                        .attr('class', 'y-axis-label')
+                        .attr('x', -30)
+                        .attr('y', innerHeight / 2)
+                        .attr('transform', 'rotate(-90,-30,' + innerHeight / 2 + ')')
+                        .attr('text-anchor', 'middle')
+                        .attr('dominant-baseline', 'baseline')
+                        .text('Temp');
+
+                    g
+                        .append('text')
+                        .attr('class', 'title')
+                        .attr('x', innerWidth / 2)
+                        .attr('y', -20)
+                        .attr('text-anchor', 'middle')
+                        .attr('dominant-baseline', 'baseline')
+                        .style('font-size', 24)
+                        .text('Average Temperature per Year');
+
+                });
+            };
+
+            buildChart('#viz');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Assignment 3 - Viz 3</title>
+    </head>
+    <body>
+        <h1>Assignment 3 - Viz 3</h1>
+
+        <h3>Part 3</h3>
+
+        <div id="viz4" style="border: solid black 2px;"></div>
+
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script>
+            var svg = d3.select('#viz4')
+                .append('svg')
+                .attr("width", 500)
+                .attr("height", 500);
+            
+            function updateViz(data) {
+                var selection = svg.selectAll('circle')
+                    .data(data);
+                
+                selection
+                    .enter()
+                    .append('circle')
+                    .attr('r', function (d) {
+                        return d.size;
+                    })
+                    .attr('stroke', function (d) {
+                        return d.color;
+                    })
+
+                selection
+                    .exit()
+                    .remove()
+                
+                selection
+                    .attr('cx', 250)
+                    .attr('cy', 125)
+            }
+
+            function animate(data) {
+                updateViz(data);
+                var loop = setInterval(function() { 
+                    if (data.length === 0) { clearInterval(loop); }
+                    data.pop();
+                    updateViz(data);
+                }, 2000);
+            }
+
+            d3.json('data.json', function(data) {
+                animate(data);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>US Station Map</title>
+  </head>
+
+  <body>
+    <div id="map-holder" style="border: solid black 2px;"></div>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+      function buildChart(id) {
+        var width = 500;
+        var height = 500;
+
+        var margin = {
+          top: 50,
+          right: 50,
+          bottom: 50,
+          left: 50,
+        };
+
+        var innerWidth = width - margin.left - margin.right;
+        var innerHeight = height - margin.top - margin.bottom;
+
+        var svg = d3.select(id).append("svg").attr("height", height).attr("width", width);
+
+        var g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.json("us-states.json", function (error, geojson) {
+          handleError(error, "failed to read geoJSON data");
+
+          d3.csv("NSRDB_StationsMeta.csv", function (error, stations) {
+            handleError(error, "failed to read station data");
+            stations = prepStationData(stations);
+
+            var geoAlbersProj = d3
+              .geoAlbers()
+              .scale(375)
+              .rotate([98.5795, 0])
+              .center([0, 39.8283])
+              .translate([innerWidth / 2, innerHeight / 2]);
+
+            var geoPath = d3.geoPath().projection(geoAlbersProj);
+
+            g.selectAll("path")
+              .data(geojson.features)
+              .enter()
+              .append("path")
+              .attr("d", geoPath)
+              .style("fill", "white")
+              .style("stroke", "black")
+              .style("stroke-width", 0.5);
+
+            var radiusScale = d3
+              .scaleLinear()
+              .domain(d3.extent(stations, (d) => d.elevation))
+              .range([2, 15]);
+
+            g.selectAll("circle")
+              .data(stations)
+              .enter()
+              .append("circle")
+              .attr("cx", function (d) {
+                return geoAlbersProj(d.loc)[0];
+              })
+              .attr("cy", function (d) {
+                return geoAlbersProj(d.loc)[1];
+              })
+              .attr("r", function (d) {
+                return radiusScale(d.elevation);
+              })
+              .attr("fill", function (d) {
+                if (d.color === 1) {
+                  return "red";
+                } else if (d.color === 2) {
+                  return "blue";
+                } else {
+                  return "green";
+                }
+              })
+              .attr("stroke", "none");
+
+            g.append("text")
+              .attr("class", "title")
+              .attr("x", innerWidth / 2)
+              .attr("y", -20)
+              .attr("text-anchor", "middle")
+              .attr("dominant-baseline", "baseline")
+              .style("font-size", 24)
+              .text("Stations in the US");
+          });
+        });
+
+        function handleError(error, msg) {
+          if (error) {
+            console.error(msg);
+          }
+        }
+
+        function prepStationData(data) {
+          return data.map(function (d) {
+            return {
+              color: +d.CLASS,
+              elevation: +d["NSRDB_ELEV (m)"],
+              loc: [+d["ISH_LON(dd)"], +d["ISH_LAT (dd)"]],
+            };
+          });
+        }
+      }
+      buildChart("#map-holder");
+    </script>
+  </body>
+</html>

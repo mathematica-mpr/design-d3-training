@@ -1,0 +1,138 @@
+<html>
+  <head>
+    <title>US Station Map</title>
+  </head>
+
+  <body>
+    <div id="map-holder" style="border: solid black 2px;"></div>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+      function buildChart(id) {
+        var width = 500;
+        var height = 500;
+
+        var margin = {
+          top: 50,
+          right: 50,
+          bottom: 50,
+          left: 50,
+        };
+
+        var innerWidth = width - margin.left - margin.right;
+        var innerHeight = height - margin.top - margin.bottom;
+
+        var svg = d3.select(id).append("svg").attr("height", height).attr("width", width);
+
+        var g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.json("us-counties.json", function (error, geojson) {
+          handleError(error, "failed to read geoJSON data");
+
+          d3.csv("laucnty12.csv", function (error, counties2012) {
+            handleError(error, "failed to read counties2012 data");
+
+            d3.csv("laucnty13.csv", function (error, counties2013) {
+              handleError(error, "failed to read counties2013 data");
+
+              d3.csv("laucnty14.csv", function (error, counties2014) {
+                handleError(error, "failed to read counties2014 data");
+
+                d3.csv("laucnty15.csv", function (error, counties2015) {
+                  handleError(error, "failed to read counties2015 data");
+                  var counties = handleCounties(counties2012, counties2013, counties2014, counties2015);
+                  draw(geojson, counties);
+                });
+              });
+            });
+          });
+        });
+
+        function handleError(error, msg) {
+          if (error) {
+            console.error(msg);
+          }
+        }
+
+        function handleCounties(data1, data2, data3, data4) {
+          var mergedCounties = data1.concat(data2, data3, data4);
+          var counties = {};
+          mergedCounties.forEach((county) => {
+            code = county.StateCode + county.CountyCode;
+            if (!counties[code]) {
+              counties[code] = {
+                name: county.CountyName,
+                years: {
+                  2012: 0,
+                  2013: 0,
+                  2014: 0,
+                  2015: 0,
+                },
+              };
+            }
+            if (county.Year === "2012") {
+              counties[code].years[2012] = +county.Percent;
+            } else if (county.Year === "2013") {
+              counties[code].years[2013] = +county.Percent;
+            } else if (county.Year === "2014") {
+              counties[code].years[2014] = +county.Percent;
+            } else if (county.Year === "2015") {
+              counties[code].years[2015] = +county.Percent;
+            }
+          });
+          return counties;
+        }
+
+        function draw(geojson, counties) {
+          geojson.features.forEach(function (f) {
+            var county = counties[f.id];
+            if (county) {
+              f.properties.county = county;
+            }
+          });
+
+          var opacityScale = d3.scaleLinear().domain([0, 100]).range([0, 1]);
+
+          var mercatorProj2012 = d3
+            .geoMercator()
+            .scale(150)
+            .rotate([80, 0])
+            .center([0, 50])
+            .translate([innerWidth / 2, innerHeight / 2]);
+
+          var geoPath2012 = d3.geoPath().projection(mercatorProj2012);
+
+          g.selectAll("path")
+            .data(geojson.features)
+            .enter()
+            .append("path")
+            .attr("d", geoPath2012)
+            .style("fill", function (d) {
+              if (d.properties.county) {
+                return "blue";
+              } else {
+                return "grey";
+              }
+            })
+            .style("stroke", "none")
+            .style("stroke-width", 0.5)
+            .attr("fill-opacity", function (d) {
+              if (d.properties.county) {
+                return opacityScale(d.properties.county.years[2012]);
+              }
+            });
+
+          g.append("text")
+            .attr("class", "title")
+            .attr("x", innerWidth / 2)
+            .attr("y", -20)
+            .attr("text-anchor", "middle")
+            .attr("dominant-baseline", "baseline")
+            .style("font-size", 24)
+            .text("2012");
+        }
+      }
+      buildChart("#map-holder");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Assignment 3 - Viz 1</title>
+    </head>
+    <body>
+        <h1>Assignment 3 - Viz 1</h1>
+
+        <h3>Part 1</h3>
+        <div id="viz1" style="border: solid black 2px;"></div>
+
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script>
+            var svg = d3.select('#viz1')
+                .append('svg')
+                .attr("width", 300)
+                .attr("height", 300);
+
+            var rect = svg.append('rect')
+                .attr('height', 20)
+                .attr('width', 100)
+                .style('fill', 'blue')
+
+            var cirlce1 = svg.append('circle')
+                .attr('cx', 50)
+                .attr('cy', 50)
+                .attr('r', 12.5)
+                .style('fill', 'orange')
+                .attr('stroke', 'blue')
+                .attr('stroke-width', 2)
+
+            var cirlce2 = svg.append('circle')
+                .attr('cx', 100)
+                .attr('cy', 50)
+                .attr('r', 25)
+                .style('fill', 'orange')
+                .attr('stroke', 'blue')
+                .attr('stroke-width', 2)
+            
+            var cirlce3 = svg.append('circle')
+                .attr('cx', 190)
+                .attr('cy', 50)
+                .attr('r', 50)
+                .style('fill', 'orange')
+                .attr('stroke', 'blue')
+                .attr('stroke-width', 2)
+            
+            var octagon = svg.append('polygon')
+                .attr('points', '60,20 100,40 100,80 60,100 20,80 20,40')
+        </script>
+    </body>
+</html>

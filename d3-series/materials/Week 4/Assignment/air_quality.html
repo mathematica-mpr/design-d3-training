@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <title>Air Quality Viz</title>
+  </head>
+  <body>
+    <div id="air-quality-bar-chart" style="border: solid black 2px;"></div>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+      function buildChart(containerId) {
+        var width = 960;
+        var height = 500;
+
+        var margin = {
+          top: 50,
+          right: 50,
+          bottom: 50,
+          left: 50,
+        };
+
+        var innerWidth = width - margin.left - margin.right;
+        var innerHeight = height - margin.top - margin.bottom;
+
+        var svg = d3.select(containerId).append("svg").attr("height", height).attr("width", width);
+
+        var g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("air_quality.csv", (error, data) => {
+          if (error) {
+            console.error("failed to read data");
+            return;
+          }
+          console.log("raw", data);
+          data.forEach((d) => {
+            d.Emissions = parseFloat(d.Emissions.replace(/,/g, ""));
+          });
+          console.log("clean", data);
+
+          var x = d3
+            .scaleBand()
+            .domain(data.map((d) => d.State))
+            .range([0, innerWidth]);
+          console.log(x.domain(), x.range());
+
+          var y = d3
+            .scaleLinear()
+            .domain([0, d3.max(data, (d) => d.Emissions)])
+            .range([innerHeight, 0]);
+          console.log(y.domain(), x.range());
+
+          var xAxis = d3.axisBottom(x);
+          g.append("g")
+            .attr("class", "x-axis")
+            .attr("transform", "translate(0," + innerHeight + ")")
+            .call(xAxis);
+
+          var yAxis = d3.axisLeft(y);
+          g.append("g").attr("class", "y-axis").call(yAxis);
+
+          g.selectAll(".bar")
+            .data(data)
+            .enter()
+            .append("rect")
+            .attr("class", "bar")
+            .attr("x", (d) => x(d.State))
+            .attr("y", (d) => y(d.Emissions))
+            .attr("height", (d) => innerHeight - y(d.Emissions))
+            .attr("width", 10)
+            .attr("fill", (d) => {
+              if (d.Region === "Northeast") {
+                return "#01FDF6";
+              } else if (d.Region === "South") {
+                return "#CBBAED";
+              } else if (d.Region === "Midwest") {
+                return "#E9DF00";
+              } else {
+                return "#03FCBA";
+              }
+
+              g.append("text")
+                .attr("class", "x-axis-label")
+                .attr("x", innerWidth / 2)
+                .attr("y", innerHeight + 30)
+                .attr("text-anchor", "middle")
+                .attr("dominant-baseline", "hanging")
+                .text("States");
+
+              g.append("text")
+                .attr("class", "y-axis-label")
+                .attr("x", -30)
+                .attr("y", innerHeight / 2)
+                .attr("transform", "rotate(-90,-30," + innerHeight / 2 + ")")
+                .attr("text-anchor", "middle")
+                .attr("dominant-baseline", "baseline")
+                .text("Emissions");
+
+              g.append("text")
+                .attr("class", "title")
+                .attr("x", innerWidth / 2)
+                .attr("y", -20)
+                .attr("text-anchor", "middle")
+                .attr("dominant-baseline", "baseline")
+                .style("font-size", 24)
+                .text("Emissions by State");
+            });
+        });
+      }
+      buildChart("#air-quality-bar-chart");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <title>Climate Viz</title>
+    </head>
+    <body>
+        <div id="climate-bar-chart" style="border: solid black 2px;"></div>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script>
+            function buildChart(containerId) {
+                var width = 960;
+                var height = 1200;
+
+                var margin = {
+                    top: 50,
+                    right: 0,
+                    bottom: 50,
+                    left: 100
+                };
+
+                var innerWidth = width - margin.left - margin.right;
+                var innerHeight = height - margin.top - margin.bottom;
+
+                var svg = d3
+                    .select(containerId)
+                    .append('svg')
+                    .attr('height', height)
+                    .attr('width', width);
+                
+                var g = svg
+                    .append('g')
+                    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+                
+                d3.json('climate.json', function (error, data) {
+                    if (error) {
+                        console.error('failed to read data');
+                        return;
+                    }
+                    console.log('raw', data)
+
+                    data.forEach(function(d) {
+                        d.year = +d.year;
+                        d.temp = +d.temp;
+                    });
+
+                    console.log('clean', data);
+
+                    var x = d3
+                        .scaleLinear()
+                        // .domain([data[0].temp, data[data.length-1].temp])
+                        // .domain(
+                        //     data.map(function(d) {
+                        //         return d.temp;
+                        //     }))
+                        .domain([
+                            -0.2,
+                            d3.max(data, function(d) {
+                                return d.temp;
+                            })
+                        ])
+                        .range([0, innerWidth])
+
+
+                    console.log(x.domain(), x.range());
+
+                    var y = d3
+                        .scaleBand()
+                        // .domain([1880, 1890, 1900, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020])
+                        .domain(
+                            data.map(function(d) {
+                                return d.year;
+                            }))
+                        .range([innerHeight, 0])
+                        .padding(2)
+
+                    console.log(y.domain(), y.range());
+
+                    var xAxis = d3.axisBottom(x);
+
+                    g
+                        .append('g')
+                        .attr('class', 'x-axis')
+                        .attr('transform', 'translate(0,' + innerHeight + ')')
+                        .call(xAxis);
+                    
+                    var yAxis = d3.axisLeft(y);
+
+                    g
+                        .append('g')
+                        .attr('class', 'y-axis')
+                        .call(yAxis);
+                    
+                    g
+                        .selectAll('.bar')
+                        .data(data)
+                        .enter()
+                        .append('rect')
+                        .attr('class', 'bar')
+                        .attr('x', data[0].temp)
+                        // .attr('x', function(d) {
+                        //     return x(d.temp);
+                        // })
+                        .attr('y', function(d) {
+                            return y(d.year);
+                        })
+                        .attr('height', 5)
+                        .attr('width', function(d) {
+                            return x(d.temp);
+                        })
+                        .attr('fill', d => {
+                            if (d.year >= 1880 && d.year < 1890) {
+                                return 'red'
+                            } else if (d.year >= 1890 && d.year < 1900) {
+                                return 'orange'
+                            } else if (d.year >= 1900 && d.year < 1910) {
+                                return 'yellow'
+                            } else if (d.year >= 1910 && d.year < 1920) {
+                                return 'green'
+                            } else if (d.year >= 1920 && d.year < 1930) {
+                                return 'blue'
+                            } else if (d.year >= 1930 && d.year < 1940) {
+                                return 'purple'
+                            } else if (d.year >= 1940 && d.year < 1950) {
+                                return 'pink'
+                            } else if (d.year >= 1950 && d.year < 1960) {
+                                return 'teal'
+                            } else if (d.year >= 1960 && d.year < 1970) {
+                                return 'lemonchiffon'
+                            } else if (d.year >= 1970 && d.year < 1980) {
+                                return 'steelblue'
+                            } else if (d.year >= 1980 && d.year < 1990) {
+                                return 'lightblue'
+                            } else if (d.year >= 1990 && d.year < 2000) {
+                                return 'magenta'
+                            } else if (d.year >= 2000 && d.year < 2010) {
+                                return 'magenta'
+                            } 
+                        })
+                        .attr('stroke', 'none');
+
+                    g
+                        .append('text')
+                        .attr('class', 'x-axis-label')
+                        .attr('x', innerWidth / 2)
+                        .attr('y', innerHeight + 30)
+                        .attr('text-anchor', 'middle')
+                        .attr('dominant-baseline', 'hanging')
+                        .text('Temp');
+
+                    g
+                        .append('text')
+                        .attr('class', 'y-axis-label')
+                        .attr('x', -30)
+                        .attr('y', innerHeight / 2)
+                        .attr('transform', 'rotate(-90,-30,' + innerHeight / 2 + ')')
+                        .attr('text-anchor', 'middle')
+                        .attr('dominant-baseline', 'baseline')
+                        .text('Year');
+                    
+                    g
+                        .append('text')
+                        .attr('class', 'title')
+                        .attr('x', innerWidth / 2)
+                        .attr('y', -20)
+                        .attr('text-anchor', 'middle')
+                        .attr('dominant-baseline', 'baseline')
+                        .style('font-size', 24)
+                        .text('Yearly Global Temperatures');
+                })
+            }
+            buildChart('#climate-bar-chart')
+        </script>
+    </body>
+</html>
