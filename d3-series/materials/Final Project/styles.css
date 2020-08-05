@@ -1,0 +1,35 @@
+.charts1 {
+  display: flex;
+  justify-content: center;
+  margin: 25px auto;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.charts2 {
+  display: flex;
+  justify-content: center;
+  margin: 25px auto;
+}
+
+.charts2-child {
+  width: 750px;
+}
+
+h1 {
+  text-align: center;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 2px;
+  background: white;
+  border: solid black 1px;
+  border-radius: 5px;
+  pointer-events: none;
+}
