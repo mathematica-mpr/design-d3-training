@@ -9,7 +9,7 @@
     "author": "Linus Marco",
     "dependencies": {
         "http-server": "^0.10.0",
-        "reveal.js": "^3.9.2",
+        "reveal.js": "^4.3.0",
         "d3": "^4.12.0"
     }
 }
