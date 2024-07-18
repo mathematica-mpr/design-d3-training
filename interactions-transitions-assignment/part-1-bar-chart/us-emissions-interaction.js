@@ -93,7 +93,7 @@ function createChart(elementId) {
     
     // legend for regions
     const legend = svg.append("g")
-      .attr("transform", `translate(${margins.left + 100},${margins.top})`);
+      .attr("transform", `translate(${margins.left + 120},${margins.top})`);
     const regions = Array.from(new Set(data.map(d => d.Region)));
     regions.forEach((region, i) => {
       const legendRow = legend.append("g")
@@ -112,40 +112,46 @@ function createChart(elementId) {
     });
     // create bars
     let bars = g.selectAll(".bar")
-    .data(data)
-    .join("rect")
-    .attr("class", "bar")
+        .data(data)
+        .join("rect")
+        .attr("class", "bar");
 
   // add event listeners for the radio buttons
-  d3.selectAll('input[name="sort"]').on('change', function() {
-    let sortOrder;
-    if (this.value === 'state') {
-      sortOrder = (a, b) => d3.ascending(a.State, b.State);
-    } else if (this.value === 'emissions-desc') {
-      sortOrder = (a, b) => d3.descending(a.Emissions, b.Emissions);
-    } else if (this.value === 'emissions-asc') {
-      sortOrder = (a, b) => d3.ascending(a.Emissions, b.Emissions);
-    }
+    d3.selectAll('input[name="sort"]').on('change', function() {
+        let sortOrder;
+        if (this.value === 'state') {
+        sortOrder = (a, b) => d3.ascending(a.State, b.State);
+        } else if (this.value === 'emissions-desc') {
+        sortOrder = (a, b) => d3.descending(a.Emissions, b.Emissions);
+        } else if (this.value === 'emissions-asc') {
+        sortOrder = (a, b) => d3.ascending(a.Emissions, b.Emissions);
+        }
 
-    // sort data
-    data.sort(sortOrder);
+        // sort data
+        data.sort(sortOrder);
 
-    // update scales
-    stateScale.domain(data.map(d => d.State));
-    emissionsScale.domain([0, d3.max(data, d => d.Emissions)]);
+        // update scales
+        stateScale.domain(data.map(d => d.State));
+        emissionsScale.domain([0, d3.max(data, d => d.Emissions)]);
 
-    // transition bars
-    bars.transition()
-      .duration(1500)
-      .delay((_d, i) => i * Number(d3.select('#delay').node().value))
-      .attr("x", d => stateScale(d.State))
-      .attr("y", d => emissionsScale(d.Emissions))
-      .attr("height", d => innerHeight - emissionsScale(d.Emissions));
-
-    g.select('.x.axis')
-        .transition()
+        // transition bars
+        bars.transition()
         .duration(1500)
-        .call(xAxis);
+        .delay((_d, i) => i * Number(d3.select('#delay').node().value))
+        .attr("x", d => stateScale(d.State))
+        .attr("y", d => emissionsScale(d.Emissions))
+        .attr("height", d => innerHeight - emissionsScale(d.Emissions));
+
+        g.select('.x.axis')
+            .transition()
+            .duration(1500)
+            .call(xAxis);
+
+        if(isNaN(d3.select('#delay').node().value)) {
+            alert("Please enter a number for the delay");
+            return;
+        }
+    
     });  
   });
 };
