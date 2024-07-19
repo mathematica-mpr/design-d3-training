@@ -163,7 +163,7 @@ function createChart(elementId) {
                 g.select('.x-axis')
                     .transition()
                     .duration(1500)
-                    .call(xAxis)
+                    .call(d3.scaleBottom(xScale))
                     .selectAll('text') // rotate and adjust text labels
                         .attr('transform', 'rotate(-45)')
                         .attr('text-anchor', 'end')
