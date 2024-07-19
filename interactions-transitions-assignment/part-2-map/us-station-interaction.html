@@ -4,6 +4,16 @@
     </head>
     <body>
         <div id="chart-container"></div>
+        <div id="checkbox-container">
+            <input type="checkbox" id="class1" checked> Class 1
+            <input type="checkbox" id="class2" checked> Class 2
+            <input type="checkbox" id="class3" checked> Class 3
+        </div>        
+        <div id="filter-container">
+            <input type="number" id="min-elevation" placeholder="Min elevation">
+            <input type="number" id="max-elevation" placeholder="Max elevation">
+            <button id="filter-button">Filter stations</button>
+        </div>
         <script src="https://d3js.org/d3.v6.min.js"></script>
         <script src="./us-station-interaction.js"></script>
     </body>
