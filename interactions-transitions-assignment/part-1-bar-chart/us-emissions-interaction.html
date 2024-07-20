@@ -3,7 +3,20 @@
         <title>US Air Quality</title>
     </head>
     <body>
+        <br><br><br>
+            <div>
+                <input
+                    type="radio" name="sort" value="label"
+                    onclick="myFunction()"> Sort by Label<br>
+                <input type="radio" name="sort" value="descending"> Sort by Emissions Descending<br>
+                <input type="radio" name="sort" value="ascending"> Sort by Emissions Ascending<br>
+            </div>
         <div id="chart-container"></div>
+        <script>
+            function myFunction() {
+                console.log("Test");
+            }
+        </script>
         <script src="https://d3js.org/d3.v6.min.js"></script>
         <script src="./us-emissions-interaction.js"></script>
     </body>

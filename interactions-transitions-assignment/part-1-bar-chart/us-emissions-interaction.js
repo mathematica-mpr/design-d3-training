@@ -91,7 +91,10 @@ function createChart(elementId) {
             .attr('y', -10)
             .text('Gas Emissions in 2020 Across the US');
 
-        console.log(maxEmissions);
+        // Add interactivity
+        // document.getElementsByName()
+
+        // console.log(maxEmissions);
     });
     
     return svg.node();
