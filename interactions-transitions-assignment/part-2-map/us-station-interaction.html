@@ -1,10 +1,39 @@
-<html>
-    <head>
-        <title>US Weather Stations</title>
-    </head>
-    <body>
-        <div id="chart-container"></div>
-        <script src="https://d3js.org/d3.v6.min.js"></script>
-        <script src="./us-station-interaction.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Weather Stations</title>
+</head>
+<body>
+    <div id="chart-container"></div>
+
+    <div id="filters">
+        <div id="checkbox-container">
+            <div class="checkbox-item">
+                <input type="checkbox" id="class-1" value="1" checked>
+                <label for="class-1">Class 1</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="class-2" value="2" checked>
+                <label for="class-2">Class 2</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="class-3" value="3" checked>
+                <label for="class-3">Class 3</label>
+            </div>
+        </div>
+        <div>
+            <label for="min-elevation">Min Elevation:</label>
+            <input type="number" id="min-elevation" name="min-elevation">
+            <label for="max-elevation">Max Elevation:</label>
+            <input type="number" id="max-elevation" name="max-elevation">
+            <button id="filter-button">Filter Stations</button>
+        </div>
+    </div>
+
+    
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="./us-station-interaction.js"></script>
+</body>
 </html>
