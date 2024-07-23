@@ -1,9 +1,4 @@
 function createChart(elementId) {
-    const toNum = stringNum => {
-        if (typeof stringNum === "string")
-            return +(stringNum.replace(/,/g, ''))
-        return stringNum;
-    };
 
     // container dimensions
     const height = 500;
@@ -32,12 +27,14 @@ function createChart(elementId) {
 
     // read in air quality data
     d3.csv('air_quality.csv').then( function(data) {
-
-
         // bar chart and transitions code goes here
 
-        // const minEmissions = d3.min(data, d => +d.Emissions);
-        const maxEmissions = d3.max(data, d => toNum(d.Emissions));
+        // tidy data
+        data.forEach(d => 
+            d.Emissions = +(d.Emissions.replace(/,/g, ''))
+        );
+
+        const maxEmissions = d3.max(data, d => d.Emissions);
         const y = d3.scaleLinear()
             .domain([0, maxEmissions])
             .range([innerHeight, 0]);
@@ -59,12 +56,12 @@ function createChart(elementId) {
             .data(data)
             .join('g')
             .attr('transform', d =>
-                `translate(${x(d.State)}, ${y(toNum(d.Emissions))})`);
+                `translate(${x(d.State)}, ${y(d.Emissions)})`);
 
         const bars = chart.append('rect')
             .attr('width', x.bandwidth())
             .attr('fill', d => scaleOrdinal(d.Region))
-            .attr('height', d => innerHeight - y(toNum(d.Emissions)));
+            .attr('height', d => innerHeight - y(d.Emissions));
 
         const bottomAxis = g.append('g')
             .attr('transform', `translate(0,${innerHeight})`);
@@ -91,10 +88,46 @@ function createChart(elementId) {
             .attr('y', -10)
             .text('Gas Emissions in 2020 Across the US');
 
-        // Add interactivity
-        // document.getElementsByName()
+        const radioButtons = Array.from(document.getElementsByName('sort'));
+        radioButtons.forEach(button => {
+            button.addEventListener('change', _ => updateSort());
+        });
 
-        // console.log(maxEmissions);
+        const updateSort = _ => {
+            const activeButton = radioButtons.find(button => button.checked);
+            switch(activeButton.id) {
+                case "sort-ascending":
+                    data = d3.sort(data, state => state.Emissions);
+                    break;
+                case "sort-state":
+                    data = d3.sort(data, state => state.State);
+                    break;
+                case "sort-descending":
+                    data = d3.reverse(d3.sort(data, state => state.Emissions));
+                    break;
+            }
+            x.domain(data.map(d => d.State));
+            svg.node().update();
+        };
+
+        svg.node().update = _ => {
+            const t = svg.transition()
+                .duration(1500);
+            const delay = +document.getElementById("delay-input").value;
+            if (isNaN(delay)) alert("Can not accept input");
+        
+            chart.data(data, d => d.State)
+                .order()
+              .transition(t)
+                .delay((_, i) => i * delay)
+                .attr('transform', d =>
+                    `translate(${x(d.State)}, ${y(d.Emissions)})`);
+        
+            bottomAxis.transition(t)
+                .call(d3.axisBottom(x))
+              .selectAll(".tick")
+                .delay((_, i) => i * delay);
+        };
     });
     
     return svg.node();
