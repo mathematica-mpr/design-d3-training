@@ -1,10 +1,23 @@
 <html>
-    <head>
-        <title>US Air Quality</title>
-    </head>
-    <body>
-        <div id="chart-container"></div>
-        <script src="https://d3js.org/d3.v6.min.js"></script>
-        <script src="./us-emissions-interaction.js"></script>
-    </body>
+  <head>
+    <title>US Air Quality</title>
+  </head>
+  <body>
+    <div id="chart-container"></div>
+    <div id="controls">
+      <input type="radio" id="state" name="sort" value="state">
+      <label for="state">Sort By State</label>
+      <br>
+      <input type="radio" id="emissions-desc" name="sort" value="emissions-desc">
+      <label for="emissions-desc">Sort By Emissions Descending</label>
+      <br>
+      <input type="radio" id="emissions-asc" name="sort" value="emissions-asc">
+      <label for="emissions-asc">Sort By Emissions Ascending</label>
+      <br>
+      <label for="delay">Delay (in milliseconds):</label>
+      <input type="text" id="delay" name="delay" value="0" min="0">
+    </div>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="./us-emissions-interaction.js"></script>
+  </body>
 </html>
