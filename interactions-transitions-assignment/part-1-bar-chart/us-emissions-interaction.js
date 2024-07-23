@@ -38,6 +38,7 @@ function createChart(elementId) {
         const y = d3.scaleLinear()
             .domain([0, maxEmissions])
             .range([innerHeight, 0]);
+
         const x = d3.scaleBand()
             .domain(data.map(d => d.State))
             .rangeRound([0, innerWidth])
@@ -62,6 +63,42 @@ function createChart(elementId) {
             .attr('width', x.bandwidth())
             .attr('fill', d => scaleOrdinal(d.Region))
             .attr('height', d => innerHeight - y(d.Emissions));
+
+        const legendHeight = 50;
+        const legendSpacing = 2;
+        const legendBlockNum = scaleOrdinal.domain().length;
+        const legendBlockSize = (legendHeight - ((legendBlockNum - 1) * legendSpacing)) / legendBlockNum;
+
+        const legend = g.append('g')
+            .attr('transform', `translate(${innerWidth}, 10)`);
+
+        legend.selectAll('rect')
+            .data(scaleOrdinal.domain())
+            .join('rect')
+            .attr('height', legendBlockSize)
+            .attr('width', legendBlockSize)
+            .attr('stroke', 'black')
+            .attr('y', (_, i) => i * (legendBlockSize+legendSpacing))
+            .attr('fill', d => scaleOrdinal(d));
+
+        legend.selectAll('text')
+            .data(scaleOrdinal.domain())
+            .join('text')
+            .attr('text-anchor', 'start')
+            .attr('dominant-baseline', 'hanging')
+            .style('font-size', legendBlockSize)
+            .style('fill', 'black')
+            .attr('x', legendBlockSize + 4)
+            .attr('y', (_, i) => i * (legendBlockSize+legendSpacing))
+            .text(d => d);
+
+        legend.append('text')
+            .style('font-size', legendBlockSize + 1)
+            .style('fill', 'black')
+            .attr('x', 6)
+            .attr('y', -legendBlockSize)
+            .text('Class');
+
 
         const bottomAxis = g.append('g')
             .attr('transform', `translate(0,${innerHeight})`);
