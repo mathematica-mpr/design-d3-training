@@ -3,7 +3,22 @@
         <title>US Air Quality</title>
     </head>
     <body>
+        <br><br><br>
+            <div>
+                <input type="radio" id="sort-state" name="sort" checked>
+                <label for="sort-state">Sort Alphabetically by State</label><br>
+
+                <input type="radio" id="sort-descending" name="sort">
+                <label for="sort-descending">Sort by Descending Emissions</label><br>
+
+                <input type="radio" id="sort-ascending" name="sort">
+                <label for="sort-ascending">Sort by Ascending Emissions</label><br>
+            </div>
         <div id="chart-container"></div>
+        <div>
+            <input id="delay-input" type="text" value=20>
+            <label for="delay-input">Delay (milliseconds)</label>
+        </div>
         <script src="https://d3js.org/d3.v6.min.js"></script>
         <script src="./us-emissions-interaction.js"></script>
     </body>
