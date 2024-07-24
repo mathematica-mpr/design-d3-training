@@ -3,8 +3,26 @@
         <title>US Weather Stations</title>
     </head>
     <body>
+        <br>
+        <div id="class-checkbox-container">
+            <label for="class-1">Class: 1</label>
+            <input type="checkbox" id="1" name="class-checkbox" checked><br>
+            <label for="class-2">Class: 2</label>
+            <input type="checkbox" id="2" name="class-checkbox" checked><br>
+            <label for="class-3">Class: 3</label>
+            <input type="checkbox" id="3" name="class-checkbox" checked><br>
+        </div>
         <div id="chart-container"></div>
+        <br>
+        <div id="elevation-input-container">
+            <input type="submit" id="elevation-submit-button" value="Submit"><br>
+            <input type="text" id="min" name="elevation-input">
+            <label for="min">Minimum Elevation (Feet)</label><br>
+            <input type="text" id="max" name="elevation-input">
+            <label for="min">Maximum Elevation (Feet)</label><br>
+        </div>
         <script src="https://d3js.org/d3.v6.min.js"></script>
         <script src="./us-station-interaction.js"></script>
+        
     </body>
 </html>

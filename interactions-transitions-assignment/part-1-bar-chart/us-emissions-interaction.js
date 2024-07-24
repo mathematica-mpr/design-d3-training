@@ -47,7 +47,7 @@ function createChart(elementId) {
         const regions = data.reduce((arr, state) => {
             if (!arr.includes(state.Region)) arr.push(state.Region);
             return arr;
-        }, new Array());
+        }, []);
 
         const scaleOrdinal = d3.scaleOrdinal()
             .domain(regions)
@@ -60,6 +60,7 @@ function createChart(elementId) {
                 `translate(${x(d.State)}, ${y(d.Emissions)})`);
 
         const bars = chart.append('rect')
+            .style("mix-blend-mode", "multiply")
             .attr('width', x.bandwidth())
             .attr('fill', d => scaleOrdinal(d.Region))
             .attr('height', d => innerHeight - y(d.Emissions));
