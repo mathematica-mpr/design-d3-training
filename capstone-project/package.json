@@ -1,0 +1,17 @@
+{
+  "name": "design-d3-training",
+  "version": "1.0.0",
+  "description": "This repo is used for the design and d3 data visualization training.",
+  "main": "index.js",
+  "author": "AST Web Dev Team",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "d3": "^6.7.0"
+  },
+  "prettier": {
+    "useTabs": false,
+    "printWidth": 120,
+    "tabWidth": 4,
+    "singleQuote": true
+  }
+}
