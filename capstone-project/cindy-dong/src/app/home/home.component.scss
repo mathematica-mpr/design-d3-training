@@ -25,7 +25,7 @@ body {
 }
 
 #button {
-    display: flex;
+    display: inline-block;
     justify-content: center;
     margin-bottom: 70px;
 
@@ -39,5 +39,6 @@ body {
         border: none;
         border-radius: 5px;
         letter-spacing: 1.5px;
+        cursor: pointer;
     }
 }

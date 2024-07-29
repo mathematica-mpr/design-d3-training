@@ -1,0 +1,8 @@
+# Node
+/node_modules
+npm-debug.log
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+
