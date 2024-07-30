@@ -2,18 +2,18 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-line-chart',
+    selector: 'app-bar-graph',
     standalone: true,
     imports: [],
-    templateUrl: './line-chart.component.html',
-    styleUrl: './line-chart.component.scss',
+    templateUrl: './bar-graph.component.html',
+    styleUrl: './bar-graph.component.scss',
 })
-export class LineChartComponent {
+export class BarGraphComponent {
     constructor(private router: Router) {}
+    navigateToFirstViz() {
+        this.router.navigate(['/first-viz']);
+    }
     navigateToSecondViz() {
         this.router.navigate(['/second-viz']);
-    }
-    navigateToThirdViz() {
-        this.router.navigate(['/third-viz']);
     }
 }

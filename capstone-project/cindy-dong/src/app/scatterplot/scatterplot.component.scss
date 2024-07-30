@@ -1,4 +1,4 @@
-.year {
+.population {
     padding-inline: 110px;
     padding-top: 0px;
     font-size: 30px;
@@ -32,5 +32,7 @@
     .active {
         background-color: #bfe7f9;
         color: #1b5c79;
+        border-color: black;
+        border-width: thick;
     }
 }

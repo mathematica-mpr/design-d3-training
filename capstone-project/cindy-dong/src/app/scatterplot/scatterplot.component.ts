@@ -2,16 +2,16 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-line-chart',
+    selector: 'app-scatterplot',
     standalone: true,
     imports: [],
-    templateUrl: './line-chart.component.html',
-    styleUrl: './line-chart.component.scss',
+    templateUrl: './scatterplot.component.html',
+    styleUrl: './scatterplot.component.scss',
 })
-export class LineChartComponent {
+export class ScatterplotComponent {
     constructor(private router: Router) {}
-    navigateToSecondViz() {
-        this.router.navigate(['/second-viz']);
+    navigateToFirstViz() {
+        this.router.navigate(['/first-viz']);
     }
     navigateToThirdViz() {
         this.router.navigate(['/third-viz']);
