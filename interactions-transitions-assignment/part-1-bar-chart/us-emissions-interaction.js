@@ -1,5 +1,4 @@
 function createChart(elementId) {
-
     // container dimensions
     const height = 500;
     const width = 1000;
@@ -26,7 +25,7 @@ function createChart(elementId) {
         .attr('dominant-baseline', 'middle');
 
     // read in air quality data
-    d3.csv('air_quality.csv').then( function(data) {
+    d3.csv('air_quality.csv').then( data => {
         // bar chart and transitions code goes here
 
         // tidy data
@@ -41,7 +40,7 @@ function createChart(elementId) {
 
         const x = d3.scaleBand()
             .domain(data.map(d => d.State))
-            .rangeRound([0, innerWidth])
+            .rangeRound([0, innerWidth - 10])
             .padding(0.1);
 
         const regions = data.reduce((arr, state) => {
@@ -71,7 +70,7 @@ function createChart(elementId) {
         const legendBlockSize = (legendHeight - ((legendBlockNum - 1) * legendSpacing)) / legendBlockNum;
 
         const legend = g.append('g')
-            .attr('transform', `translate(${innerWidth}, 10)`);
+            .attr('transform', `translate(${innerWidth - 10}, 10)`);
 
         legend.selectAll('rect')
             .data(scaleOrdinal.domain())
@@ -152,7 +151,7 @@ function createChart(elementId) {
             const t = svg.transition()
                 .duration(1500);
             const delay = +document.getElementById("delay-input").value;
-            if (isNaN(delay)) alert("Can not accept input");
+            if (isNaN(delay)) alert("Can not accept input. Must be a number.");
         
             chart.data(data, d => d.State)
                 .order()

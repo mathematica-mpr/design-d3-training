@@ -70,7 +70,7 @@ function createMap(elementId) {
             .attr('stroke', '#999999')
             .attr('stroke-width', '.5');
 
-        const stationDots = map.selectAll('circle')
+        map.selectAll('circle')
             .data(applicableStations)
             .join('circle')
             .style("mix-blend-mode", "multiply")
@@ -153,9 +153,7 @@ function createMap(elementId) {
             const checkedBoxes = checkboxes.filter(box => box.checked).map(box => box.id);
             return applicableStations
             .filter(station =>
-                checkedBoxes.includes(station.class)
-            )
-            .filter(station =>
+                checkedBoxes.includes(station.class) &&
                 station.elevation >= range[0] &&
                 station.elevation <= range[1]
             );
