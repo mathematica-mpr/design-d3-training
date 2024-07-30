@@ -16,4 +16,7 @@ export class ScatterplotComponent {
     navigateToThirdViz() {
         this.router.navigate(['/third-viz']);
     }
+    navigateToHome() {
+        this.router.navigate(['/']);
+    }
 }

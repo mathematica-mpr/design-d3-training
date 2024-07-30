@@ -16,4 +16,7 @@ export class BarGraphComponent {
     navigateToSecondViz() {
         this.router.navigate(['/second-viz']);
     }
+    navigateToHome() {
+        this.router.navigate(['/']);
+    }
 }

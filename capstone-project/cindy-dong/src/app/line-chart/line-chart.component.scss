@@ -34,3 +34,22 @@
         color: #1b5c79;
     }
 }
+
+#back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    button {
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+        font-size: 17px;
+        font-weight: 600;
+        background-color: transparent;
+        border: none;
+        font-family: serif;
+        color: #12445b;
+        cursor: pointer;
+    }
+}

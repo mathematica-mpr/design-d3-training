@@ -1,10 +1,19 @@
 <body>
     <header class="population">
         <h3>By Weighted Population Density</h3>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
     </header>
     <div id="selection">
         <button type="button" (click)="navigateToFirstViz()">Year</button>
         <button type="button" class="active">Population</button>
         <button type="button" (click)="navigateToThirdViz()">Geography</button>
+    </div>
+    <div id="back">
+        <button type="button" (click)="navigateToHome()">
+            <span class="material-symbols-outlined"> arrow_back </span>Home
+        </button>
     </div>
 </body>
