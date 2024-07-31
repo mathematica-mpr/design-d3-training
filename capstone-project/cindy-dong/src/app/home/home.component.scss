@@ -11,6 +11,7 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 100px;
+    padding-top: 30px;
 
     .box {
         background-color: #bfe7f9;
@@ -22,10 +23,16 @@ body {
         font-family: sans-serif;
         flex: 1 0 21%;
     }
+    .box img {
+        width: 250px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 #button {
-    display: inline-block;
+    display: flex;
     justify-content: center;
     margin-bottom: 70px;
 

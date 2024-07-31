@@ -5,13 +5,16 @@
   "main": "index.js",
   "author": "AST Web Dev Team",
   "dependencies": {
-    "http-server": "^0.12.3",
-    "d3": "^6.7.0"
+    "d3": "^6.7.0",
+    "http-server": "^0.12.3"
   },
   "prettier": {
     "useTabs": false,
     "printWidth": 120,
     "tabWidth": 4,
     "singleQuote": true
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3"
   }
 }
