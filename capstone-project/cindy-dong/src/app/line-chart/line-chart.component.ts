@@ -34,10 +34,11 @@ export class LineChartComponent implements OnInit {
     url: string = '../../assets/years.json';
 
     ngOnInit() {
+        //lifecycle hook, part of OnInit interface
         fetch(this.url)
-            .then((res) => res.json())
+            .then((response) => response.json())
             .then((json) => {
-                this.yearsData = json.Population;
+                this.yearsData = json.Years;
                 this.createChart();
                 this.setupFilters();
                 this.updateChart();
@@ -79,7 +80,7 @@ export class LineChartComponent implements OnInit {
                     .filter((d) => d.year !== null) as { year: Date; value: number }[],
             };
         });
-
+        
         const x = d3
             .scaleTime()
             .domain(d3.extent(formattedData[0].values, (d) => d.year) as [Date, Date])
@@ -142,7 +143,7 @@ export class LineChartComponent implements OnInit {
         const selectCounty = d3.select('#select-county');
         const selectYear = d3.select('#select-year');
         const clearFilters = d3.select('#clear-filters');
-        const selectedItems = d3.select('#selected-items');
+        const selectedItems = d3.select('#selected-items'); // show the items selected
 
         //populates county and year
         const counties = Array.from(new Set(this.yearsData.map((d) => d.COUNTY)));
