@@ -62,11 +62,10 @@ export class ScatterplotComponent implements OnInit {
                 });
             return { name, values };
         });
-        //console.log(this.formattedData);
+        
     }
 
-    createChart(filteredData: PopulationData[] = this.populationData) {
-        const data: PopulationData[] = filteredData;
+    createChart(_filteredData: PopulationData[] = this.populationData) {
         const margin = { top: 20, right: 30, bottom: 30, left: 40 },
             width = 800 - margin.left - margin.right,
             height = 450 - margin.top - margin.bottom;
@@ -88,7 +87,8 @@ export class ScatterplotComponent implements OnInit {
         const y = d3
             .scaleLinear()
             .domain([0, d3.max(this.formattedData, (d) => d3.max(d.values, (v) => v.yValue)) as number])
-            .range([height, 0]);
+            .range([height, 0])
+            .nice();
 
         svg.append('g').attr('transform', `translate(0,${height})`).call(d3.axisBottom(x));
         svg.append('g').call(d3.axisLeft(y));
