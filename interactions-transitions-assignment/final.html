@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Visualization Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .tab-container {
+            display: flex;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin: 0;
+            border-bottom: 1px solid #ccc;
+        }
+        .tab {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            background-color: #ddd;
+            margin-right: 2px;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            transition: background-color 0.3s;
+        }
+        .tab.active {
+            background-color: white;
+            border-bottom: 1px solid white;
+        }
+        .tab-content {
+            display: none;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        iframe {
+            width: 70%;
+            height: 100vh; 
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Tabs -->
+    <div class="tab-container">
+        <div class="tab active" data-target="tab-content-1">Private Health Insurance</div>
+        <div class="tab" data-target="tab-content-2">Employment Over Time</div>
+        <div class="tab" data-target="tab-content-3">Private Health Insurance vs. Employment</div>
+    </div>
+
+    <!-- Tab Content Sections -->
+    <div id="tab-content-1" class="tab-content active">
+        <iframe src="part-1-bar-chart/viz1.html"></iframe>
+    </div>
+    <div id="tab-content-2" class="tab-content">
+        <iframe src="part-2-map/viz2.html"></iframe>
+    </div>
+    <div id="tab-content-3" class="tab-content">
+        <iframe src="part-3/viz3.html"></iframe>
+    </div>
+
+    <!-- JavaScript to Handle Tab Switching -->
+    <script>
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const target = this.getAttribute('data-target');
+
+                // Remove active class from all tabs and content
+                document.querySelectorAll('.tab, .tab-content').forEach(el => {
+                    el.classList.remove('active');
+                });
+
+                // Add active class to the clicked tab and corresponding content
+                this.classList.add('active');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+
+        // Optionally, you can use this to ensure the default tab is active when the page loads
+        document.querySelector('.tab.active').click();
+    </script>
+</body>
+</html>

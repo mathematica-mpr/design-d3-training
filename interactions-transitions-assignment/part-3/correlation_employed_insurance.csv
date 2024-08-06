@@ -1,0 +1,3227 @@
+state,county,pct_employed,pct_private
+Alabama,Autauga County,97.09,58.37
+Alabama,Baldwin County,96.08,60.67
+Alabama,Barbour County,93.06,43
+Alabama,Bibb County,92.56,54.12
+Alabama,Blount County,94.8,59.56
+Alabama,Bullock County,96.65,46.76
+Alabama,Butler County,93.53,54.84
+Alabama,Calhoun County,92.71,55.47
+Alabama,Chambers County,96.41,56.1
+Alabama,Cherokee County,95.87,59.78
+Alabama,Chilton County,93.9,58.25
+Alabama,Choctaw County,93.53,51.05
+Alabama,Clarke County,88.37,50.63
+Alabama,Clay County,94.64,54.49
+Alabama,Cleburne County,96.71,57.87
+Alabama,Coffee County,94.5,47.61
+Alabama,Colbert County,96.01,61.21
+Alabama,Conecuh County,92.14,49.1
+Alabama,Coosa County,97.45,56.91
+Alabama,Covington County,92.3,56.47
+Alabama,Crenshaw County,95.95,55.02
+Alabama,Cullman County,94.99,57.24
+Alabama,Dale County,90.98,44.7
+Alabama,Dallas County,89.62,44.02
+Alabama,DeKalb County,95.55,53.68
+Alabama,Elmore County,95.93,62.31
+Alabama,Escambia County,89.93,53.7
+Alabama,Etowah County,94.3,56.22
+Alabama,Fayette County,92.05,54.55
+Alabama,Franklin County,95.16,52.25
+Alabama,Geneva County,96.35,47.69
+Alabama,Greene County,87.34,38.57
+Alabama,Hale County,90.88,46.81
+Alabama,Henry County,94.55,55.42
+Alabama,Houston County,94.4,52.89
+Alabama,Jackson County,94.81,57.5
+Alabama,Jefferson County,93.75,60.95
+Alabama,Lamar County,94.89,54.88
+Alabama,Lauderdale County,95.33,62.38
+Alabama,Lawrence County,96.24,59.83
+Alabama,Lee County,95.32,66.71
+Alabama,Limestone County,94.91,65.3
+Alabama,Lowndes County,89.52,45.92
+Alabama,Macon County,89.13,50.92
+Alabama,Madison County,95.53,67.11
+Alabama,Marengo County,93.06,53.38
+Alabama,Marion County,93.84,53.69
+Alabama,Marshall County,96.35,54.76
+Alabama,Mobile County,94.38,54.11
+Alabama,Monroe County,86.49,48.27
+Alabama,Montgomery County,93.58,52.94
+Alabama,Morgan County,95.21,60.49
+Alabama,Perry County,88.55,43.77
+Alabama,Pickens County,91.53,49.89
+Alabama,Pike County,95.12,61.06
+Alabama,Randolph County,95.91,56.98
+Alabama,Russell County,94.41,42.54
+Alabama,St. Clair County,94.8,64.49
+Alabama,Shelby County,96.22,74.37
+Alabama,Sumter County,92.03,42.84
+Alabama,Talladega County,92.95,55.01
+Alabama,Tallapoosa County,89.04,54.39
+Alabama,Tuscaloosa County,94.05,66
+Alabama,Walker County,92.67,56.55
+Alabama,Washington County,93.25,55.67
+Alabama,Wilcox County,87.02,39.01
+Alabama,Winston County,94.57,50.84
+Alaska,Aleutians East Borough,96.44,39.66
+Alaska,Aleutians West Census Area,95.99,66.3
+Alaska,Anchorage Municipality,94.77,56.35
+Alaska,Bethel Census Area,82.5,27.52
+Alaska,Bristol Bay Borough,96.18,57.66
+Alaska,Chugach Census Area,97.19,62.37
+Alaska,Copper River Census Area,94.36,47.55
+Alaska,Denali Borough,96.34,73.7
+Alaska,Dillingham Census Area,88.4,32.31
+Alaska,Fairbanks North Star Borough,92.88,55.22
+Alaska,Haines Borough,90.97,46.85
+Alaska,Hoonah-Angoon Census Area,89.15,43.18
+Alaska,Juneau City and Borough,95.57,66.92
+Alaska,Kenai Peninsula Borough,92,52.19
+Alaska,Ketchikan Gateway Borough,94.44,60.35
+Alaska,Kodiak Island Borough,93.82,44.74
+Alaska,Kusilvak Census Area,77.45,15.23
+Alaska,Lake and Peninsula Borough,81.75,34.69
+Alaska,Matanuska-Susitna Borough,90.13,50.31
+Alaska,Nome Census Area,81.93,32.59
+Alaska,North Slope Borough,90.2,58.07
+Alaska,Northwest Arctic Borough,84.02,29.94
+Alaska,Petersburg Census Area,95.68,56.04
+Alaska,Prince of Wales-Hyder Census Area,90.31,38.99
+Alaska,Sitka City and Borough,94.64,58.01
+Alaska,Skagway Municipality,90.03,69.69
+Alaska,Southeast Fairbanks Census Area,89.48,48.03
+Alaska,Wrangell City and Borough,94.01,51.06
+Alaska,Yakutat City and Borough,91.74,52.26
+Alaska,Yukon-Koyukuk Census Area,85.01,27.65
+Arizona,Apache County,90.63,29.76
+Arizona,Cochise County,93.23,44.27
+Arizona,Coconino County,91.94,60.48
+Arizona,Gila County,93.67,47.11
+Arizona,Graham County,93.07,53.25
+Arizona,Greenlee County,97.15,73.48
+Arizona,La Paz County,91.17,44
+Arizona,Maricopa County,94.9,59.64
+Arizona,Mohave County,92.37,45.48
+Arizona,Navajo County,88.97,37.05
+Arizona,Pima County,93.16,52.94
+Arizona,Pinal County,92.93,54.86
+Arizona,Santa Cruz County,91.67,38.85
+Arizona,Yavapai County,94.16,52.38
+Arizona,Yuma County,91.36,43.43
+Arkansas,Arkansas County,95.24,51.49
+Arkansas,Ashley County,95.49,43.99
+Arkansas,Baxter County,94.56,50.14
+Arkansas,Benton County,97.43,65.88
+Arkansas,Boone County,95.51,55.39
+Arkansas,Bradley County,94.32,44.17
+Arkansas,Calhoun County,91.97,45.19
+,,,
+Arkansas,Carroll County,95.52,46.89
+Arkansas,Chicot County,89.16,35.5
+Arkansas,Clark County,96.41,56.12
+Arkansas,Clay County,94.18,44.93
+Arkansas,Cleburne County,94.89,49.82
+Arkansas,Cleveland County,96.91,54.65
+Arkansas,Columbia County,93.47,51.74
+Arkansas,Conway County,92.67,46.17
+Arkansas,Craighead County,94.17,54.69
+Arkansas,Crawford County,95.23,48.6
+Arkansas,Crittenden County,90.71,46.91
+Arkansas,Cross County,92.96,46.18
+Arkansas,Dallas County,93.01,44.32
+Arkansas,Desha County,95.01,44.82
+Arkansas,Drew County,97.21,53.07
+Arkansas,Faulkner County,96.44,61.95
+Arkansas,Franklin County,94.56,45.01
+Arkansas,Fulton County,94.9,39.51
+Arkansas,Garland County,93.69,47.58
+Arkansas,Grant County,96.74,54.95
+Arkansas,Greene County,92.55,50.4
+Arkansas,Hempstead County,94.29,47.3
+Arkansas,Hot Spring County,94.43,49.52
+Arkansas,Howard County,93.43,43.71
+Arkansas,Independence County,95.7,50.34
+Arkansas,Izard County,89.28,43.97
+Arkansas,Jackson County,89.41,39.08
+Arkansas,Jefferson County,91.4,50.5
+Arkansas,Johnson County,96.06,49.74
+Arkansas,Lafayette County,93.28,42.15
+Arkansas,Lawrence County,92.17,46.65
+Arkansas,Lee County,86.19,37.53
+Arkansas,Lincoln County,98.33,53.08
+Arkansas,Little River County,92.11,57.8
+Arkansas,Logan County,93.86,51.75
+Arkansas,Lonoke County,95.26,53.36
+Arkansas,Madison County,92.33,49.49
+Arkansas,Marion County,94,49.13
+Arkansas,Miller County,91.88,47.1
+Arkansas,Mississippi County,91.09,47.58
+Arkansas,Monroe County,93.76,44.32
+Arkansas,Montgomery County,92.47,45.6
+Arkansas,Nevada County,94.43,39.57
+Arkansas,Newton County,94.72,53.27
+Arkansas,Ouachita County,92.54,43.11
+Arkansas,Perry County,94.65,51.72
+Arkansas,Phillips County,85.58,36.64
+Arkansas,Pike County,96.2,52.18
+Arkansas,Poinsett County,95.29,37.14
+Arkansas,Polk County,89.49,43.09
+Arkansas,Pope County,94.3,52.73
+Arkansas,Prairie County,93.98,55.37
+Arkansas,Pulaski County,95.02,54.06
+Arkansas,Randolph County,95.74,43.22
+Arkansas,St. Francis County,94.01,39.81
+Arkansas,Saline County,96.08,63.26
+Arkansas,Scott County,94.19,46.25
+Arkansas,Searcy County,96.34,44.08
+Arkansas,Sebastian County,95.06,50.48
+Arkansas,Sevier County,95.12,42.68
+Arkansas,Sharp County,94.8,36.77
+Arkansas,Stone County,91.78,34.72
+Arkansas,Union County,96.15,55.31
+Arkansas,Van Buren County,92.91,39.35
+Arkansas,Washington County,95.6,60.72
+Arkansas,White County,95.06,52.8
+Arkansas,Woodruff County,94.21,48.42
+Arkansas,Yell County,96.44,51.89
+California,Alameda County,95.27,70.14
+California,Alpine County,90.02,50.73
+California,Amador County,94.36,60.36
+California,Butte County,92.59,53.39
+California,Calaveras County,94.79,57.1
+California,Colusa County,95.8,51.06
+California,Contra Costa County,94.52,69.36
+California,Del Norte County,93.61,44.13
+California,El Dorado County,95.34,67.23
+California,Fresno County,91.15,47.1
+California,Glenn County,94.33,48.43
+California,Humboldt County,90.96,49.69
+California,Imperial County,86.3,39.73
+California,Inyo County,96.07,60.31
+California,Kern County,90.87,46.33
+California,Kings County,91.56,44.06
+California,Lake County,89.46,39.15
+California,Lassen County,93.85,61.98
+California,Los Angeles County,93.55,55.13
+California,Madera County,90.38,43.53
+California,Marin County,95.46,74.42
+California,Mariposa County,91.27,50.17
+California,Mendocino County,91.36,42.36
+California,Merced County,89.31,43.53
+California,Modoc County,91.61,47.35
+California,Mono County,97.55,65.94
+California,Monterey County,94.93,51.46
+California,Napa County,95.48,66.66
+California,Nevada County,96.04,59.67
+California,Orange County,95.04,64.16
+California,Placer County,95.84,72.57
+California,Plumas County,93.67,57.68
+California,Riverside County,92.73,52.9
+California,Sacramento County,93.59,59.55
+California,San Benito County,92.47,61.25
+California,San Bernardino County,92.7,51.66
+California,San Diego County,93.83,60.03
+California,San Francisco County,95.32,72.56
+California,San Joaquin County,92.75,55.29
+California,San Luis Obispo County,95.53,67.33
+California,San Mateo County,96.01,75.12
+California,Santa Barbara County,94.3,57.7
+California,Santa Clara County,95.75,73.61
+California,Santa Cruz County,93.92,66.21
+California,Shasta County,94.09,53.17
+California,Sierra County,92.97,62.75
+California,Siskiyou County,92.61,46.03
+California,Solano County,94.12,62.66
+California,Sonoma County,95.38,66.07
+California,Stanislaus County,91.18,53.51
+California,Sutter County,92.3,50.07
+California,Tehama County,91.14,47.15
+California,Trinity County,90.95,44.27
+California,Tulare County,90.1,40.16
+California,Tuolumne County,92.7,58.55
+California,Ventura County,94.9,62.04
+California,Yolo County,94.42,67.85
+California,Yuba County,92.89,47.01
+Colorado,Adams County,95.93,60.41
+Colorado,Alamosa County,93.12,46.66
+Colorado,Arapahoe County,95.64,66.53
+Colorado,Archuleta County,95.74,51.54
+Colorado,Baca County,98.46,49.8
+Colorado,Bent County,95.6,43.31
+Colorado,Boulder County,95.48,75.52
+Colorado,Broomfield County,96.41,76.22
+Colorado,Chaffee County,97.74,54.89
+Colorado,Cheyenne County,98.27,63.04
+Colorado,Clear Creek County,95.94,65.21
+Colorado,Conejos County,90.23,36.7
+Colorado,Costilla County,90.68,30.42
+Colorado,Crowley County,88.38,35.45
+Colorado,Custer County,95.93,53.2
+Colorado,Delta County,93.09,42.73
+Colorado,Denver County,95.66,61.62
+Colorado,Dolores County,96.14,65.72
+Colorado,Douglas County,96.52,81.16
+Colorado,Eagle County,96.1,68.26
+Colorado,Elbert County,98.24,68.15
+Colorado,El Paso County,94.07,51.64
+Colorado,Fremont County,94.48,49.88
+Colorado,Garfield County,96.01,52.17
+Colorado,Gilpin County,98.06,70.13
+Colorado,Grand County,95.01,68.89
+Colorado,Gunnison County,95.78,66.7
+Colorado,Hinsdale County,94.84,49.94
+Colorado,Huerfano County,97.72,43.03
+Colorado,Jackson County,90.04,57.13
+Colorado,Jefferson County,96.05,71.4
+Colorado,Kiowa County,96.79,64.51
+Colorado,Kit Carson County,96.32,54.76
+Colorado,Lake County,96.37,58.85
+Colorado,La Plata County,96.06,62.87
+Colorado,Larimer County,94.91,70.13
+Colorado,Las Animas County,92.15,45.9
+Colorado,Lincoln County,97.06,61.09
+Colorado,Logan County,94.78,54.9
+Colorado,Mesa County,93.12,54.37
+Colorado,Mineral County,94.4,61.11
+Colorado,Moffat County,94.95,55.52
+Colorado,Montezuma County,95.56,48.49
+Colorado,Montrose County,94.67,44.07
+Colorado,Morgan County,95.77,55.05
+Colorado,Otero County,94.08,46.56
+Colorado,Ouray County,95.81,54.07
+Colorado,Park County,94.14,60.49
+Colorado,Phillips County,99.32,55.2
+Colorado,Pitkin County,96.63,72.07
+Colorado,Prowers County,95.01,43.07
+Colorado,Pueblo County,93.11,47.71
+Colorado,Rio Blanco County,94.21,58.81
+Colorado,Rio Grande County,90.65,43.53
+Colorado,Routt County,96.09,71.75
+Colorado,Saguache County,90.2,36.94
+Colorado,San Juan County,94.44,56.04
+Colorado,San Miguel County,96.98,70.68
+Colorado,Sedgwick County,93.65,53.71
+Colorado,Summit County,96.91,65.77
+Colorado,Teller County,96.08,52.59
+Colorado,Washington County,97.94,54.52
+Colorado,Weld County,94.95,62.42
+Colorado,Yuma County,95.88,56.05
+Connecticut,Fairfield County,93.43,67.1
+Connecticut,Hartford County,94.2,65.2
+Connecticut,Litchfield County,94.23,67.82
+Connecticut,Middlesex County,95.65,72.45
+Connecticut,New Haven County,93.58,62.78
+Connecticut,New London County,94.71,62.94
+Connecticut,Tolland County,95.11,75.92
+Connecticut,Windham County,93.07,63.62
+Delaware,Kent County,93.83,54.12
+Delaware,New Castle County,93.9,67.62
+Delaware,Sussex County,95.16,58
+District of Columbia,District of Columbia,92.88,64.78
+Florida,Alachua County,95.02,68.52
+Florida,Baker County,94.89,54.12
+Florida,Bay County,95.6,47.37
+Florida,Bradford County,94.65,47.44
+Florida,Brevard County,94.88,55.67
+Florida,Broward County,94.09,58.6
+Florida,Calhoun County,95.97,41.96
+Florida,Charlotte County,94.17,52.49
+Florida,Citrus County,92.12,46.22
+Florida,Clay County,94.57,55.96
+Florida,Collier County,95.61,57.9
+Florida,Columbia County,91.23,48.78
+Florida,DeSoto County,91.24,33.58
+Florida,Dixie County,96.04,40.71
+Florida,Duval County,94.68,55.4
+Florida,Escambia County,93.65,52.18
+Florida,Flagler County,95.96,52.55
+Florida,Franklin County,92.22,45.74
+Florida,Gadsden County,95.22,48.61
+Florida,Gilchrist County,95.85,49.16
+Florida,Glades County,89.43,36.48
+Florida,Gulf County,95.41,51.04
+Florida,Hamilton County,90.04,42.64
+Florida,Hardee County,91.93,39.99
+Florida,Hendry County,93.09,38.21
+Florida,Hernando County,93.15,47.07
+Florida,Highlands County,91.56,43.41
+Florida,Hillsborough County,94.82,57.76
+Florida,Holmes County,94.52,42.68
+Florida,Indian River County,93.71,51.42
+Florida,Jackson County,94.07,51.86
+Florida,Jefferson County,94.17,54.82
+Florida,Lafayette County,89.28,50.5
+Florida,Lake County,93.9,54.95
+Florida,Lee County,95.05,54.39
+Florida,Leon County,93.72,69.88
+Florida,Levy County,93.58,43.38
+Florida,Liberty County,91.75,46.9
+Florida,Madison County,95.62,48.46
+Florida,Manatee County,94.35,55.19
+Florida,Marion County,93.08,47.74
+Florida,Martin County,95.38,59.39
+Florida,Miami-Dade County,94.95,52.2
+Florida,Monroe County,96.56,55.28
+Florida,Nassau County,95.26,57.1
+Florida,Okaloosa County,95.87,42.99
+Florida,Okeechobee County,94.73,44.56
+Florida,Orange County,94.49,60.46
+Florida,Osceola County,94.3,54.32
+Florida,Palm Beach County,93.95,58.19
+Florida,Pasco County,93.99,52.73
+Florida,Pinellas County,94.85,57.65
+Florida,Polk County,94.61,51.42
+Florida,Putnam County,91.48,38.26
+Florida,St. Johns County,94.92,69.15
+Florida,St. Lucie County,94.6,50.43
+Florida,Santa Rosa County,94.45,52.11
+Florida,Sarasota County,96,58.28
+Florida,Seminole County,95.43,67.4
+Florida,Sumter County,95.31,49.29
+Florida,Suwannee County,94.77,49.73
+Florida,Taylor County,92.67,48.46
+Florida,Union County,96.98,56.19
+Florida,Volusia County,95.31,55.43
+Florida,Wakulla County,96.77,67.34
+Florida,Walton County,95,55.12
+Florida,Washington County,93.6,46.92
+Georgia,Appling County,96.2,47.86
+Georgia,Atkinson County,93.56,36.03
+Georgia,Bacon County,95.69,44.38
+Georgia,Baker County,85.97,40.81
+Georgia,Baldwin County,92.64,64.38
+Georgia,Banks County,96.27,58.07
+Georgia,Barrow County,95.17,58.15
+Georgia,Bartow County,94.25,59.62
+Georgia,Ben Hill County,93.88,41.88
+Georgia,Berrien County,94.17,42
+Georgia,Bibb County,92.56,49.99
+Georgia,Bleckley County,93.27,57.52
+Georgia,Brantley County,95.3,37.57
+Georgia,Brooks County,93.21,50.38
+Georgia,Bryan County,93.03,55.17
+Georgia,Bulloch County,90.96,63.31
+Georgia,Burke County,95.57,53.91
+Georgia,Butts County,94.88,53.27
+Georgia,Calhoun County,88.97,43.82
+Georgia,Camden County,93.42,49.84
+Georgia,Candler County,94.88,45.47
+Georgia,Carroll County,93.76,60.31
+Georgia,Catoosa County,96.5,64.22
+Georgia,Charlton County,86.27,45.13
+Georgia,Chatham County,92.62,54.83
+Georgia,Chattahoochee County,88.23,25.58
+Georgia,Chattooga County,95.13,45.05
+Georgia,Cherokee County,96.24,70.04
+Georgia,Clarke County,94.19,65.11
+Georgia,Clay County,89.87,41.77
+Georgia,Clayton County,92.95,47.86
+Georgia,Clinch County,96.24,40.88
+Georgia,Cobb County,95.22,69.71
+Georgia,Coffee County,95.84,48.47
+Georgia,Colquitt County,92.41,40.92
+Georgia,Columbia County,95.23,60.64
+Georgia,Cook County,95.38,47.57
+Georgia,Coweta County,96.15,69.04
+Georgia,Crawford County,91.35,50.64
+Georgia,Crisp County,88.04,40.59
+Georgia,Dade County,95,58.63
+Georgia,Dawson County,94.93,62.47
+Georgia,Decatur County,93.55,41.07
+Georgia,DeKalb County,93.32,60.27
+Georgia,Dodge County,95.4,56.95
+Georgia,Dooly County,90.79,50.43
+Georgia,Dougherty County,89.56,43.4
+Georgia,Douglas County,93.3,60.46
+Georgia,Early County,91.81,39.72
+Georgia,Echols County,97.57,52.1
+Georgia,Effingham County,94.12,67.76
+Georgia,Elbert County,92.97,45.42
+Georgia,Emanuel County,92.04,42.18
+Georgia,Evans County,92.25,43.02
+Georgia,Fannin County,94.21,49.97
+Georgia,Fayette County,95.85,71.12
+Georgia,Floyd County,94.43,55.62
+Georgia,Forsyth County,96.71,78.98
+Georgia,Franklin County,95.49,52.65
+Georgia,Fulton County,94.21,67.98
+Georgia,Gilmer County,96.86,46.12
+Georgia,Glascock County,98.62,53.17
+Georgia,Glynn County,95.24,53.33
+Georgia,Gordon County,96.5,55.93
+Georgia,Grady County,96.93,45.7
+Georgia,Greene County,95.6,48.76
+Georgia,Gwinnett County,95.95,62.91
+Georgia,Habersham County,97.57,56.74
+Georgia,Hall County,96.47,57.81
+Georgia,Hancock County,97.51,47.48
+Georgia,Haralson County,95.73,58.21
+Georgia,Harris County,93.75,62.79
+Georgia,Hart County,93.79,51.39
+Georgia,Heard County,92.64,47.48
+Georgia,Henry County,94.29,65.77
+Georgia,Houston County,94.51,54.87
+Georgia,Irwin County,87.99,46.45
+Georgia,Jackson County,96.06,61.18
+Georgia,Jasper County,94.88,51.61
+Georgia,Jeff Davis County,94.66,39.04
+Georgia,Jefferson County,93.34,44.91
+Georgia,Jenkins County,96.09,37.54
+Georgia,Johnson County,88.22,44.21
+Georgia,Jones County,96.01,61.46
+Georgia,Lamar County,91.93,53.83
+Georgia,Lanier County,95.98,44.66
+Georgia,Laurens County,94.96,51.84
+Georgia,Lee County,95.31,62.86
+Georgia,Liberty County,90.7,36.76
+Georgia,Lincoln County,95.95,50.01
+Georgia,Long County,87.61,38.97
+Georgia,Lowndes County,94.19,52.96
+Georgia,Lumpkin County,95.23,68.1
+Georgia,McDuffie County,93.68,44.4
+Georgia,McIntosh County,95.9,48.03
+Georgia,Macon County,90.8,37.45
+Georgia,Madison County,93.72,51.75
+Georgia,Marion County,93.55,49.6
+Georgia,Meriwether County,94.4,50.58
+Georgia,Miller County,92.99,47.36
+Georgia,Mitchell County,89.13,40.92
+Georgia,Monroe County,96.31,62.35
+Georgia,Montgomery County,92.19,55.18
+Georgia,Morgan County,97.02,60.69
+Georgia,Murray County,93.5,53.52
+Georgia,Muscogee County,91.42,45.99
+Georgia,Newton County,93.84,53.84
+Georgia,Oconee County,97.07,74.98
+Georgia,Oglethorpe County,94.79,54.35
+Georgia,Paulding County,95.73,66.01
+Georgia,Peach County,90.31,49.8
+Georgia,Pickens County,95.43,57.15
+Georgia,Pierce County,94.95,45.85
+Georgia,Pike County,94.98,64.33
+Georgia,Polk County,94.65,54.11
+Georgia,Pulaski County,94.8,46.84
+Georgia,Putnam County,96.55,49.22
+Georgia,Quitman County,78.61,41.88
+Georgia,Rabun County,95.93,49.56
+Georgia,Randolph County,91.23,32.77
+Georgia,Richmond County,90.71,46.06
+Georgia,Rockdale County,93.4,56.69
+Georgia,Schley County,91.97,56.11
+Georgia,Screven County,93.86,46.54
+Georgia,Seminole County,95.22,35.86
+Georgia,Spalding County,95.69,47.65
+Georgia,Stephens County,93.61,49
+Georgia,Stewart County,90.81,41.79
+Georgia,Sumter County,93.52,52.2
+Georgia,Talbot County,93.48,48.72
+Georgia,Taliaferro County,95.79,35.32
+Georgia,Tattnall County,94.25,48.49
+Georgia,Taylor County,95.21,43.55
+Georgia,Telfair County,98.46,45.14
+Georgia,Terrell County,92.56,38.67
+Georgia,Thomas County,93.79,53.08
+Georgia,Tift County,97.18,48.14
+Georgia,Toombs County,92.78,39.66
+Georgia,Towns County,95.85,55.75
+Georgia,Treutlen County,91.12,40.56
+Georgia,Troup County,94.23,58.51
+Georgia,Turner County,92.61,41.71
+Georgia,Twiggs County,95.94,51.79
+Georgia,Union County,95.21,50
+Georgia,Upson County,95.67,52.18
+Georgia,Walker County,93.21,53.66
+Georgia,Walton County,95.23,61.21
+Georgia,Ware County,95.82,43.16
+Georgia,Warren County,96.34,45.89
+Georgia,Washington County,94.92,47.17
+Georgia,Wayne County,94.61,48.77
+Georgia,Webster County,93.71,47.08
+Georgia,Wheeler County,92.82,36.07
+Georgia,White County,96.49,58.85
+Georgia,Whitfield County,94.05,55.29
+Georgia,Wilcox County,94.1,50.63
+Georgia,Wilkes County,97.73,49.61
+Georgia,Wilkinson County,92.47,50.37
+Georgia,Worth County,93.63,46.86
+Hawaii,Hawaii County,93.67,58.35
+Hawaii,Honolulu County,95.82,66.15
+Hawaii,Kalawao County,100,98.38
+Hawaii,Kauai County,96.45,66.22
+Hawaii,Maui County,94.86,67.92
+Idaho,Ada County,96.32,71
+Idaho,Adams County,88.45,53.87
+Idaho,Bannock County,94.56,63.01
+Idaho,Bear Lake County,96.27,72.88
+Idaho,Benewah County,93.56,52
+Idaho,Bingham County,94.53,59.59
+Idaho,Blaine County,98.12,61.26
+Idaho,Boise County,98.08,57.93
+Idaho,Bonner County,95.99,56
+Idaho,Bonneville County,96.11,64.62
+Idaho,Boundary County,97.3,47.96
+Idaho,Butte County,96.5,50.66
+Idaho,Camas County,97.6,49.49
+Idaho,Canyon County,95.18,53.74
+Idaho,Caribou County,96.16,67.01
+Idaho,Cassia County,96.61,62.03
+Idaho,Clark County,96.6,46.21
+Idaho,Clearwater County,93.67,53.21
+Idaho,Custer County,96,51.65
+Idaho,Elmore County,93.47,35.07
+Idaho,Franklin County,99.51,66.79
+Idaho,Fremont County,93.58,52.78
+Idaho,Gem County,96.94,52.11
+Idaho,Gooding County,93.6,53.46
+Idaho,Idaho County,95.42,51.79
+Idaho,Jefferson County,96.56,65.97
+Idaho,Jerome County,95.35,52.62
+Idaho,Kootenai County,96,61.18
+Idaho,Latah County,94.67,74.71
+Idaho,Lemhi County,96.13,48.11
+Idaho,Lewis County,94.91,48.39
+Idaho,Lincoln County,96.48,48.44
+Idaho,Madison County,92.59,69.52
+Idaho,Minidoka County,95.5,52.87
+Idaho,Nez Perce County,96.56,61.45
+Idaho,Oneida County,99.32,66.58
+Idaho,Owyhee County,97.29,46.33
+Idaho,Payette County,95.35,57.52
+Idaho,Power County,94.38,56.99
+Idaho,Shoshone County,91.44,45.95
+Idaho,Teton County,94.79,73.89
+Idaho,Twin Falls County,96.94,60.73
+Idaho,Valley County,99.25,58.93
+Idaho,Washington County,94.13,55
+Illinois,Adams County,95.91,63.58
+Illinois,Alexander County,92.3,40.48
+Illinois,Bond County,97.44,62.45
+Illinois,Boone County,92.49,66.86
+Illinois,Brown County,96.89,58.68
+Illinois,Bureau County,95.02,65.02
+Illinois,Calhoun County,95.57,67.45
+Illinois,Carroll County,94.22,63.66
+Illinois,Cass County,93.6,61.71
+Illinois,Champaign County,95.23,73.88
+Illinois,Christian County,96.57,63.33
+Illinois,Clark County,96.04,65.64
+Illinois,Clay County,94.38,58.3
+Illinois,Clinton County,96.89,69.43
+Illinois,Coles County,93.18,57.56
+Illinois,Cook County,92.96,62.27
+Illinois,Crawford County,95.99,63.64
+Illinois,Cumberland County,97.71,63.49
+Illinois,DeKalb County,93.43,68.8
+Illinois,De Witt County,95.16,68.11
+Illinois,Douglas County,96.78,56.69
+Illinois,DuPage County,95.6,76.66
+Illinois,Edgar County,95.47,60.78
+Illinois,Edwards County,92.3,62.22
+Illinois,Effingham County,97.37,66.28
+Illinois,Fayette County,95.6,56.44
+Illinois,Ford County,95.57,59.98
+Illinois,Franklin County,92.81,52.11
+Illinois,Fulton County,93.17,61.14
+Illinois,Gallatin County,91.29,57.36
+Illinois,Greene County,97.09,54.96
+Illinois,Grundy County,95.6,74.56
+Illinois,Hamilton County,96.47,63.64
+Illinois,Hancock County,94.41,62.29
+Illinois,Hardin County,93.68,52.89
+Illinois,Henderson County,93.84,67.13
+Illinois,Henry County,95.78,68.34
+Illinois,Iroquois County,94.33,61.37
+Illinois,Jackson County,91.12,59.84
+Illinois,Jasper County,95.62,61.84
+Illinois,Jefferson County,93.8,55.92
+Illinois,Jersey County,95.71,69.21
+Illinois,Jo Daviess County,97.64,68.68
+Illinois,Johnson County,96.3,61.09
+Illinois,Kane County,94.98,68.37
+Illinois,Kankakee County,94.55,63.97
+Illinois,Kendall County,95.92,79.53
+Illinois,Knox County,94.77,62.05
+Illinois,Lake County,94.65,71.26
+Illinois,LaSalle County,94.01,65.92
+Illinois,Lawrence County,95.43,58.55
+Illinois,Lee County,96.66,66.02
+Illinois,Livingston County,95.06,66.7
+Illinois,Logan County,94.29,68.28
+Illinois,McDonough County,90.86,66.4
+Illinois,McHenry County,95.27,75.78
+Illinois,McLean County,96.68,75.02
+Illinois,Macon County,92.28,61.68
+Illinois,Macoupin County,94.45,61.82
+Illinois,Madison County,94.55,67.24
+Illinois,Marion County,91.24,52.2
+Illinois,Marshall County,95.6,67.17
+Illinois,Mason County,93.94,57.07
+Illinois,Massac County,94.41,52.92
+Illinois,Menard County,95.13,70.74
+Illinois,Mercer County,95.93,70.82
+Illinois,Monroe County,97.59,80.46
+Illinois,Montgomery County,95.53,67.76
+Illinois,Morgan County,94.48,63.3
+Illinois,Moultrie County,96.87,60.84
+Illinois,Ogle County,93.83,67.54
+Illinois,Peoria County,92.45,63.41
+Illinois,Perry County,94.28,58.02
+Illinois,Piatt County,96.27,75.67
+Illinois,Pike County,94.53,55.89
+Illinois,Pope County,93.2,46.72
+Illinois,Pulaski County,93.47,41.91
+Illinois,Putnam County,97.3,70.09
+Illinois,Randolph County,95.6,62.61
+Illinois,Richland County,95.28,59.29
+Illinois,Rock Island County,94.24,62.93
+Illinois,St. Clair County,94.56,56.32
+Illinois,Saline County,92.08,52.99
+Illinois,Sangamon County,95.04,67.95
+Illinois,Schuyler County,92.83,59.58
+Illinois,Scott County,96.4,63.9
+Illinois,Shelby County,96.03,68.73
+Illinois,Stark County,96.82,64.68
+Illinois,Stephenson County,93.24,56.17
+Illinois,Tazewell County,95.81,69.98
+Illinois,Union County,94.77,56.12
+Illinois,Vermilion County,94.16,55.9
+Illinois,Wabash County,95.61,58.69
+Illinois,Warren County,91.52,62.77
+Illinois,Washington County,94.76,72.54
+Illinois,Wayne County,96.27,56.42
+Illinois,White County,93.97,55.53
+Illinois,Whiteside County,96.27,64.77
+Illinois,Will County,95.1,74.53
+Illinois,Williamson County,94.75,60.51
+Illinois,Winnebago County,92.22,58.38
+Illinois,Woodford County,96.37,76.37
+Indiana,Adams County,96.98,59.43
+Indiana,Allen County,94.95,63.29
+Indiana,Bartholomew County,95.6,68.51
+Indiana,Benton County,96.66,58.52
+Indiana,Blackford County,93.92,60.46
+Indiana,Boone County,96.62,77.3
+Indiana,Brown County,95.79,65.78
+Indiana,Carroll County,97.38,63.36
+Indiana,Cass County,95.56,64.23
+Indiana,Clark County,95.86,67.18
+Indiana,Clay County,95.38,66.33
+Indiana,Clinton County,96.44,61.83
+Indiana,Crawford County,97.06,53.67
+Indiana,Daviess County,96.5,50.45
+Indiana,Dearborn County,96.57,69.6
+Indiana,Decatur County,96.03,69.7
+Indiana,DeKalb County,96.33,69.82
+Indiana,Delaware County,93.64,62.11
+Indiana,Dubois County,97.78,75.02
+Indiana,Elkhart County,95.62,59.34
+Indiana,Fayette County,95.63,55.96
+Indiana,Floyd County,95.92,69.52
+Indiana,Fountain County,94.56,60.04
+Indiana,Franklin County,97.62,68.51
+Indiana,Fulton County,93.1,60.9
+Indiana,Gibson County,96.99,73.16
+Indiana,Grant County,92.71,56.47
+Indiana,Greene County,94.55,63.56
+Indiana,Hamilton County,97.18,82.03
+Indiana,Hancock County,97.27,74.34
+Indiana,Harrison County,95.01,66.56
+Indiana,Hendricks County,96.43,76.96
+Indiana,Henry County,95.77,58.51
+Indiana,Howard County,94.65,64.98
+Indiana,Huntington County,97.55,68.13
+Indiana,Jackson County,96.66,65.18
+Indiana,Jasper County,95.27,67.82
+Indiana,Jay County,96.71,56.13
+Indiana,Jefferson County,96.62,61.83
+Indiana,Jennings County,96.77,63.79
+Indiana,Johnson County,96.35,70.33
+Indiana,Knox County,96.39,63.74
+Indiana,Kosciusko County,96.39,65.54
+Indiana,LaGrange County,96.56,40.6
+Indiana,Lake County,92.96,62.68
+Indiana,LaPorte County,94.54,62.27
+Indiana,Lawrence County,95.8,63.68
+Indiana,Madison County,94.61,56.63
+Indiana,Marion County,94.29,57.92
+Indiana,Marshall County,96.63,61.97
+Indiana,Martin County,98.42,69.13
+Indiana,Miami County,95.13,59.57
+Indiana,Monroe County,93.58,71.2
+Indiana,Montgomery County,96.08,66.08
+Indiana,Morgan County,94.8,65.88
+Indiana,Newton County,92.72,64.98
+Indiana,Noble County,96.03,65.86
+Indiana,Ohio County,98.12,66.22
+Indiana,Orange County,97.19,58.2
+Indiana,Owen County,95.05,55.03
+Indiana,Parke County,95.45,55.85
+Indiana,Perry County,96.58,69.55
+Indiana,Pike County,96.9,69.29
+Indiana,Porter County,95.46,73.13
+Indiana,Posey County,96.44,70.9
+Indiana,Pulaski County,94.16,66.44
+Indiana,Putnam County,97.71,70.61
+Indiana,Randolph County,95.23,61.79
+Indiana,Ripley County,95.6,66.32
+Indiana,Rush County,94.61,60.85
+Indiana,St. Joseph County,95.1,63.63
+Indiana,Scott County,95.55,57.18
+Indiana,Shelby County,96.45,64.3
+Indiana,Spencer County,96.02,69.24
+Indiana,Starke County,94.37,54.71
+Indiana,Steuben County,94.24,65.31
+Indiana,Sullivan County,95.75,56.64
+Indiana,Switzerland County,94.54,53.19
+Indiana,Tippecanoe County,96.04,73.79
+Indiana,Tipton County,96.55,67.53
+Indiana,Union County,97.12,69.16
+Indiana,Vanderburgh County,94.97,61.18
+Indiana,Vermillion County,91.98,62.53
+Indiana,Vigo County,94.12,59.94
+Indiana,Wabash County,95.67,65.81
+Indiana,Warren County,96.83,68.86
+Indiana,Warrick County,96.5,74.56
+Indiana,Washington County,95.84,57.58
+Indiana,Wayne County,95.55,54.05
+Indiana,Wells County,97.37,68.21
+Indiana,White County,95.53,63.13
+Indiana,Whitley County,95.57,69.46
+Iowa,Adair County,94.08,62.01
+Iowa,Adams County,96.43,64.34
+Iowa,Allamakee County,97.19,62.4
+Iowa,Appanoose County,93.38,50.99
+Iowa,Audubon County,98.69,62.46
+Iowa,Benton County,97.72,73.68
+Iowa,Black Hawk County,94.66,66.25
+Iowa,Boone County,97.76,71.39
+Iowa,Bremer County,96.87,75.4
+Iowa,Buchanan County,97.09,67.41
+Iowa,Buena Vista County,94.11,63.6
+Iowa,Butler County,96.2,69.16
+Iowa,Calhoun County,97.56,65.03
+Iowa,Carroll County,98.12,68.79
+Iowa,Cass County,98.13,61.44
+Iowa,Cedar County,97.2,73.98
+Iowa,Cerro Gordo County,96.75,65.97
+Iowa,Cherokee County,97.58,65.73
+Iowa,Chickasaw County,97.81,70.64
+Iowa,Clarke County,97.94,58.4
+Iowa,Clay County,95.39,64.4
+Iowa,Clayton County,97.8,65.03
+Iowa,Clinton County,95.63,61.57
+Iowa,Crawford County,94.83,61.58
+Iowa,Dallas County,96.8,79.66
+Iowa,Davis County,97.01,47.97
+Iowa,Decatur County,95.98,57.74
+Iowa,Delaware County,98.26,74.67
+Iowa,Des Moines County,95.76,61.39
+Iowa,Dickinson County,98.11,65.22
+Iowa,Dubuque County,95.93,71.21
+Iowa,Emmet County,97,64.7
+Iowa,Fayette County,97.7,62.99
+Iowa,Floyd County,97.4,62.23
+Iowa,Franklin County,95.51,63.52
+Iowa,Fremont County,96.16,63.2
+Iowa,Greene County,95.71,65.91
+Iowa,Grundy County,97.6,77.19
+Iowa,Guthrie County,96.2,67.55
+Iowa,Hamilton County,96.94,69.27
+Iowa,Hancock County,97.94,68.22
+Iowa,Hardin County,97.32,66.57
+Iowa,Harrison County,97.51,69.55
+Iowa,Henry County,95.21,64.26
+Iowa,Howard County,97.61,63.45
+Iowa,Humboldt County,96.28,62.66
+Iowa,Ida County,97.74,63.73
+Iowa,Iowa County,96.62,72.28
+Iowa,Jackson County,94.66,67.51
+Iowa,Jasper County,96.49,68.1
+Iowa,Jefferson County,92.68,60.18
+Iowa,Johnson County,96.28,77.17
+Iowa,Jones County,95.6,66.47
+Iowa,Keokuk County,96.17,62.25
+Iowa,Kossuth County,96.31,62.29
+Iowa,Lee County,94.83,61.19
+Iowa,Linn County,96.08,70.58
+Iowa,Louisa County,95.95,68.24
+Iowa,Lucas County,96.67,56.89
+Iowa,Lyon County,97.86,69.43
+Iowa,Madison County,97.05,76.18
+Iowa,Mahaska County,96.82,64.26
+Iowa,Marion County,97.48,70.71
+Iowa,Marshall County,94.79,62.11
+Iowa,Mills County,96.01,65.9
+Iowa,Mitchell County,98.52,64.24
+Iowa,Monona County,97.64,61.69
+Iowa,Monroe County,95.07,66.03
+Iowa,Montgomery County,96.65,63.16
+Iowa,Muscatine County,96.67,67.8
+Iowa,O'Brien County,98.21,68.96
+Iowa,Osceola County,96.98,62.03
+Iowa,Page County,94.86,63.51
+Iowa,Palo Alto County,98.19,68.46
+Iowa,Plymouth County,97.92,71.04
+Iowa,Pocahontas County,95.96,61.36
+Iowa,Polk County,95.43,67.3
+Iowa,Pottawattamie County,95.77,61.1
+Iowa,Poweshiek County,94.99,72.04
+Iowa,Ringgold County,96.96,60.46
+Iowa,Sac County,97.22,61.83
+Iowa,Scott County,96.02,67.26
+Iowa,Shelby County,96.54,63.58
+Iowa,Sioux County,97.81,73.23
+Iowa,Story County,94.31,79.62
+Iowa,Tama County,96.02,63.54
+Iowa,Taylor County,97.28,67.59
+Iowa,Union County,95.24,61.84
+Iowa,Van Buren County,95.29,53.42
+Iowa,Wapello County,94.9,59.01
+Iowa,Warren County,96.69,74.9
+Iowa,Washington County,97.18,63.14
+Iowa,Wayne County,98.64,52.92
+Iowa,Webster County,96.86,61.02
+Iowa,Winnebago County,96.91,71.8
+Iowa,Winneshiek County,97.92,74.99
+Iowa,Woodbury County,95.34,58.29
+Iowa,Worth County,96.63,68.32
+Iowa,Wright County,97.23,63.63
+Kansas,Allen County,95.77,63.91
+Kansas,Anderson County,95.21,57.31
+Kansas,Atchison County,96.16,69.89
+Kansas,Barber County,97.45,70.12
+Kansas,Barton County,96.58,60.3
+Kansas,Bourbon County,96.51,59.85
+Kansas,Brown County,95.35,62.72
+Kansas,Butler County,95.82,68.83
+Kansas,Chase County,96.83,69.67
+Kansas,Chautauqua County,93.6,55.35
+Kansas,Cherokee County,97.7,58.72
+Kansas,Cheyenne County,97.81,66.46
+Kansas,Clark County,98.48,73.65
+Kansas,Clay County,97.43,59.68
+Kansas,Cloud County,96.83,68.13
+Kansas,Coffey County,95.28,67.47
+Kansas,Comanche County,96.95,77.06
+Kansas,Cowley County,94.94,63.85
+Kansas,Crawford County,94.84,59.75
+Kansas,Decatur County,96.13,66.8
+Kansas,Dickinson County,97.12,62.27
+Kansas,Doniphan County,98.75,67.92
+Kansas,Douglas County,95.67,74.84
+Kansas,Edwards County,98.13,65.74
+Kansas,Elk County,94.05,51.67
+Kansas,Ellis County,96.61,74.71
+Kansas,Ellsworth County,98.25,66.4
+Kansas,Finney County,95.82,67.39
+Kansas,Ford County,95.32,66.95
+Kansas,Franklin County,96.93,68.33
+Kansas,Geary County,96.12,39.04
+Kansas,Gove County,97.11,66.05
+Kansas,Graham County,95.93,63.35
+Kansas,Grant County,93.92,58.5
+Kansas,Gray County,97.68,69.98
+Kansas,Greeley County,100,72.29
+Kansas,Greenwood County,97.73,63.27
+Kansas,Hamilton County,100,57.76
+Kansas,Harper County,95.13,59.44
+Kansas,Harvey County,96.53,68.57
+Kansas,Haskell County,97.49,62.98
+Kansas,Hodgeman County,96.64,69.55
+Kansas,Jackson County,95.83,67.14
+Kansas,Jefferson County,96.51,73.34
+Kansas,Jewell County,98.64,60.1
+Kansas,Johnson County,96.85,80.1
+Kansas,Kearny County,98.42,59.76
+Kansas,Kingman County,96.12,72.79
+Kansas,Kiowa County,97.19,68.21
+Kansas,Labette County,97.11,59.05
+Kansas,Lane County,97.55,65.26
+Kansas,Leavenworth County,94.31,60.53
+Kansas,Lincoln County,98.25,66.71
+Kansas,Linn County,95.1,59.55
+Kansas,Logan County,99.36,64.95
+Kansas,Lyon County,95.98,67.86
+Kansas,McPherson County,98.66,73.34
+Kansas,Marion County,95.97,67.04
+Kansas,Marshall County,97.44,70.16
+Kansas,Meade County,97.74,64.87
+Kansas,Miami County,98.18,72.79
+Kansas,Mitchell County,97.16,64.44
+Kansas,Montgomery County,94.81,56.07
+Kansas,Morris County,97.28,64.89
+Kansas,Morton County,98.57,63.84
+Kansas,Nemaha County,98.04,73.53
+Kansas,Neosho County,96.45,62.69
+Kansas,Ness County,98.69,74.64
+Kansas,Norton County,96.84,66.98
+Kansas,Osage County,95.87,62.61
+Kansas,Osborne County,98.04,66.57
+Kansas,Ottawa County,97.65,69.21
+Kansas,Pawnee County,98.21,63.98
+Kansas,Phillips County,97.55,66.48
+Kansas,Pottawatomie County,97.78,72.46
+Kansas,Pratt County,96.66,67.31
+Kansas,Rawlins County,99.19,66.44
+Kansas,Reno County,95.65,63.57
+Kansas,Republic County,98.98,66.33
+Kansas,Rice County,95.45,70.85
+Kansas,Riley County,94.96,67.61
+Kansas,Rooks County,97.82,64.91
+Kansas,Rush County,96.41,78.1
+Kansas,Russell County,95.62,66.79
+Kansas,Saline County,96.03,62.36
+Kansas,Scott County,99.16,74.27
+Kansas,Sedgwick County,94.81,62.92
+Kansas,Seward County,96.4,60.12
+Kansas,Shawnee County,95.88,66.95
+Kansas,Sheridan County,97.64,71.66
+Kansas,Sherman County,94.62,65.97
+Kansas,Smith County,97.31,64.56
+Kansas,Stafford County,95.6,70.12
+Kansas,Stanton County,97.82,56.5
+Kansas,Stevens County,93.24,61.06
+Kansas,Sumner County,94.86,66.43
+Kansas,Thomas County,98.73,74.53
+Kansas,Trego County,97.89,68.07
+Kansas,Wabaunsee County,97.98,68.02
+Kansas,Wallace County,99.58,71.13
+Kansas,Washington County,98.33,71.05
+Kansas,Wichita County,96.05,76.14
+Kansas,Wilson County,95.53,65.09
+Kansas,Woodson County,91.64,61.2
+Kansas,Wyandotte County,93.7,50.23
+Kentucky,Adair County,92.9,51.9
+Kentucky,Allen County,94.24,51.08
+Kentucky,Anderson County,93.95,62.54
+Kentucky,Ballard County,94.5,53.66
+Kentucky,Barren County,93.27,50.51
+Kentucky,Bath County,96.52,47
+Kentucky,Bell County,90.37,33.77
+Kentucky,Boone County,96.45,70.29
+Kentucky,Bourbon County,94.44,58.41
+Kentucky,Boyd County,92.11,49.97
+Kentucky,Boyle County,94.16,57.86
+Kentucky,Bracken County,95.23,57.5
+Kentucky,Breathitt County,90.87,37.41
+Kentucky,Breckinridge County,92.18,53.62
+Kentucky,Bullitt County,94.97,68
+Kentucky,Butler County,92.61,48.68
+Kentucky,Caldwell County,93.77,55.31
+Kentucky,Calloway County,95.74,61.88
+Kentucky,Campbell County,95.75,70.78
+Kentucky,Carlisle County,95.32,47.05
+Kentucky,Carroll County,89.81,49.81
+Kentucky,Carter County,94.9,43.64
+Kentucky,Casey County,91.6,37.96
+Kentucky,Christian County,92.32,38.91
+Kentucky,Clark County,95,55.73
+Kentucky,Clay County,90.5,28.27
+Kentucky,Clinton County,93.24,37.85
+Kentucky,Crittenden County,97.09,52.82
+Kentucky,Cumberland County,95.77,48.4
+Kentucky,Daviess County,95.64,60.63
+Kentucky,Edmonson County,91.42,48.28
+Kentucky,Elliott County,98.16,37.89
+Kentucky,Estill County,89.93,41.97
+Kentucky,Fayette County,94.77,65.88
+Kentucky,Fleming County,91.6,46.51
+Kentucky,Floyd County,90.73,40.5
+Kentucky,Franklin County,95.17,63.55
+Kentucky,Fulton County,94.14,37.55
+Kentucky,Gallatin County,94.12,57.24
+Kentucky,Garrard County,94.73,57
+Kentucky,Grant County,95.15,56.97
+Kentucky,Graves County,94.78,52.04
+Kentucky,Grayson County,96.48,46.93
+Kentucky,Green County,94.6,43.22
+Kentucky,Greenup County,94.53,57.89
+Kentucky,Hancock County,94.95,61.67
+Kentucky,Hardin County,93.33,50.92
+Kentucky,Harlan County,87.47,34.63
+Kentucky,Harrison County,96.08,55.52
+Kentucky,Hart County,95.98,46.16
+Kentucky,Henderson County,96.15,57.08
+Kentucky,Henry County,95.28,52.05
+Kentucky,Hickman County,93.56,48.54
+Kentucky,Hopkins County,93.56,55.33
+Kentucky,Jackson County,93.7,41.87
+Kentucky,Jefferson County,94.69,62.79
+Kentucky,Jessamine County,95.13,62.58
+Kentucky,Johnson County,91.1,44.5
+Kentucky,Kenton County,96.08,67.2
+Kentucky,Knott County,90.02,35.29
+Kentucky,Knox County,93.68,33.76
+Kentucky,Larue County,97.61,56.42
+Kentucky,Laurel County,95.03,45.66
+Kentucky,Lawrence County,94.17,42.46
+Kentucky,Lee County,89.86,37.77
+Kentucky,Leslie County,94.34,37.08
+Kentucky,Letcher County,90.92,36.74
+Kentucky,Lewis County,93.56,40.34
+Kentucky,Lincoln County,92.64,48.58
+Kentucky,Livingston County,94.16,60.36
+Kentucky,Logan County,95.29,56.25
+Kentucky,Lyon County,96.8,58.59
+Kentucky,McCracken County,96.47,55.39
+Kentucky,McCreary County,92.28,33.25
+Kentucky,McLean County,94.35,60
+Kentucky,Madison County,93.47,59.46
+Kentucky,Magoffin County,87.82,41.44
+Kentucky,Marion County,92.11,54.66
+Kentucky,Marshall County,96.4,59.62
+Kentucky,Martin County,93.67,50.84
+Kentucky,Mason County,95.78,55.95
+Kentucky,Meade County,94.81,55.33
+Kentucky,Menifee County,95.41,37.38
+Kentucky,Mercer County,93.97,59.42
+Kentucky,Metcalfe County,96.91,47.46
+Kentucky,Monroe County,96.49,43.45
+Kentucky,Montgomery County,94.68,51.33
+Kentucky,Morgan County,94.56,42.63
+Kentucky,Muhlenberg County,95.03,54.8
+Kentucky,Nelson County,96.67,65.09
+Kentucky,Nicholas County,95.02,45.75
+Kentucky,Ohio County,94.53,50.51
+Kentucky,Oldham County,96.37,78.28
+Kentucky,Owen County,96.05,57.15
+Kentucky,Owsley County,89,30.54
+Kentucky,Pendleton County,96.02,58.2
+Kentucky,Perry County,90.68,43.69
+Kentucky,Pike County,92.03,46.85
+Kentucky,Powell County,94.06,50.66
+Kentucky,Pulaski County,93.95,48.28
+Kentucky,Robertson County,92.29,44.14
+Kentucky,Rockcastle County,91.12,48.43
+Kentucky,Rowan County,96.09,55.78
+Kentucky,Russell County,93.59,45.99
+Kentucky,Scott County,96.72,72.49
+Kentucky,Shelby County,96.2,64.1
+Kentucky,Simpson County,94.14,59.29
+Kentucky,Spencer County,95.24,72.7
+Kentucky,Taylor County,95.13,55.35
+Kentucky,Todd County,94.42,41.7
+Kentucky,Trigg County,92.08,48.15
+Kentucky,Trimble County,90.09,55.23
+Kentucky,Union County,94.9,62.05
+Kentucky,Warren County,95.18,62.45
+Kentucky,Washington County,95.46,58.98
+Kentucky,Wayne County,94.29,45.67
+Kentucky,Webster County,95.62,57.37
+Kentucky,Whitley County,93.43,45.83
+Kentucky,Wolfe County,74.57,27.9
+Kentucky,Woodford County,96.71,65.27
+Louisiana,Acadia Parish,90.35,49.95
+Louisiana,Allen Parish,91.26,52.6
+Louisiana,Ascension Parish,93.98,69.45
+Louisiana,Assumption Parish,94.88,52.53
+Louisiana,Avoyelles Parish,93.65,44.12
+Louisiana,Beauregard Parish,92.15,48.01
+Louisiana,Bienville Parish,94.69,37.27
+Louisiana,Bossier Parish,94.63,53.69
+Louisiana,Caddo Parish,93.12,47.27
+Louisiana,Calcasieu Parish,94.15,56.35
+Louisiana,Caldwell Parish,90.6,39.86
+Louisiana,Cameron Parish,98.09,59.61
+Louisiana,Catahoula Parish,92.26,50.58
+Louisiana,Claiborne Parish,95.98,42.14
+Louisiana,Concordia Parish,90.82,41.01
+Louisiana,De Soto Parish,90.88,47.65
+Louisiana,East Baton Rouge Parish,93.42,59.59
+Louisiana,East Carroll Parish,93.61,25.52
+Louisiana,East Feliciana Parish,93.27,58.16
+Louisiana,Evangeline Parish,86.68,40.23
+Louisiana,Franklin Parish,91.75,40.17
+Louisiana,Grant Parish,95.9,49.52
+Louisiana,Iberia Parish,91.29,47.32
+Louisiana,Iberville Parish,90.39,52.86
+Louisiana,Jackson Parish,95.61,44.66
+Louisiana,Jefferson Parish,94.62,52.09
+Louisiana,Jefferson Davis Parish,92.58,53.07
+Louisiana,Lafayette Parish,94.93,61.95
+Louisiana,Lafourche Parish,92.99,55.72
+Louisiana,La Salle Parish,95.57,52.68
+Louisiana,Lincoln Parish,95.32,57.12
+Louisiana,Livingston Parish,94.85,62.07
+Louisiana,Madison Parish,90.19,35.73
+Louisiana,Morehouse Parish,94.23,46.16
+Louisiana,Natchitoches Parish,86.91,45.09
+Louisiana,Orleans Parish,91.46,49.36
+Louisiana,Ouachita Parish,94.56,49.89
+Louisiana,Plaquemines Parish,96.76,50.47
+Louisiana,Pointe Coupee Parish,94.56,50.08
+Louisiana,Rapides Parish,94.17,49.04
+Louisiana,Red River Parish,95.79,40.7
+Louisiana,Richland Parish,93.43,38.85
+Louisiana,Sabine Parish,91.37,43.81
+Louisiana,St. Bernard Parish,91.03,44.88
+Louisiana,St. Charles Parish,93.93,63.17
+Louisiana,St. Helena Parish,82.67,47.21
+Louisiana,St. James Parish,95.11,59.22
+Louisiana,St. John the Baptist Parish,91.47,52.7
+Louisiana,St. Landry Parish,94.8,51.82
+Louisiana,St. Martin Parish,92.7,49.22
+Louisiana,St. Mary Parish,93.28,41.39
+Louisiana,St. Tammany Parish,94.66,60.92
+Louisiana,Tangipahoa Parish,92.9,51.44
+Louisiana,Tensas Parish,85.66,28.89
+Louisiana,Terrebonne Parish,93.67,51.71
+Louisiana,Union Parish,95.96,48.47
+Louisiana,Vermilion Parish,92.64,52.95
+Louisiana,Vernon Parish,92.47,35.8
+Louisiana,Washington Parish,90.55,40.79
+Louisiana,Webster Parish,95.12,44.05
+Louisiana,West Baton Rouge Parish,92.08,63.56
+Louisiana,West Carroll Parish,92.72,44.96
+Louisiana,West Feliciana Parish,91.74,57.48
+Louisiana,Winn Parish,94.35,51.88
+Maine,Androscoggin County,95.48,60.09
+Maine,Aroostook County,95.11,50.4
+Maine,Cumberland County,96.78,71.41
+Maine,Franklin County,95.24,54.56
+Maine,Hancock County,96.42,62.28
+Maine,Kennebec County,96.28,61.62
+Maine,Knox County,96.5,59.05
+Maine,Lincoln County,96.15,55.62
+Maine,Oxford County,93.9,53.46
+Maine,Penobscot County,95.36,59.17
+Maine,Piscataquis County,94.5,50.39
+Maine,Sagadahoc County,96.12,65.08
+Maine,Somerset County,95.26,49.27
+Maine,Waldo County,95.22,56.72
+Maine,Washington County,92.89,45.42
+Maine,York County,96.51,68.16
+Maryland,Allegany County,92.54,58.38
+Maryland,Anne Arundel County,95.75,70.5
+Maryland,Baltimore County,94.96,68.23
+Maryland,Calvert County,96.2,73.49
+Maryland,Caroline County,95.14,53.01
+Maryland,Carroll County,96.56,78.12
+Maryland,Cecil County,94.79,65.3
+Maryland,Charles County,95.63,69.25
+Maryland,Dorchester County,92.75,52.61
+Maryland,Frederick County,95.92,74.46
+Maryland,Garrett County,95.85,56.92
+Maryland,Harford County,95.85,72.48
+Maryland,Howard County,96.13,77.77
+Maryland,Kent County,96.69,62.54
+Maryland,Montgomery County,95.36,71.61
+Maryland,Prince George's County,93.62,61.73
+Maryland,Queen Anne's County,96.88,70.38
+Maryland,St. Mary's County,96.51,63.76
+Maryland,Somerset County,90.77,53.44
+Maryland,Talbot County,97.08,64.16
+Maryland,Washington County,94.51,62.47
+Maryland,Wicomico County,92.1,56.13
+Maryland,Worcester County,94.11,60.18
+Maryland,Baltimore city,92.44,53.22
+Massachusetts,Barnstable County,95.95,62.64
+Massachusetts,Berkshire County,94.86,61.89
+Massachusetts,Bristol County,94.57,61.73
+Massachusetts,Dukes County,94.94,63.5
+Massachusetts,Essex County,94.8,65.06
+Massachusetts,Franklin County,94.58,61.45
+Massachusetts,Hampden County,93.8,54.96
+Massachusetts,Hampshire County,94.38,73.51
+Massachusetts,Middlesex County,95.82,75.12
+Massachusetts,Nantucket County,94.16,67.48
+Massachusetts,Norfolk County,95.54,76.92
+Massachusetts,Plymouth County,94.91,69.49
+Massachusetts,Suffolk County,93.17,61.57
+Massachusetts,Worcester County,95.16,66.97
+Michigan,Alcona County,93.93,52.23
+Michigan,Alger County,95.3,56.7
+Michigan,Allegan County,96.6,70.73
+Michigan,Alpena County,92.52,52.02
+Michigan,Antrim County,95.76,60.25
+Michigan,Arenac County,93.24,56.22
+Michigan,Baraga County,95.89,52.36
+Michigan,Barry County,94.69,71.54
+Michigan,Bay County,94.08,61.83
+Michigan,Benzie County,95.11,63.68
+Michigan,Berrien County,93.83,59.28
+Michigan,Branch County,94.84,58.92
+Michigan,Calhoun County,93.61,61.28
+Michigan,Cass County,94.21,61.62
+Michigan,Charlevoix County,95.18,61.83
+Michigan,Cheboygan County,92.58,53.91
+Michigan,Chippewa County,91.01,55.21
+Michigan,Clare County,89.97,43.93
+Michigan,Clinton County,96.58,75.78
+Michigan,Crawford County,92.58,52.96
+Michigan,Delta County,94.89,55.62
+Michigan,Dickinson County,96.18,64.54
+Michigan,Eaton County,95.4,70.61
+Michigan,Emmet County,96.02,62.51
+Michigan,Genesee County,91.06,55.74
+Michigan,Gladwin County,93.78,52.93
+Michigan,Gogebic County,95.51,55.04
+Michigan,Grand Traverse County,96.2,68.12
+Michigan,Gratiot County,95.19,65.47
+Michigan,Hillsdale County,95.93,60.66
+Michigan,Houghton County,94.14,62.18
+Michigan,Huron County,94.94,62.21
+Michigan,Ingham County,93.25,67.91
+Michigan,Ionia County,94.9,67.16
+Michigan,Iosco County,92.56,50.83
+Michigan,Iron County,94.84,54.95
+Michigan,Isabella County,92.72,63.8
+Michigan,Jackson County,93.72,60.54
+Michigan,Kalamazoo County,93.77,69.06
+Michigan,Kalkaska County,94.08,53.53
+Michigan,Kent County,95.4,68.22
+Michigan,Keweenaw County,94.39,55.7
+Michigan,Lake County,94.2,43.15
+Michigan,Lapeer County,94.12,66.25
+Michigan,Leelanau County,95.85,68.37
+Michigan,Lenawee County,95.16,65.74
+Michigan,Livingston County,96.15,78.3
+Michigan,Luce County,93.36,55.25
+Michigan,Mackinac County,90.78,55.13
+Michigan,Macomb County,94.41,68.08
+Michigan,Manistee County,92.7,59.72
+Michigan,Marquette County,94.17,64.27
+Michigan,Mason County,95.48,57.25
+Michigan,Mecosta County,93.8,57.9
+Michigan,Menominee County,94.63,61.31
+Michigan,Midland County,95.53,68.98
+Michigan,Missaukee County,92.15,56.33
+Michigan,Monroe County,95.05,71.04
+Michigan,Montcalm County,95.95,57.91
+Michigan,Montmorency County,92.84,52.66
+Michigan,Muskegon County,92.79,59.81
+Michigan,Newaygo County,94.79,55.03
+Michigan,Oakland County,95.34,76.08
+Michigan,Oceana County,94.03,51.8
+Michigan,Ogemaw County,91.98,49.55
+Michigan,Ontonagon County,94.07,52.47
+Michigan,Osceola County,92.39,54.7
+Michigan,Oscoda County,90.67,44.62
+Michigan,Otsego County,94.34,61.38
+Michigan,Ottawa County,95.97,75.96
+Michigan,Presque Isle County,93.62,55.84
+Michigan,Roscommon County,91.64,49.3
+Michigan,Saginaw County,93.48,60.97
+Michigan,St. Clair County,93.37,62.42
+Michigan,St. Joseph County,95.79,58.13
+Michigan,Sanilac County,93.92,58.08
+Michigan,Schoolcraft County,92.57,53.07
+Michigan,Shiawassee County,96.05,65.77
+Michigan,Tuscola County,93.37,61.57
+Michigan,Van Buren County,94.84,57.61
+Michigan,Washtenaw County,95.46,77.77
+Michigan,Wayne County,91.1,53.96
+Michigan,Wexford County,93.93,56.49
+Minnesota,Aitkin County,94.92,54.67
+Minnesota,Anoka County,96.37,73.17
+Minnesota,Becker County,96.2,57.8
+Minnesota,Beltrami County,93.94,53.69
+Minnesota,Benton County,96.67,66.61
+Minnesota,Big Stone County,97.24,62.25
+Minnesota,Blue Earth County,96.06,71.54
+Minnesota,Brown County,97.69,74.38
+Minnesota,Carlton County,95.23,65.77
+Minnesota,Carver County,97.51,83.35
+Minnesota,Cass County,93.77,52.15
+Minnesota,Chippewa County,94.65,64.53
+Minnesota,Chisago County,96.32,72.99
+Minnesota,Clay County,96.85,69.95
+Minnesota,Clearwater County,93,51.66
+Minnesota,Cook County,98.29,63.08
+Minnesota,Cottonwood County,95.36,68.62
+Minnesota,Crow Wing County,96.07,61.64
+Minnesota,Dakota County,96.54,75.96
+Minnesota,Dodge County,97.46,74.53
+Minnesota,Douglas County,97.61,71.76
+Minnesota,Faribault County,96.52,66.47
+Minnesota,Fillmore County,97.48,65.97
+Minnesota,Freeborn County,96.14,60.61
+Minnesota,Goodhue County,96.43,68.52
+Minnesota,Grant County,95.08,58.11
+Minnesota,Hennepin County,96.01,71.65
+Minnesota,Houston County,98.17,68.85
+Minnesota,Hubbard County,96,57.75
+Minnesota,Isanti County,95.47,68.34
+Minnesota,Itasca County,94.18,59.2
+Minnesota,Jackson County,97.3,69.93
+Minnesota,Kanabec County,95.95,57.67
+Minnesota,Kandiyohi County,96.27,62.4
+Minnesota,Kittson County,95.89,64.69
+Minnesota,Koochiching County,94.16,60.19
+Minnesota,Lac qui Parle County,97.19,67.05
+Minnesota,Lake County,97.2,65.68
+Minnesota,Lake of the Woods County,95.77,64.75
+Minnesota,Le Sueur County,96.69,70.36
+Minnesota,Lincoln County,97.12,66.84
+Minnesota,Lyon County,96.9,64.75
+Minnesota,McLeod County,97.34,69.49
+Minnesota,Mahnomen County,90.95,35.75
+Minnesota,Marshall County,97.94,68.12
+Minnesota,Martin County,95.45,61.63
+Minnesota,Meeker County,97.62,67.39
+Minnesota,Mille Lacs County,94.24,58.12
+Minnesota,Morrison County,95.85,60.63
+Minnesota,Mower County,96.94,61.3
+Minnesota,Murray County,97.19,64.52
+Minnesota,Nicollet County,97.68,73.87
+Minnesota,Nobles County,97.57,59.93
+Minnesota,Norman County,95.06,62.13
+Minnesota,Olmsted County,96.61,74.48
+Minnesota,Todd County,96.1,65.51
+Minnesota,Pennington County,96.51,70.41
+Minnesota,Pine County,93.92,61.92
+Minnesota,Pipestone County,96.31,58.54
+Minnesota,Polk County,96.9,65.05
+Minnesota,Pope County,98.62,69.19
+Minnesota,Ramsey County,95.36,63.4
+Minnesota,Red Lake County,97.89,70.09
+Minnesota,Redwood County,98.39,65.08
+Minnesota,Renville County,97.1,64.68
+Minnesota,Rice County,94.9,66.6
+Minnesota,Rock County,98.22,70.36
+Minnesota,Roseau County,95.78,73.02
+Minnesota,St. Louis County,95.11,66.37
+Minnesota,Scott County,96.96,78.4
+Minnesota,Sherburne County,97.62,78.27
+Minnesota,Sibley County,97.09,71.35
+Minnesota,Stearns County,95.08,69.98
+Minnesota,Steele County,96.29,67.38
+Minnesota,Stevens County,97.58,72.71
+Minnesota,Swift County,96.66,61.82
+Minnesota,Todd County,95.76,55.31
+Minnesota,Traverse County,95.53,67.53
+Minnesota,Wabasha County,96.31,69.83
+Minnesota,Wadena County,93.3,51.39
+Minnesota,Waseca County,96.4,64.78
+Minnesota,Washington County,96.92,79.12
+Minnesota,Washington County,96.63,56.92
+Minnesota,Wilkin County,95.55,69.99
+Minnesota,Winona County,96.72,71.3
+Minnesota,Wright County,97.33,78.19
+Minnesota,Yellow Medicine County,98.15,63.87
+Mississippi,Adams County,90.75,42.17
+Mississippi,Alcorn County,93.76,50.44
+Mississippi,Amite County,92.91,42.75
+Mississippi,Attala County,92.68,49.65
+Mississippi,Benton County,97.42,53.41
+Mississippi,Bolivar County,92.61,39.93
+Mississippi,Calhoun County,96.38,44.72
+Mississippi,Carroll County,92.33,50.65
+Mississippi,Chickasaw County,96.23,50.96
+Mississippi,Choctaw County,90.63,51.05
+Mississippi,Claiborne County,89.12,38.49
+Mississippi,Clarke County,93.62,52.52
+Mississippi,Clay County,91.26,50.94
+Mississippi,Coahoma County,87.96,36.32
+Mississippi,Copiah County,92.58,50.7
+Mississippi,Covington County,94.53,49.46
+Mississippi,DeSoto County,95.4,68.59
+Mississippi,Forrest County,92.73,51.77
+Mississippi,Franklin County,97.94,49.08
+Mississippi,George County,87.38,49.67
+Mississippi,Greene County,83.5,57.94
+Mississippi,Grenada County,94.69,47.21
+Mississippi,Hancock County,93.94,55.65
+Mississippi,Harrison County,91.23,45.89
+Mississippi,Hinds County,90.66,51.71
+Mississippi,Holmes County,84.64,32.95
+Mississippi,Humphreys County,85.61,31.24
+Mississippi,Issaquena County,90.65,25.25
+Mississippi,Itawamba County,98.36,54.32
+Mississippi,Jackson County,90.71,53.75
+Mississippi,Jasper County,96.02,46.48
+Mississippi,Jefferson County,90.34,37.58
+Mississippi,Jefferson Davis County,93.05,44.62
+Mississippi,Jones County,95.19,54.07
+Mississippi,Kemper County,84.63,46.62
+Mississippi,Lafayette County,95.86,71.85
+Mississippi,Lamar County,90.83,57.47
+Mississippi,Lauderdale County,95.06,52.4
+Mississippi,Lawrence County,87.4,48.03
+Mississippi,Leake County,91.7,45.92
+Mississippi,Lee County,94.4,60.76
+Mississippi,Leflore County,88.55,39.45
+Mississippi,Lincoln County,94.75,54.99
+Mississippi,Lowndes County,92.23,53.86
+Mississippi,Madison County,95.56,70.75
+Mississippi,Marion County,90.63,44.23
+Mississippi,Marshall County,93.87,48.39
+Mississippi,Monroe County,92.35,52.73
+Mississippi,Montgomery County,91.9,44.34
+Mississippi,Neshoba County,90.78,45.46
+Mississippi,Newton County,96.13,51.78
+Mississippi,Noxubee County,89.18,38.66
+Mississippi,Oktibbeha County,91.53,67.79
+Mississippi,Panola County,91.86,45.55
+Mississippi,Pearl River County,94.08,54.02
+Mississippi,Perry County,92.77,41.85
+Mississippi,Pike County,92.9,46.6
+Mississippi,Pontotoc County,96.48,55.24
+Mississippi,Prentiss County,95.46,57
+Mississippi,Quitman County,84.35,31.37
+Mississippi,Rankin County,95.32,65.93
+Mississippi,Scott County,92.8,47.54
+Mississippi,Sharkey County,89.6,38.55
+Mississippi,Simpson County,92.98,48.88
+Mississippi,Smith County,95.53,51.23
+Mississippi,Stone County,93.33,46.85
+Mississippi,Sunflower County,89.05,44.46
+Mississippi,Tallahatchie County,89.49,38.49
+Mississippi,Tate County,94.62,55.6
+Mississippi,Tippah County,93.85,49.75
+Mississippi,Tishomingo County,95.5,50.65
+Mississippi,Tunica County,91.91,40.82
+Mississippi,Union County,94.59,56.83
+Mississippi,Walthall County,95.25,48.18
+Mississippi,Warren County,93.28,51.95
+Mississippi,Washington County,89.91,37.68
+Mississippi,Wayne County,89.35,49.43
+Mississippi,Webster County,94.15,54.45
+Mississippi,Wilkinson County,92.31,40.86
+Mississippi,Winston County,91.72,46.11
+Mississippi,Yalobusha County,93.33,44.44
+Mississippi,Yazoo County,87.86,41.66
+Missouri,Adair County,94.28,68.71
+Missouri,Andrew County,96,71.93
+Missouri,Atchison County,96.54,63.34
+Missouri,Audrain County,95.01,57.34
+Missouri,Barry County,96.67,53.12
+Missouri,Barton County,93.32,53.27
+Missouri,Bates County,95,59.96
+Missouri,Benton County,92.75,50.15
+Missouri,Bollinger County,94.48,57.19
+Missouri,Boone County,96.49,74.79
+Missouri,Buchanan County,95.06,59.65
+Missouri,Butler County,93.09,49.58
+Missouri,Caldwell County,96.77,58.72
+Missouri,Callaway County,94.32,65.55
+Missouri,Camden County,95.43,56.8
+Missouri,Cape Girardeau County,95.59,69.47
+Missouri,Carroll County,93.82,59.69
+Missouri,Carter County,96.21,47.21
+Missouri,Cass County,95.74,70.48
+Missouri,Cedar County,95.22,37.8
+Missouri,Chariton County,96.96,64.84
+Missouri,Christian County,96.4,65.23
+Missouri,Clark County,97.02,54.92
+Missouri,Clay County,95.88,72.93
+Missouri,Clinton County,96.5,70.49
+Missouri,Cole County,96.13,71.66
+Missouri,Cooper County,94.34,65.54
+Missouri,Crawford County,92.26,51.5
+Missouri,Dade County,91.25,50.71
+Missouri,Dallas County,95.85,46.81
+Missouri,Daviess County,97.67,54.38
+Missouri,DeKalb County,97.98,68.87
+Missouri,Dent County,94.83,50.66
+Missouri,Douglas County,95.83,46.94
+Missouri,Dunklin County,92.47,42.41
+Missouri,Franklin County,95.61,68.36
+Missouri,Gasconade County,98.07,65.2
+Missouri,Gentry County,97.21,56.36
+Missouri,Greene County,95.94,62.65
+Missouri,Grundy County,95.31,51.47
+Missouri,Harrison County,96.74,54.26
+Missouri,Henry County,94.49,50.93
+Missouri,Hickory County,90.88,47.8
+Missouri,Holt County,97.34,65.45
+Missouri,Howard County,97.1,66.79
+Missouri,Howell County,95.55,46.41
+Missouri,Iron County,94.6,48.86
+Missouri,Jackson County,95.06,64.28
+Missouri,Jasper County,95.13,56.82
+Missouri,Jefferson County,95.24,68.58
+Missouri,Johnson County,95.4,57.93
+Missouri,Knox County,95.57,53.23
+Missouri,Laclede County,93.63,55.65
+Missouri,Lafayette County,97.13,64
+Missouri,Lawrence County,92.24,51.37
+Missouri,Lewis County,94.71,61.38
+Missouri,Lincoln County,95.95,70.33
+Missouri,Linn County,98.01,64.62
+Missouri,Livingston County,97.51,59.65
+Missouri,McDonald County,95.65,44.29
+Missouri,Macon County,95.38,58.45
+Missouri,Madison County,95.61,49.72
+Missouri,Maries County,93.48,55.29
+Missouri,Marion County,96.06,61.87
+Missouri,Mercer County,96.45,58
+Missouri,Miller County,94.11,60
+Missouri,Mississippi County,91.72,45.88
+Missouri,Moniteau County,95.87,61.39
+Missouri,Monroe County,97.97,60.15
+Missouri,Montgomery County,97.36,61.99
+Missouri,Morgan County,95.9,41.47
+Missouri,New Madrid County,93.35,47.09
+Missouri,Newton County,95.12,56.79
+Missouri,Nodaway County,97.41,70.9
+Missouri,Oregon County,95.88,39.08
+Missouri,Osage County,98.25,75.96
+Missouri,Ozark County,95.68,45.5
+Missouri,Pemiscot County,88.74,40.08
+Missouri,Perry County,95.64,69.48
+Missouri,Pettis County,95.21,54.61
+Missouri,Phelps County,95.49,61.25
+Missouri,Pike County,95.35,62.19
+Missouri,Platte County,96.61,77.05
+Missouri,Polk County,97.51,52.99
+Missouri,Pulaski County,95.16,38.52
+Missouri,Putnam County,94.51,51.88
+Missouri,Ralls County,94.76,65.82
+Missouri,Randolph County,95.58,58.6
+Missouri,Ray County,96.64,66.41
+Missouri,Reynolds County,92.08,50.8
+Missouri,Ripley County,95.01,44.25
+Missouri,St. Charles County,97,80.94
+Missouri,St. Clair County,96.54,49.48
+Missouri,Ste. Genevieve County,95.52,71.47
+Missouri,St. Francois County,95.74,58.11
+Missouri,St. Louis County,95.47,71.85
+Missouri,Saline County,97.11,63.65
+Missouri,Schuyler County,98.34,54.03
+Missouri,Scotland County,97.76,45.27
+Missouri,Scott County,96.1,54.59
+Missouri,Shannon County,95.76,42.93
+Missouri,Shelby County,98.15,56.37
+Missouri,Stoddard County,94.67,48.31
+Missouri,Stone County,92.28,57.14
+Missouri,Sullivan County,97.85,60.06
+Missouri,Taney County,95.46,51.57
+Missouri,Texas County,93.62,43.66
+Missouri,Vernon County,96.14,54.44
+Missouri,Warren County,95.98,66.03
+Missouri,Washington County,92.83,48.26
+Missouri,Wayne County,92.09,41.54
+Missouri,Webster County,94.91,54.14
+Missouri,Worth County,97.93,61.44
+Missouri,Wright County,93.73,42.65
+Missouri,St. Louis city,94.15,58.05
+Montana,Beaverhead County,96.68,58.04
+Montana,Big Horn County,86.63,31.28
+Montana,Blaine County,87.22,37.17
+Montana,Broadwater County,89.87,60.12
+Montana,Carbon County,95.45,61.04
+Montana,Carter County,97.72,47.78
+Montana,Cascade County,96.31,48.5
+Montana,Chouteau County,95.95,48.81
+Montana,Custer County,96.62,57.88
+Montana,Daniels County,98.64,71.46
+Montana,Dawson County,97.36,66.65
+Montana,Deer Lodge County,96.32,49.41
+Montana,Fallon County,99.87,71.22
+Montana,Fergus County,96.99,57.05
+Montana,Flathead County,95.96,57.37
+Montana,Gallatin County,97.64,72.07
+Montana,Garfield County,100,60.99
+Montana,Glacier County,93.73,23.02
+Montana,Golden Valley County,97.82,49.26
+Montana,Granite County,96.41,55.9
+Montana,Hill County,93.6,52.04
+Montana,Jefferson County,96.57,62.47
+Montana,Judith Basin County,97.65,58.54
+Montana,Lake County,94.17,43.82
+Montana,Lewis and Clark County,96.52,63.03
+Montana,Liberty County,100,44.49
+Montana,Lincoln County,91.78,44.5
+Montana,McCone County,98.29,63.29
+Montana,Madison County,97.08,58.36
+Montana,Meagher County,99.43,51.49
+Montana,Mineral County,93.49,46.5
+Montana,Missoula County,95.12,65.51
+Montana,Musselshell County,93.01,47.14
+Montana,Park County,98.06,63.94
+Montana,Petroleum County,96.51,67.03
+Montana,Phillips County,94.34,51.12
+Montana,Pondera County,91.34,49.54
+Montana,Powder River County,99.32,63.97
+Montana,Powell County,98.8,55.12
+Montana,Prairie County,97.67,43.7
+Montana,Ravalli County,94.34,49.8
+Montana,Richland County,97.53,65.96
+Montana,Roosevelt County,89.26,38.02
+Montana,Rosebud County,94.16,52.34
+Montana,Sanders County,95.05,45.28
+Montana,Sheridan County,97.69,67.93
+Montana,Silver Bow County,94.68,57.8
+Montana,Stillwater County,95.74,66.86
+Montana,Sweet Grass County,98.83,67.99
+Montana,Teton County,98.66,56.12
+Montana,Toole County,97.1,52.53
+Montana,Treasure County,98.76,60.59
+Montana,Valley County,93.95,54.96
+Montana,Wheatland County,98.43,44.48
+Montana,Wibaux County,99.61,68.92
+Montana,Yellowstone County,96.57,63.12
+Nebraska,Adams County,97.63,66.74
+Nebraska,Antelope County,98.15,69.2
+Nebraska,Arthur County,99.56,51.71
+Nebraska,Banner County,98.48,73.49
+Nebraska,Blaine County,100,70.02
+Nebraska,Boone County,98.6,73.06
+Nebraska,Box Butte County,95.19,64.81
+Nebraska,Boyd County,98.25,62.62
+Nebraska,Brown County,99.23,60.93
+Nebraska,Buffalo County,97.23,71.79
+Nebraska,Burt County,95.63,58.91
+Nebraska,Butler County,98.48,72.26
+Nebraska,Cass County,97.29,69.43
+Nebraska,Cedar County,98.29,74.31
+Nebraska,Chase County,96.48,71.22
+Nebraska,Cherry County,99.91,63.69
+Nebraska,Cheyenne County,97.29,63.09
+Nebraska,Clay County,96.7,68.58
+Nebraska,Colfax County,98.26,69.83
+Nebraska,Cuming County,97.11,74.69
+Nebraska,Custer County,98.11,63.73
+Nebraska,Dakota County,95.91,64.81
+Nebraska,Dawes County,98.19,68.35
+Nebraska,Dawson County,96.34,64.21
+Nebraska,Deuel County,95.9,61.57
+Nebraska,Dixon County,98.11,72.83
+Nebraska,Dodge County,95.47,63.85
+Nebraska,Douglas County,95.92,68.88
+Nebraska,Dundy County,98.94,68.52
+Nebraska,Fillmore County,99.16,73.55
+Nebraska,Franklin County,99.66,60.8
+Nebraska,Frontier County,95.13,66.43
+Nebraska,Furnas County,98.73,66.47
+Nebraska,Gage County,97.9,66.12
+Nebraska,Garden County,98,53.19
+Nebraska,Garfield County,99.73,72.22
+Nebraska,Gosper County,98.61,69.18
+Nebraska,Grant County,99.13,66.18
+Nebraska,Greeley County,98.69,66.65
+Nebraska,Hall County,95.96,64.19
+Nebraska,Hamilton County,96.81,78.49
+Nebraska,Harlan County,98.77,67.95
+Nebraska,Hayes County,99.56,71.54
+Nebraska,Hitchcock County,98.2,64.26
+Nebraska,Holt County,98.91,73.27
+Nebraska,Hooker County,97.32,66.62
+Nebraska,Howard County,96.65,77.04
+Nebraska,Jefferson County,98.27,66.15
+Nebraska,Johnson County,97.53,70.35
+Nebraska,Kearney County,97.77,71.29
+Nebraska,Keith County,96.29,60.4
+Nebraska,Keya Paha County,100,72.34
+Nebraska,Kimball County,93.45,46.84
+Nebraska,Knox County,96.53,66.81
+Nebraska,Lancaster County,96.64,72.7
+Nebraska,Lincoln County,96.64,65.3
+Nebraska,Logan County,99.77,67.86
+Nebraska,Loup County,100,68.84
+Nebraska,McPherson County,100,73.33
+Nebraska,Madison County,96.78,69.05
+Nebraska,Merrick County,98.24,67.66
+Nebraska,Morrill County,94.66,63.42
+Nebraska,Nance County,95.77,71.32
+Nebraska,Nemaha County,94.5,67.14
+Nebraska,Nuckolls County,98.23,67.7
+Nebraska,Otoe County,97.29,67.7
+Nebraska,Pawnee County,95.58,55.17
+Nebraska,Perkins County,99.25,71.53
+Nebraska,Phelps County,99.4,72.71
+Nebraska,Pierce County,96.68,76.02
+Nebraska,Platte County,97.69,69.52
+Nebraska,Polk County,94.35,64.4
+Nebraska,Red Willow County,95.24,65.87
+Nebraska,Richardson County,96.37,65.35
+Nebraska,Rock County,98.83,69.76
+Nebraska,Saline County,97.62,66.88
+Nebraska,Sarpy County,96.83,67.76
+Nebraska,Saunders County,98.03,74.99
+Nebraska,Scotts Bluff County,95.49,59.64
+Nebraska,Seward County,97.59,74.96
+Nebraska,Sheridan County,98.41,53.11
+Nebraska,Sherman County,96.66,67.94
+Nebraska,Sioux County,97.4,57.78
+Nebraska,Stanton County,97.75,72.67
+Nebraska,Thayer County,98.29,69.07
+Nebraska,Thomas County,98.02,66.55
+Nebraska,Thurston County,88.19,45.7
+Nebraska,Valley County,99.24,64.07
+Nebraska,Washington County,97.46,75.57
+Nebraska,Wayne County,96.89,81.76
+Nebraska,Webster County,98.1,68.41
+Nebraska,Wheeler County,100,65.6
+Nebraska,York County,96.96,70.14
+Nevada,Churchill County,94.07,49.11
+Nevada,Clark County,93.01,56.95
+Nevada,Douglas County,95.92,64.15
+Nevada,Elko County,95.73,70.29
+Nevada,Esmeralda County,97.04,48.14
+Nevada,Eureka County,100,65.54
+Nevada,Humboldt County,96.21,65.05
+Nevada,Lander County,90.79,69.57
+Nevada,Lincoln County,94.94,56.98
+Nevada,Lyon County,92.03,53.43
+Nevada,Mineral County,87.86,39.68
+Nevada,Nye County,91.34,42.64
+Nevada,Pershing County,91.24,61.93
+Nevada,Storey County,96.34,52.33
+Nevada,Washoe County,94.77,63.96
+Nevada,White Pine County,97.5,65.48
+Nevada,Carson City,95.39,58.25
+New Hampshire,Belknap County,96.21,64.9
+New Hampshire,Carroll County,94.46,60.99
+New Hampshire,Cheshire County,96.13,68.07
+New Hampshire,Coos County,95.01,53.98
+New Hampshire,Grafton County,97.13,64.63
+New Hampshire,Hillsborough County,95.97,71.06
+New Hampshire,Merrimack County,96.55,70.61
+New Hampshire,Rockingham County,96.61,76.64
+New Hampshire,Strafford County,95.93,70.65
+New Hampshire,Sullivan County,97.47,60.97
+New Jersey,Atlantic County,91.34,59.65
+New Jersey,Bergen County,95.43,74.07
+New Jersey,Burlington County,94.58,72.28
+New Jersey,Camden County,93.35,63.31
+New Jersey,Cape May County,93.32,64.95
+New Jersey,Cumberland County,92.01,52.73
+New Jersey,Essex County,92.03,57.9
+New Jersey,Gloucester County,94.7,72.8
+New Jersey,Hudson County,94.57,59.01
+New Jersey,Hunterdon County,96.09,81.28
+New Jersey,Mercer County,93.99,69.3
+New Jersey,Middlesex County,94.18,72.79
+New Jersey,Monmouth County,94.93,75.54
+New Jersey,Morris County,95.12,80.71
+New Jersey,Ocean County,94.66,64.06
+New Jersey,Passaic County,93.75,54.91
+New Jersey,Salem County,92.9,63.83
+New Jersey,Somerset County,95.57,78.72
+New Jersey,Sussex County,94.75,76.78
+New Jersey,Union County,94.21,63.83
+New Jersey,Warren County,94.2,73.44
+New Mexico,Bernalillo County,94.41,51.1
+New Mexico,Catron County,94.74,28.23
+New Mexico,Chaves County,94.79,40.57
+New Mexico,Cibola County,88.4,30.46
+New Mexico,Colfax County,95.34,38.32
+New Mexico,Curry County,92.12,36.74
+New Mexico,De Baca County,90.24,54.91
+New Mexico,Do�a Ana County,92.32,40.52
+New Mexico,Eddy County,95.7,55.11
+New Mexico,Grant County,91.96,42.29
+New Mexico,Guadalupe County,93.33,45.25
+New Mexico,Harding County,96.71,56.21
+New Mexico,Hidalgo County,92.66,42.68
+New Mexico,Lea County,93.11,49.83
+New Mexico,Lincoln County,94.93,43.06
+New Mexico,Los Alamos County,96.47,85.3
+New Mexico,Luna County,90.53,31.33
+New Mexico,McKinley County,87.58,19.87
+New Mexico,Mora County,90.66,42.04
+New Mexico,Otero County,90.86,33.53
+New Mexico,Quay County,97.47,39.29
+New Mexico,Rio Arriba County,92.98,42.84
+New Mexico,Roosevelt County,91.39,39.82
+New Mexico,Sandoval County,93.45,54.35
+New Mexico,San Juan County,91.77,40.39
+New Mexico,San Miguel County,94.32,39.53
+New Mexico,Santa Fe County,95.11,50.96
+New Mexico,Sierra County,92.17,38.05
+New Mexico,Socorro County,95.29,42.3
+New Mexico,Taos County,91.78,38.36
+New Mexico,Torrance County,90.92,40.04
+New Mexico,Union County,96.58,47.22
+New Mexico,Valencia County,92.29,45.88
+New York,Albany County,95.41,71.12
+New York,Allegany County,94.8,60.74
+New York,Bronx County,89.94,38.89
+New York,Broome County,92.37,60.58
+New York,Cattaraugus County,94.41,56.36
+New York,Cayuga County,95.2,62.85
+New York,Chautauqua County,94.52,56.62
+New York,Chemung County,94.14,57.73
+New York,Chenango County,93.48,59.31
+New York,Clinton County,95.51,63.88
+New York,Columbia County,94.35,63.72
+New York,Cortland County,94.39,68.28
+New York,Delaware County,95.73,56.38
+New York,Dutchess County,95.04,69.99
+New York,Erie County,95.21,65.23
+New York,Essex County,95.27,62.76
+New York,Franklin County,93.05,59.36
+New York,Fulton County,96.02,56.07
+New York,Genesee County,96.05,65.57
+New York,Greene County,96.28,62.76
+New York,Hamilton County,97.89,56.17
+New York,Herkimer County,93.88,58.49
+New York,Jefferson County,94.25,47.2
+New York,Kings County,93.48,51.39
+New York,Lewis County,95.09,61.14
+New York,Livingston County,95.98,68.77
+New York,Madison County,96.12,65.16
+New York,Monroe County,94.71,65.96
+New York,Montgomery County,94.01,54.99
+New York,Nassau County,95.85,76.07
+New York,New York County,94.29,66.58
+New York,Niagara County,94.76,63.6
+New York,Oneida County,95.59,60.01
+New York,Onondaga County,94.26,65.07
+New York,Ontario County,96.45,67.95
+New York,Orange County,95.19,63.5
+New York,Orleans County,94,57.93
+New York,Oswego County,93.42,58.11
+New York,Otsego County,94.25,65.46
+New York,Putnam County,95.42,74.58
+New York,Queens County,94.04,54.83
+New York,Rensselaer County,94.92,69.17
+New York,Richmond County,95.07,67.5
+New York,Rockland County,94.58,59.13
+New York,St. Lawrence County,93.16,60.09
+New York,Saratoga County,96.75,75.86
+New York,Schenectady County,93.04,62.71
+New York,Schoharie County,94.71,64.19
+New York,Schuyler County,94.3,56.98
+New York,Seneca County,96.2,59.66
+New York,Steuben County,94.3,56.9
+New York,Suffolk County,95.45,73.8
+New York,Sullivan County,92.73,59.75
+New York,Tioga County,94.35,62.15
+New York,Tompkins County,95.94,73.92
+New York,Ulster County,94.63,62.65
+New York,Warren County,95.94,65.79
+New York,Washington County,94.42,58.13
+New York,Wayne County,96.33,63.58
+New York,Westchester County,94.26,70.61
+New York,Wyoming County,95.33,65.31
+New York,Yates County,96.17,50.21
+North Carolina,Alamance County,94.75,60.56
+North Carolina,Alexander County,94.22,57.63
+North Carolina,Alleghany County,96.59,52.05
+North Carolina,Anson County,92.56,51.43
+North Carolina,Ashe County,95.58,58.87
+North Carolina,Avery County,94.32,57.36
+North Carolina,Beaufort County,93.14,52.13
+North Carolina,Bertie County,90.01,48.22
+North Carolina,Bladen County,95.05,46.11
+North Carolina,Brunswick County,94.05,56.94
+North Carolina,Buncombe County,96.84,60.44
+North Carolina,Burke County,93.36,54.05
+North Carolina,Cabarrus County,95.03,67.72
+North Carolina,Caldwell County,93.55,53.55
+North Carolina,Camden County,91.32,59.95
+North Carolina,Carteret County,94.69,56.65
+North Carolina,Caswell County,94.21,56.63
+North Carolina,Catawba County,93.97,58.37
+North Carolina,Chatham County,95.62,65.02
+North Carolina,Cherokee County,95.12,45.69
+North Carolina,Chowan County,94.7,51.3
+North Carolina,Clay County,96.51,47.44
+North Carolina,Cleveland County,92.59,52.7
+North Carolina,Columbus County,94.27,44.2
+North Carolina,Craven County,93.86,52
+North Carolina,Cumberland County,92.18,37.42
+North Carolina,Currituck County,96.71,58.14
+North Carolina,Dare County,94.38,65.76
+North Carolina,Davidson County,94.53,57.45
+North Carolina,Davie County,95.97,61.05
+North Carolina,Duplin County,94.06,47.27
+North Carolina,Durham County,95.31,64.65
+North Carolina,Edgecombe County,91.15,47.28
+North Carolina,Forsyth County,95.04,60.58
+North Carolina,Franklin County,93.2,57.04
+North Carolina,Gaston County,93.99,58.3
+North Carolina,Gates County,90.41,62.31
+North Carolina,Graham County,96.63,48.83
+North Carolina,Granville County,95.29,60.44
+North Carolina,Greene County,94.37,48.44
+North Carolina,Guilford County,94.14,61.72
+North Carolina,Halifax County,93.51,45.48
+North Carolina,Harnett County,93.41,47.35
+North Carolina,Haywood County,95.95,56.87
+North Carolina,Henderson County,96.98,57.95
+North Carolina,Hertford County,91.66,48.53
+North Carolina,Hoke County,92.13,38.04
+North Carolina,Hyde County,95.46,48.19
+North Carolina,Iredell County,95.22,64.98
+North Carolina,Jackson County,94.2,58.26
+North Carolina,Johnston County,95.74,60.1
+North Carolina,Jones County,91.59,41.1
+North Carolina,Lee County,94.38,51.08
+North Carolina,Lenoir County,91.06,45.49
+North Carolina,Lincoln County,94.78,62.5
+North Carolina,McDowell County,94.32,54.12
+North Carolina,Macon County,95.18,50
+North Carolina,Madison County,96.61,57.15
+North Carolina,Martin County,90.13,52.4
+North Carolina,Mecklenburg County,95.27,66.65
+North Carolina,Mitchell County,95.46,57.66
+North Carolina,Montgomery County,96.5,50.04
+North Carolina,Moore County,95.39,52.65
+North Carolina,Nash County,92.76,55.68
+North Carolina,New Hanover County,94.81,64.9
+North Carolina,Northampton County,92.15,53.3
+North Carolina,Onslow County,92.04,33.05
+North Carolina,Orange County,95.97,76.11
+North Carolina,Pamlico County,95.37,50.12
+North Carolina,Pasquotank County,93.32,53.06
+North Carolina,Pender County,92.46,56.52
+North Carolina,Perquimans County,94.69,52.19
+North Carolina,Person County,93.95,59.07
+North Carolina,Pitt County,91.9,63.96
+North Carolina,Polk County,96.34,57.04
+North Carolina,Randolph County,95.46,52.29
+North Carolina,Richmond County,91.78,47.41
+North Carolina,Robeson County,92.65,41.62
+North Carolina,Rockingham County,93.65,53.91
+North Carolina,Rowan County,93.03,53.56
+North Carolina,Rutherford County,93.25,50.08
+North Carolina,Sampson County,93.23,46.51
+North Carolina,Scotland County,88.27,43.88
+North Carolina,Stanly County,95.09,60.46
+North Carolina,Stokes County,95.2,59.08
+North Carolina,Surry County,95.39,55.59
+North Carolina,Swain County,93.95,43.04
+North Carolina,Transylvania County,94.6,53.19
+North Carolina,Tyrrell County,96.02,55.52
+North Carolina,Union County,95.32,71.06
+North Carolina,Vance County,92.02,46.91
+North Carolina,Wake County,95.81,72.92
+North Carolina,Warren County,90.97,47.21
+North Carolina,Washington County,92.7,50.8
+North Carolina,Watauga County,91.27,69.57
+North Carolina,Wayne County,94.6,44.99
+North Carolina,Wilkes County,94.71,55.69
+North Carolina,Wilson County,91.39,51.47
+North Carolina,Yadkin County,94.9,58.74
+North Carolina,Yancey County,92.64,52.53
+North Dakota,Adams County,99.65,74.98
+North Dakota,Barnes County,98.25,73.65
+North Dakota,Benson County,96.02,42.82
+North Dakota,Billings County,95.92,74.6
+North Dakota,Bottineau County,96.35,72.42
+North Dakota,Bowman County,95.94,78.76
+North Dakota,Burke County,97.81,83.41
+North Dakota,Burleigh County,97.51,75.73
+North Dakota,Cass County,96.91,76.44
+North Dakota,Cavalier County,98.27,76.75
+North Dakota,Dickey County,96.97,77.75
+North Dakota,Divide County,95.84,61.59
+North Dakota,Dunn County,98.24,60.69
+North Dakota,Eddy County,98.61,61.07
+North Dakota,Emmons County,98.12,73.82
+North Dakota,Foster County,99.77,77.82
+North Dakota,Golden Valley County,96.93,72.28
+North Dakota,Grand Forks County,96.09,72.86
+North Dakota,Grant County,98.8,70.68
+North Dakota,Griggs County,98.55,78.82
+North Dakota,Hettinger County,95.21,65.77
+North Dakota,Kidder County,99.03,64.81
+North Dakota,LaMoure County,99.21,75.01
+North Dakota,Logan County,99.44,80.18
+North Dakota,McHenry County,95.5,69.35
+North Dakota,McIntosh County,99.2,66.49
+North Dakota,McKenzie County,96.68,70.38
+North Dakota,McLean County,98.45,75.56
+North Dakota,Mercer County,98.12,68.28
+North Dakota,Morton County,97.98,76.23
+North Dakota,Mountrail County,95.66,65.01
+North Dakota,Nelson County,99.65,68.46
+North Dakota,Oliver County,97.26,72.96
+North Dakota,Pembina County,95.52,67.51
+North Dakota,Pierce County,98.64,72.62
+North Dakota,Ramsey County,99.4,64.69
+North Dakota,Ransom County,96.76,73.73
+North Dakota,Renville County,98.22,70.73
+North Dakota,Richland County,97.02,71.28
+North Dakota,Rolette County,93.18,34.5
+North Dakota,Sargent County,98.64,77.4
+North Dakota,Sheridan County,98.28,65.32
+North Dakota,Sioux County,83.21,33.19
+North Dakota,Slope County,97.91,82.11
+North Dakota,Stark County,97.29,75.84
+North Dakota,Steele County,99.45,75.62
+North Dakota,Stutsman County,95.52,68.62
+North Dakota,Towner County,97.95,71.06
+North Dakota,Traill County,97.24,72.93
+North Dakota,Walsh County,97.72,68.96
+North Dakota,Ward County,96.03,68.9
+North Dakota,Wells County,96.63,74.38
+North Dakota,Williams County,96.57,73.69
+Ohio,Adams County,93.4,47.46
+Ohio,Allen County,94.36,61.99
+Ohio,Ashland County,96.22,64.7
+Ohio,Ashtabula County,92.84,52.59
+Ohio,Athens County,94.16,64.44
+Ohio,Auglaize County,96.71,76.33
+Ohio,Belmont County,94.39,62.35
+Ohio,Brown County,95.65,59.05
+Ohio,Butler County,95.07,68.37
+Ohio,Carroll County,96.3,59.99
+Ohio,Champaign County,94.19,66.8
+Ohio,Clark County,93.19,54.45
+Ohio,Clermont County,95.77,67.9
+Ohio,Clinton County,94.4,59.2
+Ohio,Columbiana County,94.03,58.02
+Ohio,Coshocton County,93.88,52.21
+Ohio,Crawford County,94.53,60.5
+Ohio,Cuyahoga County,92.55,59.44
+Ohio,Darke County,97.27,64.78
+Ohio,Defiance County,95.59,67.26
+Ohio,Delaware County,97.46,81.34
+Ohio,Erie County,94.31,65
+Ohio,Fairfield County,96.11,66.96
+Ohio,Fayette County,95.06,56.97
+Ohio,Franklin County,95.15,63.97
+Ohio,Fulton County,95.58,68.65
+Ohio,Gallia County,95.51,53.39
+Ohio,Geauga County,97.22,73.91
+Ohio,Greene County,94.9,63.99
+Ohio,Guernsey County,94.99,55.05
+Ohio,Hamilton County,94.62,65.28
+Ohio,Hancock County,96.32,72.07
+Ohio,Hardin County,94.93,60.71
+Ohio,Harrison County,94.06,50.47
+Ohio,Henry County,95.49,69.28
+Ohio,Highland County,95.19,50.37
+Ohio,Hocking County,96.19,55.11
+Ohio,Holmes County,97.67,41.98
+Ohio,Huron County,95.34,64.15
+Ohio,Jackson County,93.1,56.43
+Ohio,Jefferson County,94.39,58.29
+Ohio,Knox County,95.79,60.68
+Ohio,Lake County,95.21,70.15
+Ohio,Lawrence County,95.02,50.75
+Ohio,Licking County,96.27,65.06
+Ohio,Logan County,95.53,65.47
+Ohio,Lorain County,95.11,64.7
+Ohio,Lucas County,92.83,59.55
+Ohio,Madison County,96.16,65.29
+Ohio,Mahoning County,92.08,55.82
+Ohio,Marion County,93.93,56.47
+Ohio,Medina County,97.14,75.11
+Ohio,Meigs County,91.67,47.89
+Ohio,Mercer County,97.5,76.46
+Ohio,Miami County,95.83,66.79
+Ohio,Monroe County,95.26,58.03
+Ohio,Montgomery County,93.74,57.46
+Ohio,Morgan County,96.01,50.17
+Ohio,Morrow County,97.34,60.63
+Ohio,Muskingum County,94.7,57.1
+Ohio,Noble County,95.23,55.49
+Ohio,Ottawa County,96.3,68.56
+Ohio,Paulding County,95.5,66.34
+Ohio,Perry County,93.88,54.95
+Ohio,Pickaway County,95.56,64.46
+Ohio,Pike County,94.95,51.22
+Ohio,Portage County,94.2,68.89
+Ohio,Preble County,96.76,65.8
+Ohio,Putnam County,96.84,79.3
+Ohio,Richland County,94.29,57.89
+Ohio,Ross County,93.97,57.41
+Ohio,Sandusky County,95.48,61.94
+Ohio,Scioto County,93.06,48.67
+Ohio,Seneca County,95.84,63.81
+Ohio,Shelby County,94.79,70.91
+Ohio,Stark County,94.85,62.09
+Ohio,Summit County,94.18,63.08
+Ohio,Trumbull County,95.19,55.35
+Ohio,Tuscarawas County,94.48,60.81
+Ohio,Union County,97.21,79.56
+Ohio,Van Wert County,94.91,71.34
+Ohio,Vinton County,94.24,48.24
+Ohio,Warren County,96.58,78.74
+Ohio,Washington County,95.44,59.52
+Ohio,Wayne County,96.66,62.21
+Ohio,Williams County,96.17,65.46
+Ohio,Wood County,95.12,75.4
+Ohio,Wyandot County,96.72,69.41
+Oklahoma,Adair County,94.68,32.41
+Oklahoma,Alfalfa County,96.52,68.58
+Oklahoma,Atoka County,95.71,45.88
+Oklahoma,Beaver County,95.99,64.31
+Oklahoma,Beckham County,95.63,60.9
+Oklahoma,Blaine County,94.07,61.16
+Oklahoma,Bryan County,94.35,48.24
+Oklahoma,Caddo County,93.11,48.74
+Oklahoma,Canadian County,95.84,66.18
+Oklahoma,Carter County,95.36,52.27
+Oklahoma,Cherokee County,92.32,46.57
+Oklahoma,Choctaw County,92.86,37.41
+Oklahoma,Cimarron County,99.59,55.48
+Oklahoma,Cleveland County,95.38,66.23
+Oklahoma,Coal County,93.92,40.4
+Oklahoma,Comanche County,93.21,43.1
+Oklahoma,Cotton County,95.44,52.2
+Oklahoma,Craig County,95.36,50.29
+Oklahoma,Creek County,95.91,55.52
+Oklahoma,Custer County,97.22,63.98
+Oklahoma,Delaware County,93.98,45.51
+Oklahoma,Dewey County,97.6,61.45
+Oklahoma,Ellis County,93.89,62.22
+Oklahoma,Garfield County,94.92,55.39
+Oklahoma,Garvin County,96.82,52.19
+Oklahoma,Grady County,95.57,60.11
+Oklahoma,Grant County,96.48,58.93
+Oklahoma,Greer County,94.8,43.72
+Oklahoma,Harmon County,93.14,51.49
+Oklahoma,Harper County,96.49,56.88
+Oklahoma,Haskell County,92.04,42.36
+Oklahoma,Hughes County,91.85,47.26
+Oklahoma,Jackson County,96.11,51.13
+Oklahoma,Jefferson County,94.2,45.44
+Oklahoma,Johnston County,93.54,46.61
+Oklahoma,Kay County,93.44,53.19
+Oklahoma,Kingfisher County,96.25,65.26
+Oklahoma,Kiowa County,96.77,50.56
+Oklahoma,Latimer County,90.05,42.61
+Oklahoma,Le Flore County,94.71,41.59
+Oklahoma,Lincoln County,96,57.38
+Oklahoma,Logan County,96,62.31
+Oklahoma,Love County,94.18,56.48
+Oklahoma,McClain County,96.62,67.61
+Oklahoma,McCurtain County,94.58,40.22
+Oklahoma,McIntosh County,94.66,41.36
+Oklahoma,Major County,97.19,63.85
+Oklahoma,Marshall County,96.64,48.02
+Oklahoma,Mayes County,94.55,48.29
+Oklahoma,Murray County,96.39,55.64
+Oklahoma,Muskogee County,93.59,46.25
+Oklahoma,Noble County,94.63,62.6
+Oklahoma,Nowata County,93.84,54.31
+Oklahoma,Okfuskee County,94.35,39.46
+Oklahoma,Oklahoma County,95.31,56.19
+Oklahoma,Okmulgee County,92.02,48.52
+Oklahoma,Osage County,93.95,56.31
+Oklahoma,Ottawa County,95.1,46.69
+Oklahoma,Pawnee County,96.07,53.86
+Oklahoma,Payne County,96.14,68.22
+Oklahoma,Pittsburg County,93.37,49.93
+Oklahoma,Pontotoc County,95.09,55.72
+Oklahoma,Pottawatomie County,93.68,55.88
+Oklahoma,Pushmataha County,91.92,40.05
+Oklahoma,Roger Mills County,94.32,55.83
+Oklahoma,Rogers County,95.52,65.54
+Oklahoma,Seminole County,91.42,44.05
+Oklahoma,Sequoyah County,94.15,39.67
+Oklahoma,Stephens County,93.51,50.15
+Oklahoma,Texas County,97.32,60.92
+Oklahoma,Tillman County,94.04,48.94
+Oklahoma,Tulsa County,94.59,59.88
+Oklahoma,Wagoner County,94.66,62.14
+Oklahoma,Washington County,95.13,57.28
+Oklahoma,Washita County,94.23,57.63
+Oklahoma,Woods County,94.87,67.85
+Oklahoma,Woodward County,95.8,59.91
+Oregon,Baker County,93.13,48.54
+Oregon,Benton County,93.91,69.29
+Oregon,Clackamas County,95.47,70.32
+Oregon,Clatsop County,95.65,51.06
+Oregon,Columbia County,94.21,61.34
+Oregon,Coos County,93,46.39
+Oregon,Crook County,95.02,52.94
+Oregon,Curry County,91.34,49.6
+Oregon,Deschutes County,94.43,60.06
+Oregon,Douglas County,94.05,48.56
+Oregon,Gilliam County,94.34,59.73
+Oregon,Grant County,90.88,59.77
+Oregon,Harney County,92.96,54.35
+Oregon,Hood River County,94.97,59.23
+Oregon,Jackson County,94.86,55.05
+Oregon,Jefferson County,90.51,49.01
+Oregon,Josephine County,92.55,44.33
+Oregon,Klamath County,92.55,45.55
+Oregon,Lake County,92.55,50.69
+Oregon,Lane County,92.89,56.41
+Oregon,Lincoln County,92.9,45.88
+Oregon,Linn County,93.19,56.9
+Oregon,Malheur County,93.79,43.94
+Oregon,Marion County,94.66,55.8
+Oregon,Morrow County,96.39,56.14
+Oregon,Multnomah County,94.77,65.47
+Oregon,Polk County,94.37,62.72
+Oregon,Sherman County,98.15,55.96
+Oregon,Tillamook County,95.35,52.77
+Oregon,Umatilla County,93.08,57.03
+Oregon,Union County,94.56,56.05
+Oregon,Wallowa County,95,55.73
+Oregon,Wasco County,93.4,52.36
+Oregon,Washington County,95.56,71.59
+Oregon,Wheeler County,95.64,42.77
+Oregon,Yamhill County,96.67,61.79
+Pennsylvania,Adams County,96.15,69.63
+Pennsylvania,Allegheny County,95.14,70.58
+Pennsylvania,Armstrong County,94.51,63.7
+Pennsylvania,Beaver County,94.94,66.49
+Pennsylvania,Bedford County,95.54,59.96
+Pennsylvania,Berks County,94.42,65.25
+Pennsylvania,Blair County,95.32,59.35
+Pennsylvania,Bradford County,95.26,62.21
+Pennsylvania,Bucks County,95.83,76.82
+Pennsylvania,Butler County,95.42,74.67
+Pennsylvania,Cambria County,94.82,61.45
+Pennsylvania,Cameron County,89.76,53.61
+Pennsylvania,Carbon County,94.88,63.11
+Pennsylvania,Centre County,95.94,77.55
+Pennsylvania,Chester County,95.89,76.43
+Pennsylvania,Clarion County,94.03,62.66
+Pennsylvania,Clearfield County,92.61,58.79
+Pennsylvania,Clinton County,94.23,60.18
+Pennsylvania,Columbia County,95.54,67.81
+Pennsylvania,Crawford County,94.17,59.17
+Pennsylvania,Cumberland County,96.54,71.59
+Pennsylvania,Dauphin County,95.64,65.21
+Pennsylvania,Delaware County,93.81,69.17
+Pennsylvania,Elk County,93.99,64.49
+Pennsylvania,Erie County,94.59,61.18
+Pennsylvania,Fayette County,92.69,58.33
+Pennsylvania,Forest County,94.64,50.28
+Pennsylvania,Franklin County,96.08,63.09
+Pennsylvania,Fulton County,94.75,64.1
+Pennsylvania,Greene County,95.08,64.22
+Pennsylvania,Huntingdon County,94.62,62.77
+Pennsylvania,Indiana County,92.79,63.79
+Pennsylvania,Jefferson County,95.47,56.31
+Pennsylvania,Juniata County,97.17,62.26
+Pennsylvania,Lackawanna County,95.76,64.25
+Pennsylvania,Lancaster County,96.38,63.41
+Pennsylvania,Lawrence County,93.63,60.08
+Pennsylvania,Lebanon County,95.1,61.61
+Pennsylvania,Lehigh County,93.79,63.73
+Pennsylvania,Luzerne County,93.95,61.62
+Pennsylvania,Lycoming County,94.92,62.74
+Pennsylvania,McKean County,93.51,60.1
+Pennsylvania,Mercer County,94.19,57.91
+Pennsylvania,Mifflin County,96.5,56.89
+Pennsylvania,Monroe County,93.77,63.66
+Pennsylvania,Montgomery County,95.52,77.92
+Pennsylvania,Montour County,98.3,67.12
+Pennsylvania,Northampton County,95.42,71.22
+Pennsylvania,Northumberland County,95.77,62.32
+Pennsylvania,Perry County,96.62,66.82
+Pennsylvania,Philadelphia County,91.21,51.26
+Pennsylvania,Pike County,92.17,64.11
+Pennsylvania,Potter County,93.23,54.71
+Pennsylvania,Schuylkill County,94.8,62.94
+Pennsylvania,Snyder County,97.54,64.81
+Pennsylvania,Somerset County,95.16,63.32
+Pennsylvania,Sullivan County,94.96,58.47
+Pennsylvania,Susquehanna County,93.87,62.15
+Pennsylvania,Tioga County,94.79,60.21
+Pennsylvania,Union County,97.14,67.5
+Pennsylvania,Venango County,93.43,57.11
+Pennsylvania,Warren County,95.62,62.56
+Pennsylvania,Washington County,94.6,69.96
+Pennsylvania,Wayne County,94.89,61.57
+Pennsylvania,Westmoreland County,95.33,69.62
+Pennsylvania,Wyoming County,95.08,66.67
+Pennsylvania,York County,95.37,68.83
+Rhode Island,Bristol County,96.56,74.89
+Rhode Island,Kent County,95.73,69.6
+Rhode Island,Newport County,94.2,67.99
+Rhode Island,Providence County,94.1,60.5
+Rhode Island,Washington County,94.1,72.66
+South Carolina,Abbeville County,94.99,51.65
+South Carolina,Aiken County,92.69,57.47
+South Carolina,Allendale County,87.13,41.78
+South Carolina,Anderson County,94.54,59.08
+South Carolina,Bamberg County,92.95,47.34
+South Carolina,Barnwell County,93.38,48.06
+South Carolina,Beaufort County,95.45,56.45
+South Carolina,Berkeley County,95.68,55.42
+South Carolina,Calhoun County,93.48,51.04
+South Carolina,Charleston County,96.35,65.09
+South Carolina,Cherokee County,93.5,52.09
+South Carolina,Chester County,95.06,52.21
+South Carolina,Chesterfield County,90.6,53.07
+South Carolina,Clarendon County,88.52,42.65
+South Carolina,Colleton County,92.99,48.37
+South Carolina,Darlington County,91.96,50.16
+South Carolina,Dillon County,93.63,40.86
+South Carolina,Dorchester County,94.29,57.06
+South Carolina,Edgefield County,92.97,58.61
+South Carolina,Fairfield County,95.01,52.94
+South Carolina,Florence County,94.99,56.02
+South Carolina,Georgetown County,93.13,52.2
+South Carolina,Greenville County,96.04,63.62
+South Carolina,Greenwood County,93.92,53.64
+South Carolina,Hampton County,91.87,49.49
+South Carolina,Horry County,94.03,51.23
+South Carolina,Jasper County,92.36,46.76
+South Carolina,Kershaw County,93.71,53.85
+South Carolina,Lancaster County,93.38,62.02
+South Carolina,Laurens County,93.24,50.56
+South Carolina,Lee County,92.7,40.6
+South Carolina,Lexington County,95.18,62.7
+South Carolina,McCormick County,94.32,42.37
+South Carolina,Marion County,91.63,40.86
+South Carolina,Marlboro County,89.98,37.93
+South Carolina,Newberry County,95.02,58.36
+South Carolina,Oconee County,93.94,54.5
+South Carolina,Orangeburg County,90.1,48.01
+South Carolina,Pickens County,94.97,64.18
+South Carolina,Richland County,93.89,59.09
+South Carolina,Saluda County,95.56,47.02
+South Carolina,Spartanburg County,94.63,58.3
+South Carolina,Sumter County,91.49,42.82
+South Carolina,Union County,92.26,49.77
+South Carolina,Williamsburg County,94.97,44.9
+South Carolina,York County,94.96,68.68
+South Dakota,Aurora County,99.66,70.45
+South Dakota,Beadle County,97.7,66.48
+South Dakota,Bennett County,90.58,33.28
+South Dakota,Bon Homme County,95.81,64.52
+South Dakota,Brookings County,96.08,77.7
+South Dakota,Brown County,97.8,71.76
+South Dakota,Brule County,98.35,70.26
+South Dakota,Buffalo County,77.97,18.7
+South Dakota,Butte County,94.21,54.89
+South Dakota,Campbell County,99.23,78.12
+South Dakota,Charles Mix County,91.55,45.99
+South Dakota,Clark County,96.51,70.9
+South Dakota,Clay County,91.51,73.19
+South Dakota,Codington County,97.39,66.29
+South Dakota,Corson County,75.83,29.81
+South Dakota,Custer County,94.57,62.3
+South Dakota,Davison County,97.87,64.75
+South Dakota,Day County,98.41,60.4
+South Dakota,Deuel County,98.71,68.35
+South Dakota,Dewey County,78.58,30.26
+South Dakota,Douglas County,99.45,64.71
+South Dakota,Edmunds County,98.32,74.15
+South Dakota,Fall River County,97.73,51.39
+South Dakota,Faulk County,94.85,66.25
+South Dakota,Grant County,97.76,72.94
+South Dakota,Gregory County,97.72,59.5
+South Dakota,Haakon County,98.49,60.34
+South Dakota,Hamlin County,97.68,70.48
+South Dakota,Hand County,100,76.22
+South Dakota,Hanson County,97.68,74.42
+South Dakota,Harding County,99.13,70.91
+South Dakota,Hughes County,98.2,70.61
+South Dakota,Hutchinson County,97.75,69.64
+South Dakota,Hyde County,99.49,74.11
+South Dakota,Jackson County,90.74,30.3
+South Dakota,Jerauld County,99.69,62.8
+South Dakota,Jones County,97.56,60.14
+South Dakota,Kingsbury County,98.99,72.7
+South Dakota,Lake County,96.75,70.9
+South Dakota,Lawrence County,97.33,64.61
+South Dakota,Lincoln County,97.34,78.77
+South Dakota,Lyman County,93.79,46.88
+South Dakota,McCook County,97.53,69.23
+South Dakota,McPherson County,98.27,61.74
+South Dakota,Marshall County,97.36,72.25
+South Dakota,Meade County,97.49,61.8
+South Dakota,Mellette County,89.92,19.72
+South Dakota,Miner County,98.83,71.06
+South Dakota,Minnehaha County,97.41,70.98
+South Dakota,Moody County,97.47,67.21
+South Dakota,Oglala Lakota County,83.72,12.68
+South Dakota,Pennington County,95.95,56.27
+South Dakota,Perkins County,98.6,67.22
+South Dakota,Potter County,99.01,66.16
+South Dakota,Roberts County,94.12,48.41
+South Dakota,Sanborn County,98.41,68.76
+South Dakota,Spink County,97.31,71.47
+South Dakota,Stanley County,100,73.96
+South Dakota,Sully County,99.43,79.34
+South Dakota,Todd County,89.28,14.7
+South Dakota,Tripp County,94.8,60.42
+South Dakota,Turner County,97.64,68.6
+South Dakota,Union County,97.73,71.87
+South Dakota,Walworth County,95.08,62.58
+South Dakota,Yankton County,97.75,67.43
+South Dakota,Ziebach County,69.61,31.48
+Tennessee,Anderson County,94.49,57.08
+Tennessee,Bedford County,95.59,53.65
+Tennessee,Benton County,92.77,50.08
+Tennessee,Bledsoe County,92.51,45.73
+Tennessee,Blount County,95.24,62.01
+Tennessee,Bradley County,94.62,57.78
+Tennessee,Campbell County,89.82,44.94
+Tennessee,Cannon County,96.98,58.22
+Tennessee,Carroll County,96,52.76
+Tennessee,Carter County,94.11,47.68
+Tennessee,Cheatham County,95.68,62.63
+Tennessee,Chester County,92.67,54.95
+Tennessee,Claiborne County,92.82,54.25
+Tennessee,Clay County,94.72,47.43
+Tennessee,Cocke County,91.4,42.42
+Tennessee,Coffee County,95.63,56.41
+Tennessee,Crockett County,95.77,51.58
+Tennessee,Cumberland County,93.76,50.75
+Tennessee,Davidson County,95.3,63.38
+Tennessee,Decatur County,92.03,51.24
+Tennessee,DeKalb County,95.08,53.41
+Tennessee,Dickson County,96.52,60.84
+Tennessee,Dyer County,93.79,54.95
+Tennessee,Fayette County,93.63,61.24
+Tennessee,Fentress County,93.69,43.98
+Tennessee,Franklin County,95.97,57.88
+Tennessee,Gibson County,94.23,53.7
+Tennessee,Giles County,94.56,56.03
+Tennessee,Grainger County,94.82,48.24
+Tennessee,Greene County,95.05,52.41
+Tennessee,Grundy County,91.96,48.86
+Tennessee,Hamblen County,92.3,49.21
+Tennessee,Hamilton County,95.44,63.79
+Tennessee,Hancock County,87.99,35.56
+Tennessee,Hardeman County,86.87,46.75
+Tennessee,Hardin County,95.43,42.51
+Tennessee,Hawkins County,92.39,53.12
+Tennessee,Haywood County,94.18,49.06
+Tennessee,Henderson County,92.28,49.65
+Tennessee,Henry County,95.32,51.38
+Tennessee,Hickman County,96.72,54.39
+Tennessee,Houston County,94.16,47.88
+Tennessee,Humphreys County,90.93,53.73
+Tennessee,Jackson County,92.41,48.94
+Tennessee,Jefferson County,93.84,52.84
+Tennessee,Johnson County,96.95,39.94
+Tennessee,Knox County,95.77,66.9
+Tennessee,Lake County,87.56,40.13
+Tennessee,Lauderdale County,92.99,49.33
+Tennessee,Lawrence County,91.79,49.58
+Tennessee,Lewis County,95.53,46.7
+Tennessee,Lincoln County,96.17,61.58
+Tennessee,Loudon County,96.4,61.46
+Tennessee,McMinn County,93.83,51.05
+Tennessee,McNairy County,93.06,51.89
+Tennessee,Macon County,95.64,52.55
+Tennessee,Madison County,93.31,54.85
+Tennessee,Marion County,94.85,58.45
+Tennessee,Marshall County,93.64,60.71
+Tennessee,Maury County,96.19,63.53
+Tennessee,Meigs County,91.09,50.24
+Tennessee,Monroe County,93.08,48.63
+Tennessee,Montgomery County,94.03,44.8
+Tennessee,Moore County,96.11,57.08
+Tennessee,Morgan County,92.29,47.2
+Tennessee,Obion County,93.85,53.79
+Tennessee,Overton County,96.44,51.39
+Tennessee,Perry County,91.2,38.57
+Tennessee,Pickett County,95.21,52.58
+Tennessee,Polk County,93.73,52.28
+Tennessee,Putnam County,94.14,59.61
+Tennessee,Rhea County,91.22,52.3
+Tennessee,Roane County,93.98,57.15
+Tennessee,Robertson County,95.33,63.42
+Tennessee,Rutherford County,95.78,67.86
+Tennessee,Scott County,91.81,43.84
+Tennessee,Sequatchie County,95.31,48.32
+Tennessee,Sevier County,95.21,50.08
+Tennessee,Shelby County,92.64,56.59
+Tennessee,Smith County,96.31,55
+Tennessee,Stewart County,93.95,49.3
+Tennessee,Sullivan County,93.5,54.09
+Tennessee,Sumner County,96.6,65.26
+Tennessee,Tipton County,94.73,56.95
+Tennessee,Trousdale County,95.38,54.17
+Tennessee,Unicoi County,93.9,48.29
+Tennessee,Union County,93.32,51.27
+Tennessee,Van Buren County,94.99,47.49
+Tennessee,Warren County,96.19,47.81
+Tennessee,Washington County,95.2,59.74
+Tennessee,Wayne County,93.98,49.9
+Tennessee,Weakley County,95.32,54.67
+Tennessee,White County,95.12,51.4
+Tennessee,Williamson County,97.54,81.09
+Tennessee,Wilson County,96.49,69.05
+Texas,Anderson County,96.6,55.61
+Texas,Andrews County,96.08,60.04
+Texas,Angelina County,93.3,49.62
+Texas,Aransas County,90.68,48.27
+Texas,Archer County,96.32,61.99
+Texas,Armstrong County,99.46,72.07
+Texas,Atascosa County,92.79,54.96
+Texas,Austin County,94.42,58.55
+Texas,Bailey County,96.97,36.2
+Texas,Bandera County,92.89,48.38
+Texas,Bastrop County,94.88,56.31
+Texas,Baylor County,98.2,59.86
+Texas,Bee County,91.66,50.04
+Texas,Bell County,92.54,44.41
+Texas,Bexar County,94.26,52.66
+Texas,Blanco County,95.08,59.64
+Texas,Borden County,94.54,77.03
+Texas,Bosque County,95.74,54.22
+Texas,Bowie County,95.19,56.55
+Texas,Brazoria County,95.24,67.21
+Texas,Brazos County,95.63,69.97
+Texas,Brewster County,95.81,62.78
+Texas,Briscoe County,96.88,54.45
+Texas,Brooks County,98.86,32.22
+Texas,Brown County,95.66,54.9
+Texas,Burleson County,96.06,57.57
+Texas,Burnet County,96.79,56.66
+Texas,Caldwell County,97.48,53.16
+Texas,Calhoun County,95.7,60.61
+Texas,Callahan County,95.77,54.78
+Texas,Cameron County,94.37,35
+Texas,Camp County,93.55,49.41
+Texas,Carson County,98.41,75.32
+Texas,Cass County,91.85,55.78
+Texas,Castro County,98.5,44.11
+Texas,Chambers County,92.94,69.04
+Texas,Cherokee County,93.51,49.6
+Texas,Childress County,92.2,60.33
+Texas,Clay County,97.24,58.29
+Texas,Cochran County,90.65,39.56
+Texas,Coke County,97.71,56.22
+Texas,Coleman County,94.21,48.6
+Texas,Collin County,96,76.77
+Texas,Collingsworth County,94.16,39.8
+Texas,Colorado County,96.12,60.29
+Texas,Comal County,95.97,63.49
+Texas,Comanche County,93.86,58.32
+Texas,Concho County,98.64,57.59
+Texas,Cooke County,95.96,61.5
+Texas,Coryell County,93.34,42.43
+Texas,Cottle County,91.92,47.72
+Texas,Crane County,97.11,69.09
+Texas,Crockett County,100,61.55
+Texas,Crosby County,94.74,44.71
+Texas,Culberson County,90.73,39.58
+Texas,Dallam County,96.95,47.26
+Texas,Dallas County,94.98,53.61
+Texas,Dawson County,92.72,46.96
+Texas,Deaf Smith County,96.71,48.79
+Texas,Delta County,95.44,57.1
+Texas,Denton County,96.14,75.01
+Texas,DeWitt County,93.25,56.42
+Texas,Dickens County,93.67,51.73
+Texas,Dimmit County,92.05,37.13
+Texas,Donley County,98.38,63.07
+Texas,Duval County,91.17,45.21
+Texas,Eastland County,95.23,53.11
+Texas,Ector County,93.42,59.26
+Texas,Edwards County,100,42.5
+Texas,Ellis County,96.51,63.48
+Texas,El Paso County,93.79,43.77
+Texas,Erath County,95.04,63.1
+Texas,Falls County,91.89,48.2
+Texas,Fannin County,95.34,53.7
+Texas,Fayette County,95.91,66.1
+Texas,Fisher County,97.38,60.22
+Texas,Floyd County,97.18,45.77
+Texas,Foard County,91.08,56.06
+Texas,Fort Bend County,94.4,70.56
+Texas,Franklin County,93.56,57.97
+Texas,Freestone County,96.67,53.04
+Texas,Frio County,92.54,49.32
+Texas,Gaines County,96.19,46.76
+Texas,Galveston County,94.1,64.7
+Texas,Garza County,91.07,62
+Texas,Gillespie County,95.71,54.82
+Texas,Glasscock County,100,56.74
+Texas,Goliad County,95.77,57.34
+Texas,Gonzales County,97.44,53.11
+Texas,Gray County,94.86,52.82
+Texas,Grayson County,95.63,56.18
+Texas,Gregg County,95.92,53.4
+Texas,Grimes County,94.63,55.74
+Texas,Guadalupe County,95.5,56.05
+Texas,Hale County,95.76,49.01
+Texas,Hall County,89.92,45.55
+Texas,Hamilton County,97.61,53.65
+Texas,Hansford County,89.03,62.39
+Texas,Hardeman County,95.26,52.62
+Texas,Hardin County,96.06,57.08
+Texas,Harris County,93.82,54.38
+Texas,Harrison County,93.94,54.35
+Texas,Hartley County,99.55,58
+Texas,Haskell County,92.75,48.11
+Texas,Hays County,94.49,67.65
+Texas,Hemphill County,93.4,57.66
+Texas,Henderson County,93.69,48.44
+Texas,Hidalgo County,92.69,34.42
+Texas,Hill County,93.77,51.87
+Texas,Hockley County,93.45,53.92
+Texas,Hood County,94.04,58.44
+Texas,Hopkins County,95.64,55.06
+Texas,Houston County,96.99,48.66
+Texas,Howard County,93.23,53.23
+Texas,Hudspeth County,91.35,20.84
+Texas,Hunt County,95.14,54.13
+Texas,Hutchinson County,93.01,58.75
+Texas,Irion County,94.4,65.15
+Texas,Jack County,96.67,56.47
+Texas,Jackson County,95.21,57.75
+Texas,Jasper County,89.94,48.77
+Texas,Jeff Davis County,99.47,38.6
+Texas,Jefferson County,94.27,51.94
+Texas,Jim Hogg County,91.89,40.8
+Texas,Jim Wells County,96.32,49
+Texas,Johnson County,96.49,60.02
+Texas,Jones County,94.01,53.3
+Texas,Karnes County,96.46,57.92
+Texas,Kaufman County,94.68,62.8
+Texas,Kendall County,95.67,65.46
+Texas,Kenedy County,100,21.23
+Texas,Kent County,95,78.63
+Texas,Kerr County,95.71,51.68
+Texas,Kimble County,96.81,48.44
+Texas,King County,90.65,61.29
+Texas,Kinney County,98.88,42.86
+Texas,Kleberg County,93.97,49.71
+Texas,Knox County,95.5,54.1
+Texas,Lamar County,96.14,48.11
+Texas,Lamb County,95.83,49.96
+Texas,Lampasas County,92.87,42.89
+Texas,La Salle County,97.17,48
+Texas,Lavaca County,96.68,67.48
+Texas,Lee County,97.51,62.73
+Texas,Leon County,94.14,53.09
+Texas,Liberty County,92.46,48.05
+Texas,Limestone County,94.07,45.97
+Texas,Lipscomb County,94.39,63.52
+Texas,Live Oak County,97.05,46.79
+Texas,Llano County,93.47,50.52
+Texas,Loving County,100,53.85
+Texas,Lubbock County,95.68,61.96
+Texas,Lynn County,96.28,57.13
+Texas,McCulloch County,95.08,49.91
+Texas,McLennan County,95.43,58.95
+Texas,McMullen County,94.82,53.04
+Texas,Madison County,94.28,55.87
+Texas,Marion County,89.09,54.66
+Texas,Martin County,95.96,67.49
+Texas,Mason County,94.74,67.14
+Texas,Matagorda County,93.58,51.49
+Texas,Maverick County,92.31,37.95
+Texas,Medina County,96.7,56.88
+Texas,Menard County,95.49,38.8
+Texas,Midland County,96.58,65.67
+Texas,Milam County,93.46,54.2
+Texas,Mills County,97.67,55.73
+Texas,Mitchell County,96.78,52.36
+Texas,Montague County,93.77,58.31
+Texas,Montgomery County,95.36,64.91
+Texas,Moore County,96.27,62.92
+Texas,Morris County,92.6,54.61
+Texas,Motley County,95.4,45.74
+Texas,Nacogdoches County,92.34,53.33
+Texas,Navarro County,95.07,51.38
+Texas,Newton County,88.99,46.83
+Texas,Nolan County,92.07,52.72
+Texas,Nueces County,94.19,51.2
+Texas,Ochiltree County,96.19,51.86
+Texas,Oldham County,99.56,73.21
+Texas,Orange County,95.53,56.97
+Texas,Palo Pinto County,94.16,49.62
+Texas,Panola County,97.12,50.22
+Texas,Parker County,95.25,63.6
+Texas,Parmer County,98.56,56.24
+Texas,Pecos County,98.91,55.36
+Texas,Polk County,90.88,48.58
+Texas,Potter County,96.55,49.77
+Texas,Presidio County,90.15,35.02
+Texas,Rains County,96.05,49.94
+Texas,Randall County,96.4,68.71
+Texas,Reagan County,93.7,61.82
+Texas,Real County,99.01,40.02
+Texas,Red River County,94.86,50.81
+Texas,Reeves County,88.87,53.42
+Texas,Refugio County,93.67,51.63
+Texas,Roberts County,98.67,73.6
+Texas,Robertson County,90.95,55.68
+Texas,Rockwall County,96.27,74.42
+Texas,Runnels County,97.25,58.78
+Texas,Rusk County,92.66,55.65
+Texas,Sabine County,90.69,49.74
+Texas,San Augustine County,88.86,47.04
+Texas,San Jacinto County,92.7,44.42
+Texas,San Patricio County,95,51.37
+Texas,San Saba County,97.8,45.9
+Texas,Schleicher County,83.63,55.67
+Texas,Scurry County,96.51,55.99
+Texas,Shackelford County,91.51,58.36
+Texas,Shelby County,94.44,46.78
+Texas,Sherman County,97.91,61.78
+Texas,Smith County,94.53,57.06
+Texas,Somervell County,95.1,62.95
+Texas,Starr County,86.86,26.2
+Texas,Stephens County,91.4,49.14
+Texas,Sterling County,99,47.78
+Texas,Stonewall County,96.37,52.2
+Texas,Sutton County,93.75,56.17
+Texas,Swisher County,92.58,45.17
+Texas,Tarrant County,95.03,60.08
+Texas,Taylor County,96.98,53.08
+Texas,Terrell County,100,65.89
+Texas,Terry County,92.2,40.22
+Texas,Throckmorton County,95.22,53.33
+Texas,Titus County,94.94,51.55
+Texas,Tom Green County,95.97,59.68
+Texas,Travis County,95.69,70.23
+Texas,Trinity County,92.93,38.58
+Texas,Tyler County,85.6,43.48
+Texas,Upshur County,94.05,54.26
+Texas,Upton County,97.02,70.67
+Texas,Uvalde County,95.06,43.82
+Texas,Val Verde County,96,44.68
+Texas,Van Zandt County,95.99,52.75
+Texas,Victoria County,94.82,55.47
+Texas,Walker County,96.58,69.03
+Texas,Waller County,94.71,60.64
+Texas,Ward County,94.24,59.59
+Texas,Washington County,95.42,62.63
+Texas,Webb County,94.33,39.29
+Texas,Wharton County,94.7,54.23
+Texas,Wheeler County,95.54,52.63
+Texas,Wichita County,95.43,50.24
+Texas,Wilbarger County,93.06,54.38
+Texas,Willacy County,89.56,31.41
+Texas,Williamson County,95.04,72.32
+Texas,Wilson County,95.99,59.27
+Texas,Winkler County,97.45,62.02
+Texas,Wise County,95.64,60.94
+Texas,Wood County,94.85,50.46
+Texas,Yoakum County,94.69,55.23
+Texas,Young County,97.01,53.57
+Texas,Zapata County,91.68,36.13
+Texas,Zavala County,95.63,35.61
+Utah,Beaver County,96.44,76.14
+Utah,Box Elder County,96.92,71.9
+Utah,Cache County,97.14,75.04
+Utah,Carbon County,93.35,66.46
+Utah,Daggett County,98.97,85.71
+Utah,Davis County,97.44,77.69
+Utah,Duchesne County,92.57,64.42
+Utah,Emery County,96.22,74.63
+Utah,Garfield County,96.98,65.94
+Utah,Grand County,97.45,57.59
+Utah,Iron County,95.12,62.7
+Utah,Juab County,96.44,70.25
+Utah,Kane County,96.61,61.43
+Utah,Millard County,96.26,68.93
+Utah,Morgan County,98.38,81.16
+Utah,Piute County,96.91,50.14
+Utah,Rich County,97.35,77.14
+Utah,Salt Lake County,96.26,73.04
+Utah,San Juan County,88.05,44.65
+Utah,Sanpete County,95.74,67.1
+Utah,Sevier County,93.45,64.23
+Utah,Summit County,97.9,82.84
+Utah,Tooele County,94.85,74.57
+Utah,Uintah County,93.06,60.72
+Utah,Utah County,96.25,77.58
+Utah,Wasatch County,98.2,81.14
+Utah,Washington County,96.62,63.25
+Utah,Wayne County,98.21,60.65
+Utah,Weber County,96.68,72.1
+Vermont,Addison County,96.12,64.9
+Vermont,Bennington County,95.86,58.39
+Vermont,Caledonia County,96.93,53.87
+Vermont,Chittenden County,96.4,71.92
+Vermont,Essex County,94.81,43.78
+Vermont,Franklin County,95.58,62.13
+Vermont,Grand Isle County,95.41,66.06
+Vermont,Lamoille County,96.34,58.73
+Vermont,Orange County,96.22,55.51
+Vermont,Orleans County,95.82,50.78
+Vermont,Rutland County,96.51,57.25
+Vermont,Washington County,96.82,63.11
+Vermont,Windham County,95.61,53.98
+Vermont,Windsor County,96.22,61.21
+Virginia,Accomack County,96.22,54.06
+Virginia,Albemarle County,96.61,75.61
+Virginia,Alleghany County,95.43,56.51
+Virginia,Amelia County,95.58,64.12
+Virginia,Amherst County,95.14,65.21
+Virginia,Appomattox County,97.23,60.66
+Virginia,Arlington County,97.15,81.98
+Virginia,Augusta County,97.08,67.52
+Virginia,Bath County,93.62,43.1
+Virginia,Bedford County,96.57,69.39
+Virginia,Bland County,95.68,58.42
+Virginia,Botetourt County,97.17,72.47
+Virginia,Brunswick County,93.11,51.64
+Virginia,Buchanan County,93.54,42.92
+Virginia,Buckingham County,94.22,56.15
+Virginia,Campbell County,96.16,63.2
+Virginia,Caroline County,96.99,70.44
+Virginia,Carroll County,95.61,54.34
+Virginia,Charles City County,96.94,60.34
+Virginia,Charlotte County,94.5,48.87
+Virginia,Chesterfield County,95.3,69.99
+Virginia,Clarke County,97.05,74.98
+Virginia,Craig County,98.26,62.34
+Virginia,Culpeper County,95.99,63.26
+Virginia,Cumberland County,97.72,57.48
+Virginia,Dickenson County,95.13,45.63
+Virginia,Dinwiddie County,93.71,61.98
+Virginia,Essex County,91.98,55.76
+Virginia,Fairfax County,95.95,73.8
+Virginia,Fauquier County,97.07,74.25
+Virginia,Floyd County,96.91,65.14
+Virginia,Fluvanna County,97.48,68.06
+Virginia,Franklin County,95.7,58.61
+Virginia,Frederick County,96.69,69.73
+Virginia,Giles County,95.85,62.76
+Virginia,Gloucester County,96.36,62.94
+Virginia,Goochland County,96.26,78.33
+Virginia,Grayson County,95.66,52.51
+Virginia,Greene County,95.62,66.38
+Virginia,Greensville County,94.66,52.2
+Virginia,Halifax County,96.12,55.54
+Virginia,Hanover County,96.79,75.56
+Virginia,Henrico County,95.94,71.66
+Virginia,Henry County,93.66,47.7
+Virginia,Highland County,88.63,49
+Virginia,Isle of Wight County,94.05,64.96
+Virginia,James City County,95.86,66.67
+Virginia,King and Queen County,96.46,69.19
+Virginia,King George County,96.12,69.01
+Virginia,King William County,95.93,75.14
+Virginia,Lancaster County,90.1,55.08
+Virginia,Lee County,90.28,41.44
+Virginia,Loudoun County,96.44,82.18
+Virginia,Louisa County,94.82,61
+Virginia,Lunenburg County,96.23,56.91
+Virginia,Madison County,95.9,65.83
+Virginia,Mathews County,95.55,55.33
+Virginia,Mecklenburg County,96.59,57.87
+Virginia,Middlesex County,94.81,53.71
+Virginia,Montgomery County,96.52,75.36
+Virginia,Nelson County,96.9,63.6
+Virginia,New Kent County,96.89,77.4
+Virginia,Northampton County,95.63,53.72
+Virginia,Northumberland County,93.96,56.27
+Virginia,Nottoway County,95.69,51.56
+Virginia,Orange County,94.47,64.35
+Virginia,Page County,94.76,57.56
+Virginia,Patrick County,96.25,54.38
+Virginia,Pittsylvania County,94.68,57.59
+Virginia,Powhatan County,98.56,75.46
+Virginia,Prince Edward County,94.06,64.34
+Virginia,Prince George County,93.46,56.79
+Virginia,Prince William County,95,67.06
+Virginia,Pulaski County,95.11,62.06
+Virginia,Rappahannock County,95.84,61.4
+Virginia,Richmond County,97.54,62.46
+Virginia,Roanoke County,96.67,72.16
+Virginia,Rockbridge County,95.23,63.84
+Virginia,Rockingham County,96.88,67.64
+Virginia,Russell County,93.45,54.61
+Virginia,Scott County,96.26,55.67
+Virginia,Shenandoah County,95.99,62.8
+Virginia,Smyth County,94.49,51.44
+Virginia,Southampton County,95.25,57.62
+Virginia,Spotsylvania County,93.99,65.42
+Virginia,Stafford County,96.19,63.72
+Virginia,Surry County,95.24,57.25
+Virginia,Sussex County,93.16,58.85
+Virginia,Tazewell County,92.95,52.31
+Virginia,Warren County,94.21,62.79
+Virginia,Washington County,95.76,58.79
+Virginia,Westmoreland County,87.3,56.15
+Virginia,Wise County,90.76,52.31
+Virginia,Wythe County,95.77,60.53
+Virginia,York County,94.73,61.43
+Virginia,Alexandria city,96.71,70.84
+Virginia,Bristol city,93.67,48.76
+Virginia,Buena Vista city,98.17,59.56
+Virginia,Charlottesville city,95.96,73.91
+Virginia,Chesapeake city,94.76,59.13
+Virginia,Colonial Heights city,93.94,59.47
+Virginia,Covington city,97.26,57.77
+Virginia,Danville city,92.86,48.29
+Virginia,Emporia city,83.26,43.21
+Virginia,Fairfax city,95.97,77.17
+Virginia,Falls Church city,95.56,87.85
+Virginia,Franklin city,90.06,51.51
+Virginia,Fredericksburg city,94.21,63.42
+Virginia,Galax city,91.66,39.32
+Virginia,Hampton city,93.88,52.91
+Virginia,Harrisonburg city,95.26,67.7
+Virginia,Hopewell city,91.59,47.19
+Virginia,Lexington city,96.64,77.49
+Virginia,Lynchburg city,93.69,62.57
+Virginia,Manassas city,95.64,60.02
+Virginia,Manassas Park city,96.89,59.7
+Virginia,Martinsville city,96.06,44.37
+Virginia,Newport News city,94.29,50.4
+Virginia,Norfolk city,92.01,47.77
+Virginia,Norton city,91.42,50.83
+Virginia,Petersburg city,87.39,44.26
+Virginia,Poquoson city,98.27,71.69
+Virginia,Portsmouth city,93.75,49.16
+Virginia,Radford city,93.52,69.66
+Virginia,Richmond city,93.68,58.1
+Virginia,Roanoke city,93.27,54.65
+Virginia,Salem city,95.07,72.75
+Virginia,Staunton city,96.32,60.58
+Virginia,Suffolk city,93.8,57.87
+Virginia,Virginia Beach city,95.62,57.75
+Virginia,Waynesboro city,95.38,60.08
+Virginia,Williamsburg city,94.81,73.66
+Virginia,Winchester city,94.71,60.39
+Washington,Adams County,93.71,39.94
+Washington,Asotin County,94.24,56.93
+Washington,Benton County,94.66,59.98
+Washington,Chelan County,96.32,53.3
+Washington,Clallam County,93.39,51.25
+Washington,Clark County,94.86,64.56
+Washington,Columbia County,98.27,57.3
+Washington,Cowlitz County,93.54,55.41
+Washington,Douglas County,95.83,52.72
+Washington,Ferry County,92.68,39.94
+Washington,Franklin County,94.34,48.67
+Washington,Garfield County,93.47,65.89
+Washington,Grant County,94.24,46.05
+Washington,Grays Harbor County,93.63,53.39
+Washington,Island County,94.19,51.63
+Washington,Jefferson County,93.01,53.02
+Washington,King County,95.73,73.14
+Washington,Kitsap County,95.6,60.02
+Washington,Kittitas County,93.89,66.28
+Washington,Klickitat County,93.85,55.52
+Washington,Lewis County,93.36,54.14
+Washington,Lincoln County,96.41,54.94
+Washington,Mason County,93.64,51.8
+Washington,Okanogan County,94.51,41.9
+Washington,Pacific County,94.59,51.07
+Washington,Pend Oreille County,93.58,48.9
+Washington,Pierce County,95.01,59.87
+Washington,San Juan County,97.88,65.11
+Washington,Skagit County,94.88,59.05
+Washington,Skamania County,94.21,61
+Washington,Snohomish County,95.85,69.4
+Washington,Spokane County,94.55,57.01
+Washington,Stevens County,94.42,46.95
+Washington,Thurston County,93.88,60.56
+Washington,Wahkiakum County,94.43,53.98
+Washington,Walla Walla County,94.49,57.56
+Washington,Whatcom County,94.81,63.77
+Washington,Whitman County,91.84,73.05
+Washington,Yakima County,93.56,43.76
+West Virginia,Barbour County,91.6,53.24
+West Virginia,Berkeley County,94.04,62.7
+West Virginia,Boone County,87.61,48.56
+West Virginia,Braxton County,87.7,50.01
+West Virginia,Brooke County,96.19,60.12
+West Virginia,Cabell County,94.29,53.9
+West Virginia,Calhoun County,89.36,41.96
+West Virginia,Clay County,87.21,35.65
+West Virginia,Doddridge County,95.81,54.87
+West Virginia,Fayette County,92.74,45.43
+West Virginia,Gilmer County,88.93,52.62
+West Virginia,Grant County,93.41,55.92
+West Virginia,Greenbrier County,94.06,49.18
+West Virginia,Hampshire County,93,52.33
+West Virginia,Hancock County,91.84,56.63
+West Virginia,Hardy County,96.41,53.71
+West Virginia,Harrison County,94.24,57.21
+West Virginia,Jackson County,96.58,55.82
+West Virginia,Jefferson County,94.31,66.23
+West Virginia,Kanawha County,94.29,54.89
+West Virginia,Lewis County,93.45,50.66
+West Virginia,Lincoln County,94.24,44.19
+West Virginia,Logan County,85.89,45.89
+West Virginia,McDowell County,85,34.8
+West Virginia,Marion County,94.34,61.31
+West Virginia,Marshall County,96.31,60.57
+West Virginia,Mason County,97.1,57.49
+West Virginia,Mercer County,93.62,49.66
+West Virginia,Mineral County,92.62,63.28
+West Virginia,Mingo County,85.98,40.02
+West Virginia,Monongalia County,93.4,69.98
+West Virginia,Monroe County,90.04,43.06
+West Virginia,Morgan County,93.77,61.57
+West Virginia,Nicholas County,91.68,49.09
+West Virginia,Ohio County,94.14,58.86
+West Virginia,Pendleton County,96.38,59.86
+West Virginia,Pleasants County,92.37,61.33
+West Virginia,Pocahontas County,93.03,48.32
+West Virginia,Preston County,90.86,60.55
+West Virginia,Putnam County,96.3,65.87
+West Virginia,Raleigh County,93.07,48.9
+West Virginia,Randolph County,92.88,50.75
+West Virginia,Ritchie County,94.85,48.51
+West Virginia,Roane County,89.93,46.71
+West Virginia,Summers County,90.22,43.7
+West Virginia,Taylor County,89.87,55.76
+West Virginia,Tucker County,94.92,58.76
+West Virginia,Tyler County,92.37,49.97
+West Virginia,Upshur County,94.2,51.24
+West Virginia,Wayne County,95.08,48.02
+West Virginia,Webster County,88.16,30.99
+West Virginia,Wetzel County,91.91,55.18
+West Virginia,Wirt County,95.82,49.72
+West Virginia,Wood County,94.96,54.14
+West Virginia,Wyoming County,88.38,49.81
+Wisconsin,Adams County,94.15,55.81
+Wisconsin,Ashland County,94.17,54.36
+Wisconsin,Barron County,97.12,60.76
+Wisconsin,Bayfield County,96.04,58.77
+Wisconsin,Brown County,97.21,70.51
+Wisconsin,Buffalo County,97.9,68.27
+Wisconsin,Burnett County,94.38,53.73
+Wisconsin,Calumet County,97.78,76.95
+Wisconsin,Chippewa County,97.36,68.27
+Wisconsin,Clark County,96.99,53.84
+Wisconsin,Columbia County,97.15,71.96
+Wisconsin,Crawford County,97.43,61.76
+Wisconsin,Dane County,97.53,78.67
+Wisconsin,Dodge County,95.89,72.85
+Wisconsin,Door County,96.46,66.55
+Wisconsin,Douglas County,95.99,66.74
+Wisconsin,Dunn County,96.62,67.02
+Wisconsin,Eau Claire County,96.11,68.69
+Wisconsin,Florence County,94.31,56.92
+Wisconsin,Fond du Lac County,96.45,71.93
+Wisconsin,Forest County,95.05,53.56
+Wisconsin,Grant County,97.01,72.61
+Wisconsin,Green County,96.73,71.16
+Wisconsin,Green Lake County,97.02,63.41
+Wisconsin,Iowa County,97.91,74.34
+Wisconsin,Iron County,94.47,57.98
+Wisconsin,Jackson County,94.84,59.32
+Wisconsin,Jefferson County,96.74,71.66
+Wisconsin,Juneau County,96.21,58.83
+Wisconsin,Kenosha County,93.57,65.62
+Wisconsin,Kewaunee County,98.02,71.77
+Wisconsin,La Crosse County,96.51,72.84
+Wisconsin,Lafayette County,98.25,66.19
+Wisconsin,Langlade County,95.21,58.61
+Wisconsin,Lincoln County,96.15,69.08
+Wisconsin,Manitowoc County,97.6,70.87
+Wisconsin,Marathon County,97.04,68.37
+Wisconsin,Marinette County,95.56,62.91
+Wisconsin,Marquette County,95.83,60.52
+Wisconsin,Menominee County,89.61,29.61
+Wisconsin,Milwaukee County,94.88,58.33
+Wisconsin,Monroe County,97.72,60.19
+Wisconsin,Oconto County,97.38,67.7
+Wisconsin,Oneida County,97.77,65.99
+Wisconsin,Outagamie County,96.84,73.71
+Wisconsin,Ozaukee County,97.25,77.98
+Wisconsin,Pepin County,97.57,63.3
+Wisconsin,Pierce County,96.88,77.06
+Wisconsin,Polk County,96.06,65.87
+Wisconsin,Portage County,96.75,73.35
+Wisconsin,Price County,98.19,62.12
+Wisconsin,Racine County,96.01,65.67
+Wisconsin,Richland County,97.88,60.56
+Wisconsin,Rock County,95.46,66.16
+Wisconsin,Rusk County,95.89,55.97
+Wisconsin,St. Croix County,97.94,80
+Wisconsin,Sauk County,97.69,68.58
+Wisconsin,Sawyer County,94.95,57.78
+Wisconsin,Shawano County,96.8,63.59
+Wisconsin,Sheboygan County,96.69,72.86
+Wisconsin,Taylor County,96.4,64.76
+Wisconsin,Trempealeau County,97.52,68.3
+Wisconsin,Vernon County,97.67,60.37
+Wisconsin,Vilas County,94.36,58.44
+Wisconsin,Walworth County,96.62,70.91
+Wisconsin,Washburn County,96.4,57.24
+Wisconsin,Washington County,97.07,77.32
+Wisconsin,Waukesha County,96.97,78.7
+Wisconsin,Waupaca County,97.67,67.5
+Wisconsin,Waushara County,95.87,60.9
+Wisconsin,Winnebago County,97.03,70.37
+Wisconsin,Wood County,96.04,65.27
+Wyoming,Albany County,95.89,74.84
+Wyoming,Big Horn County,92.69,57.67
+Wyoming,Campbell County,95.92,69.79
+Wyoming,Carbon County,96.33,67.2
+Wyoming,Converse County,94.63,70.38
+Wyoming,Crook County,99,68.34
+Wyoming,Fremont County,92.59,51.39
+Wyoming,Goshen County,95.43,60.44
+Wyoming,Hot Springs County,97.1,56.92
+Wyoming,Johnson County,97.19,61.66
+Wyoming,Laramie County,95.08,63.19
+Wyoming,Lincoln County,97.28,67.51
+Wyoming,Natrona County,95.69,66.76
+Wyoming,Niobrara County,95.04,60.5
+Wyoming,Park County,97.56,64.88
+Wyoming,Platte County,97.9,66.02
+Wyoming,Sheridan County,96.39,67.19
+Wyoming,Sublette County,94.71,69.66
+Wyoming,Sweetwater County,93.75,71.96
+Wyoming,Teton County,98.16,77.67
+Wyoming,Uinta County,95.54,68.7
+Wyoming,Washakie County,95.76,64.84
+Wyoming,Weston County,96.1,64.49
+American Samoa,Western District,,
+Guam,Guam,,
+Northern Mariana Islands,Rota,,
+Northern Mariana Islands,Tinian Municipality,,
+Puerto Rico,Adjuntas Municipio,70.21,17.33
+Puerto Rico,Aguada Municipio,92.31,26.54
+Puerto Rico,Aguadilla Municipio,82.61,28.06
+Puerto Rico,Aguas Buenas Municipio,90.32,35.18
+Puerto Rico,Aibonito Municipio,93.99,26.61
+Puerto Rico,A�asco Municipio,90.4,31.5
+Puerto Rico,Arecibo Municipio,82.32,32.52
+Puerto Rico,Arroyo Municipio,87.1,19.8
+Puerto Rico,Barceloneta Municipio,81.38,35.18
+Puerto Rico,Barranquitas Municipio,82.03,23.79
+Puerto Rico,Bayam�n Municipio,88.44,42.24
+Puerto Rico,Cabo Rojo Municipio,87.15,36.6
+Puerto Rico,Caguas Municipio,87.22,40.23
+Puerto Rico,Camuy Municipio,92.66,24.73
+Puerto Rico,Can�vanas Municipio,77.77,36.33
+Puerto Rico,Carolina Municipio,85.69,48.02
+Puerto Rico,Cata�o Municipio,83.34,33.9
+Puerto Rico,Cayey Municipio,91.86,46.96
+Puerto Rico,Ceiba Municipio,89.49,33.54
+Puerto Rico,Ciales Municipio,78.45,20.92
+Puerto Rico,Cidra Municipio,87.34,43.58
+Puerto Rico,Coamo Municipio,93.1,29.88
+Puerto Rico,Comer�o Municipio,82.79,24.1
+Puerto Rico,Corozal Municipio,74.09,29.24
+Puerto Rico,Culebra Municipio,96.72,42.16
+Puerto Rico,Dorado Municipio,81.23,44.85
+Puerto Rico,Fajardo Municipio,74.13,31.25
+Puerto Rico,Florida Municipio,81.1,25.17
+Puerto Rico,Gu�nica Municipio,65.15,19.14
+Puerto Rico,Guayama Municipio,91.23,25.47
+Puerto Rico,Guayanilla Municipio,76.35,28.79
+Puerto Rico,Guaynabo Municipio,90.45,54.96
+Puerto Rico,Gurabo Municipio,84.01,46.64
+Puerto Rico,Hatillo Municipio,93.94,33.71
+Puerto Rico,Hormigueros Municipio,79.46,36.54
+Puerto Rico,Humacao Municipio,90.5,32.15
+Puerto Rico,Isabela Municipio,89.24,27.38
+Puerto Rico,Jayuya Municipio,85.54,19.15
+Puerto Rico,Juana D�az Municipio,78.64,34.41
+Puerto Rico,Juncos Municipio,80.19,31.12
+Puerto Rico,Lajas Municipio,80.5,27.86
+Puerto Rico,Lares Municipio,86.04,23.1
+Puerto Rico,Las Mar�as Municipio,93.95,32.32
+Puerto Rico,Las Piedras Municipio,86.95,36.14
+Puerto Rico,Lo�za Municipio,74.36,27.38
+Puerto Rico,Luquillo Municipio,74.48,31.22
+Puerto Rico,Manat� Municipio,81.78,30.37
+Puerto Rico,Maricao Municipio,92.87,27.69
+Puerto Rico,Maunabo Municipio,74.4,24.29
+Puerto Rico,Mayag�ez Municipio,74.1,31.33
+Puerto Rico,Moca Municipio,77.12,26.05
+Puerto Rico,Morovis Municipio,81.94,25.37
+Puerto Rico,Naguabo Municipio,82.83,24.02
+Puerto Rico,Naranjito Municipio,81.82,32.63
+Puerto Rico,Orocovis Municipio,74.54,18.82
+Puerto Rico,Patillas Municipio,81.15,21.13
+Puerto Rico,Pe�uelas Municipio,82.03,23.96
+Puerto Rico,Ponce Municipio,88.31,28.84
+Puerto Rico,Quebradillas Municipio,94.87,25.86
+Puerto Rico,Rinc�n Municipio,92.96,34.77
+Puerto Rico,R�o Grande Municipio,79.43,38.5
+Puerto Rico,Sabana Grande Municipio,81.6,30.82
+Puerto Rico,Salinas Municipio,94.16,26.02
+Puerto Rico,San Germ�n Municipio,92.51,33.94
+Puerto Rico,San Juan Municipio,83.85,44.87
+Puerto Rico,San Lorenzo Municipio,91.12,31.42
+Puerto Rico,San Sebasti�n Municipio,84.54,25.38
+Puerto Rico,Santa Isabel Municipio,93.5,29.45
+Puerto Rico,Toa Alta Municipio,89.74,48.88
+Puerto Rico,Toa Baja Municipio,85.64,39.97
+Puerto Rico,Trujillo Alto Municipio,95.28,53.18
+Puerto Rico,Utuado Municipio,66.67,21.67
+Puerto Rico,Vega Alta Municipio,80.28,32.18
+Puerto Rico,Vega Baja Municipio,81.94,29.46
+Puerto Rico,Vieques Municipio,86.88,18.03
+Puerto Rico,Villalba Municipio,79.96,27.61
+Puerto Rico,Yabucoa Municipio,81.89,26.13
+Puerto Rico,Yauco Municipio,82.45,29.11
