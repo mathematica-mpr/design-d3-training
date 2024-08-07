@@ -66,7 +66,7 @@ export class ScatterplotComponent implements OnInit {
     }
 
     createChart(_filteredData: PopulationData[] = this.populationData) {
-        const margin = { top: 20, right: 30, bottom: 30, left: 40 },
+        const margin = { top: 20, right: 30, bottom: 40, left: 40 },
             width = 800 - margin.left - margin.right,
             height = 450 - margin.top - margin.bottom;
 
@@ -104,7 +104,7 @@ export class ScatterplotComponent implements OnInit {
         svg.append('text')
             .attr('text-anchor', 'middle')
             .attr('x', width / 2 + margin.left)
-            .attr('y', height + 30)
+            .attr('y', height + 35)
             .style('font-size', '12px')
             .text('Total Weighted Population');
 

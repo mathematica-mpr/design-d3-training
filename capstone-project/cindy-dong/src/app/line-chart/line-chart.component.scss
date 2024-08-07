@@ -56,17 +56,15 @@
 }
 
 .container {
-    position: relative;
     padding-inline: 20px;
     padding: 50px;
     background-color: #bfe7f9;
     margin: 20px 110px;
-    display: flex;
+    display: inline-block;
     flex-direction: row;
     border-radius: 3px;
     border: 2px solid #628492;
     align-items: center;
-    max-width: 1100px;
 
     #chart {
         background-color: white;
@@ -74,11 +72,11 @@
         border-radius: 5px;
         padding: 15px;
         border: 2px solid #8da9b6;
+        display: inline-block;
     }
     #filters {
         display: flex;
-        flex-direction: column;
-        margin-left: 20px;
+        flex-direction: row;
         background-color: #bfe7f9;
 
         #select-county {
@@ -90,6 +88,9 @@
             font-weight: 600;
             border-radius: 4px;
             border-color: #628492;
+            margin-right: 15px;
+            margin-bottom: 20px;
+            cursor: pointer;
         }
         #select-year {
             background-color: #f6fafd;
@@ -100,6 +101,9 @@
             font-weight: 600;
             border-radius: 4px;
             border-color: #628492;
+            margin-right: 15px;
+            margin-bottom: 20px;
+            cursor: pointer;
         }
         #clear-filters {
             background-color: transparent;
@@ -111,6 +115,7 @@
             display: flex;
             align-items: center;
             letter-spacing: 0.2px;
+            margin-bottom: 20px;
             cursor: pointer;
             .material-symbols-outlined {
                 font-size: 17px;

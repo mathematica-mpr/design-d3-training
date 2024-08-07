@@ -32,7 +32,8 @@ export class LineChartComponent implements OnInit {
     }
     yearsData: YearsData[] = [];
     url: string = '../../assets/years.json';
-
+    width = 800 - 40 - 30; // Define width as a class property
+    
     ngOnInit() {
         //lifecycle hook, part of OnInit interface
         fetch(this.url)
@@ -45,11 +46,11 @@ export class LineChartComponent implements OnInit {
             });
     }
 
-    createChart(filteredData: YearsData[] = this.yearsData) {
+    createChart(filteredData: YearsData[] = this.yearsData, x?: d3.ScaleTime<number, number>) {
         const data: YearsData[] = filteredData;
 
-        const margin = { top: 20, right: 30, bottom: 30, left: 40 },
-            width = 800 - margin.left - margin.right,
+        const margin = { top: 20, right: 30, bottom: 40, left: 40 },
+            width = this.width,
             height = 450 - margin.top - margin.bottom;
 
         d3.select('#chart').selectAll('*').remove();
@@ -80,11 +81,13 @@ export class LineChartComponent implements OnInit {
                     .filter((d) => d.year !== null) as { year: Date; value: number }[],
             };
         });
-        
-        const x = d3
-            .scaleTime()
-            .domain(d3.extent(formattedData[0].values, (d) => d.year) as [Date, Date])
-            .range([0, width]);
+
+        if (!x) {
+            x = d3
+                .scaleTime()
+                .domain(d3.extent(formattedData[0].values, (d) => d.year) as [Date, Date])
+                .range([0, width]);
+        }
         svg.append('g').attr('transform', `translate(0,${height})`).call(d3.axisBottom(x));
 
         const y = d3
@@ -96,7 +99,7 @@ export class LineChartComponent implements OnInit {
 
         const line = d3
             .line<{ year: Date; value: number }>()
-            .x((d) => x(d.year))
+            .x((d) => x!(d.year))
             .y((d) => y(d.value));
 
         svg.selectAll('.line')
@@ -112,7 +115,7 @@ export class LineChartComponent implements OnInit {
             .data(formattedData.flatMap((d) => d.values.map((v) => ({ ...v, name: d.name }))))
             .join('circle')
             .attr('class', 'circle')
-            .attr('cx', (d) => x(d.year))
+            .attr('cx', (d) => x!(d.year))
             .attr('cy', (d) => y(d.value))
             .attr('r', 3)
             .attr('fill', 'black');
@@ -120,7 +123,7 @@ export class LineChartComponent implements OnInit {
         svg.append('text')
             .attr('text-anchor', 'middle')
             .attr('x', width / 2 + margin.left)
-            .attr('y', height + 30)
+            .attr('y', height + 35)
             .style('font-size', '12px')
             .text('Year');
 
@@ -139,18 +142,19 @@ export class LineChartComponent implements OnInit {
             .style('font-size', '16px')
             .text('Percent of population Uninsured from 2009-2020 in VA Counties');
     }
+
     setupFilters() {
         const selectCounty = d3.select('#select-county');
         const selectYear = d3.select('#select-year');
         const clearFilters = d3.select('#clear-filters');
         const selectedItems = d3.select('#selected-items'); // show the items selected
-
-        //populates county and year
+    
+        // Populates county and year
         const counties = Array.from(new Set(this.yearsData.map((d) => d.COUNTY)));
         counties.forEach((county) => {
             selectCounty.append('option').text(county).attr('value', county);
         });
-
+    
         const years = Object.keys(this.yearsData[0])
             .filter((key) => key.includes('Percentage'))
             .map((key) => key.match(/\((\d{4})\)/)?.[1]);
@@ -159,11 +163,28 @@ export class LineChartComponent implements OnInit {
                 selectYear.append('option').text(year).attr('value', year);
             }
         });
-
-        // handles filter changes
+    
+        // Handles filter changes
         selectCounty.on('change', () => this.updateChart());
-        selectYear.on('change', () => this.updateChart());
-
+        selectYear.on('change', () => {
+            const selectedYear = selectYear.property('value');
+            const parseYear = d3.timeParse('%Y');
+            const startYear = parseYear(selectedYear);
+            const endYear = parseYear((parseInt(selectedYear) + 1).toString());
+    
+            if (startYear && endYear) {
+                // Update the x-axis domain
+                const x = d3
+                    .scaleTime()
+                    .domain([startYear, endYear])
+                    .range([0, this.width]);
+    
+                this.updateChart(x);
+            } else {
+                console.error('Invalid year selected');
+            }
+        });
+    
         // Handle clear filters
         clearFilters.on('click', () => {
             selectCounty.property('value', '');
@@ -171,18 +192,19 @@ export class LineChartComponent implements OnInit {
             this.updateChart();
         });
     }
-
-    updateChart() {
-        const selectedCounties = (d3.select('#select-county').property('value') as string) || '';
+    
+    updateChart(x?: d3.ScaleTime<number, number>) {
+        const selectedCounties = Array.from(d3.select('#select-county').property('selectedOptions'), (option: HTMLOptionElement) => option.value);
         const selectedYear = (d3.select('#select-year').property('value') as string) || '';
-
+    
         const filteredData = this.yearsData.filter((d) => {
             return (
-                (!selectedCounties || selectedCounties.includes(d.COUNTY)) &&
+                (selectedCounties.length === 0 || selectedCounties.includes(d.COUNTY)) &&
                 (!selectedYear || Object.keys(d).some((key) => key.includes(selectedYear)))
             );
         });
-
-        this.createChart(filteredData);
+    
+        this.createChart(filteredData, x);
     }
+    
 }
