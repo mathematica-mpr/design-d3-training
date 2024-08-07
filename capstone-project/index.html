@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Data Visualization Capstone Project</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Data Visualization Selector</h1>
+            <div id="frame">
+                <div id="home" class="viz">
+                </div>
+                <div id="viz1" class="viz" style="display:none;">
+                    <div id="chart"></div>
+                    <div id="radio-buttons">
+                        <input class="radio-item" type="radio" id="sort-county" name="sort" checked>
+                        <label for="sort-county">Sort Alphabetically by County</label><br>
+
+                        <input class="radio-item" type="radio" id="sort-descending" name="sort">
+                        <label for="sort-descending">Sort by Descending Summed Percentage</label><br>
+
+                        <input class="radio-item" type="radio" id="sort-ascending" name="sort">
+                        <label for="sort-ascending">Sort by Ascending Summed Percentage</label><br>
+                    </div>
+                </div>
+                <div id="viz2" class="viz" style="display:none;">
+
+                </div>
+                <div id="viz3" class="viz" style="display:none;"> </div>
+            </div>
+            <div class="selector-container">
+                <label for="vizSelector">Choose a visualization:</label>
+                <select id="vizSelector">
+                    <option value="home">Home</option>
+                    <option value="viz1">Relationship Between Percentage of Pop. w/ Adequate Education and Percentage of Pop. in Poverty across New York State</option>
+                    <option value="viz2">Visualization 2</option>
+                    <option value="viz3">Visualization 3</option>
+                </select>
+            </div>
+        </div>
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script src="data-vis1.js"></script>
+        <script src="data-vis2.js"></script>
+        <script src="selector-script.js"></script>
+    </body>
+</html>
