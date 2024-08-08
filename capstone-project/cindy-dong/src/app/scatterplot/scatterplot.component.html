@@ -17,17 +17,19 @@
         </button>
     </div>
     <div class="container">
-        
         <div id="filters">
-            <select id="select-county">
+            <select id="select-county" multiple>
                 <option value="">Select County</option>
             </select>
             <select id="select-year">
                 <option value="">Select Year</option>
             </select>
-            <button id="clear-filters">Clear Filters<span class="material-symbols-outlined"> cancel </span></button>
         </div>
+        <button id="clear-filters">Clear Filters<span class="material-symbols-outlined"> cancel </span></button>
+        <p style="font-family: sans-serif">Selected Counties:</p>
+        <div id="selected-items"></div>
         <div id="chart"></div>
+        <div id="legend"></div>
+        <div id="tooltip" style="position: absolute; opacity: 0; background: white; border: 1px solid #ccc; padding: 5px; border-radius: 5px; pointer-events: none;"></div>
     </div>
-    <div id="selected-items"></div>
 </body>

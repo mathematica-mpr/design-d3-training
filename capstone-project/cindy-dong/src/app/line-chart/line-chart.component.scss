@@ -82,12 +82,11 @@
         border: 2px solid #8da9b6;
         display: inline-block;
         float: left;
-        
     }
     #selected-items {
         display: flex;
-        flex-wrap: wrap; /* Allows items to wrap to the next line */
-        gap: 15px; 
+        flex-wrap: wrap;
+        gap: 15px;
         padding: 20px 20px;
         background-color: #6794a9;
         border-radius: 5px;
@@ -96,11 +95,10 @@
         font-family: sans-serif;
         font-size: 14px;
         font-weight: 600;
-        
+
         cursor: pointer;
     }
 
-    
     #filters {
         display: flex;
         flex-direction: row;
@@ -132,7 +130,6 @@
             margin-bottom: 20px;
             cursor: pointer;
         }
-        
     }
 
     #clear-filters {
@@ -164,7 +161,4 @@
         border-radius: 5px;
         pointer-events: none;
     }
-    
-
-    
 }
