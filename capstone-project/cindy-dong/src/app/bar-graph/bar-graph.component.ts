@@ -39,12 +39,17 @@ export class BarGraphComponent implements OnInit {
             .then((response) => response.json())
             .then((json) => {
                 this.geographyData = json.Geography;
+                this.geographyData.sort((a, b) => {
+                    const countyA = a.COUNTY.replace(' County', '');
+                    const countyB = b.COUNTY.replace(' County', '');
+                    return countyA.localeCompare(countyB);
+                });
                 this.formatData();
                 this.createChart();
-                this.setupFilters();
-                this.updateChart();
             });
     }
+    
+
     formatData() {
         this.formattedData = this.geographyData.map((geoData) => {
             const name = geoData.COUNTY;
@@ -60,11 +65,30 @@ export class BarGraphComponent implements OnInit {
         });
         console.log(this.formattedData);
     }
-    createChart(_filteredData: GeographyData[] = this.geographyData) {
+
+    sortData(order: 'asc' | 'desc') {
+        this.geographyData.sort((a, b) => {
+            const maxA = d3.max(this.formattedData.find((f) => f.name === a.COUNTY)!.values, (v) => v.value) as number;
+            const maxB = d3.max(this.formattedData.find((f) => f.name === b.COUNTY)!.values, (v) => v.value) as number;
+            return order === 'asc' ? maxA - maxB : maxB - maxA;
+        });
+        this.createChart();
+    }
+
+    resetChart() {
+        this.geographyData.sort((a, b) => {
+            const countyA = a.COUNTY.replace(' County', '');
+            const countyB = b.COUNTY.replace(' County', '');
+            return countyA.localeCompare(countyB);
+        });
+        this.createChart();
+    }
+
+    createChart() {
         const margin = { top: 20, right: 30, bottom: 110, left: 40 },
             width = 1350 - margin.left - margin.right,
             height = 500 - margin.top - margin.bottom;
-
+    
         d3.select('#chart').selectAll('*').remove();
         const svg = d3
             .select('#chart')
@@ -73,25 +97,21 @@ export class BarGraphComponent implements OnInit {
             .attr('height', height + margin.top + margin.bottom)
             .append('g')
             .attr('transform', `translate(${margin.left},${margin.top})`);
-
-        const sortedData = this.geographyData.sort((a, b) => {
-            const countyA = a.COUNTY.replace(' County', '');
-            const countyB = b.COUNTY.replace(' County', '');
-            return countyA.localeCompare(countyB);
-        });
-
+    
+        const tooltip = d3.select('#tooltip');
+    
         const x = d3
             .scaleBand()
             .padding(0.1)
-            .domain(sortedData.map((d) => d.COUNTY.replace(' County', '')))
+            .domain(this.geographyData.map((d) => d.COUNTY.replace(' County', '')))
             .range([0, width]);
-
+    
         const y = d3
             .scaleLinear()
             .domain([0, d3.max(this.formattedData, (d) => d3.max(d.values, (v) => v.value)) as number])
             .range([height, 0])
             .nice();
-
+    
         svg.append('g')
             .attr('transform', `translate(0,${height})`)
             .call(d3.axisBottom(x))
@@ -101,33 +121,49 @@ export class BarGraphComponent implements OnInit {
             .style('text-anchor', 'end')
             .attr('y', '-5')
             .attr('x', '-10');
-
+    
         svg.append('g').call(d3.axisLeft(y));
-
+    
         svg.selectAll('.bar')
             .data(this.geographyData)
             .join('rect')
             .attr('class', 'bar')
             .attr('x', (d) => x(d.COUNTY.replace(' County', ''))!)
+            .attr('y', height)
+            .attr('width', x.bandwidth())
+            .attr('height', 0)
+            .attr('fill', (d) => (d['Region'] === 'inland' ? '#56AC2E' : '#178FA9'))
+            .on('mouseover', (event, d) => {
+                const county = d.COUNTY;
+                const percent = d3.max(this.formattedData.find((f) => f.name === county)!.values, (v) => v.value);
+                tooltip
+                    .style('opacity', 1)
+                    .html(`County: ${county}<br>Percent: ${percent}%`)
+                    .style('left', `${event.pageX + 10}px`)
+                    .style('top', `${event.pageY - 28}px`);
+            })
+            .on('mouseout', () => {
+                tooltip.style('opacity', 0);
+            })
+            .transition()
+            .duration(1500)
             .attr('y', (d) =>
                 y(d3.max(this.formattedData.find((f) => f.name === d.COUNTY)!.values, (v) => v.value) as number)
             )
-            .attr('width', x.bandwidth())
             .attr(
                 'height',
                 (d) =>
                     height -
                     y(d3.max(this.formattedData.find((f) => f.name === d.COUNTY)!.values, (v) => v.value) as number)
-            )
-            .attr('fill', (d) => (d['Region'] === 'inland' ? '#56AC2E' : '#178FA9'));
-            
+            );
+    
         svg.append('text')
             .attr('text-anchor', 'middle')
             .attr('x', width / 2 + margin.left)
             .attr('y', height + 100)
             .style('font-size', '15px')
             .text('Counties');
-        
+    
         svg.append('text')
             .attr('text-anchor', 'middle')
             .attr('transform', 'rotate(-90)')
@@ -135,54 +171,41 @@ export class BarGraphComponent implements OnInit {
             .attr('x', -height / 2 + 10)
             .style('font-size', '12px')
             .text('Percentage of population uninsured (%)');
-
+    
         svg.append('text')
             .attr('x', width / 2)
             .attr('y', -2)
             .attr('text-anchor', 'middle')
             .style('font-size', '16px')
             .text('Percent of Population Uninsured in VA Counties by Coastal Zone');
+            const legend = svg.append('g')
+            .attr('transform', `translate(${width - 100}, 0)`);
+    
+        legend.append('rect')
+            .attr('x', 0)
+            .attr('y', 0)
+            .attr('width', 18)
+            .attr('height', 18)
+            .attr('fill', '#56AC2E');
+    
+        legend.append('text')
+            .attr('x', 24)
+            .attr('y', 9)
+            .attr('dy', '0.35em')
+            .text('Inland');
+    
+        legend.append('rect')
+            .attr('x', 0)
+            .attr('y', 24)
+            .attr('width', 18)
+            .attr('height', 18)
+            .attr('fill', '#178FA9');
+    
+        legend.append('text')
+            .attr('x', 24)
+            .attr('y', 33)
+            .attr('dy', '0.35em')
+            .text('Coastal');
     }
-    setupFilters() {
-        const selectCounty = d3.select('#select-county');
-        const selectYear = d3.select('#select-year');
-        const clearFilters = d3.select('#clear-filters');
-        const selectedItems = d3.select('#selected-items'); // show the items selected
-
-        //populates county and year
-        const counties = Array.from(new Set(this.geographyData.map((d) => d.COUNTY)));
-        counties.forEach((county) => {
-            selectCounty.append('option').text(county).attr('value', county);
-        });
-
-        const years = Array.from(new Set(Object.keys(this.geographyData[0]).filter((key) => key !== 'COUNTY')));
-        years.forEach((year) => {
-            selectYear.append('option').text(year).attr('value', year);
-        });
-
-        // handles filter changes
-        selectCounty.on('change', () => this.updateChart());
-        selectYear.on('change', () => this.updateChart());
-
-        // Handle clear filters
-        clearFilters.on('click', () => {
-            selectCounty.property('value', '');
-            selectYear.property('value', '');
-            this.updateChart();
-        });
-    }
-
-    updateChart() {
-        const selectedCounties = (d3.select('#select-county').property('value') as string) || '';
-        const selectedYear = (d3.select('#select-year').property('value') as string) || '';
-
-        const filteredData = this.geographyData.filter((d) => {
-            return (
-                (!selectedCounties || selectedCounties.includes(d.COUNTY)) &&
-                (!selectedYear || Object.keys(d).some((key) => key.includes(selectedYear)))
-            );
-        });
-
-        this.createChart(filteredData);
-    }
+    
 }
