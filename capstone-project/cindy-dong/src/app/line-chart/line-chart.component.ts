@@ -177,7 +177,7 @@ export class LineChartComponent implements OnInit {
             .style('font-size', '16px')
             .text('Percent of population Uninsured from 2009-2020 in VA Counties');
 
-        //d3.select('#legend').selectAll('*').remove();
+        d3.select('#legend').selectAll('*').remove();
 
         if (selectedCounties.length > 0) {
             const legend = d3

@@ -17,15 +17,31 @@
         </button>
     </div>
     <div class="container">
+        <select id="select-year">
+            <option value="">Select Year</option>
+        </select>
         <input type="radio" id="descending" name="sort" value="percent-desc" (change)="sortData('desc')" />
         <label for="percent-desc">Sort By Percent Descending</label>
 
         <input type="radio" id="ascending" name="sort" value="percent-asc" (change)="sortData('asc')" />
         <label for="percent-asc">Sort By Percent Ascending</label>
 
-        <button id="clear-filters" (click)="resetChart()">Cancel<span class="material-symbols-outlined"> cancel </span></button>
+        <button id="clear-filters" (click)="resetChart()">
+            Cancel<span class="material-symbols-outlined"> cancel </span>
+        </button>
 
-        <div id="tooltip" style="position: absolute; opacity: 0; background-color: white; border: 1px solid #ccc; padding: 5px; border-radius: 5px; pointer-events: none;"></div>
+        <div
+            id="tooltip"
+            style="
+                position: absolute;
+                opacity: 0;
+                background-color: white;
+                border: 1px solid #ccc;
+                padding: 5px;
+                border-radius: 5px;
+                pointer-events: none;
+            "
+        ></div>
 
         <div id="chart"></div>
     </div>
