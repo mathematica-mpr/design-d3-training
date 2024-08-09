@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Weather Stations</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap">
+    <link rel="stylesheet" href="./viz2.css">
+</head>
+<body>
+    <div class="blurb-1">
+        <h3>EMPLOYMENT PERCENTAGES IN US STATES FROM 2016-2020</h3>
+        <hr>
+        <p>The following data visualization explores changes in employment within US state 
+            populations from 2016-2020. It calculates the average employment percentage of counties 
+            in each state for each year. 
+        </p>
+        <hr>
+        <h4>HOW AVERAGE IS CALCULATED</h4>
+        <p><b>Average for {state} =</b> Σ(Percent of {county} Employed) / {Number of counties}</p>
+        <h4>HOW TO USE THIS VISUALIZATION</h4>
+        <p><b>STATE SELECTION:</b> Use dropdown menu to select states for display in the line chart. It is recommended
+            to limit selection to <b>3 states</b> for maximum visibility.
+        </p>
+        <p><b>COUNTRY LINE:</b> Use "country" checkbox in the state dropdown menu to display the line graph for the average employment percentage
+            of the US population. This can be used to compare state employment changes to the national changes.
+        </p>
+        <p><b>VIEW SPECIFIC PERCENTAGE VALUES:</b> Hover over the data points on the lines to view additional details about the data</p>
+    </div>
+    <br><br>
+    <div id="dropdown">
+        <button id="dropdown-button">Select States<span class="arrow down"></span></button>
+        <div id="dropdown-menu">
+        </div>
+    </div>
+    <div id="chart-container"></div>
+
+    
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="./viz2.js"></script>
+</body>
+</html>

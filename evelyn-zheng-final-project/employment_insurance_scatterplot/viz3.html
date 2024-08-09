@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Weather Stations</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap">
+    <link rel="stylesheet" href="./viz3.css">
+</head>
+<body>
+    <div class="blurb-1">
+        <h3>EMPLOYMENT PERCENTAGES IN US STATES AND THEIR CORRESPONDING PRIVATE HEALTH INSURANCE COVERAGE PERCENTAGES IN 2020</h3>
+        <hr>
+        <p>The following data visualization explores the relationship between the percentage of state populations that are employed
+            and the percentage with private health insurance. It aims to observe potential correlations between the two values by plotting
+            county data in a scatterplot.
+        </p>
+        <hr>
+        <h4>HOW (X,Y) POINT VALUES ARE CALCULATED</h4>
+        <p><b>Average Percentage of {state} Employed =</b> Σ(Percent of {county} Employed) / {Number of counties}</p>
+        <p><b>Average Percentage of {state} with Private Health Insurance =</b> Σ(Percent of {county} with Private Health Insurance) / {Number of counties}</p>
+        <h4>HOW TO USE THIS VISUALIZATION</h4>
+        <p><b>STATE SELECTION:</b> Use dropdown menu to select states and their counties for display in the scatterplot chart. 
+        </p>
+        <p><b>LINE OF BEST FIT:</b> The red line on the plot represents the best fit for the state data selected. It is accompanied
+            by an equation in the format <i>y = mx + b</i>, allowing users to observe the magnitude of the correlation.
+        </p>
+        <p><b>VIEW SPECIFIC POINT VALUES:</b> Hover over the points in the chart to view additional details about the data</p>
+    </div><br><br>
+    <div id="dropdown">
+        <button id="dropdown-button">Select States<span class="arrow down"></span></button>
+        <div id="dropdown-menu">
+        </div>
+    </div>
+
+    <div id="chart-container"></div>
+
+    
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="./viz3.js"></script>
+</body>
+</html>
