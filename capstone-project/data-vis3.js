@@ -69,7 +69,6 @@ export function createChart(elementId) {
     });
 
     const draw = (geoJSON, data, filter='ACS_PCT_LT_HS') => {
-
         const chartMargins = {
             top: 60,
             right: 40,
@@ -100,7 +99,7 @@ export function createChart(elementId) {
             .interpolator(interpolator);
         
         const legendBackground = g.append('g')
-            .attr('transform', `translate(${graph.attr('width') - 160}, 51)`);
+            .attr('transform', `translate(${graph.attr('width') - 160}, 46)`);
         legendBackground.append('rect')
             .attr('width', 218)
             .attr('height', 45)
@@ -117,7 +116,7 @@ export function createChart(elementId) {
 
         g.append('g')
             .attr('class', 'legend')
-            .attr('transform', `translate(${graph.attr('width') - 155}, 55)`)
+            .attr('transform', `translate(${graph.attr('width') - 155}, 50)`)
             .call(legend);
 
         g.append('g')

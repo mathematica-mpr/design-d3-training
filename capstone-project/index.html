@@ -10,15 +10,19 @@
         <div class="container">
             <div id="frame">
                 <div id="home" class="viz" style="display:block;">
-                    <h1>Welcome to the NY Data Exploration App</h1>
-                
-                    <p>This web app allows you to delve into the relationship between education levels and poverty rates across New York State.</p>
-                
-                    <h2>What You'll Discover</h2>
-                    <ul>
-                        <li><strong>Three Interactive Visualizations:</strong> Explore our maps and charts to see how the percentage of the population with less than a high school education correlates with the percentage of the population in poverty.</li>
-                        <li><strong>Insights into NY Counties:</strong> Our data reveals that cities in NY generally show higher values for both education and poverty rates compared to rural areas and towns. Dive in to uncover more patterns and insights.</li>
-                    </ul>
+                    <h1>Exploring the Relationship Between Education and Poverty Levels in New York State</h1>
+
+                    <h2>Discoveries</h2>
+                    <div class="box-container">
+                        <div class="box">
+                            In 2020, the counties that have higher education attainment rates (ages 25 and older) tend to also have higher poverty rates (ages 0-17).
+                        </div>
+                        <div class="box">
+                            Education attainment rates (ages 25 and older) and poverty rates (ages 0-17) had a notable net decrease from 2009 to 2020.
+                        </div>
+                        <div class="box">
+                            In 2020, cities in NY tend to show higher percentages of both education attainment rates (ages 25 and older) and poverty rates (ages 0-17) compared to those of rural areas and towns.</div>
+                    </div>
                 
                     <h2>How to Use This App</h2>
                     <ol>
@@ -27,20 +31,24 @@
                         <li><strong>Engage with the Data:</strong> Examine how different regions of New York State compare and interact. Notice trends and anomalies as you navigate through the visualizations.</li>
                     </ol>
                 
-                    <p>Enjoy your data exploration journey!</p>
+                    <p>
+                        Data sourced from: <br>
+                        <a href="https://www.ahrq.gov/sdoh/data-analytics/sdoh-data.html">AHRQ's database on Social Determinants of Health (SDOH)</a><br>
+                        <a href="https://unstats.un.org/unsd/statcom/51st-session/documents/BG-Item3j-Recommendation-E.pdf">UN Statistical Commission Endorsed <i>Degree of Urbanization</i></a><br>
+                    </p>
                 </div>
                 
                 <div id="viz1" class="viz" style="display:none;">
                     <div id="chart"></div>
                     <div id="radio-buttons">
                         <input class="radio-item" type="radio" id="sort-county" name="sort" checked>
-                        <label for="sort-county">Sort Alphabetically by County</label><br>
+                        <label for="sort-county">Sort Alphabetically</label><br>
 
                         <input class="radio-item" type="radio" id="sort-descending" name="sort">
-                        <label for="sort-descending">Sort by Descending Summed Percentage</label><br>
+                        <label for="sort-descending">Sort by Summed Values (Descending)</label><br>
 
                         <input class="radio-item" type="radio" id="sort-ascending" name="sort">
-                        <label for="sort-ascending">Sort by Ascending Summed Percentage</label><br>
+                        <label for="sort-ascending">Sort by Summed Values (Ascending)</label><br>
                     </div>
                 </div>
                 <div id="viz2" class="viz" style="display:none;">
@@ -54,9 +62,6 @@
 
                         <input class="radio-item" type="radio" id="SAIPE_PCT_POV_0_17" name="filter">
                         <label for="SAIPE_PCT_POV_0_17">Show Percentage of Pop. in Poverty (ages 0-17)</label><br>
-
-                        <!-- <input class="radio-item" type="radio" id="POP_DENSITY" name="filter">
-                        <label for="sort-ascending">Sort by Ascending Summed Percentage</label><br> -->
                     </div>
                 </div>
             </div>

@@ -107,7 +107,7 @@ export function createChart(elementId) {
         const legendBlockSize = (legendHeight - ((legendBlockNum - 1) * legendSpacing)) / legendBlockNum;
 
         const legendBackground = g.append('g')
-            .attr('transform', `translate(${graph.attr('width') - 130}, 51)`);
+            .attr('transform', `translate(${graph.attr('width') - 130}, 46)`);
 
         legendBackground.append('rect')
             .attr('width', 208)
@@ -116,7 +116,7 @@ export function createChart(elementId) {
             .attr('stroke', 'gray');
 
         const legend = g.append('g')
-            .attr('transform', `translate(${graph.attr('width') - 125}, 55)`);
+            .attr('transform', `translate(${graph.attr('width') - 125}, 50)`);
 
         legend.selectAll('rect')
             .data(scaleOrdinal.domain())
@@ -144,7 +144,7 @@ export function createChart(elementId) {
 
         const title = [
             'Relationship Between Percentage of Children w/ Less than High School Education',
-            'and Percentage of Children in Poverty across New York State (2020)'
+            'and Percentage of Children in Poverty across New York Counties (2020)'
         ];
         g.append('g')
             .attr('class', 'title-container')

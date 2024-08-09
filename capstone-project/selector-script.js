@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', _ => {
 
     vizSelector.addEventListener('change', () => {
         const selectedViz = vizSelector.value;
-
         vizContainers.forEach(viz => {
             if (viz.id === selectedViz) {
                 viz.style.display = 'block';

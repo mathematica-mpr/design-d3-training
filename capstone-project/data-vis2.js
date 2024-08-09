@@ -203,7 +203,7 @@ export function createChart(elementId) {
 
         // Append a background rectangle for the legend
         const legendBackground = g.append('g')
-            .attr('transform', `translate(${graph.attr('width') - 130}, 51)`);
+            .attr('transform', `translate(${graph.attr('width') - 130}, 46)`);
 
         legendBackground.append('rect')
             .attr('width', 208)
@@ -212,7 +212,7 @@ export function createChart(elementId) {
             .attr('stroke', 'gray');
 
         const legend = g.append('g')
-            .attr('transform', `translate(${graph.attr('width') - 125}, 55)`);
+            .attr('transform', `translate(${graph.attr('width') - 125}, 50)`);
         
         legend.selectAll('rect')
             .data(scaleOrdinal.domain())
