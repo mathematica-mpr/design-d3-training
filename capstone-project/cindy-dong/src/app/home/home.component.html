@@ -1,0 +1,48 @@
+<h2>Overview:</h2>
+
+<body>
+    <div id="container">
+        <div class="box">
+            <h3>About:</h3>
+            <p>
+                This project focuses on analyzing and visualizing data regarding uninsured individuals under the age of
+                65 across Virginia counties from 2009 to 2020. The objective of this tool is to provide policymakers and
+                researchers with insights into the significant reduction in uninsured rates over time. It aims to
+                enhance understanding of how policies and various factors have impacted health insurance coverage in
+                these regions.
+            </p>
+        </div>
+        <div class="box">
+            <h3>Dataset:</h3>
+            <p>
+                The data for this project is sourced from the
+                <i
+                    ><a href="https://www.ahrq.gov/sdoh/data-analytics/sdoh-data.html"
+                        >Agency for Healthcare Research and Quality’s (AHRQ) Social Determinants of Health (SDOH)
+                        Database (Beta Version)</a
+                    ></i
+                >. This database provides a comprehensive set of variables across various domains, facilitating research
+                and analysis on social determinants of health.
+            </p>
+            <img src="../../assets/SDOH-icons.avif" alt="SDOH Icons" />
+        </div>
+        <div class="box">
+            <h3>Trends:</h3>
+            <ul>
+                <li><b>Year:</b> This variable helps track changes and trends over time.</li>
+                <li>
+                    <b>Total Weighted Population:</b> This variable provides a measure of the total population in each
+                    county, accounting for factors such as age distribution.
+                </li>
+                <li>
+                    <b>Geography:</b> This variable indicates whether a county is coastal or not, which can influence
+                    access to healthcare services.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="button">
+        <button type="button" (click)="navigateToFirstViz()">Learn More</button>
+    </div>
+</body>
