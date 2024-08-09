@@ -8,10 +8,28 @@
     </head>
     <body>
         <div class="container">
-            <h1>Data Visualization Selector</h1>
             <div id="frame">
-                <div id="home" class="viz">
+                <div id="home" class="viz" style="display:block;">
+                    <h1>Welcome to the NY Data Exploration App</h1>
+                
+                    <p>This web app allows you to delve into the relationship between education levels and poverty rates across New York State.</p>
+                
+                    <h2>What You'll Discover</h2>
+                    <ul>
+                        <li><strong>Three Interactive Visualizations:</strong> Explore our maps and charts to see how the percentage of the population with less than a high school education correlates with the percentage of the population in poverty.</li>
+                        <li><strong>Insights into NY Counties:</strong> Our data reveals that cities in NY generally show higher values for both education and poverty rates compared to rural areas and towns. Dive in to uncover more patterns and insights.</li>
+                    </ul>
+                
+                    <h2>How to Use This App</h2>
+                    <ol>
+                        <li><strong>Explore the Visualizations:</strong> Use the data visualization selector below to cycle through different graphs, charts, and maps.</li>
+                        <li><strong>Interactive Hover Mechanics:</strong> Hover over different regions or data points to get detailed information. Each visualization supports interactive tooltips that provide more context and data points about specific areas.</li>
+                        <li><strong>Engage with the Data:</strong> Examine how different regions of New York State compare and interact. Notice trends and anomalies as you navigate through the visualizations.</li>
+                    </ol>
+                
+                    <p>Enjoy your data exploration journey!</p>
                 </div>
+                
                 <div id="viz1" class="viz" style="display:none;">
                     <div id="chart"></div>
                     <div id="radio-buttons">
@@ -26,23 +44,38 @@
                     </div>
                 </div>
                 <div id="viz2" class="viz" style="display:none;">
-
+                    <div id="chart"></div>
                 </div>
-                <div id="viz3" class="viz" style="display:none;"> </div>
+                <div id="viz3" class="viz" style="display:none;">
+                    <div id="chart"></div>
+                    <div id="radio-buttons">
+                        <input class="radio-item" type="radio" id="ACS_PCT_LT_HS" name="filter" checked>
+                        <label for="ACS_PCT_LT_HS">Show Percentage w/ Less Than High School Education (age >= 25)</label><br>
+
+                        <input class="radio-item" type="radio" id="SAIPE_PCT_POV_0_17" name="filter">
+                        <label for="SAIPE_PCT_POV_0_17">Show Percentage of Pop. in Poverty (ages 0-17)</label><br>
+
+                        <!-- <input class="radio-item" type="radio" id="POP_DENSITY" name="filter">
+                        <label for="sort-ascending">Sort by Ascending Summed Percentage</label><br> -->
+                    </div>
+                </div>
             </div>
             <div class="selector-container">
                 <label for="vizSelector">Choose a visualization:</label>
                 <select id="vizSelector">
                     <option value="home">Home</option>
-                    <option value="viz1">Relationship Between Percentage of Pop. w/ Adequate Education and Percentage of Pop. in Poverty across New York State</option>
-                    <option value="viz2">Visualization 2</option>
-                    <option value="viz3">Visualization 3</option>
+                    <option value="viz1">Bar Chart Illustrating the Proportional Relationship of Both Observed Values across NY Counties (2020)</option>
+                    <option value="viz2">Line Graph Illustrating the Relationship of Both Observed Values over Time</option>
+                    <option value="viz3">Map Illustrating Both Observed Values Across NY Counties (2020)</option>
                 </select>
             </div>
         </div>
         <script src="https://d3js.org/d3.v6.min.js"></script>
-        <script src="data-vis1.js"></script>
-        <script src="data-vis2.js"></script>
-        <script src="selector-script.js"></script>
+        <script src="https://unpkg.com/topojson-client@3"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+        <script type="module" src="data-vis1.js"></script>
+        <script type="module" src="data-vis2.js"></script>
+        <script type="module" src="data-vis3.js"></script>
+        <script type="module" src="selector-script.js"></script>
     </body>
 </html>
