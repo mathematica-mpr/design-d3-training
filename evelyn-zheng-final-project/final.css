@@ -1,0 +1,101 @@
+h1 {
+    font-family: 'Source Sans Pro';
+
+}
+body {
+    font-family: 'Source Sans';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250vh;
+    background-color: #f9f9f9;
+}
+.container {
+    font-family: Source Sans Pro;
+    width: 75%;
+    height: 250vh;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.tab-container {
+    display: flex;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+}
+.tab {
+    font-family: 'Source Sans Pro';
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #ddd;
+    margin-right: 2px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    transition: background-color 0.3s;
+}
+.tab.active {
+    background-color: rgba(233, 191, 201, 0.806);
+    border-bottom: 1px solid white;
+}
+.tab-content {
+    flex: 1;
+    display: none;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.tab-content.active {
+    display: block;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.Intro {
+    border-radius: 10px;
+    text-align: left;
+    padding:20px;
+    background-color: rgba(233, 191, 201, 0.806);
+}
+
+hr {
+    border: none; /* Ensure border is not affecting display */
+    height: 2px;  /* Set a height */
+    background-color: black; /* Color for visibility */
+    margin: 20px 0; /* Margin to space out from surrounding content */
+}
+
+.context {
+    font-size: 18px;
+}
+
+a {
+    color:rgba(176, 30, 64, 0.806)
+}
+
+/* Container for narrative statements */
+.narrative-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto multiple lines if necessary */
+    gap: 2%; /* Adds space between columns */
+}
+
+.narrative {
+    flex: 1; /* Ensures the divs take up equal space */
+    padding:30px;
+    min-width: 30%; /* Sets a minimum width for each column */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    margin-right: 2%; /* Adds spacing between divs */
+}
+
+/* Remove margin-right for the last item in a row */
+.narrative:nth-child(3n) {
+    margin-right: 0;
+}

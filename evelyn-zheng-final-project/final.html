@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Visualization Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap">
+    <link rel="stylesheet" href="final.css">
+        
+</head>
+<body>
+    <div class="container">
+        <h1>Exploring the Relationship Between Private Health Insurance and Employment in the US</h1>
+        <h3>AHRQ SOCIAL DETERMINANTS OF HEALTH DATABASE</h3>
+
+        <hr>
+        <div class="context">
+        <p>"AHRQ's database on Social Determinants of Health (SDOH) was created under a project funded by the Patient Centered Outcomes Research (PCOR) Trust Fund. The purpose of this project is to create easy to use, easily linkable SDOH-focused data to use in PCOR research, inform approaches to address emerging health issues, and ultimately contribute to improved health outcomes.</p>
+        <p>Variables in the files correspond to five key SDOH domains: social context (e.g., age, race/ethnicity, veteran status), economic context (e.g., income, unemployment rate), education, physical infrastructure (e.g, housing, crime, transportation), and healthcare context (e.g., health insurance). The files can be linked to other data by geography (county, ZIP Code, and census tract). The database includes data files and codebooks by year at three levels of geography, as well as a documentation file."</p>
+        <a href=" https://www.ahrq.gov/sdoh/data-analytics/sdoh-data.html" target="_blank">LEARN MORE</a>
+    </div>
+    <br>
+        <div class="Intro">
+            <h3>THIS PROJECT</h3>
+            <p>This data visualization tool focuses on <b>employment</b> and <b>private health insurance</b>. The three tabs below showcases data
+            on the use of private health insurance in states from 2016-2020, changes in employment in states and nationally from 2016-2020, and the relationship
+        between our two variables of interest.</p>
+            <h4>EMPLOYMENT AND PRIVATE HEALTH INSURANCE: SIGNIFICANCE OF TOOL</h4>
+            <p>Employment rates and health insurance coverage can vary significantly between 
+                states due to differing economic conditions, healthcare policies, and demographics. 
+                A state-level visualization helps in understanding these variations and informing targeted polices 
+                depending on state needs. Visualizing employment and insurance data over time allows us to observe patterns and access changes.
+                Understanding state-level data helps in designing state-specific programs for employment and health insurance that are more 
+                relevant and effective. Additionally, visualizing the relationship between employment and health insurance
+                can show whether or not data supports a correlation, positive or negative. This can provide motivation for further research.</p>
+        </div>
+        <div class="narrative-container">
+        <div class="narrative">
+            <h4>NARRATIVE STATEMENT 1</h4>
+            <p>North Dakota has the largest average percentage of its counties having private health insurance
+                while Texas has the smallest.
+            </p>
+        </div>
+        <div class="narrative">
+            <h4>NARRATIVE STATEMENT 2</h4>
+            <p>The percentage of employment in the US has increased over the past 5 years.</p>
+        </div>
+        <div class="narrative">
+            <h4>NARRATIVE STATEMENT 3</h4>
+            <p>There is a positive correlation between employment and private health insurnace.</p>
+        </div>
+        </div>
+        <div class="tab-container">
+            <div class="tab active" data-target="tab-content-1">Private Health Insurance</div>
+            <div class="tab" data-target="tab-content-2">Employment Over Time</div>
+            <div class="tab" data-target="tab-content-3">Private Health Insurance vs. Employment</div>
+        </div>
+
+        <!-- Tab Content Sections -->
+        <div id="tab-content-1" class="tab-content active">
+            <iframe src="private-insurance-bar-chart/viz1.html"></iframe>
+        </div>
+        <div id="tab-content-2" class="tab-content">
+            <iframe src="employment_line_chart/viz2.html"></iframe>
+        </div>
+        <div id="tab-content-3" class="tab-content">
+            <iframe src="employment_insurance_scatterplot/viz3.html"></iframe>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const target = this.getAttribute('data-target');
+
+                document.querySelectorAll('.tab, .tab-content').forEach(el => {
+                    el.classList.remove('active');
+                });
+
+                // Add active class to the clicked tab and corresponding content
+                this.classList.add('active');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+
+        document.querySelector('.tab.active').click();
+    </script>
+</body>
+</html>

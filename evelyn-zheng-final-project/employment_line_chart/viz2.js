@@ -1,15 +1,14 @@
-function createChart(elementId, checkboxContainerId) {
+function createChart(elementId, dropdownContainerId) {
     // Container dimensions
     const height = 500;
     const width = 1000;
     const margins = {
         top: 50,
-        right: 350, // Increased right margin to accommodate legend
+        right: 350, 
         bottom: 50,
         left: 50
     };
 
-    // Calculate dimensions without margins
     const innerHeight = height - margins.top - margins.bottom;
     const innerWidth = width - margins.left - margins.right;
 
@@ -17,8 +16,7 @@ function createChart(elementId, checkboxContainerId) {
     const svg = d3.select(elementId)
         .append('svg')
         .attr('height', height)
-        .attr('width', width)
-        .style('border', '1px solid black'); // Add border for visibility
+        .attr('width', width);
 
     // Create inner group element
     const g = svg.append('g')
@@ -28,26 +26,16 @@ function createChart(elementId, checkboxContainerId) {
     // Create a tooltip element
     const tooltip = d3.select('body').append('div')
         .attr('class', 'tooltip')
-        .style('position', 'absolute')
-        .style('background-color', 'lightgrey')
-        .style('border', '1px solid black')
-        .style('padding', '5px')
-        .style('border-radius', '3px')
-        .style('pointer-events', 'none')
         .style('opacity', 0);
 
     let stateLines = {};
-    let countryLine;
     let colorScale;
 
-    // Load CSV data
     d3.csv('pct_employ.csv').then(function(data) {
-        console.log('Data loaded:', data); // Log data for debugging
 
-        // Parse pct columns to float
         data.forEach(d => {
             ['2016', '2017', '2018', '2019', '2020'].forEach(year => {
-                d[year] = parseFloat(d[year].replace(/,/g, "")) || 0; // Ensure default value for missing or non-numeric data
+                d[year] = parseFloat(d[year].replace(/,/g, "")) || 0; 
             });
         });
 
@@ -88,19 +76,14 @@ function createChart(elementId, checkboxContainerId) {
         }));
         stateData["country"] = averageCountryData;
 
-        console.log('State Data:', stateData); // Log stateData to check if all states have data
-
         // Flatten data and prepare for line plotting
         const linesData = Object.keys(stateData).map(state => ({
             state: state,
             values: stateData[state]
         }));
 
-        console.log('Lines Data:', linesData); // Log linesData to check if it contains all states
-
-        // Define color scale with sufficient colors
         colorScale = d3.scaleOrdinal(d3.schemeCategory10)
-            .domain(Object.keys(stateData).filter(state => state !== 'country'));
+            .domain(Object.keys(stateData)); 
 
         // Define scales
         const xScale = d3.scalePoint()
@@ -112,22 +95,47 @@ function createChart(elementId, checkboxContainerId) {
             .nice()
             .range([innerHeight, 0]);
 
-        // Create line generator
+        svg.append('text')
+            .attr('class', 'title-label')
+            .attr('text-anchor', 'middle')
+            .attr('x', margins.left + innerWidth)
+            .attr('y', margins.top / 2)
+            .style('font-size', '14px')
+            .text('Percentage of States that is Employed from 2016-2020');
+
+        svg.append('text')
+            .attr('class', 'x-axis-label')
+            .attr('text-anchor', 'middle')
+            .attr('x', margins.left + innerWidth / 2)
+            .attr('y', height - margins.bottom / 3)
+            .style('font-size', '14px')
+            .text('Year');
+
+        svg.append('text')
+            .attr('class', 'y-axis-label')
+            .attr('text-anchor', 'middle')
+            .attr('x', -(innerHeight / 2 + margins.top))
+            .attr('y', margins.left / 3)
+            .attr('transform', 'rotate(-90)')
+            .style('font-size', '14px')
+            .text('Percent Employed');
+
         const line = d3.line()
             .x(d => xScale(d.year))
             .y(d => yScale(d.value))
-            .curve(d3.curveLinear); // Use linear interpolation for smooth lines
+            .curve(d3.curveLinear);
 
         // Draw country line
-        countryLine = g.append('path')
+        const countryColor = colorScale('country'); // Get color for country
+        const countryLine = g.append('path')
             .datum(stateData["country"])
             .attr('class', 'line')
             .attr('d', line)
-            .style('stroke', 'black') // Different color for the country line
+            .style('stroke', countryColor) 
             .style('stroke-width', 2)
             .style('fill', 'none')
-            .attr('data-state', 'country') // Add a data attribute for identification
-            .style('visibility', 'hidden'); // Initially hide the country line
+            .attr('data-state', 'country') 
+            .style('visibility', 'hidden'); 
 
         // Add points for the country
         g.selectAll('.point-country')
@@ -138,8 +146,8 @@ function createChart(elementId, checkboxContainerId) {
             .attr('cx', d => xScale(d.year))
             .attr('cy', d => yScale(d.value))
             .attr('r', 4)
-            .style('fill', 'black') // Different color for country points
-            .style('visibility', 'hidden') // Initially hide all points
+            .style('fill', countryColor) // Use color scale for country points
+            .style('visibility', 'hidden') // Initially hide
             .on('mouseover', function(event, d) {
                 tooltip.transition().duration(200).style('opacity', .9);
                 tooltip.html(`State: Country<br>Year: ${d.year}<br>Percent: ${d.value.toFixed(2)}%`)
@@ -153,16 +161,15 @@ function createChart(elementId, checkboxContainerId) {
         // Draw state lines and create a mapping to control visibility
         linesData.forEach(state => {
             if (state.state === "country") return; // Skip country line here
-            console.log(`Drawing line for state: ${state.state}`, state.values); // Debugging each state’s line data
             const path = g.append('path')
                 .datum(state.values)
                 .attr('class', 'line')
                 .attr('d', line)
-                .style('stroke', colorScale(state.state)) // Use color scale for different states
+                .style('stroke', colorScale(state.state)) 
                 .style('stroke-width', 2)
                 .style('fill', 'none')
                 .attr('data-state', state.state) // Add a data attribute for identification
-                .style('visibility', 'hidden'); // Initially hide all lines
+                .style('visibility', 'hidden'); 
 
             stateLines[state.state] = path;
 
@@ -175,8 +182,8 @@ function createChart(elementId, checkboxContainerId) {
                 .attr('cx', d => xScale(d.year))
                 .attr('cy', d => yScale(d.value))
                 .attr('r', 4)
-                .style('fill', colorScale(state.state)) // Use color scale for different states
-                .style('visibility', 'hidden') // Initially hide all points
+                .style('fill', colorScale(state.state)) 
+                .style('visibility', 'hidden') 
                 .on('mouseover', function(event, d) {
                     tooltip.transition().duration(200).style('opacity', .9);
                     tooltip.html(`State: ${state.state.replace(/-/g, ' ')}<br>Year: ${d.year}<br>Percent: ${d.value.toFixed(2)}%`)
@@ -188,73 +195,69 @@ function createChart(elementId, checkboxContainerId) {
                 });
         });
 
-        // Create axes
         const xAxis = d3.axisBottom(xScale);
         const yAxis = d3.axisLeft(yScale);
 
-        // Append x-axis
         g.append('g')
             .attr('class', 'x-axis')
-            .attr('transform', `translate(0, ${innerHeight})`)
+            .attr('transform', `translate(0,${innerHeight})`)
             .call(xAxis);
 
-        // Append y-axis
         g.append('g')
             .attr('class', 'y-axis')
             .call(yAxis);
 
-        // Create checkboxes
-        const checkboxContainer = d3.select(checkboxContainerId);
+        // Create dropdown menu
+        const dropdownMenu = d3.select(dropdownContainerId);
 
-        // Style checkbox container as a grid
-        checkboxContainer.style('display', 'grid')
-            .style('grid-template-columns', 'repeat(10, 1fr)')
-            .style('gap', '10px'); // Space between checkboxes
+        const createCheckboxItem = (value, text) => {
+            const checkboxItem = dropdownMenu.append('div')
+                .attr('class', 'checkbox-item')
+                .style('display', 'flex') // Horizontal alignment
+                .style('align-items', 'center')
+                .style('margin-bottom', '5px'); 
 
-        // Create the Country checkbox first
-        checkboxContainer.append('div')
-            .append('input')
-            .attr('type', 'checkbox')
-            .attr('id', 'checkbox-country')
-            .property('checked', false) // Default unchecked
-            .on('change', updateChart); // Checkbox change event handler
-        
-        checkboxContainer.append('label')
-            .attr('for', 'checkbox-country')
-            .text('Country');
-
-        // Checkboxes for state lines
-        Object.keys(stateData).forEach(state => {
-            if (state === "country") return; // Skip country here
-            checkboxContainer.append('div')
-                .append('input')
+            // Create and append checkbox
+            checkboxItem.append('input')
                 .attr('type', 'checkbox')
-                .attr('id', `checkbox-${state}`)
-                .property('checked', false) // Default unchecked
-                .on('change', updateChart); // Checkbox change event handler
-            
-            checkboxContainer.append('label')
-                .attr('for', `checkbox-${state}`)
-                .text(state.replace(/-/g, ' ')); // Convert dashes back to spaces for display
+                .attr('id', value) 
+                .attr('value', value)
+                .on('change', updateChart); // Dropdown change event handle
+
+            // Create and append label
+            checkboxItem.append('label')
+                .attr('for', value) // Link label to checkbox via for attribute
+                .text(text);
+        };
+
+        // Add checkboxes and labels for each state
+        Object.keys(stateData).filter(state => state !== 'country').forEach(state => {
+            createCheckboxItem(state, state.replace(/-/g, ' ')); // For multiple worded states
         });
 
-        // Add a legend
-        const legend = svg.append('g')
-            .attr('transform', `translate(${margins.left + innerWidth + 20}, ${margins.top})`)
-            .style('display', 'grid')
-            .style('grid-template-columns', 'repeat(3, 1fr)') // Three columns
-            .style('grid-auto-rows', '20px') // Fixed row height
-            .style('gap', '5px'); // Space between legend items
+        // Add the Country option separately
+        createCheckboxItem('country', 'Country');
 
-        // Update the legend based on selected checkboxes
+        // Toggle dropdown menu visibility
+        d3.select('#dropdown-button').on('click', function() {
+            const menu = d3.select(dropdownContainerId);
+            const isVisible = menu.classed('visible');
+            menu.classed('visible', !isVisible);
+            d3.select('.arrow').classed('up', !isVisible).classed('down', isVisible);
+        });
+
+        // Update the legend
         function updateLegend() {
+            const legend = g.selectAll('.legend').data([0]); // Create a single legend container
+            legend.enter().append('g').attr('class', 'legend')
+                .merge(legend)
+                .attr('transform', `translate(${innerWidth + 20}, 20)`);
+            
             legend.selectAll('*').remove(); // Clear existing legend
 
-            const selectedStates = Object.keys(stateLines).filter(state => 
-                d3.select(`#checkbox-${state}`).property('checked')
-            );
+            const selectedStates = Array.from(dropdownMenu.selectAll('input:checked').nodes()).map(node => node.value);
 
-            // Ensure unique color assignment
+            // Color assignment
             const uniqueColorScale = d3.scaleOrdinal(d3.schemeCategory10)
                 .domain(selectedStates);
 
@@ -263,36 +266,38 @@ function createChart(elementId, checkboxContainerId) {
 
             // Append legend items
             selectedStates.forEach((state, index) => {
-                const col = Math.floor(index / numRows); // Determine column index
+                const col = Math.floor(index / numRows); // Determine column index for legend order
                 const row = index % numRows; // Determine row index
 
                 legend.append('rect')
-                    .attr('x', col * 100) // Position by column
-                    .attr('y', row * 20) // Position by row
+                    .attr('x', col * 100) 
+                    .attr('y', row * 20) 
                     .attr('width', 10)
                     .attr('height', 10)
-                    .style('fill', colorScale(state)); // Use color scale for the legend
+                    .style('fill', uniqueColorScale(state)); // Use color scale for the legend
 
                 legend.append('text')
-                    .attr('x', col * 100 + 15) // Position by column
-                    .attr('y', row * 20 + 10) // Position by row
+                    .attr('x', col * 100 + 15) 
+                    .attr('y', row * 20 + 10) 
                     .text(state.replace(/-/g, ' ')) // Convert dashes back to spaces for display
                     .style('font-size', '12px')
                     .attr('alignment-baseline', 'middle');
             });
         }
 
-        // Update chart based on checkbox selection
         function updateChart() {
+            // Get selected states from dropdown
+            const selectedStates = Array.from(dropdownMenu.selectAll('input:checked').nodes()).map(node => node.value);
+
             // Update country line visibility
-            const isCountryChecked = d3.select('#checkbox-country').property('checked');
+            const isCountryChecked = selectedStates.includes('country');
             countryLine.style('visibility', isCountryChecked ? 'visible' : 'hidden');
             g.selectAll('.point-country')
                 .style('visibility', isCountryChecked ? 'visible' : 'hidden');
 
             // Update state lines visibility
             Object.keys(stateLines).forEach(state => {
-                const isChecked = d3.select(`#checkbox-${state}`).property('checked');
+                const isChecked = selectedStates.includes(state);
                 stateLines[state].style('visibility', isChecked ? 'visible' : 'hidden');
                 g.selectAll(`.point-${state}`)
                     .style('visibility', isChecked ? 'visible' : 'hidden');
@@ -302,11 +307,17 @@ function createChart(elementId, checkboxContainerId) {
             updateLegend();
         }
 
-        // Initial update to ensure chart is updated
         updateChart();
     }).catch(function(error) {
         console.error('Error loading CSV file:', error);
     });
 }
 
-createChart('#chart-container', '#checkbox-container');
+d3.select('body').on('click', function(event) {
+    if (!d3.select('#dropdown').node().contains(event.target)) {
+        d3.select('#dropdown-menu').classed('visible', false);
+        d3.select('.arrow').classed('up', false).classed('down', true);
+    }
+});
+
+createChart('#chart-container', '#dropdown-menu');

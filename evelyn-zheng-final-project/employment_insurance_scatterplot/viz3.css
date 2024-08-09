@@ -1,0 +1,175 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+#year-dropdown {
+    position: relative;
+    display: inline-block;
+}
+#year-dropdown-button {
+    background-color: rgb(255, 209, 209);
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#year-dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto; /* Scroll if content exceeds max height */
+    padding: 10px;
+}
+#year-dropdown-menu.visible {
+    display: grid; /* Show when visible */
+}
+#year-dropdown-menu label {
+    display: block;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+#year-dropdown-menu label:hover {
+    background-color: #f1f1f1;
+}
+#dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#dropdown-button {
+    background-color: rgb(255, 209, 209);
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif; /* Ensure consistent font for button */
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+}
+
+#dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    max-height: 200px; /* Limit height */
+    overflow-y: auto; /* Scroll if content exceeds max height */
+    padding: 10px;
+}
+
+#dropdown-menu.visible {
+    display: grid; /* Show when visible */
+}
+
+#dropdown-menu label {
+    font-family: 'Source Sans Pro', sans-serif; /* Ensure consistent font for labels */
+    font-size: 16px; /* Match font size with button */
+    display: block;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+#dropdown-menu label:hover {
+    background-color: #f1f1f1;
+}
+
+/* Arrow styles for dropdown button */
+.arrow { 
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 10px;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.arrow.up {
+    transform: rotate(-135deg); /* Rotate arrow up */
+}
+
+.arrow.down {
+    transform: rotate(45deg); /* Rotate arrow down */
+}
+/* Tooltip styling */
+.tooltip {
+    position: absolute;
+    opacity: 0;
+    background-color: rgb(255, 209, 209);
+    border: 1px solid rgb(125, 18, 18);
+    padding: 10px;
+    border-radius: 5px;
+    pointer-events: none; /* Prevents tooltip from blocking mouse cursor */
+    font-family: 'Source Sans Pro', sans-serif; /* Font for tooltip */
+    font-size: 15px; /* Font size for tooltip */
+}
+
+/* Axis labels */
+.x-axis-label, .y-axis-label {
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 17px; 
+    font-weight: bold; 
+}
+
+/* Title label */
+.title-label {
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 20px; 
+    font-weight: bold; 
+    text-anchor: middle;
+}
+
+/* Bars */
+.bar {
+    stroke: none;
+    stroke-width: 0;
+}
+
+/* Legend styling */
+.legend rect {
+    stroke: #000;
+    stroke-width: 0.5px;
+}
+
+.legend text {
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 13px; 
+}
+
+/* Checkbox styling */
+#checkbox-container {
+    margin-top: 10px;
+}
+
+.blurb-1 {
+    font-family: "Source Sans Pro";
+    padding: 20px;
+    background-color:#ecebeb;
+    border: dashed;
+    border-radius: 7px;
+    border-width: 1px;
+ }
+
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.checkbox-item label {
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 14px; 
+}
