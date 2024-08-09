@@ -175,7 +175,7 @@ export class LineChartComponent implements OnInit {
             .attr('y', -2)
             .attr('text-anchor', 'middle')
             .style('font-size', '16px')
-            .text('Percent of population Uninsured from 2009-2020 in VA Counties');
+            .text('Percent of population uninsured from 2009-2020 in VA counties');
 
         d3.select('#legend').selectAll('*').remove();
 

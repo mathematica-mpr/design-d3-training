@@ -54,9 +54,8 @@ export class BarGraphComponent implements OnInit {
             option.text = year;
             selectYear.appendChild(option);
         });
-        selectYear.value = '2020'; // Set the default year to 2020
+        selectYear.value = '2020';
 
-        // Add an event listener to update the chart when the year is changed
         selectYear.addEventListener('change', () => {
             const selectedYear = selectYear.value;
             this.createChart(selectedYear, this.currentSortOrder);
@@ -64,7 +63,7 @@ export class BarGraphComponent implements OnInit {
     }
 
     sortData(order: 'asc' | 'desc') {
-        this.currentSortOrder = order;  // Store the current sort order
+        this.currentSortOrder = order;  
         const selectedYear = (document.getElementById('select-year') as HTMLSelectElement).value || '2020';
         
         this.geographyData.sort((a, b) => {
@@ -79,14 +78,12 @@ export class BarGraphComponent implements OnInit {
     resetChart() {
         const selectedYear = (document.getElementById('select-year') as HTMLSelectElement).value || '2020';
     
-        // Reset the sorting order by County name
         this.geographyData.sort((a, b) => {
             const countyA = a.COUNTY.replace(' County', '');
             const countyB = b.COUNTY.replace(' County', '');
             return countyA.localeCompare(countyB);
         });
     
-        // Clear the radio button selection and the sort order
         this.currentSortOrder = null;
         const radioButtons = document.querySelectorAll('input[type="radio"]');
         radioButtons.forEach((radioButton) => {
@@ -191,7 +188,7 @@ export class BarGraphComponent implements OnInit {
             .attr('y', -2)
             .attr('text-anchor', 'middle')
             .style('font-size', '16px')
-            .text(`Percent of Population Uninsured in VA Counties (${selectedYear}) by Coastal Zone`);
+            .text(`Percent of population uninsured in VA counties (${selectedYear}) by coastal zone`);
     
         const legend = svg.append('g')
             .attr('transform', `translate(${width - 100}, 0)`);

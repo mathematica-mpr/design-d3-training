@@ -171,7 +171,7 @@ export class ScatterplotComponent implements OnInit {
             .attr('y', -2)
             .attr('text-anchor', 'middle')
             .style('font-size', '16px')
-            .text('Percent of population Uninsured by Total Weighted Population in VA Counties');
+            .text('Percent of population uninsured by total weighted population in VA counties');
 
         const legend = d3
             .select('#legend')
