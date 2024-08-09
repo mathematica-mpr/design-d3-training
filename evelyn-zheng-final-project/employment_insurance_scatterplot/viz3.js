@@ -4,7 +4,7 @@ function createChart(elementId, dropdownContainerId) {
     const width = 1000;
     const margins = {
         top: 50,
-        right: 370, 
+        right: 400, 
         bottom: 50,
         left: 70
     };
