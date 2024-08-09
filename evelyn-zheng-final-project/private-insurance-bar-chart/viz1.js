@@ -113,7 +113,7 @@ function createChart(elementId, yearDropdownId) {
             .style('display', 'flex')
             .style('align-items', 'center') 
             .style('margin-bottom', '5px') 
-            .each((d) => {
+            .each(function(d) {
                 const container = d3.select(this);
                 container.append('input')
                     .attr('type', 'checkbox')
