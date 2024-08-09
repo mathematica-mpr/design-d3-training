@@ -4,7 +4,7 @@ function createChart(elementId, dropdownContainerId) {
     const width = 1000;
     const margins = {
         top: 50,
-        right: 350, 
+        right: 350,
         bottom: 50,
         left: 50
     };
@@ -29,13 +29,13 @@ function createChart(elementId, dropdownContainerId) {
         .style('opacity', 0);
 
     let stateLines = {};
-    let colorScale;
+    let colorScale; // Declare colorScale globally
 
     d3.csv('pct_employ.csv').then(function(data) {
 
         data.forEach(d => {
             ['2016', '2017', '2018', '2019', '2020'].forEach(year => {
-                d[year] = parseFloat(d[year].replace(/,/g, "")) || 0; 
+                d[year] = parseFloat(d[year].replace(/,/g, "")) || 0;
             });
         });
 
@@ -82,8 +82,9 @@ function createChart(elementId, dropdownContainerId) {
             values: stateData[state]
         }));
 
+        // Define color scale
         colorScale = d3.scaleOrdinal(d3.schemeCategory10)
-            .domain(Object.keys(stateData)); 
+            .domain(Object.keys(stateData));
 
         // Define scales
         const xScale = d3.scalePoint()
@@ -131,11 +132,11 @@ function createChart(elementId, dropdownContainerId) {
             .datum(stateData["country"])
             .attr('class', 'line')
             .attr('d', line)
-            .style('stroke', countryColor) 
+            .style('stroke', countryColor)
             .style('stroke-width', 2)
             .style('fill', 'none')
-            .attr('data-state', 'country') 
-            .style('visibility', 'hidden'); 
+            .attr('data-state', 'country')
+            .style('visibility', 'hidden');
 
         // Add points for the country
         g.selectAll('.point-country')
@@ -147,7 +148,7 @@ function createChart(elementId, dropdownContainerId) {
             .attr('cy', d => yScale(d.value))
             .attr('r', 4)
             .style('fill', countryColor) // Use color scale for country points
-            .style('visibility', 'hidden') // Initially hide
+            .style('visibility', 'hidden')
             .on('mouseover', function(event, d) {
                 tooltip.transition().duration(200).style('opacity', .9);
                 tooltip.html(`State: Country<br>Year: ${d.year}<br>Percent: ${d.value.toFixed(2)}%`)
@@ -165,11 +166,11 @@ function createChart(elementId, dropdownContainerId) {
                 .datum(state.values)
                 .attr('class', 'line')
                 .attr('d', line)
-                .style('stroke', colorScale(state.state)) 
+                .style('stroke', colorScale(state.state))
                 .style('stroke-width', 2)
                 .style('fill', 'none')
                 .attr('data-state', state.state) // Add a data attribute for identification
-                .style('visibility', 'hidden'); 
+                .style('visibility', 'hidden');
 
             stateLines[state.state] = path;
 
@@ -182,8 +183,8 @@ function createChart(elementId, dropdownContainerId) {
                 .attr('cx', d => xScale(d.year))
                 .attr('cy', d => yScale(d.value))
                 .attr('r', 4)
-                .style('fill', colorScale(state.state)) 
-                .style('visibility', 'hidden') 
+                .style('fill', colorScale(state.state))
+                .style('visibility', 'hidden')
                 .on('mouseover', function(event, d) {
                     tooltip.transition().duration(200).style('opacity', .9);
                     tooltip.html(`State: ${state.state.replace(/-/g, ' ')}<br>Year: ${d.year}<br>Percent: ${d.value.toFixed(2)}%`)
@@ -215,12 +216,12 @@ function createChart(elementId, dropdownContainerId) {
                 .attr('class', 'checkbox-item')
                 .style('display', 'flex') // Horizontal alignment
                 .style('align-items', 'center')
-                .style('margin-bottom', '5px'); 
+                .style('margin-bottom', '5px');
 
             // Create and append checkbox
             checkboxItem.append('input')
                 .attr('type', 'checkbox')
-                .attr('id', value) 
+                .attr('id', value)
                 .attr('value', value)
                 .on('change', updateChart); // Dropdown change event handle
 
@@ -257,28 +258,21 @@ function createChart(elementId, dropdownContainerId) {
 
             const selectedStates = Array.from(dropdownMenu.selectAll('input:checked').nodes()).map(node => node.value);
 
-            // Color assignment
-            const uniqueColorScale = d3.scaleOrdinal(d3.schemeCategory10)
-                .domain(selectedStates);
-
-            const numColumns = 3;
-            const numRows = Math.ceil(selectedStates.length / numColumns);
-
             // Append legend items
             selectedStates.forEach((state, index) => {
-                const col = Math.floor(index / numRows); // Determine column index for legend order
-                const row = index % numRows; // Determine row index
+                const col = Math.floor(index / 3); // Number of columns in the legend
+                const row = index % 3; // Row index
 
                 legend.append('rect')
-                    .attr('x', col * 100) 
-                    .attr('y', row * 20) 
+                    .attr('x', col * 100)
+                    .attr('y', row * 20)
                     .attr('width', 10)
                     .attr('height', 10)
-                    .style('fill', uniqueColorScale(state)); // Use color scale for the legend
+                    .style('fill', colorScale(state)); // Use global color scale for the legend
 
                 legend.append('text')
-                    .attr('x', col * 100 + 15) 
-                    .attr('y', row * 20 + 10) 
+                    .attr('x', col * 100 + 15)
+                    .attr('y', row * 20 + 10)
                     .text(state.replace(/-/g, ' ')) // Convert dashes back to spaces for display
                     .style('font-size', '12px')
                     .attr('alignment-baseline', 'middle');
