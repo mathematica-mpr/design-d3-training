@@ -1,0 +1,20 @@
+{
+  "name": "capstone-project",
+  "version": "1.0.0",
+  "description": "You will visualize the [AHRQ’s Social Determinants of Health (SDOH) Database (Beta Version)](https://www.ahrq.gov/sdoh/data-analytics/sdoh-data.html).",
+  "main": "data-vis1.js",
+  "scripts": {
+    "start": "node ../../../../../AppData/Roaming/npm/node_modules/http-server/bin/http-server"
+  },
+  "author": "AST Web Dev Team",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "d3": "^6.7.0"
+  },
+  "prettier": {
+    "useTabs": false,
+    "printWidth": 120,
+    "tabWidth": 4,
+    "singleQuote": true
+  }
+}

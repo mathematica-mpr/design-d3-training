@@ -1,0 +1,17 @@
+As the title explains I was looking to explore the relationship between education attainment and poverty in my state, new york
+I chose to look into this because of my own interests in making educational support more accessible.
+When actually making the project, I wanted to look as easy to use and text-light as possible. I wanted the relationships to be easy to understood
+for even some random high school student to stumble upon it. I know when I was younger, most research intimidated me.
+I am fairly new to front-end development, the only visualizations I knew how to implement were the ones worked on in d3 modules.
+But I knew from the start what I wanted it to look like so I learned what I needed to learn to make it happen.
+I mainly observed two statistics, percentage of ppl with less than high school education and percentage of
+ppl in poverty. As we go through the web app, you'll see that I color coordinated each page so that the blue will always be tied to education attainment 
+and the orange will represent impoverishment.
+This is the home page.
+Here are the discoveries that I made.
+Here is a short explanation for how to use the web app. It talks about the selector at the bottom, and how pretty much everything on each of the
+visualizations have a hover mechanic built in to get more info.
+The sources I used are at the bottom.
+The first is the database that I was assigned for the project.
+The second is s report I looked at a little bit to understand how to loosely categorize the counties into different area types:
+ cities, rural areas, and towns

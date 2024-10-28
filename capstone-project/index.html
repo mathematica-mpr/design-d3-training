@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Data Visualization Capstone Project</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="frame">
+                <div id="home" class="viz" style="display:block;">
+                    <h1>Exploring the Relationship Between Education and Poverty Levels in New York State</h1>
+
+                    <h2>Discoveries</h2>
+                    <div class="box-container">
+                        <div class="box">
+                            In 2020, the counties that have higher education attainment rates (ages 25 and older) tend to also have higher poverty rates (ages 0-17).
+                        </div>
+                        <div class="box">
+                            Education attainment rates (ages 25 and older) and poverty rates (ages 0-17) had a notable net decrease from 2009 to 2020.
+                        </div>
+                        <div class="box">
+                            In 2020, cities in NY tend to show higher percentages of both education attainment rates (ages 25 and older) and poverty rates (ages 0-17) compared to those of rural areas and towns.</div>
+                    </div>
+                
+                    <h2>How to Use This App</h2>
+                    <ol>
+                        <li><strong>Explore the Visualizations:</strong> Use the data visualization selector below to cycle through different graphs, charts, and maps.</li>
+                        <li><strong>Interactive Hover Mechanics:</strong> Hover over different regions or data points to get detailed information. Each visualization supports interactive tooltips that provide more context and data points about specific areas.</li>
+                        <li><strong>Engage with the Data:</strong> Examine how different regions of New York State compare and interact. Notice trends and anomalies as you navigate through the visualizations.</li>
+                    </ol>
+                
+                    <p>
+                        Data sourced from: <br>
+                        <a href="https://www.ahrq.gov/sdoh/data-analytics/sdoh-data.html">AHRQ's database on Social Determinants of Health (SDOH)</a><br>
+                        <a href="https://unstats.un.org/unsd/statcom/51st-session/documents/BG-Item3j-Recommendation-E.pdf">UN Statistical Commission Endorsed <i>Degree of Urbanization</i></a><br>
+                    </p>
+                </div>
+                
+                <div id="viz1" class="viz" style="display:none;">
+                    <div id="chart"></div>
+                    <div id="radio-buttons">
+                        <input class="radio-item" type="radio" id="sort-county" name="sort" checked>
+                        <label for="sort-county">Sort Alphabetically</label><br>
+
+                        <input class="radio-item" type="radio" id="sort-descending" name="sort">
+                        <label for="sort-descending">Sort by Summed Values (Descending)</label><br>
+
+                        <input class="radio-item" type="radio" id="sort-ascending" name="sort">
+                        <label for="sort-ascending">Sort by Summed Values (Ascending)</label><br>
+                    </div>
+                </div>
+                <div id="viz2" class="viz" style="display:none;">
+                    <div id="chart"></div>
+                </div>
+                <div id="viz3" class="viz" style="display:none;">
+                    <div id="chart"></div>
+                    <div id="radio-buttons">
+                        <input class="radio-item" type="radio" id="ACS_PCT_LT_HS" name="filter" checked>
+                        <label for="ACS_PCT_LT_HS">Show Percentage w/ Less Than High School Education (age >= 25)</label><br>
+
+                        <input class="radio-item" type="radio" id="SAIPE_PCT_POV_0_17" name="filter">
+                        <label for="SAIPE_PCT_POV_0_17">Show Percentage of Pop. in Poverty (ages 0-17)</label><br>
+                    </div>
+                </div>
+            </div>
+            <div class="selector-container">
+                <label for="vizSelector">Choose a visualization:</label>
+                <select id="vizSelector">
+                    <option value="home">Home</option>
+                    <option value="viz1">Bar Chart Illustrating the Proportional Relationship of Both Observed Values across NY Counties (2020)</option>
+                    <option value="viz2">Line Graph Illustrating the Relationship of Both Observed Values over Time</option>
+                    <option value="viz3">Map Illustrating Both Observed Values Across NY Counties (2020)</option>
+                </select>
+            </div>
+        </div>
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script src="https://unpkg.com/topojson-client@3"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+        <script type="module" src="data-vis1.js"></script>
+        <script type="module" src="data-vis2.js"></script>
+        <script type="module" src="data-vis3.js"></script>
+        <script type="module" src="selector-script.js"></script>
+    </body>
+</html>

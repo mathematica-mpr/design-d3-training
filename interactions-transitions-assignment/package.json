@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "description": "This repo is used for the design and d3 data visualization training.",
     "main": "index.js",
+    "scripts": {
+        "start": "node ../../../../../AppData/Roaming/npm/node_modules/http-server/bin/http-server"
+    },
     "author": "AST Web Dev Team",
     "dependencies": {
         "http-server": "^0.12.3",
